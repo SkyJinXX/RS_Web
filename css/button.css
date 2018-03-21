@@ -1,0 +1,30 @@
+.isLikeButton{
+	background-color: #FFFFFF;
+	color: #7171C6;
+	border: 1px solid #8B8989;
+	border-radius: 15px;
+	padding: 3px 8px;
+	font-size: 15px;
+}
+
+.isLikeButton:hover{
+	background-color: #CD6839;
+	color: #FFFFFF;
+	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+}
+
+.uninterestedButton{
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	color: #828282;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.uninterestedButton:hover{
+	cursor: pointer;
+}

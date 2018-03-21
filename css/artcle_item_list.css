@@ -1,0 +1,124 @@
+/*资讯导航*/
+.menu{
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+.menu a{
+	color: #6B6B6B;
+	font-size: 23px;
+}
+
+.menu a:hover{
+	cursor: pointer;
+}
+
+/*资讯列表*/
+.InformationList{
+	width:80%;
+	margin: auto;
+	background-color: transparent;
+	border-radius: 2px;
+}
+
+.InformationItemOutside{
+	width: 100%;
+	height: 15em;
+	margin-bottom: 8px;
+	padding: 0.4em 0.5em 0.5em 0.5em;
+	border-radius: 2px;
+	background-color: #F0F0F0;	
+	border: 1px solid #A3A3A3;
+}
+
+.InformationItemOutside:hover{
+	background-color: #CCCCCC;
+	cursor: pointer;
+	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+}
+
+.InformationItemInside{
+	width: 100%;
+	height: 14em;
+	background-color: #F2F2F2;
+	border-radius: 4px;
+	padding: 2px 2px 2px 2px;
+}
+
+.itemLeft{
+	width: 40%;
+	height: 100%;
+	float: left;
+	margin-right: 1%;
+	background-color: transparent;
+}
+
+.itemLeft p{
+	text-align: center;	
+	color: #000000;
+}
+
+.itemLeft img{
+	border: none;
+	padding: 0;
+	margin: auto;
+	max-width: 100%;
+}
+
+.itemRight{
+	width: 55%;
+	height: 100%;
+	float: left;
+	margin-right: 1%;
+	background-color: transparent;
+	border-radius: 4px;
+}
+
+.uninterested{
+	width: 2%;
+	height: 12%;
+	border: none;
+	border-radius: 5px;
+	margin-right: 1%;
+	float: left;
+}
+
+.informationTitle{
+	width: 99%;
+	margin-top: 1%;
+	margin-left: 1%;
+}
+
+.informationContent{
+	width: 99%;
+	height: 68%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 1%;
+}
+
+.ahover{
+	color: black;
+	cursor: pointer;
+}
+
+.type{
+	width:35%;
+	height: 10%;
+	margin-left: 1%;
+	padding-left: 3%;
+	font-size: 15px;
+	float: left;
+	color: #436EEE;
+	border-left: 2px solid #9FB6CD;
+}
+
+.isLikeBox{
+	width: 25%;
+	margin-left: 75%;
+}
