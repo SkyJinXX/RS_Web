@@ -102,6 +102,10 @@
 	margin-left: 1%;
 }
 
+.informationContent span{
+    font-family: Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+}
+
 .ahover{
 	color: black;
 	cursor: pointer;
@@ -119,6 +123,6 @@
 }
 
 .isLikeBox{
-	width: 25%;
-	margin-left: 75%;
+	width: 60%;
+	margin-left: 40%;
 }

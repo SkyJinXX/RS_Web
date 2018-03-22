@@ -71,7 +71,7 @@
                             <a href="index.aspx">个性推荐</a>
                         </li>
                         <li>
-                            <a href="allInformation.aspx">发现世界</a>
+                            <a href="allInformation.aspx">热门</a>
                         </li>
                     </ul>
                 </div>

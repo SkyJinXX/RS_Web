@@ -29,7 +29,14 @@
         <div class="page-wrapper toggled">
             <div class="top">
                 <div class="menu_nav">
-
+                    <ul>
+                        <li>
+                            <a href="index.aspx">个性推荐</a>
+                        </li>
+                        <li>
+                            <a href="allInformation.aspx">发现世界</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="search_position">
                     <div class="sidebar-search">
