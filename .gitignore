@@ -53,3 +53,5 @@ dkms.conf
 
 *.config
 *.sln
+.vs/WebSite9/v15/Server/sqlite3/storage.ide-shm
+.vs/WebSite9/v15/Server/sqlite3/storage.ide-wal
