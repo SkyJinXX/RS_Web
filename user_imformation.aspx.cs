@@ -30,16 +30,41 @@ public partial class user_imformation : System.Web.UI.Page
             TextBox_Username.Enabled = false;
 
             cmd.CommandText = "select Uname from Users where Uusername = '" + (String)Session["username"] + "'";
-            TextBox_Nickname.Text = (String)cmd.ExecuteScalar();
+           cmd.ExecuteScalar();
+            if (cmd.ExecuteScalar()== DBNull.Value)
+            {
+                TextBox_Nickname.Text = "";
+            }               
+            else{
+                TextBox_Nickname.Text = (String)cmd.ExecuteScalar();
+            }
+                
 
-            cmd.CommandText = "select Umail from Users where Uusername = '" + (String)Session["username"] + "'";
+           cmd.CommandText = "select Umail from Users where Uusername = '" + (String)Session["username"] + "'";
             TextBox_Email.Text = (String)cmd.ExecuteScalar();
 
             cmd.CommandText = "select Uage from Users where Uusername = '" + (String)Session["username"] + "'";
-            TextBox_Age.Text = (String)cmd.ExecuteScalar();
+          cmd.ExecuteScalar();
+            if (cmd.ExecuteScalar()== DBNull.Value)
+            {
+                TextBox_Age.Text = "";
+            }
+            else{
+                TextBox_Age.Text = (String)cmd.ExecuteScalar();
+            }
+                
 
             cmd.CommandText = "select Usex from Users where Uusername = '" + (String)Session["username"] + "'";
-            TextBox_Sex.Text = (String)cmd.ExecuteScalar();
+           // TextBox_Sex.Text = (String)cmd.ExecuteScalar();
+
+             if (cmd.ExecuteScalar() == DBNull.Value)
+            {
+                TextBox_Sex.Text = "";
+            }
+            else
+            {
+                TextBox_Sex.Text = (String)cmd.ExecuteScalar();
+            }
 
 
             objConnection.Close();
