@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="interests.aspx.cs" Inherits="interests" %>
 
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -95,11 +97,25 @@
                     <div class="table">
                         <div class="table_inside">
                             <div class="message_title">
-
+                                
                             </div>
                             <div class="subline"></div>
                             <div class="message_line">
-                                
+                                <asp:Label ID="Label1" runat="server" Text="最近浏览资讯兴趣方向"></asp:Label>
+                                <asp:TextBox ID="TextBox1" runat="server" Text="科技 游戏"></asp:TextBox><br/>
+                                <asp:Label ID="Label2" runat="server" Text="历史浏览资讯兴趣模型"></asp:Label><asp:Chart ID="Chart1" runat="server" BackColor="ActiveBorder" BorderlineColor="Transparent" Height="284px" OnLoad="Chart1_Load" Width="822px">
+                                    <Series>
+                                        <asp:Series Name="Series1" ChartArea="ChartArea1" ChartType="Pie" IsValueShownAsLabel="True" Label="#VALX:#VAL%" Legend="Legend1"></asp:Series>
+                                    </Series>
+                                    <ChartAreas>
+                                        <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                                    </ChartAreas>
+                                    <Legends>
+                                        <asp:Legend Enabled="False" Name="Legend1">
+                                        </asp:Legend>
+                                    </Legends>
+                                </asp:Chart>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=USERUSE-04UKSUB\SQLEXPRESS;Initial Catalog=recommendedsystem;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Uid], [Sum] FROM [U_L]"></asp:SqlDataSource>
                             </div>
                         </div>
                     </div>

@@ -42,7 +42,7 @@
                         <asp:TextBox ID="ConfirmPassword" runat="server" placeholder="确认密码" maxlength="20"  TextMode="Password"></asp:TextBox>
                         <asp:TextBox ID="Email" runat="server" placeholder="电子邮件" maxlength="20" ></asp:TextBox>
                         <asp:TextBox ID="TextBox1" runat="server" placeholder="电子邮件" maxlength="20" Visible="False" ></asp:TextBox>
-                        <asp:Button ID="Button_register" CssClass="loginButton" runat="server" Text="注册" OnClick="Button_register_Click" />
+                        <asp:Button ID="Button_register" CssClass="loginButton" runat="server" Text="立即注册" OnClick="Button_register_Click" />
                     </div>
                 </div>
                 <div class="footer">
