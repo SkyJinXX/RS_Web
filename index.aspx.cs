@@ -455,8 +455,8 @@ public partial class index : System.Web.UI.Page
 
         SqlCommand cmd = new SqlCommand("", conn);
         cmd.CommandText = "select Nid,Ntitle,Ncontent,Ntype,Ngoods,Nbads from News where Nid in ('"
-                            + a.IndexOf(0) + "','" + a.IndexOf(1) + "','" + a.IndexOf(2) + "','"
-                            + a.IndexOf(3) + "')";
+                            + a[0] + "','" + a[1] + "','" + a[2] + "','"
+                            + a[3] + "')";
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
@@ -520,13 +520,12 @@ public partial class index : System.Web.UI.Page
         int page_int = int.Parse(page);
         int st = page_int * 4;
         int end = (page_int+1) * 4;
-
         ArrayList a = Recommand_Nid();
 
         ArrayList showlist = new ArrayList();
         for(int i = st; i < end; i++)
         {
-            showlist.Add(a.IndexOf(i));
+            showlist.Add(a[i]);
         }
 
         String JsonBuilder = Select_News(showlist);

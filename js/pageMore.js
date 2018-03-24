@@ -22,9 +22,11 @@ $(function pageMore() {
             data: "{'page':'" + page + "'}",
             dataType: "json",
             success: function (result) {
-                console.log(result);
+                var result_true = eval("("+result.d+")");
+                var news = result_true['Tables'][0]['Rows']
+                console.log(news);
 
-                var div = "<div>" + result.d + "</div>";
+                var div = "<div>" + news + "</div>";
                 $('.InformationList').append(div);
             },
             error: function (textStatus, errorThrown) {
@@ -36,3 +38,25 @@ $(function pageMore() {
 
     scrollListen();
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
