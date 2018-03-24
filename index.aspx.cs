@@ -13,11 +13,8 @@ using System.Text;
 
 public partial class index : System.Web.UI.Page
 {
-    [WebMethod]
-    public static string getNewsDiv()
-    {
-        return "这是第条资讯";
-    }
+
+
     //全局变量 用于迭代资讯主键
     int count = 1;
     String str = "";
@@ -517,10 +514,12 @@ public partial class index : System.Web.UI.Page
     }
 
     //获取前台页面需要显示的资讯的多个属性值
-    public static string GetNewsJson(int page)
+    [WebMethod]
+    public static string GetNewsJson(string page)
     {
-        int st = page * 4;
-        int end = page * 4;
+        int page_int = int.Parse(page);
+        int st = page_int * 4;
+        int end = (page_int+1) * 4;
 
         ArrayList a = Recommand_Nid();
 

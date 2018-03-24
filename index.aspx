@@ -32,7 +32,7 @@
 
                     if (bottomPadding < 50) {
                         pageShow();
-                        page++;
+                        //page++;
                     }
                 });
             }
@@ -41,9 +41,9 @@
                 $.ajax({
                     type: 'post',
                     contentType: "application/json",
-                    url: 'index.aspx/getNewsDiv',
+                    url: 'index.aspx/getNewsJson',
                     async: true,
-                    data: "{}",
+                    data: "{'page':'"+ page +"'}",
                     dataType: "json",
                     success: function (result) {
                         console.log(result);
