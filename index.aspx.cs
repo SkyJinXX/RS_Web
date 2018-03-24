@@ -8,6 +8,8 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using System.Web.Services;
+using System.Collections;
+using System.Text;
 
 public partial class index : System.Web.UI.Page
 {
@@ -409,6 +411,128 @@ public partial class index : System.Web.UI.Page
     protected void Collecting_C(object sender, EventArgs e)
     {
         co = 1;
+    }
+
+    //搜索生成关键字查询的资讯显示序列
+    public static ArrayList Search_Nid(TextBox tb)
+    {
+        ArrayList res = new ArrayList();
+
+        String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        SqlConnection conn = new SqlConnection(connstr);
+        conn.Open();
+
+        SqlCommand cmd = new SqlCommand("", conn);
+        cmd.CommandText = "select * from News where Ntitle like '%" + tb.Text + "%' or Nkeyword like '%"
+            + tb.Text + "%'";
+
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        foreach (DataRow row in ds.Tables[0].Rows)
+        {
+            res.Add(Convert.ToInt32(row[0].ToString()));
+        }
+        //Console.Write("{0}", s.ToString());
+        conn.Close();
+
+        return res;
+    }
+
+    //默认生成总的Nid序列
+    public static ArrayList Recommand_Nid()
+    {
+        ArrayList res = new ArrayList();
+        for (int i = 1; i < 9; i++) {
+            res.Add(i);
+        }
+        return res;
+    }
+
+    //选择某组资讯返回json格式
+    public static String Select_News(ArrayList a)
+    {
+        String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        SqlConnection conn = new SqlConnection(connstr);
+        conn.Open();
+
+        SqlCommand cmd = new SqlCommand("", conn);
+        cmd.CommandText = "select Nid,Ntitle,Ncontent,Ntype,Ngoods,Nbads from News where Nid in ('"
+                            + a.IndexOf(0) + "','" + a.IndexOf(1) + "','" + a.IndexOf(2) + "','"
+                            + a.IndexOf(3) + "')";
+
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        String s = DatasetToJson(ds);
+        //Response.Write("" +s.ToString());
+        Console.Write("{0}", s.ToString());
+
+        conn.Close();
+
+        return s;
+    }
+
+    //数据集的总的（多表）json格式转化
+    public static string DatasetToJson(System.Data.DataSet ds)
+    {
+        StringBuilder json = new StringBuilder();
+        json.Append("{\"Tables\":");
+        json.Append("[");
+        foreach (System.Data.DataTable dt in ds.Tables)
+        {
+            json.Append(DataTableToJson(dt));
+            json.Append(",");
+        }
+        json.Remove(json.Length - 1, 1);
+        json.Append("]");
+        json.Append("}");
+        return json.ToString();
+    }
+
+    //单表的json格式转化
+    public static string DataTableToJson(DataTable dt)
+    {
+        StringBuilder jsonBuilder = new StringBuilder();
+        jsonBuilder.Append("{\"Name\":\"" + dt.TableName + "\",\"Rows");
+        jsonBuilder.Append("\":[");
+        for (int i = 0; i < dt.Rows.Count; i++)
+        {
+            jsonBuilder.Append("{");
+            for (int j = 0; j < dt.Columns.Count; j++)
+            {
+                jsonBuilder.Append("\"");
+                jsonBuilder.Append(dt.Columns[j].ColumnName);
+                jsonBuilder.Append("\":\"");
+                jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\"", "\\\""));
+                jsonBuilder.Append("\",");
+            }
+            jsonBuilder.Remove(jsonBuilder.Length - 1, 1);
+            jsonBuilder.Append("},");
+        }
+        jsonBuilder.Remove(jsonBuilder.Length - 1, 1);
+        jsonBuilder.Append("]");
+        jsonBuilder.Append("}");
+        return jsonBuilder.ToString();
+    }
+
+    //获取前台页面需要显示的资讯的多个属性值
+    public static string GetNewsJson(int page)
+    {
+        int st = page * 4;
+        int end = page * 4;
+
+        ArrayList a = Recommand_Nid();
+
+        ArrayList showlist = new ArrayList();
+        for(int i = st; i < end; i++)
+        {
+            showlist.Add(a.IndexOf(i));
+        }
+
+        String JsonBuilder = Select_News(showlist);
+
+        return JsonBuilder;
     }
 
 }
