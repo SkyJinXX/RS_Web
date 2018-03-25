@@ -1,13 +1,12 @@
 $(function pageMore() {
-    var page = 0;
-    pageShow();
+    
     function scrollListen() {
         $(document).scroll(function () {
             var bottomPadding = $(document).height() - $(document).scrollTop() - $(window).height();
 
             if (bottomPadding < 50) {
                 pageShow();
-                //page++;
+                page++;
             }
         });
     }
@@ -63,7 +62,9 @@ $(function pageMore() {
             }
         });
     }
-
+    var page = 0;
+    pageShow();
+    page++;
     scrollListen();
 })
 
