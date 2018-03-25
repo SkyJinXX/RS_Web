@@ -12,6 +12,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="js/pageMore.js"></script>
 	<link href="Bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet" />
 	<link href="Bootstrap/font-awesome.min.css" type="text/css" rel="stylesheet" />
 	<link href="css/htmleaf-demo.css" rel="stylesheet" type="text/css" />
@@ -23,43 +24,7 @@
 	<link href="css/button.css" rel="stylesheet" type="text/css" />
 	
 	<title>首页</title>
-    <script type="text/javascript">
-        $(function pageMore() {
-            var page = 0;
-            function scrollListen() {
-                $(document).scroll(function () {
-                    var bottomPadding = $(document).height() - $(document).scrollTop() - $(window).height();
-
-                    if (bottomPadding < 50) {
-                        pageShow();
-                        page++;
-                    }
-                });
-            }
-            function pageShow() {
-                var _url = "?action=pageMore&page=" + page;
-                $.ajax({
-                    type: 'post',
-                    contentType: "application/json",
-                    url: 'index.aspx/getNewsDiv',
-                    async: true,
-                    data: "{}",
-                    dataType: "json",
-                    success: function (result) {
-                        console.log(result);
-                        var div = "<div>" + result.d + "</div>";
-                        $('.InformationList').append(div);
-                    },
-                    error: function (textStatus,errorThrown) {
-                        cosole.log(textStatus);
-                        console.log(errorThrown);
-                    }
-                });
-            }
-
-            scrollListen();
-        })
-    </script>
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -83,7 +48,7 @@
                             <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
                         </div>
                     </div>
-                    <!-- sidebar-search  -->
+                    <!-- sidebar-search 123  -->
                 </div>
             </div>
             <nav id="sidebar" class="sidebar-wrapper">
@@ -221,162 +186,6 @@
                     </header>
                     <div class="subline"></div>
                     <div class="InformationList">
-                        <div class="InformationItemOutside">
-                            <div class="InformationItemInside">
-                                <div class="itemLeft">
-                                    <img src="img/a2.jpg" data-am-pureviewed="1">
-                                </div>
-                                <div class="itemRight">
-                                    <div class="informationTitle">
-                                        <a href="view.aspx" class="ahover">你认识萌萌的小熊猫吗？</a>
-                                    </div>
-                                    <div class="informationContent">
-                                        <a href="view.aspx" class="ahover">南极洲又称第七大陆，是地球上最后一个被发现、唯一没有土著人居住的大陆。
-
-南极大陆为通常所说的南大洋（太平洋、印度洋和大西洋的南部水域）所包围，它与南美洲最近的距离为965公里，距新西兰2000公里、距澳大利亚2500公里、距南非3800公里、距中国北京的距离约有12000公里。南极大陆的总面积为1390万平方公里...
-                                        </a>
-                                    </div>
-                                    <div class="type">
-                                        分类
-                                    </div>
-                                    <div class="isLikeBox">
-                                        <input class="isLikeButton" type="button" name="isLike" value="点赞" />
-                                        <input class="isLikeButton" type="button" name="isLike" value="点踩" />
-                                    </div>
-                                </div>
-                                <div class="uninterested">
-                                    <input class="uninterestedButton" type="button" name="uninterested_Button" value="x" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="InformationItemOutside">
-                            <div class="InformationItemInside">
-                                <div class="itemLeft">
-                                    <p>图片显示区域</p>
-                                </div>
-                                <div class="itemRight">
-                                    <%
-                                        News_Load(Label1_News_Title, Label1_News_Content, Label1_News_Tag1, Label1_News_Tag2, Like1, Dislike1, Collection1);
-                                        Liking(Label1_News_Title, Like1);
-                                        Disliking(Label1_News_Title, Dislike1);
-                                        Collecting(Label1_News_Title, Collection1);
-                                    %>
-                                    <div class="informationTitle">
-                                        <%--<a class="ahover">资讯标题</a>--%>
-                                        <a href = "#"><asp:Label ID="Label1_News_Title" Text ="123" class="ahover" runat="server"></asp:Label></a>
-                                    </div>
-                                    <div class="informationContent">
-                                        <%--<a class="ahover">资讯内容摘要</a>--%>
-                                        <asp:Label ID="Label1_News_Content" Text="b" class="ahover" runat="server"></asp:Label>
-                                    </div>
-                                    <div class="type">
-                                        <asp:Label ID="Label1_News_Tag1" runat="server" Text="Label"></asp:Label>
-                                        <asp:Label ID="Label1_News_Tag2" runat="server" Text="Label"></asp:Label>
-                                    </div>
-                                    <div class="isLikeBox">
-                                        <asp:Button class="isLikeButton" ID="Like1" runat="server" Text="点赞" OnClick ="Liking_C"/>
-                                        <asp:Button class="isLikeButton" ID="Dislike1" runat="server" Text="点踩" OnClick="Disliking_C"/>
-                                        <asp:Button class="isLikeButton" ID="Collection1" runat="server" Text="收藏" OnClick="Collecting_C"/>
-                                        <%--<input class="isLikeButton" type="button" name="isLike" id="Like" value="点赞" onclick="Liking" />
-                                        <input class="isLikeButton" type="button" name="isLike" id="Dislike" value="点踩" onclick="Disliking"/>--%>
-                                    </div>
-                                </div>
-                                <div class="uninterested">
-                                    <input class="uninterestedButton" type="button" name="uninterested_Button" value="x" />
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="InformationItemOutside">
-                            <div class="InformationItemInside">
-                                <div class="itemLeft">
-                                    <p>图片显示区域</p>
-                                </div>
-                                <%
-                                    News_Load(Label2_News_Title, Label2_News_Content, Label2_News_Tag1, Label2_News_Tag2, Like2, Dislike2, Collection2);
-                                    Liking(Label2_News_Title, Like2);
-                                    Disliking(Label2_News_Title, Dislike2);
-                                    Collecting(Label2_News_Title, Collection2);
-                                %>
-                                <div class="itemRight">
-                                    <div class="informationTitle">
-                                        <%--<a class="ahover">资讯标题</a>--%>
-                                        <asp:Label class="ahover" ID="Label2_News_Title" runat="server" Text="资讯标题" Enabled ="true"></asp:Label>
-                                        
-                                    </div>
-                                    <div class="informationContent">
-                                        <%--<a class="ahover">资讯内容摘要</a>--%>
-                                        <asp:Label class="ahover" ID="Label2_News_Content" runat="server" Text="资讯内容摘要"></asp:Label>
-                                    </div>
-                                    <div class="type">
-                                        <asp:Label ID="Label2_News_Tag1" runat="server" Text="Label"></asp:Label>
-                                        <asp:Label ID="Label2_News_Tag2" runat="server" Text="Label"></asp:Label>
-                                    </div>
-                                    <div class="isLikeBox">
-                                        <asp:Button class="isLikeButton" ID="Like2" runat="server" Text="点赞" OnClick="Liking_C"/>
-                                        <asp:Button class="isLikeButton" ID="Dislike2" runat="server" Text="点踩" OnClick="Disliking_C"/>
-                                        <asp:Button class="isLikeButton" ID="Collection2" runat="server" Text="收藏" OnClick="Collecting_C"/>
-                                        <%--<input class="isLikeButton" type="button" name="isLike" id="Like" value="点赞" onclick="Liking" />
-                                        <input class="isLikeButton" type="button" name="isLike" id="Dislike" value="点踩" onclick="Disliking"/>--%>
-                                    </div>
-                                </div>
-                                <div class="uninterested">
-                                    <input class="uninterestedButton" type="button" name="uninterested_Button" value="x" />
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="InformationItemOutside">
-                            <div class="InformationItemInside">
-                                <div class="itemLeft">
-                                    <p>图片显示区域</p>
-                                </div>
-                                <div class="itemRight">
-                                    <div class="informationTitle">
-                                        <a class="ahover">资讯标题</a>
-                                    </div>
-                                    <div class="informationContent">
-                                        <a class="ahover">资讯内容摘要</a>
-                                    </div>
-                                    <div class="type">
-                                        分类
-                                    </div>
-                                    <div class="isLikeBox">
-                                        <input class="isLikeButton" type="button" name="isLike" value="点赞" />
-                                        <input class="isLikeButton" type="button" name="isLike" value="点踩" />
-                                    </div>
-                                </div>
-                                <div class="uninterested">
-                                    <input class="uninterestedButton" type="button" name="uninterested_Button" value="x" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="InformationItemOutside">
-                            <div class="InformationItemInside">
-                                <div class="itemLeft">
-                                    <p>图片显示区域</p>
-                                </div>
-                                <div class="itemRight">
-                                    <div class="informationTitle">
-                                        <a class="ahover">资讯标题</a>
-                                    </div>
-                                    <div class="informationContent">
-                                        <a class="ahover">资讯内容摘要</a>
-                                    </div>
-                                    <div class="type">
-                                        分类
-                                    </div>
-                                    <div class="isLikeBox">
-                                        <input class="isLikeButton" type="button" name="isLike" value="点赞" />
-                                        <input class="isLikeButton" type="button" name="isLike" value="点踩" />
-                                    </div>
-                                </div>
-                                <div class="uninterested">
-                                    <input class="uninterestedButton" type="button" name="uninterested_Button" value="x" />
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
                 <footer>
