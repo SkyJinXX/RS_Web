@@ -13,12 +13,9 @@ using System.Text;
 
 public partial class index : System.Web.UI.Page
 {
-
-
     //全局变量 用于迭代资讯主键
     int count = 1;
     String str = "";
-    int li = 0, di = 0, co = 0;
     //页面加载
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -47,48 +44,6 @@ public partial class index : System.Web.UI.Page
         }
     }
 
-    //资讯主键迭代功能
-    protected void Session_Nid_Next(String s)
-    {
-        if (s == "")
-        {
-            Session["Nid"] = count.ToString();
-        }
-        else
-        {
-            //Response.Write("<script>alert('" + s + "')</script>");
-            int st = 0, len = 0;
-            if (count == 1)
-            {
-                len = Convert.ToInt32(s.IndexOf('-')) - st;
-            }
-            else
-            {
-                int tmp = 0;
-                for (int i = 0; i < s.Length; i++)
-                {
-                    if (s[i] == '-')
-                    {
-                        tmp++;
-                        if (tmp == count - 1)
-                        {
-                            st = i + 1;
-                        }
-                        if (tmp == count)
-                        {
-                            len = i - st;
-                            break;
-                        }
-                    }
-                }
-            }
-            String q = s.Substring(st, len);
-            Session["Nid"] = q;
-            //Response.Write("<script>alert('" + Session["Nid"].ToString() + "')</script>");
-        }
-        count++;
-    }
-
     //注销事件
     protected void Button_logout_Click(object sender, EventArgs e)
     {
@@ -101,124 +56,110 @@ public partial class index : System.Web.UI.Page
     }
 
     //点赞事件 
-    protected void Liking(Label id_title, Button id_like)
+    [WebMethod]
+    protected static void Liking(String nid)
     {
-        if (IsPostBack && li == 1)
+        if (nid != null && nid != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-            cmd.CommandText = "select nid from news where ntitle = '" + id_title.Text + "'";
-
-            string nid = cmd.ExecuteScalar().ToString();
-
-            if (nid != null)
+            cmd.CommandText = "select uid from u_n where nid = '" + nid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "select uid from u_n where nid = '" + nid + "' and uid = '" + Session["uid"] + "'";
-                if (cmd.ExecuteScalar() != null)
-                {
-                    cmd.CommandText = "update u_n set isok = '" + true + "' where  nid = '" + nid + "' and uid = '"
-                        + Session["uid"] + "' ";
-                    cmd.ExecuteScalar();
-                }
-                else
-                {
-                    TimeSpan ts = new TimeSpan(0, 7, 55);
-                    cmd.CommandText = "insert into u_n values('" + Session["uid"] + "','" + nid + "','"
-                        + ts + "','" + false + "','" + true + "','" + false + "')";
-                    cmd.ExecuteScalar();
-                }
-                cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isok = '" + true + "'";
-
-                id_like.Text = "已点赞 ( " + cmd.ExecuteScalar().ToString() + " ) ";
-                id_like.Enabled = false;
+                cmd.CommandText = "update u_n set isok = '" + true + "' where  nid = '" + nid + "' and uid = '"
+                    + HttpContext.Current.Session["uid"] + "' ";
+                cmd.ExecuteScalar();
             }
-            conn.Close();
+            else
+            {
+                TimeSpan ts = new TimeSpan(0, 7, 55);
+                cmd.CommandText = "insert into u_n values('" + HttpContext.Current.Session["uid"] + "','" + nid + "','"
+                    + ts + "','" + false + "','" + true + "','" + false + "')";
+                cmd.ExecuteScalar();
+            }
+            cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isok = '" + true + "'";
 
-            li = 0;
+            //id_like.Text = "已点赞 ( " + cmd.ExecuteScalar().ToString() + " ) ";
+            //id_like.Enabled = false;
+            conn.Close();
+        }
+        else
+        {
+            Console.Write("传入的Nid为空错误");
         }
     }
 
     //点踩事件
-    protected void Disliking(Label id_title, Button id_dislike)
+    [WebMethod]
+    protected static void Disliking(string nid)
     {
-        if (IsPostBack && di == 1)
+        if (nid != null && nid != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-            cmd.CommandText = "select nid from news where ntitle = '" + id_title.Text + "'";
-
-            string nid = cmd.ExecuteScalar().ToString();
-
-            if (nid != null)
+            
+            cmd.CommandText = "select uid from u_n where nid = '" + nid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "select uid from u_n where nid = '" + nid + "' and uid = '" + Session["uid"] + "'";
-                if (cmd.ExecuteScalar() != null)
-                {
-                    cmd.CommandText = "update u_n set isbad = '" + true + "' where  nid = '" + nid + "' and uid = '"
-                        + Session["uid"] + "' ";
-                    cmd.ExecuteScalar();
-                }
-                else
-                {
-                    TimeSpan ts = new TimeSpan(0, 10, 15);
-                    cmd.CommandText = "insert into u_n values('" + Session["uid"] + "','" + nid + "','"
-                        + ts + "','" + false + "','" + false + "','" + true + "')";
-                    cmd.ExecuteScalar();
-                }
-                cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isbad = '" + true + "'";
-
-                id_dislike.Text = "已点踩 ( " + cmd.ExecuteScalar().ToString() + " ) ";
-                id_dislike.Enabled = false;
+                cmd.CommandText = "update u_n set isbad = '" + true + "' where  nid = '" + nid + "' and uid = '"
+                    + HttpContext.Current.Session["uid"] + "' ";
+                cmd.ExecuteScalar();
             }
-            conn.Close();
+            else
+            {
+                TimeSpan ts = new TimeSpan(0, 10, 15);
+                cmd.CommandText = "insert into u_n values('" + HttpContext.Current.Session["uid"] + "','" + nid + "','"
+                    + ts + "','" + false + "','" + false + "','" + true + "')";
+                cmd.ExecuteScalar();
+            }
+            cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isbad = '" + true + "'";
 
-            di = 0;
+            //id_dislike.Text = "已点踩 ( " + cmd.ExecuteScalar().ToString() + " ) ";
+            //id_dislike.Enabled = false;
+            conn.Close();
+        }
+        else
+        {
+            Console.Write("传入的Nid为空错误");
         }
     }
 
     //收藏事件
-    protected void Collecting(Label id_title, Button id_collection)
+    [WebMethod]
+    protected static void Collecting(string nid)
     {
-        if (IsPostBack && co == 1)
+        if (nid != null && nid != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-            cmd.CommandText = "select nid from news where ntitle = '" + id_title.Text + "'";
-
-            string nid = cmd.ExecuteScalar().ToString();
-
-            if (nid != null)
+            cmd.CommandText = "select uid from u_n where nid = '" + nid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "select uid from u_n where nid = '" + nid + "' and uid = '" + Session["uid"] + "'";
-                if (cmd.ExecuteScalar() != null)
-                {
-                    cmd.CommandText = "update u_n set iscollect = '" + true + "' where  nid = '" + nid + "' and uid = '"
-                        + Session["uid"] + "' ";
-                    cmd.ExecuteScalar();
-                }
-                else
-                {
-                    TimeSpan ts = new TimeSpan(0, 9, 30);
-                    cmd.CommandText = "insert into u_n values('" + Session["uid"] + "','" + nid + "','"
-                        + ts + "','" + true + "','" + false + "','" + false + "')";
-                    cmd.ExecuteScalar();
-                }
-
-                id_collection.Text = "已收藏^_^ ";
-                id_collection.Enabled = false;
+                cmd.CommandText = "update u_n set iscollect = '" + true + "' where  nid = '" + nid + "' and uid = '"
+                    + HttpContext.Current.Session["uid"] + "' ";
+                cmd.ExecuteScalar();
             }
-            conn.Close();
+            else
+            {
+                TimeSpan ts = new TimeSpan(0, 9, 30);
+                cmd.CommandText = "insert into u_n values('" + HttpContext.Current.Session["uid"] + "','" + nid + "','"
+                    + ts + "','" + true + "','" + false + "','" + false + "')";
+                cmd.ExecuteScalar();
+            }
 
-            co = 0;
+            //id_collection.Text = "已收藏^_^ ";
+            //id_collection.Enabled = false;
+            
+            conn.Close();
         }
     }
 
@@ -300,7 +241,7 @@ public partial class index : System.Web.UI.Page
     protected void News_Load(Label id_title, Label id_content, Label id_tag1, Label id_tag2, Button id_like, Button id_dislike, Button id_collection)
     {
 
-        Session_Nid_Next(str);
+        //Session_Nid_Next(str);
 
         if (Session["Nid"] == null)
         {
@@ -395,21 +336,6 @@ public partial class index : System.Web.UI.Page
         }
     }
 
-    protected void Liking_C(object sender, EventArgs e)
-    {
-        li = 1;
-    }
-
-    protected void Disliking_C(object sender, EventArgs e)
-    {
-        di = 1;
-    }
-
-    protected void Collecting_C(object sender, EventArgs e)
-    {
-        co = 1;
-    }
-
     //搜索生成关键字查询的资讯显示序列
     public static ArrayList Search_Nid(TextBox tb)
     {
@@ -423,6 +349,11 @@ public partial class index : System.Web.UI.Page
         cmd.CommandText = "select * from News where Ntitle like '%" + tb.Text + "%' or Nkeyword like '%"
             + tb.Text + "%'";
 
+        if (cmd.ExecuteScalar() == null)
+        {
+            cmd.CommandText = "select top(4) from News order by goods desc, Nid asc";
+        }
+
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
         da.Fill(ds);
@@ -430,6 +361,7 @@ public partial class index : System.Web.UI.Page
         {
             res.Add(Convert.ToInt32(row[0].ToString()));
         }
+        
         //Console.Write("{0}", s.ToString());
         conn.Close();
 
