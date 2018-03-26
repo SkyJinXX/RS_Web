@@ -30,4 +30,9 @@ public partial class interests : System.Web.UI.Page
         Chart1.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
         Chart1.Series[0].Points.DataBindXY(xData, yData);
     }
+
+    protected void search_Click(object sender, EventArgs e)
+    {
+
+    }
 }

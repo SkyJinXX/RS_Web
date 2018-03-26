@@ -55,25 +55,39 @@
 	cursor: pointer;
 }
 
-.nav-right{
-	width:20%;
-	min-height: 20em;
-	padding-top: 0.8em;
-	padding-bottom: 0.8em;
-	color: #2A2F43;
-	background-color: #FFFFFF;
-	float: left;
-	position: fixed;
-	margin-left: 72%;
-	box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+.nav-right-one {
+    width: 20%;
+    min-height: 20em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    color: #2A2F43;
+    background-color: #FFFFFF;
+    float: left;
+    position: fixed;
+    margin-left: 72%;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
 }
 
-.nav-right ul{
+.nav-right-two {
+    width: 20%;
+    min-height: 10em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    color: #2A2F43;
+    background-color: #FFFFFF;
+    float: left;
+    position: fixed;
+    margin-left: 72%;
+    margin-top:25%;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.nav-right-one ul,.nav-right-two ul{
 	list-style: none;
 	list-style-type: none;
 }
 
-.nav-right ul li{
+.nav-right-one ul li,.nav-right-two ul li{
 	font-size: 1.2em;
 	line-height: 1.8em;
 	list-style: none;
@@ -86,22 +100,29 @@
 	-moz-transition: 0.6s;
 }
 
-.nav-right ul li:hover{
+.nav-right-one ul li:hover,.nav-right-two ul li:hover{
 	cursor: pointer;
 	background-color: #E0EEEE;
 }
 
-.nav-right ul li a{
+.nav-right-one ul li a,.nav-right-two ul li a{
 	color: #8DB6CD;
 	transition: 0.6s;
 	-webkit-transition: 0.6s;
 	-moz-transition: 0.6s;
 }
 
-.nav-right ul li a:hover{
+.nav-right-one ul li a:hover,.nav-right-two ul li a:hover{
 	cursor: pointer;
 }
 
 .showLeftPush:hover{
     cursor:default;
+}
+
+.nav-right-one-title {
+    width: 100%;
+    font-size: 1.2em;
+    text-align: center;
+    height: 1em;
 }

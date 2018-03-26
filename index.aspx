@@ -31,6 +31,7 @@
     <link href="style/content.css" rel="stylesheet" type="text/css" />
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
+    <link href="style/custom.css" rel="stylesheet">
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -51,7 +52,6 @@
     <!-- Metis Menu -->
     <script src="js/metisMenu.min.js"></script>
     <script src="js/custom.js"></script>
-    <link href="style/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
 	<title>首页</title>
     
@@ -63,7 +63,7 @@
 			<div class="header-left">
 				<!--logo -->
 				<div class="logo">
-					<a href="index.html">
+					<a href="index.aspx">
 						<img src="images/logo_2.gif" alt="" />
 							
 					</a>
@@ -108,7 +108,7 @@
 									</a></li>
 									<li>
 										<div class="notification_bottom">
-											<a href="interests.html">See all messages</a>
+											<a href="interests.aspx">See all messages</a>
 										</div> 
 									</li>
 								</ul>
@@ -161,7 +161,7 @@
 									</a></li>
 									<li>
 										<div class="notification_bottom">
-											<a href="#">See all pending tasks</a>
+											<a href="interests.aspx">See all pending tasks</a>
 										</div> 
 									</li>
 								</ul>
@@ -324,170 +324,23 @@
 						</div>
 						
 					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="panel panel-widget">
-								<div class="panel-title">
-								  资讯1标题
-								  <!--
-                                  	作者：994920937@qq.com
-                                  	时间：2018-03-24
-                                  	描述：标签显示分类
-                                  -->
-								  <ul class="panel-tools">
-									<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-									<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-									<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-								  </ul>
-								</div>
-								<div class="panel-body" style="display: block;">
-									<!-- candlestick -->
-									<div class="candlestick">
-										
-										<div id="example-8">
-											<!--<span>资讯内容</span>-->
-											<div class="content-left">
-												图片
-											</div>
-											<div class="content-right">
-												<a href="#">
-													<!--标签显示咨询内容-->dasdasdasd
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-												</a>
-											</div>
-										</div>
-										<div class="sort">
-											gdfgfd
-										</div>
-										<div class="isLikeButton">
-											<input type="button" class="collect" value="收藏" />
-                                            <div class="button">
-                                                <input class="isLikeButton_like" type="button" value="" />
-                                            </div>
-											<div class="button">
-											    <input class="isLikeButton_dislike" type="button" value="" />
-											</div>
-										</div>
-									</div>
-									<!-- //candlestick -->
-								</div>
-							</div>
-						</div>
-						
-					</div>
-                    <div class="row">
-						<div class="col-md-6">
-							<div class="panel panel-widget">
-								<div class="panel-title">
-								  资讯1标题
-								  <!--
-                                  	作者：994920937@qq.com
-                                  	时间：2018-03-24
-                                  	描述：标签显示分类
-                                  -->
-								  <ul class="panel-tools">
-									<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-									<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-									<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-								  </ul>
-								</div>
-								<div class="panel-body" style="display: block;">
-									<!-- candlestick -->
-									<div class="candlestick">
-										
-										<div id="example-8">
-											<!--<span>资讯内容</span>-->
-											<div class="content-left">
-												图片
-											</div>
-											<div class="content-right">
-												<a href="#">
-													<!--标签显示咨询内容-->dasdasdasd
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-												</a>
-											</div>
-										</div>
-										<div class="sort">
-											gdfgfd
-										</div>
-										<div class="isLikeButton">
-											<input type="button" class="collect" value="收藏" />
-                                            <div class="button">
-                                                <input class="isLikeButton_like" type="button" value="" />
-                                            </div>
-											<div class="button">
-											    <input class="isLikeButton_dislike" type="button" value="" />
-											</div>
-										</div>
-									</div>
-									<!-- //candlestick -->
-								</div>
-							</div>
-						</div>
-						
-					</div>
-                    <div class="row">
-						<div class="col-md-6">
-							<div class="panel panel-widget">
-								<div class="panel-title">
-								  资讯1标题
-								  <!--
-                                  	作者：994920937@qq.com
-                                  	时间：2018-03-24
-                                  	描述：标签显示分类
-                                  -->
-								  <ul class="panel-tools">
-									<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-									<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-									<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-								  </ul>
-								</div>
-								<div class="panel-body" style="display: block;">
-									<!-- candlestick -->
-									<div class="candlestick">
-										
-										<div id="example-8">
-											<!--<span>资讯内容</span>-->
-											<div class="content-left">
-												图片
-											</div>
-											<div class="content-right">
-												<a href="#">
-													<!--标签显示咨询内容-->dasdasdasd
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-												</a>
-											</div>
-										</div>
-										<div class="sort">
-											gdfgfd
-										</div>
-										<div class="isLikeButton">
-											<input type="button" class="collect" value="收藏" />
-                                            <div class="button">
-                                                <input class="isLikeButton_like" type="button" value="" />
-                                            </div>
-											<div class="button">
-											    <input class="isLikeButton_dislike" type="button" value="" />
-											</div>
-										</div>
-									</div>
-									<!-- //candlestick -->
-								</div>
-							</div>
-						</div>
-						
-					</div>
+					
 				</div>
-				<div class="nav-right">
+                <div class="nav-right-one">
+                    <div class="nav-right-one-title">热门</div>
 					<ul>
+						<li><a href="#"> link1</a></li>
+						<li><a href="#"> link2</a></li>
+                        <li><a href="#"> link3</a></li>
+						<li><a href="#"> link4</a></li>
+						<li><a href="#"> link5</a></li>
+					</ul>
+				</div>
+				<div class="nav-right-two">
+					<ul>
+						<li><i></i><a href="#">我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>
-						<li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
 						<li><a href="#">link3</a></li>
 						<li><a href="#">link4</a></li>
 					</ul>
