@@ -1,10 +1,7 @@
-$(function pageMore() {
-    var page = 0;
-    pageShow();
+﻿$(function () {
     function scrollListen() {
         $(document).scroll(function () {
             var bottomPadding = $(document).height() - $(document).scrollTop() - $(window).height();
-
             if (bottomPadding < 50) {
                 pageShow();
                 //page++;
@@ -13,7 +10,6 @@ $(function pageMore() {
     }
 
     function pageShow() {
-        var _url = "?action=pageMore&page=" + page;
         $.ajax({
             type: 'post',
             contentType: "application/json",
@@ -26,8 +22,8 @@ $(function pageMore() {
                 var news = result_true['Tables'][0]['Rows'];
                 $.each(news,function(index, value){
                     $('.InformationList').append(
-                        '<div class="InformationItemOutside" Nid="1">' +
-                            '<div class="InformationItemInside">' +
+                        '<div class="InformationItemOutside">' +
+                            '<div class="InformationItemInside" Nid="'+value['Nid']+'">' +
                                 '<div class="itemLeft">' +
                                     '<img src="img/a2.jpg" data-am-pureviewed="1">' +
                                 '</div>' +
@@ -43,9 +39,15 @@ $(function pageMore() {
                                         value['Ntype'] +
                                     '</div>' +
                                     '<div class="isLikeBox">' +
-                                        '<input class="isLikeButton" type="button" name="isLike" value="点赞" />' +
-                                        '<input class="isLikeButton" type="button" name="isLike" value="点踩" />' +
-                                        '<input class="isLikeButton" type="button" name="isLike" value="收藏" />' +
+                                        '<div class = "likeBox">' +
+                                            '<img src="/img/good.png" width="25" height="25">'+'<p>'+ value['Ngoods'] +'</p>' +
+                                        '</div>' +
+                                        '<div class = "unlikeBox">' +
+                                            '<img src="/img/bad.png" width="25" height="25">'+'<p>'+ value['Nbads'] +'</p>' +
+                                        '</div>' +
+                                        '<div class = "collectBox">' +
+                                            '<button type="button" class="isLikeButton" id = "collectButton">' + '收藏' + '</button>' +
+                                        '</div>' +
                                     '</div>' +
                                 '</div>' +
                                 '<div class="uninterested">' +
@@ -63,9 +65,82 @@ $(function pageMore() {
             }
         });
     }
+    function likeClick(){
+    	$(document).on("click", ".likeBox", function(){
+        var Nid = jQuery(this).parent().parent().parent().attr('Nid');
+        var number = jQuery(this).children('p').text();
+        number = (parseInt(number) + 1).toString();
+        jQuery(this).children('p').text(number);
+        $.ajax({
+            type: 'post',
+            contentType: "application/json",
+            url: 'index.aspx/Liking',
+            async: true,
+            data: "{'nid':'" + Nid + "'}",
+            dataType: "json",
+            success: function (result) {
+            	alert('成功点赞');
+            },
+            error: function (textStatus, errorThrown) {
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        });
+    });
+    }
+    function unlikeClick(){
+    	$(document).on("click", ".unlikeBox", function(){
+        var Nid = jQuery(this).parent().parent().parent().attr('Nid');
+        var number = jQuery(this).children('p').text();
+        number = (parseInt(number) + 1).toString();
+        jQuery(this).children('p').text(number);
+		$.ajax({
+            type: 'post',
+            contentType: "application/json",
+            url: 'index.aspx/Disliking',
+            async: true,
+            data: "{'nid':'" + Nid + "'}",
+            dataType: "json",
+            success: function (result) {
+            	alert('成功点踩');
+            },
+            error: function (textStatus, errorThrown) {
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        });
+    });
+    }
+    function collectClick(){
+    	$(document).on("click", ".collectBox", function(){
+        var Nid = jQuery(this).parent().parent().parent().attr('Nid');
+        $.ajax({
+            type: 'post',
+            contentType: "application/json",
+            url: 'index.aspx/Collecting',
+            async: true,
+            data: "{'nid':'" + Nid + "'}",
+            dataType: "json",
+            success: function (result) {
+            	alert('成功收藏');
+            },
+            error: function (textStatus, errorThrown) {
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        });
+    });
+    }
 
+    var page = 0;
+    pageShow();
     scrollListen();
+    likeClick();
+    unlikeClick();
+    collectClick();
+
 })
+
 
 
 
