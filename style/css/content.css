@@ -1,0 +1,66 @@
+.content-left{
+	width: 34%;
+	height: auto;
+	float: left;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.content-right{
+	width: 60%;
+	height: auto;
+	float: left;
+}
+
+.content-right a{
+	color: #454545;
+}
+
+.content-right a:hover{
+	cursor: pointer;
+	color: #454545;
+}
+
+.sort{
+	width: 100%;
+	line-height: 1.2em;
+	border-left: 3px solid #9AC0CD ;
+	margin-left: 0.5em;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	padding-left: 0.8em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	clear: both;
+	color: #00C2EA;
+}
+
+.isLikeButton{
+	width: 30%;
+	right: 5%;
+}
+
+.isLikeButton_like{
+	width: 1.5em;
+	height: 1.5em;
+	line-height: 1.3em;
+	color: #19CF8A;
+	background-color: #E0FFFF;
+	border: none;
+	background: url(../images/image/点赞.png) no-repeat;
+}
+
+.isLikeButton_like:hover{
+	
+}
+
+.isLikeButton_dislike{
+	width: 1.5em;
+	height: 1.5em;
+	line-height: 1.3em;
+	color: #19CF8A;
+	background-color: white;
+	border: none;
+	background: url(../images/image/点踩.png) no-repeat;
+}
+
