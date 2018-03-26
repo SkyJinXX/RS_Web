@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 ﻿$(function () {
+=======
+$(function pageMore() {
+    
+>>>>>>> c1ba98f2165b193a1507e84a359e26900e4ffb71
     function scrollListen() {
         $(document).scroll(function () {
             var bottomPadding = $(document).height() - $(document).scrollTop() - $(window).height();
             if (bottomPadding < 50) {
                 pageShow();
-                //page++;
+                page++;
             }
         });
     }
@@ -65,6 +70,7 @@
             }
         });
     }
+<<<<<<< HEAD
     function likeClick(){
     	$(document).on("click", ".likeBox", function(){
         var Nid = jQuery(this).parent().parent().parent().attr('Nid');
@@ -134,6 +140,11 @@
 
     var page = 0;
     pageShow();
+=======
+    var page = 0;
+    pageShow();
+    page++;
+>>>>>>> c1ba98f2165b193a1507e84a359e26900e4ffb71
     scrollListen();
     likeClick();
     unlikeClick();

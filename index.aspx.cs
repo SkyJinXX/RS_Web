@@ -372,7 +372,7 @@ public partial class index : System.Web.UI.Page
     public static ArrayList Recommand_Nid()
     {
         ArrayList res = new ArrayList();
-        for (int i = 1; i < 9; i++) {
+        for (int i = 1; i < 100; i++) {
             res.Add(i);
         }
         return res;
@@ -433,7 +433,18 @@ public partial class index : System.Web.UI.Page
                 jsonBuilder.Append("\"");
                 jsonBuilder.Append(dt.Columns[j].ColumnName);
                 jsonBuilder.Append("\":\"");
-                jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\"", "\\\""));
+
+                if (j == 2)
+                {
+                    String s = dt.Rows[i][j].ToString();
+                    s = s.Substring(0, 110);
+                     
+                    jsonBuilder.Append(s.Replace("\"", "\\\""));
+                }
+                else
+                {
+                    jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\"", "\\\""));
+                }
                 jsonBuilder.Append("\",");
             }
             jsonBuilder.Remove(jsonBuilder.Length - 1, 1);
@@ -452,6 +463,7 @@ public partial class index : System.Web.UI.Page
         int page_int = int.Parse(page);
         int st = page_int * 4;
         int end = (page_int+1) * 4;
+        Console.Write("{0}x{1}", st, end);
         ArrayList a = Recommand_Nid();
 
         ArrayList showlist = new ArrayList();
