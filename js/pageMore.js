@@ -90,7 +90,7 @@
             data: "{'nid':'" + Nid + "'}",
             dataType: "json",
             success: function (result) {
-            	alert('点赞成功');
+
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);
@@ -101,7 +101,7 @@
     }
     function unlikeClick(){
     	$(document).on("click", ".unlikeBox", function(){
-        var Nid = jQuery(this).parent().parent().parent().attr('Nid');
+        var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
         var number = jQuery(this).children('p').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('p').text(number);
@@ -124,7 +124,7 @@
     }
     function collectClick(){
     	$(document).on("click", ".collectBox", function(){
-        var Nid = jQuery(this).parent().parent().parent().attr('Nid');
+        var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
         $.ajax({
             type: 'post',
             contentType: "application/json",
