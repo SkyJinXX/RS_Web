@@ -37,6 +37,7 @@
     <!-- //chart -->
      <!-- js-->
     <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/pageMore.js"></script>
     <script src="js/modernizr.custom.js"></script>
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
@@ -271,218 +272,63 @@
 				<!-- //four-grids -->
 				<!--row-->
 				<div class="message-left">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="panel panel-widget">
-								<div class="panel-title">
-								  资讯1标题
-								  <!--
-                                  	作者：994920937@qq.com
-                                  	时间：2018-03-24
-                                  	描述：标签显示分类
-                                  -->
-								  <ul class="panel-tools">
-									<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-									<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-									<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-								  </ul>
-								</div>
-								<div class="panel-body" style="display: block;">
-									<!-- candlestick -->
-									<div class="candlestick">
-										
-										<div id="example-8">
-											<!--<span>资讯内容</span>-->
-											<div class="content-left">
-												图片
-											</div>
-											<div class="content-right">
-												<a href="#">
-													<!--标签显示咨询内容-->dasdasdasd
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-												</a>
-											</div>
-										</div>
-										<div class="sort">
-											gdfgfd
-										</div>
-										<div class="isLikeButton">
-											<input type="button" class="collect" value="收藏" />
-                                            <div class="button">
-                                                <input class="isLikeButton_like" type="button" value="" />
-                                            </div>
-											<div class="button">
-											    <input class="isLikeButton_dislike" type="button" value="" />
-											</div>
-										</div>
-									</div>
-									<!-- //candlestick -->
-								</div>
-							</div>
-						</div>
-						
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="panel panel-widget">
-								<div class="panel-title">
-								  资讯1标题
-								  <!--
-                                  	作者：994920937@qq.com
-                                  	时间：2018-03-24
-                                  	描述：标签显示分类
-                                  -->
-								  <ul class="panel-tools">
-									<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-									<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-									<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-								  </ul>
-								</div>
-								<div class="panel-body" style="display: block;">
-									<!-- candlestick -->
-									<div class="candlestick">
-										
-										<div id="example-8">
-											<!--<span>资讯内容</span>-->
-											<div class="content-left">
-												图片
-											</div>
-											<div class="content-right">
-												<a href="#">
-													<!--标签显示咨询内容-->dasdasdasd
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-												</a>
-											</div>
-										</div>
-										<div class="sort">
-											gdfgfd
-										</div>
-										<div class="isLikeButton">
-											<input type="button" class="collect" value="收藏" />
-                                            <div class="button">
-                                                <input class="isLikeButton_like" type="button" value="" />
-                                            </div>
-											<div class="button">
-											    <input class="isLikeButton_dislike" type="button" value="" />
-											</div>
-										</div>
-									</div>
-									<!-- //candlestick -->
-								</div>
-							</div>
-						</div>
-						
-					</div>
                     <div class="row">
-						<div class="col-md-6">
-							<div class="panel panel-widget">
-								<div class="panel-title">
-								  资讯1标题
+
+
+                        <div class="col-md-6">
+                            <div class="panel panel-widget">
+                                <div class="panel-title">
+                                    资讯1标题
 								  <!--
                                   	作者：994920937@qq.com
                                   	时间：2018-03-24
                                   	描述：标签显示分类
                                   -->
-								  <ul class="panel-tools">
-									<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-									<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-									<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-								  </ul>
-								</div>
-								<div class="panel-body" style="display: block;">
-									<!-- candlestick -->
-									<div class="candlestick">
-										
-										<div id="example-8">
-											<!--<span>资讯内容</span>-->
-											<div class="content-left">
-												图片
-											</div>
-											<div class="content-right">
-												<a href="#">
-													<!--标签显示咨询内容-->dasdasdasd
+                                    <ul class="panel-tools">
+                                        <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+                                        <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                                        <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-body" style="display: block;">
+                                    <!-- candlestick -->
+                                    <div class="candlestick">
+
+                                        <div id="example-8">
+                                            <!--<span>资讯内容</span>-->
+                                            <div class="content-left">
+                                                图片
+                                            </div>
+                                            <div class="content-right">
+                                                <a href="#">
+                                                    <!--标签显示咨询内容-->
+                                                    dasdasdasd
 													scaasasasaasasassasaassaasads
 													scaasasasaasasassasaassaasads
 													scaasasasaasasassasaassaasads
-												</a>
-											</div>
-										</div>
-										<div class="sort">
-											gdfgfd
-										</div>
-										<div class="isLikeButton">
-											<input type="button" class="collect" value="收藏" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="sort">
+                                            gdfgfd
+                                        </div>
+                                        <div class="isLikeButton">
+                                            <input type="button" class="collect" value="收藏" />
                                             <div class="button">
                                                 <input class="isLikeButton_like" type="button" value="" />
                                             </div>
-											<div class="button">
-											    <input class="isLikeButton_dislike" type="button" value="" />
-											</div>
-										</div>
-									</div>
-									<!-- //candlestick -->
-								</div>
-							</div>
-						</div>
-						
-					</div>
-                    <div class="row">
-						<div class="col-md-6">
-							<div class="panel panel-widget">
-								<div class="panel-title">
-								  资讯1标题
-								  <!--
-                                  	作者：994920937@qq.com
-                                  	时间：2018-03-24
-                                  	描述：标签显示分类
-                                  -->
-								  <ul class="panel-tools">
-									<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
-									<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
-									<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-								  </ul>
-								</div>
-								<div class="panel-body" style="display: block;">
-									<!-- candlestick -->
-									<div class="candlestick">
-										
-										<div id="example-8">
-											<!--<span>资讯内容</span>-->
-											<div class="content-left">
-												图片
-											</div>
-											<div class="content-right">
-												<a href="#">
-													<!--标签显示咨询内容-->dasdasdasd
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-													scaasasasaasasassasaassaasads
-												</a>
-											</div>
-										</div>
-										<div class="sort">
-											gdfgfd
-										</div>
-										<div class="isLikeButton">
-											<input type="button" class="collect" value="收藏" />
                                             <div class="button">
-                                                <input class="isLikeButton_like" type="button" value="" />
+                                                <input class="isLikeButton_dislike" type="button" value="" />
                                             </div>
-											<div class="button">
-											    <input class="isLikeButton_dislike" type="button" value="" />
-											</div>
-										</div>
-									</div>
-									<!-- //candlestick -->
-								</div>
-							</div>
-						</div>
-						
-					</div>
+                                        </div>
+                                    </div>
+                                    <!-- //candlestick -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
 				</div>
 				<div class="nav-right">
 					<ul>
