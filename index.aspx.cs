@@ -57,7 +57,7 @@ public partial class index : System.Web.UI.Page
 
     //点赞事件 
     [WebMethod]
-    protected static void Liking(String nid)
+    public static void Liking(String nid)
     {
         if (nid != null && nid != "")
         {
@@ -94,7 +94,7 @@ public partial class index : System.Web.UI.Page
 
     //点踩事件
     [WebMethod]
-    protected static void Disliking(string nid)
+    public static void Disliking(string nid)
     {
         if (nid != null && nid != "")
         {
@@ -132,7 +132,7 @@ public partial class index : System.Web.UI.Page
 
     //收藏事件
     [WebMethod]
-    protected static void Collecting(string nid)
+    public static void Collecting(string nid)
     {
         if (nid != null && nid != "")
         {
