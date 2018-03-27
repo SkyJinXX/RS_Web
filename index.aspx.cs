@@ -395,7 +395,7 @@ public partial class index : System.Web.UI.Page
         conn.Open();
 
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select Nid,Ntitle,Ncontent,Ntype,Ngoods,Nbads from News where Nid in ('"
+        cmd.CommandText = "select Nid,Ntitle,Ncontent,Ntype,Ngoods,Nbads,Nimage_url from News where Nid in ('"
                             + a[0] + "','" + a[1] + "','" + a[2] + "','"
                             + a[3] + "')";
 

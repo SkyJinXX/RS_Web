@@ -38,10 +38,10 @@
                                        '<div id="example-8">'+
                                             '<!--<span>资讯内容</span>-->'+
                                             '<div class="content-left">'+
-                                                '图片'+
+                                                '<img src="'+ value['Nimage_url'] + '" alt="图片" width = "180px" height="120px">'+
                                             '</div>'+
                                             '<div class="content-right">'+
-                                                '<a href="#">'+
+                                                '<a href="allInformation.aspx">'+
                                                     value['Ncontent']+
                                                 '</a>'+
                                             '</div>'+
