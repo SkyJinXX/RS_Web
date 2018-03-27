@@ -39,15 +39,7 @@ public partial class index : System.Web.UI.Page
 
             cmd.CommandText = "Select Uid From Users Where Uusername = '" + Session["username"] + "'";
             Session["Uid"] = cmd.ExecuteScalar().ToString();
-
-            for (int i = 1; i < 176; i++)
-            {
-                String paths = "img/Information/" + i + ".jpg";
-                //Response.Write("<script>alert('" + paths.ToString() + "')</script>");
-
-                cmd.CommandText = "update News set nimage_url = '" + paths + "' where Nid = '" + (i).ToString() + "'";
-                cmd.ExecuteNonQuery();
-            }
+            
 
             conn.Close();
         }
