@@ -40,6 +40,15 @@ public partial class index : System.Web.UI.Page
             cmd.CommandText = "Select Uid From Users Where Uusername = '" + Session["username"] + "'";
             Session["Uid"] = cmd.ExecuteScalar().ToString();
 
+            for (int i = 1; i < 176; i++)
+            {
+                String paths = "img/Information/" + i + ".jpg";
+                //Response.Write("<script>alert('" + paths.ToString() + "')</script>");
+
+                cmd.CommandText = "update News set nimage_url = '" + paths + "' where Nid = '" + (i).ToString() + "'";
+                cmd.ExecuteNonQuery();
+            }
+
             conn.Close();
         }
     }
@@ -80,7 +89,11 @@ public partial class index : System.Web.UI.Page
                     + ts + "','" + false + "','" + true + "','" + false + "')";
                 cmd.ExecuteScalar();
             }
-            cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isok = '" + true + "'";
+            cmd.CommandText = "select Ngoods from News where Nid = '" + nid + "'";
+            String number = Convert.ToString(Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1);
+
+            cmd.CommandText = "update News set Ngoods = '" + number + "' where Nid = '" + nid + "'";
+            cmd.ExecuteNonQuery();
 
             //id_like.Text = "已点赞 ( " + cmd.ExecuteScalar().ToString() + " ) ";
             //id_like.Enabled = false;
@@ -118,8 +131,12 @@ public partial class index : System.Web.UI.Page
                     + ts + "','" + false + "','" + false + "','" + true + "')";
                 cmd.ExecuteScalar();
             }
-            cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isbad = '" + true + "'";
+            cmd.CommandText = "select Nbads from News where Nid = '" + nid + "'";
+            String number = Convert.ToString(Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1);
 
+            cmd.CommandText = "update News set Nbads = '" + number + "' where Nid = '" + nid + "'";
+            cmd.ExecuteNonQuery();
+            
             //id_dislike.Text = "已点踩 ( " + cmd.ExecuteScalar().ToString() + " ) ";
             //id_dislike.Enabled = false;
             conn.Close();
