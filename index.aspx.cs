@@ -212,155 +212,56 @@ public partial class index : System.Web.UI.Page
         return s;
     }
 
-    //搜索按钮事件
-    protected void search_Click(object sender, EventArgs e)
-    {
-        String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
-        SqlConnection conn = new SqlConnection(connstr);
-        conn.Open();
-
-        String q = "";
-        String s = "";
-        SqlCommand cmd = new SqlCommand(s, conn);
-
-        cmd.CommandText = "select * from News where Ntitle like '%" + searchtextbox.Text + "%' or Nkeyword like '%"
-            + searchtextbox.Text + "%'";
-        if (cmd.ExecuteScalar() == null)
-        {
-            Response.Write("<script>alert('2333')</script>");
-            q = Headlines();
-        }
-        else
-        {
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            foreach (DataRow row in ds.Tables[0].Rows)
-            {
-                q += row[0].ToString() + "-";
-            }
-            //Response.Write("<script>alert('" + q + "')</script>");
-        }
-        conn.Close();
-
-        str = q;
-    }
-
-    //单条资讯加载
-    protected void News_Load(Label id_title, Label id_content, Label id_tag1, Label id_tag2, Button id_like, Button id_dislike, Button id_collection)
-    {
-
-        //Session_Nid_Next(str);
-
-        if (Session["Nid"] == null)
-        {
-            Response.Write("<script>alert('资讯主键问题!');window.location.href ='login.aspx'</script>");
-        }
-        else
-        {
-            String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
-            SqlConnection conn = new SqlConnection(connstr);
-            conn.Open();
-
-            String nid = Session["Nid"].ToString();
-
-            String s = "";
-            SqlCommand cmd = new SqlCommand(s, conn);
-
-            if (nid != "")
-            {
-                cmd.CommandText = "select Ntitle from News where Nid = '" + nid + "'";
-                id_title.Text = cmd.ExecuteScalar().ToString();
-
-                cmd.CommandText = "select Ncontent from News where Nid = '" + nid + "'";
-                id_content.Text = "   " + Convert.ToString(cmd.ExecuteScalar());
-                if (id_content.Text.Length >= 110)
-                {
-                    id_content.Text = "   " + id_content.Text.Substring(0, 100) + ".....";
-                    //Response.Write("<script>alert('" + id_content.Text+"')</script>");
-                }
-
-                cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isok = '" + true + "'";
-                SqlCommand cmd1 = new SqlCommand("", conn);
-                cmd1.CommandText = "select Uid from U_N where Nid = '" + nid + "' and isok = '" + true + "'and Uid = '"
-                    + Session["Uid"] + "'";
-
-                if (cmd1.ExecuteScalar() != null)
-                {
-                    id_like.Text = "已点赞 ( " + cmd.ExecuteScalar().ToString() + " ) ";
-                    id_like.Enabled = false;
-                }
-                else
-                {
-                    id_like.Text = "点赞 ( " + cmd.ExecuteScalar().ToString() + " ) ";
-                }
-
-                cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isbad = '" + true + "'";
-                cmd1.CommandText = "select Uid from U_N where Nid = '" + nid + "' and isbad = '" + true + "'and Uid = '"
-                    + Session["Uid"] + "'";
-                if (cmd1.ExecuteScalar() != null)
-                {
-                    id_dislike.Text = "已点踩 ( " + cmd.ExecuteScalar().ToString() + " ) ";
-                    id_dislike.Enabled = false;
-                }
-                else
-                {
-                    id_dislike.Text = "点踩 ( " + cmd.ExecuteScalar().ToString() + " ) ";
-                }
-                cmd.CommandText = "select Uid from U_N where Nid = '" + nid + "' and iscollect = '" + true + "'and Uid = '"
-                    + Session["Uid"] + "'";
-                if (cmd.ExecuteScalar() != null)
-                {
-                    id_collection.Text = "已收藏^_^";
-                    id_collection.Enabled = false;
-                }
-                else
-                {
-                    id_collection.Text = "收藏";
-                }
-                cmd.CommandText = "select Sum from N_L where Nid ='" + nid + "'";
-                s = cmd.ExecuteScalar().ToString();
-            }
-            String s1 = "";
-            String s2 = "";
-            if (s.Length >= 3)
-            {
-                s1 = s.Substring(0, 3);
-            }
-            if (s.Length >= 6)
-            {
-                s2 = s.Substring(3, 3);
-            }
-            if (s1 != "")
-            {
-                cmd.CommandText = "select Llablename from Lables where Lid ='" + s1 + "'";
-                id_tag1.Text = cmd.ExecuteScalar().ToString();
-            }
-            if (s2 != "")
-            {
-                cmd.CommandText = "select Llablename from Lables where Lid ='" + s2 + "'";
-                id_tag2.Text = cmd.ExecuteScalar().ToString();
-            }
-            conn.Close();
-        }
-    }
-
-    //搜索生成关键字查询的资讯显示序列
-    public static ArrayList Search_Nid(TextBox tb)
+    //左边分类框显示的类别资讯
+    [WebMethod]
+    public static ArrayList Type_Nid()
     {
         ArrayList res = new ArrayList();
-
+        String s = "";
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
 
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select * from News where Ntitle like '%" + tb.Text + "%' or Nkeyword like '%"
-            + tb.Text + "%'";
+        cmd.CommandText = "select Nid,Ntitle,Ncontent,Ntime,Ntype,Ngoods,Nbads,Nimage_url from News where Ntype = '" 
+            + s + "' order by Ngoods desc";
 
         if (cmd.ExecuteScalar() == null)
         {
-            cmd.CommandText = "select top(4) from News order by goods desc, Nid asc";
+            cmd.CommandText = "select top(4) from News order by Ngoods desc, Nid asc";
+        }
+
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        foreach (DataRow row in ds.Tables[0].Rows)
+        {
+            res.Add(Convert.ToInt32(row[0].ToString()));
+        }
+
+        //Console.Write("{0}", s.ToString());
+        conn.Close();
+
+        return res;
+    }
+
+    //搜索生成关键字查询的资讯显示序列  搜索按钮事件
+    [WebMethod]
+    public static ArrayList Search_Nid()
+    {
+        ArrayList res = new ArrayList();
+        String s = "";
+        String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        SqlConnection conn = new SqlConnection(connstr);
+        conn.Open();
+
+        SqlCommand cmd = new SqlCommand("", conn);
+        cmd.CommandText = "select Nid,Ntitle,Ncontent,Ntime,Ntype,Ngoods,Nbads,Nimage_url from News where Ntitle like '%" 
+            + s + "%' or Nkeyword like '%" + s + "%' order by Ngoods desc";
+
+        if (cmd.ExecuteScalar() == null)
+        {
+            cmd.CommandText = "select top(4) from News order by Ngoods desc, Nid asc";
         }
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -381,7 +282,7 @@ public partial class index : System.Web.UI.Page
     public static ArrayList Recommand_Nid()
     {
         ArrayList res = new ArrayList();
-        for (int i = 1; i < 100; i++) {
+        for (int i = 1; i < 143; i++) {
             res.Add(i);
         }
         return res;
@@ -395,9 +296,8 @@ public partial class index : System.Web.UI.Page
         conn.Open();
 
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select Nid,Ntitle,Ncontent,Ntype,Ngoods,Nbads,Nimage_url from News where Nid in ('"
-                            + a[0] + "','" + a[1] + "','" + a[2] + "','"
-                            + a[3] + "')";
+        cmd.CommandText = "select Nid,Ntitle,Ncontent,Ntime,Ntype,Ngoods,Nbads,Nimage_url from News where Nid in ('"
+                            + a[0] + "','" + a[1] + "','" + a[2] + "','" + a[3] + "')";
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
@@ -467,14 +367,22 @@ public partial class index : System.Web.UI.Page
 
     //获取前台页面需要显示的资讯的多个属性值
     [WebMethod]
-    public static string GetNewsJson(string page)
+    public static string GetNewsJson(String page)
     {
         int page_int = int.Parse(page);
         int st = page_int * 4;
         int end = (page_int+1) * 4;
         Console.Write("{0}x{1}", st, end);
-        ArrayList a = Recommand_Nid();
 
+        ArrayList a = Recommand_Nid();
+        //if (int.Parse(SorR) == 0)
+        //{
+        //    a = Recommand_Nid();
+        //}
+        //else
+        //{
+        //    a = Search_Nid();
+        //}
         ArrayList showlist = new ArrayList();
         for(int i = st; i < end; i++)
         {
@@ -486,4 +394,8 @@ public partial class index : System.Web.UI.Page
         return JsonBuilder;
     }
 
+    public void search_Click(object sender, EventArgs e)
+    {
+
+    }
 }
