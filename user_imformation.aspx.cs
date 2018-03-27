@@ -111,4 +111,9 @@ public partial class user_imformation : System.Web.UI.Page
         Response.Write("<script>alert('信息修改成功！');window.location.href='user_imformation.aspx'</script>");
     }
 
+
+    protected void search_Click(object sender, EventArgs e)
+    {
+
+    }
 }
