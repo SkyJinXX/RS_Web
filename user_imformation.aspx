@@ -66,6 +66,39 @@
 				<div class="header-right header-right-grid">
 					<div class="profile_details_left"><!--notifications of menu start -->
 						<ul class="nofitications-dropdown">
+							<li class="dropdown head-dpdn header-nav">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									推荐
+								</a>
+								
+							</li>
+							<li class="dropdown head-dpdn header-nav">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									发现
+								</a>
+								
+							</li>	
+							
+							
+						</ul>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				
+				
+				<div class="clearfix"> </div>
+			</div>
+			<!--search-box-->
+            <div class="search-box">
+                <asp:TextBox ID="searchtextbox" CssClass="searchtextbox" runat="server" placeholder="Search for..."></asp:TextBox>
+                    
+                <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
+                 
+			</div>
+			<!--//end-search-box-->
+            <div class="header-right header-right-grid">
+					<div class="profile_details_left"><!--notifications of menu start -->
+						<ul class="nofitications-dropdown">
 							<li class="dropdown head-dpdn">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="fa fa-heart"></i><span class="badge">...</span>
@@ -206,18 +239,6 @@
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-				
-				
-				<div class="clearfix"> </div>
-			</div>
-			<!--search-box-->
-            <div class="search-box">
-                <asp:TextBox ID="searchtextbox" CssClass="searchtextbox" runat="server" placeholder="Search for..."></asp:TextBox>
-                    
-                <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
-                 
-			</div>
-				<!--//end-search-box-->
 			<div class="header-right">
 				
 				<!--notification menu end -->
@@ -231,7 +252,7 @@
 								</div>	
 							</a>
 							<ul class="dropdown-menu drp-mnu">
-                                <li> <asp:Label ID="Label1" class="user-name" runat="server" Text="Username"></asp:Label></li> 
+                                <li> <asp:Label ID="user_name" class="user-name" runat="server" Text="Username"></asp:Label></li> 
 								<li> <a href="#"><i class="fa fa-cog"></i> 修改密码</a> </li> 
 								<li> <a href="user_imformation.aspx"><i class="fa fa-user"></i> 个人信息</a> </li> 
 								<li> <a href="#"><i class="fa fa-sign-out"></i> 注销</a> </li>

@@ -69,6 +69,39 @@
 				<div class="header-right header-right-grid">
 					<div class="profile_details_left"><!--notifications of menu start -->
 						<ul class="nofitications-dropdown">
+							<li class="dropdown head-dpdn header-nav">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									推荐
+								</a>
+								
+							</li>
+							<li class="dropdown head-dpdn header-nav">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									发现
+								</a>
+								
+							</li>	
+							
+							
+						</ul>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				
+				
+				<div class="clearfix"> </div>
+			</div>
+			<!--search-box-->
+            <div class="search-box">
+                <asp:TextBox ID="searchtextbox" CssClass="searchtextbox" runat="server" placeholder="Search for..."></asp:TextBox>
+                    
+                <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
+                 
+			</div>
+			<!--//end-search-box-->
+            <div class="header-right header-right-grid">
+					<div class="profile_details_left"><!--notifications of menu start -->
+						<ul class="nofitications-dropdown">
 							<li class="dropdown head-dpdn">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="fa fa-heart"></i><span class="badge">...</span>
@@ -105,7 +138,7 @@
 									</a></li>
 									<li>
 										<div class="notification_bottom">
-											<a href="interests.html">See all messages</a>
+											<a href="interests.aspx">See all messages</a>
 										</div> 
 									</li>
 								</ul>
@@ -158,7 +191,7 @@
 									</a></li>
 									<li>
 										<div class="notification_bottom">
-											<a href="#">See all pending tasks</a>
+											<a href="interests.aspx">See all pending tasks</a>
 										</div> 
 									</li>
 								</ul>
@@ -209,18 +242,6 @@
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-				
-				
-				<div class="clearfix"> </div>
-			</div>
-			<!--search-box-->
-            <div class="search-box">
-                <asp:TextBox ID="searchtextbox" CssClass="searchtextbox" runat="server" placeholder="Search for..."></asp:TextBox>
-                    
-                <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
-                 
-			</div>
-				<!--//end-search-box-->
 			<div class="header-right">
 				
 				<!--notification menu end -->
@@ -236,7 +257,7 @@
 							<ul class="dropdown-menu drp-mnu">
                                 <li> <asp:Label ID="user_name" class="user-name" runat="server" Text="Username"></asp:Label></li> 
 								<li> <a href="#"><i class="fa fa-cog"></i> 修改密码</a> </li> 
-								<li> <a href="Userinformation.aspx"><i class="fa fa-user"></i> 个人信息</a> </li> 
+								<li> <a href="user_imformation.aspx"><i class="fa fa-user"></i> 个人信息</a> </li> 
 								<li> <a href="#"><i class="fa fa-sign-out"></i> 注销</a> </li>
 							</ul>
 						</li>
@@ -283,8 +304,17 @@
                         </div>
                     </div>
                 </div>
-				
-                <div class="nav-right">
+				<div class="nav-right-one">
+                    <div class="nav-right-one-title">热门</div>
+					<ul>
+						<li><a href="#"> link1</a></li>
+						<li><a href="#"> link2</a></li>
+                        <li><a href="#"> link3</a></li>
+						<li><a href="#"> link4</a></li>
+						<li><a href="#"> link5</a></li>
+					</ul>
+				</div>
+                <div class="nav-right-two">
 					<ul>
 						<li><i></i><a href="#">我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>

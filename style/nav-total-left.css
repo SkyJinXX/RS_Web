@@ -127,3 +127,13 @@
     text-align: center;
     height: 1em;
 }
+
+.header-nav {
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+}
+
+.header-nav:hover {
+    background-color: #EAEAEA;
+}
