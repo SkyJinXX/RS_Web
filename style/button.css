@@ -1,0 +1,27 @@
+.searchButton{
+    width:27px;
+    height:27px;
+}
+
+.collect {
+    width: 4em;
+    height: 2.2em;
+    float: left;
+    margin-right:10%;
+    border-radius: 4px;
+    border: 1px solid #B0C4DE;
+    background-color: #FFFFF0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+}
+
+.collect:hover {
+    background-color: #ADD8E6;
+}
+
+.button{
+    float:left;
+    width:30%;
+    margin-top:2%;
+}

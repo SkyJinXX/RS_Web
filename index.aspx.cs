@@ -39,6 +39,7 @@ public partial class index : System.Web.UI.Page
 
             cmd.CommandText = "Select Uid From Users Where Uusername = '" + Session["username"] + "'";
             Session["Uid"] = cmd.ExecuteScalar().ToString();
+            
 
             conn.Close();
         }
@@ -57,7 +58,7 @@ public partial class index : System.Web.UI.Page
 
     //点赞事件 
     [WebMethod]
-    protected static void Liking(String nid)
+    public static void Liking(String nid)
     {
         if (nid != null && nid != "")
         {
@@ -80,7 +81,11 @@ public partial class index : System.Web.UI.Page
                     + ts + "','" + false + "','" + true + "','" + false + "')";
                 cmd.ExecuteScalar();
             }
-            cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isok = '" + true + "'";
+            cmd.CommandText = "select Ngoods from News where Nid = '" + nid + "'";
+            String number = Convert.ToString(Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1);
+
+            cmd.CommandText = "update News set Ngoods = '" + number + "' where Nid = '" + nid + "'";
+            cmd.ExecuteNonQuery();
 
             //id_like.Text = "已点赞 ( " + cmd.ExecuteScalar().ToString() + " ) ";
             //id_like.Enabled = false;
@@ -94,7 +99,7 @@ public partial class index : System.Web.UI.Page
 
     //点踩事件
     [WebMethod]
-    protected static void Disliking(string nid)
+    public static void Disliking(string nid)
     {
         if (nid != null && nid != "")
         {
@@ -118,8 +123,12 @@ public partial class index : System.Web.UI.Page
                     + ts + "','" + false + "','" + false + "','" + true + "')";
                 cmd.ExecuteScalar();
             }
-            cmd.CommandText = "select count(*) from U_N where Nid = '" + nid + "' and isbad = '" + true + "'";
+            cmd.CommandText = "select Nbads from News where Nid = '" + nid + "'";
+            String number = Convert.ToString(Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1);
 
+            cmd.CommandText = "update News set Nbads = '" + number + "' where Nid = '" + nid + "'";
+            cmd.ExecuteNonQuery();
+            
             //id_dislike.Text = "已点踩 ( " + cmd.ExecuteScalar().ToString() + " ) ";
             //id_dislike.Enabled = false;
             conn.Close();
@@ -132,7 +141,7 @@ public partial class index : System.Web.UI.Page
 
     //收藏事件
     [WebMethod]
-    protected static void Collecting(string nid)
+    public static void Collecting(string nid)
     {
         if (nid != null && nid != "")
         {
@@ -372,7 +381,7 @@ public partial class index : System.Web.UI.Page
     public static ArrayList Recommand_Nid()
     {
         ArrayList res = new ArrayList();
-        for (int i = 1; i < 9; i++) {
+        for (int i = 1; i < 100; i++) {
             res.Add(i);
         }
         return res;
@@ -433,7 +442,18 @@ public partial class index : System.Web.UI.Page
                 jsonBuilder.Append("\"");
                 jsonBuilder.Append(dt.Columns[j].ColumnName);
                 jsonBuilder.Append("\":\"");
-                jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\"", "\\\""));
+
+                if (j == 2)
+                {
+                    String s = dt.Rows[i][j].ToString();
+                    s = s.Substring(0, 110);
+                     
+                    jsonBuilder.Append(s.Replace("\"", "\\\""));
+                }
+                else
+                {
+                    jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\"", "\\\""));
+                }
                 jsonBuilder.Append("\",");
             }
             jsonBuilder.Remove(jsonBuilder.Length - 1, 1);
@@ -452,6 +472,7 @@ public partial class index : System.Web.UI.Page
         int page_int = int.Parse(page);
         int st = page_int * 4;
         int end = (page_int+1) * 4;
+        Console.Write("{0}x{1}", st, end);
         ArrayList a = Recommand_Nid();
 
         ArrayList showlist = new ArrayList();
