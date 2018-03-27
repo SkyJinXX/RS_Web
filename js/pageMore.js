@@ -27,8 +27,6 @@
                                 '<div class="panel-title">'+
                                     value['Ntitle']+
                                     '<ul class="panel-tools">'+
-                                        '<li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>'+
-                                        '<li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>'+
                                         '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
                                     '</ul>'+
                                 '</div>'+
@@ -51,15 +49,15 @@
                                         '</div>'+
                                         '<div class="isLikeButton">'+
                                             '<div class="collectBox">'+
-                                                '<input type="button" class="collect" value="收藏" />'+
+                                                '<input type="button" class="collect" value="" title="收藏"/>'+
                                             '</div>'+
                                             '<div class="likeBox">'+
                                                 '<input class="isLikeButton_like" type="button" value="" />'+
-                                                '<p>' + value['Ngoods'] + '</p>'+
+                                                '<div class="like_count">' + value['Ngoods'] + '</div>'+
                                             '</div>'+
                                             '<div class="unlikeBox">'+
                                                 '<input class="isLikeButton_dislike" type="button" value="" />'+
-                                                '<p>' + value['Nbads'] + '</p>'+
+                                                '<div class="unlike_count">' + value['Nbads'] + '</div>'+
                                             '</div>'+
                                         '</div>'+
                                     '</div>'+
@@ -79,9 +77,9 @@
     function likeClick(){
     	$(document).on("click", ".likeBox", function(){
         var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
-        var number = jQuery(this).children('p').text();
+        var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
-        jQuery(this).children('p').text(number);
+        jQuery(this).children('div').text(number);
         $.ajax({
             type: 'post',
             contentType: "application/json",
@@ -102,9 +100,9 @@
     function unlikeClick(){
     	$(document).on("click", ".unlikeBox", function(){
         var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
-        var number = jQuery(this).children('p').text();
+        var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
-        jQuery(this).children('p').text(number);
+        jQuery(this).children('div').text(number);
 		$.ajax({
             type: 'post',
             contentType: "application/json",

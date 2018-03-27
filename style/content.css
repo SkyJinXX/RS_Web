@@ -36,14 +36,39 @@
 }
 
 .isLikeButton{
-	width: 35%;
+	width: 50%;
 	margin-left:50%;
+}
+
+.collectBox{
+    width:3em;
+	height: auto;
+    float:left;
+}
+
+.likeBox{
+    width:35%;
+	height: auto;
+    float:left;
+}
+
+.unlikeBox{
+    width:35%;
+	height: auto;
+    float:left;
+}
+
+.like_count,.unlike_count{
+    float:left;
+    padding-left:0.5em;
+    padding-right:0.5em;
 }
 
 .isLikeButton_like{
 	width: 1.5em;
 	height: 1.5em;
 	line-height: 1.3em;
+    float:left;
 	color: #19CF8A;
 	background-color: #E0FFFF;
 	border: none;
@@ -55,6 +80,7 @@
 	width: 1.5em;
 	height: 1.5em;
 	line-height: 1.3em;
+    float:left;
 	color: #19CF8A;
 	background-color: white;
 	border: none;
