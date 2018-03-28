@@ -47,6 +47,7 @@
     <!--//end-animate-->
     <!-- Metis Menu -->
     <script src="js/metisMenu.min.js"></script>
+    <script src="js/commentShow.js"></script>
     <script src="js/custom.js"></script>
     <!--//Metis Menu -->
 	
@@ -216,8 +217,8 @@
             <div class="search-box">
                 <asp:TextBox ID="searchtextbox" CssClass="searchtextbox" runat="server" placeholder="Search for..."></asp:TextBox>
                     
-                <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
-                 
+                <%--<asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
+                --%> 
 			</div>
 				<!--//end-search-box-->
 			<div class="header-right">
@@ -252,39 +253,23 @@
 			<div class="main-page">
                 <div class="messageBox_view">
                     <div class="message_view">
-                        <div class="artcle_title">
-                            <asp:Label ID="Title" runat="server" Text="标题"></asp:Label>
-                        </div>
-                        <div class="subtitle">
-                            <div class="subtitleClassification_box">
-                                <asp:Label ID="subtitleClassification" runat="server" Text="分类"></asp:Label>
-                            </div>
-                            <div class="subtitleTime_box">
-                                <asp:Label ID="subtitleTime" runat="server" Text="时间"></asp:Label>
-                            </div>
-                        </div>
-                        <div class="picture">
-                            <img src="#"/>
-                        </div>
-                        <div class="article">
-                            <p>文章内容</p>
-                        </div>
-                        <div class="article_bottom">
-                            <div class="collectBox">
-                                <input type="button" class="collect" value="" title="收藏">
-                            </div>
-                            <div class="likeBox">
-                                <input class="isLikeButton_like" type="button" value="">
-                                <div class="like_count">1</div>
-                            </div>
-                            <div class="unlikeBox">
-                                <input class="isLikeButton_dislike" type="button" value="">
-                                <div class="unlike_count">1</div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="comment_area">
                         评论区
+                        <img class=".photo" src="#"/>
+                        <div class=".name">
+                            欢仔
+                        </div>
+                        <div class="reply">回复</div>
+                        <img class=".photo" src="#"/>
+                        <div class=".name">
+                            伟仔
+                        </div>
+                        <div class="article">
+                            <p id="content">2333</p>
+
+                        </div>
                     </div>
                 </div>
 				<div class="nav-right-one">
@@ -317,3 +302,34 @@
     </form>
 </body>
 </html>
+
+                        <%--<div class="artcle_title">
+                            <asp:Label ID="Title" runat="server" Text="标题"></asp:Label>
+                        </div>
+                        <div class="subtitle">
+                            <div class="subtitleClassification_box">
+                                <asp:Label ID="subtitleClassification" runat="server" Text="分类"></asp:Label>
+                            </div>
+                            <div class="subtitleTime_box">
+                                <asp:Label ID="subtitleTime" runat="server" Text="时间"></asp:Label>
+                            </div>
+                        </div>
+                        <div class="picture">
+                            <img src="#"/>
+                        </div>
+                        <div class="article">
+                            <p id ="content">文章内容</p>
+                        </div>
+                        <div class="article_bottom">
+                            <div class="collectBox">
+                                <input type="button" class="collect" value="" title="收藏">
+                            </div>
+                            <div class="likeBox">
+                                <input class="isLikeButton_like" type="button" value="">
+                                <div class="like_count">1</div>
+                            </div>
+                            <div class="unlikeBox">
+                                <input class="isLikeButton_dislike" type="button" value="">
+                                <div class="unlike_count">1</div>
+                            </div>
+                        </div>--%>

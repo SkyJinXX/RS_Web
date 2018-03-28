@@ -32,6 +32,11 @@
     clear:both;
 }
 
+.comment_area photo {
+    width: 150px;
+    height: 150px;
+}
+
 .message_view img {
     width: 100%;
 }
@@ -49,6 +54,9 @@
     background-color: #FFFFFF;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+.comment_area article{
+
 }
 
 .subtitle {
@@ -140,4 +148,9 @@
     background-color: white;
     border: none;
     background: url(../images/image/点踩.png) no-repeat;
+}
+
+.comment_area reply {
+    color: dodgerblue;
+    font-weight: 600;
 }

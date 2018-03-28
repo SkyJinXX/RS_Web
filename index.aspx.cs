@@ -187,7 +187,7 @@ public partial class index : System.Web.UI.Page
 
         if (cmd.ExecuteScalar() == null)
         {
-            cmd.CommandText = "select top(4) from News order by Ngoods desc, Nid asc";
+            cmd.CommandText = "select top 4 * from News order by Ngoods desc, Nid asc";
         }
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -264,6 +264,7 @@ public partial class index : System.Web.UI.Page
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
         da.Fill(ds);
+
         String s = DatasetToJson(ds);
         //Response.Write("" +s.ToString());
         Console.Write("{0}", s.ToString());
