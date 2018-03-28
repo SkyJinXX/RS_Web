@@ -201,7 +201,8 @@ li.dropdown.head-dpdn {
 	float: left;
 }
 li.dropdown.head-dpdn a.dropdown-toggle {
-   padding: 1.7em 1.5em;
+    text-decoration:none;
+    padding: 1.7em 1.5em;
 }
 ul.dropdown-menu li {
     margin-left: 0;
