@@ -1,10 +1,27 @@
 ﻿body {
 }
 
-.message h1{
-    width:100%;
-    text-align:center;
-    font-size:larger;
+.messageBox_view{
+    width: 65%;
+    height:auto;
+    margin-left: 8%;
+    float: left;
+}
+
+.message_view {
+    height:auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: #FFFFFF;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.artcle_title {
+    width: 100%;
+    padding-left:5%;
+    padding-right:5%;
+    text-align: center;
+    font-size: xx-large;
 }
 
 .picture {
@@ -12,13 +29,14 @@
     height:auto;
     margin-left: 3%;
     margin-right: 3%;
+    clear:both;
 }
 
-.message img {
+.message_view img {
     width: 100%;
 }
 
-.message p {
+.message_view p {
     width: 100%;
     padding-left: 8%;
     padding-right: 8%;
@@ -31,4 +49,95 @@
     background-color: #FFFFFF;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.subtitle {
+    width:94%;
+    height:auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    color: #9E9E9E;
+}
+
+.subtitleClassification_box {
+    width: 10%;
+    min-height: 1em;
+    height: auto;
+    float: left;
+    padding-left: 0.8em;
+    border-left: 3px solid #9AC0CD;
+}
+
+.subtitleTime_box {
+    width: 10%;
+    min-height: 1em;
+    height: auto;
+    float: right;
+}
+
+.article{
+
+}
+
+.article_bottom{
+    width:35%;
+    margin-left:65%;
+    padding-top:5%;
+    padding-bottom:5%;
+    min-height:1em;
+    height:auto;
+}
+
+.collectBox {
+    width: 3em;
+    height: auto;
+    float: left;
+}
+
+.likeBox {
+    width: 35%;
+    height: auto;
+    float: left;
+}
+
+.unlikeBox {
+    width: 35%;
+    height: auto;
+    float: left;
+}
+
+.like_count, .unlike_count {
+    float: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.like_count:hover, .unlike_count:hover {
+    cursor:pointer;
+}
+
+.isLikeButton_like {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    float: left;
+    color: #19CF8A;
+    background-color: #E0FFFF;
+    border: none;
+    background: url(../images/image/点赞.png) no-repeat;
+}
+
+
+.isLikeButton_dislike {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    float: left;
+    color: #19CF8A;
+    background-color: white;
+    border: none;
+    background: url(../images/image/点踩.png) no-repeat;
 }

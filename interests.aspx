@@ -28,7 +28,8 @@
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
     <link href="style/interests.css" rel="stylesheet" type="text/css" />
-    <link href="style/custom.css" rel="stylesheet">
+    <link href="style/custom.css" rel="stylesheet" type="text/css" />
+    <link href="style/multi-switch.min.css" rel="stylesheet" type="text/css" />
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
     <!--//webfonts--> 
@@ -295,12 +296,49 @@
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=USERUSE-04UKSUB\SQLEXPRESS;Initial Catalog=recommendedsystem;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Uid], [Sum] FROM [U_L]"></asp:SqlDataSource>
 
                         </div>
-                        <div style="text-align: center">
+                        <div style="text-align: center;margin-bottom:3%;">
                             <br />
                             <asp:Label ID="Label2" runat="server" Text="历史浏览资讯兴趣模型"></asp:Label>
                         </div>
+                        <div class="line"></div>
                         <div class="interestBox">
-                            兴趣标签
+                            <table>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-ravelry"></i><span>科技</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-odnoklassniki-square"></i><span>娱乐</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-gamepad"></i><span>游戏</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-child"></i><span>体育</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <script src="js/jquery-2.1.1.min.js"></script>
+
+                            <script src="src/multi-switch.js"></script>
+                            <script>
+                                $(document).ready(function () {
+                                    $('.multi-switch').multiSwitch();
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -316,11 +354,11 @@
 				</div>
                 <div class="nav-right-two">
 					<ul>
-						<li><i></i><a href="#">我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>
-						<li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
-						<li><a href="#">link3</a></li>
-						<li><a href="#">link4</a></li>
+						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
+						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的收藏</a></li>
+						<li><a class="nav-right-two_a_after" href="#">link3</a></li>
+						<li><a class="nav-right-two_a_after" href="#">link4</a></li>
 					</ul>
 				</div>
 			</div>
@@ -331,6 +369,9 @@
 	    <script src="js/bootstrap.min.js"></script>
 	    <script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="assets/js/custom.js"></script>
+        <script src="js/jquery-2.1.1.min.js"></script>
+	
+	    <script src="js/multi-switch.js"></script>
     </form>
 </body>
 </html>

@@ -30,9 +30,29 @@
     font-size:larger;
 }
 
-.interestBox{
-    width:90%;
-    min-height:5em;
-    margin:auto;
-    margin-top:1em;
+.interestBox {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    min-height: 5em;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.interestBox table{
+    width: 100%;
+    height:auto;
+}
+
+.interestBox table tr{
+    height:1.5em;
+}
+
+.interestBox table tr td{
+    width:12.5%;
+}
+
+.interestBox table tr td i{
+    font-size:1.2em;
+    margin-right:15%;
 }

@@ -250,13 +250,38 @@
 		</div>
         <div id="page-wrapper">
 			<div class="main-page">
-                <div class="messageBox">
-                    <div class="message">
-                        <h1>标题</h1>
+                <div class="messageBox_view">
+                    <div class="message_view">
+                        <div class="artcle_title">
+                            <asp:Label ID="Title" runat="server" Text="标题"></asp:Label>
+                        </div>
+                        <div class="subtitle">
+                            <div class="subtitleClassification_box">
+                                <asp:Label ID="subtitleClassification" runat="server" Text="分类"></asp:Label>
+                            </div>
+                            <div class="subtitleTime_box">
+                                <asp:Label ID="subtitleTime" runat="server" Text="时间"></asp:Label>
+                            </div>
+                        </div>
                         <div class="picture">
                             <img src="#"/>
                         </div>
-                        <p>文章内容</p>
+                        <div class="article">
+                            <p>文章内容</p>
+                        </div>
+                        <div class="article_bottom">
+                            <div class="collectBox">
+                                <input type="button" class="collect" value="" title="收藏">
+                            </div>
+                            <div class="likeBox">
+                                <input class="isLikeButton_like" type="button" value="">
+                                <div class="like_count">1</div>
+                            </div>
+                            <div class="unlikeBox">
+                                <input class="isLikeButton_dislike" type="button" value="">
+                                <div class="unlike_count">1</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="comment_area">
                         评论区
