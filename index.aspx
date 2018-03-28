@@ -99,9 +99,9 @@
 			</div>
 			<!--search-box-->
             <div class="search-box">
-                <asp:TextBox ID="searchtextbox" CssClass="searchtextbox" runat="server" placeholder="Search for..."></asp:TextBox>
+                <input type="text" id ="searchText"/>
                     
-                <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
+                <input type="button" id="searchButton" value="搜索"/>
                  
 			</div>
 			<!--//end-search-box-->
@@ -280,14 +280,14 @@
 			<div class="main-page">
 				
 				<div class="classification">
-					<ul>
+					<ul id ="typeUl">
 						<li><i></i><a class="classification_type" href="#"><b>科技</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>娱乐</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>体育</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>游戏</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>汽车</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>国际</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>军事</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>政治</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>文化</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>财经</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>时尚</b></a></li>
 					</ul>
