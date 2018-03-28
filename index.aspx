@@ -97,9 +97,9 @@
 			</div>
 			<!--search-box-->
             <div class="search-box">
-                <asp:TextBox ID="searchtextbox" CssClass="searchtextbox" runat="server" placeholder="Search for..."></asp:TextBox>
+                <input type="text" id ="searchText"/>
                     
-                <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
+                <input type="button" id="searchButton" value="搜索"/>
                  
 			</div>
 			<!--//end-search-box-->
@@ -278,7 +278,7 @@
 			<div class="main-page">
 				
 				<div class="classification">
-					<ul>
+					<ul id ="typeUl">
 						<li><i></i><a>科技</a></li>
 						<li><i></i><a>娱乐</a></li>
 						<li><i></i><a>体育</a></li>
