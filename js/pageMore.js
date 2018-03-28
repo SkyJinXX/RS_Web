@@ -159,7 +159,7 @@ function collectClick(){
 function TypeClick(){
     $('#typeUl').children('li').each(
         function(index, value){
-            $(value).children('a').click(
+            $(value).children('a').children('b').click(
                 function(){
                     keyWord = $(this).text();
                     page = 0;

@@ -24,6 +24,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" >
     <!-- font-awesome icons -->
     <link href="style/font-awesome.css" rel="stylesheet"> 
+    
+    <link href="style/font-awesome.min.css" rel="stylesheet"> 
     <!-- //font-awesome icons -->
     <link href="style/wap.css?2" rel="stylesheet" type="text/css" />
     <!--line-->
@@ -279,15 +281,15 @@
 				
 				<div class="classification">
 					<ul id ="typeUl">
-						<li><i></i><a>科技</a></li>
-						<li><i></i><a>娱乐</a></li>
-						<li><i></i><a>体育</a></li>
-						<li><i></i><a>游戏</a></li>
-						<li><i></i><a>汽车</a></li>
-						<li><i></i><a>国际</a></li>
-						<li><i></i><a>军事</a></li>
-						<li><i></i><a>财经</a></li>
-						<li><i></i><a>时尚</a></li>
+						<li><i></i><a class="classification_type" href="#"><b>科技</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>娱乐</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>体育</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>游戏</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>汽车</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>政治</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>文化</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>财经</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>时尚</b></a></li>
 					</ul>
 				</div>
 				<!-- //four-grids -->
@@ -301,20 +303,20 @@
                 <div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><a href="#"> link1</a></li>
-						<li><a href="#"> link2</a></li>
-                        <li><a href="#"> link3</a></li>
-						<li><a href="#"> link4</a></li>
-						<li><a href="#"> link5</a></li>
+						<li><a class="nav-right-one_a_after" href="#"> link1</a></li>
+						<li><a class="nav-right-one_a_after" href="#"> link2</a></li>
+                        <li><a class="nav-right-one_a_after" href="#"> link3</a></li>
+						<li><a class="nav-right-one_a_after" href="#"> link4</a></li>
+						<li><a class="nav-right-one_a_after" href="#"> link5</a></li>
 					</ul>
 				</div>
 				<div class="nav-right-two">
 					<ul>
-						<li><i></i><a href="#">我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>
-                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
-						<li><a href="#">link3</a></li>
-						<li><a href="#">link4</a></li>
+						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
+						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的收藏</a></li>
+						<li><a class="nav-right-two_a_after" href="#">link3</a></li>
+						<li><a class="nav-right-two_a_after" href="#">link4</a></li>
 					</ul>
 				</div>
 				<!--//row-->
