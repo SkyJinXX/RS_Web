@@ -259,7 +259,35 @@
                         <div class="comment_area_title">
                             <b>热门评论</b>
                         </div>
-                        <div class="comment_box">
+                        <div class="comment_box_single">
+                            <div class="comment_box_title">
+                                <img class="photo" src="#" style="float:left" />
+                                <div class="name">
+                                    伟仔
+                                </div>
+                            </div>
+                            <div class="comment_box_article">
+                                <p class="content">2333</p>
+
+                            </div>
+                            <div class="comment_box_bottom">
+
+                                <div class="fa_img">
+                                    <i class="fa fa-reply"></i>
+                                </div>
+                                <div class="replyButton">
+                                    <button class="comment_box_bottom_button" type="button">回复</button>
+                                </div>
+                                <div class="fa_img">
+                                    <i class="fa fa-flag"></i>
+                                </div>
+                                <div class="reportButton">
+                                    <button class="comment_box_bottom_button" type="button">举报</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="comment_box_double">
                             <div class="comment_box_title">
                                 <img class="photo" src="#" style="float:left" />
                                 <div class="name">
@@ -276,20 +304,20 @@
 
                             </div>
                             <div class="comment_box_bottom">
-                                <ul>
-                                    <li class="fa_img">
-                                        <i class="fa fa-reply"></i>
-                                    </li>
-                                    <li class="replyButton">
-                                        <button class="comment_box_bottom_button" type="button">回复</button>
-                                    </li>
-                                    <li class="fa_img">
-                                        <i class="fa fa-flag"></i>
-                                    </li>
-                                    <li class="reportButton">
-                                        <button class="comment_box_bottom_button" type="button">举报</button>
-                                    </li>
-                                </ul>
+
+                                <div class="fa_img">
+                                    <i class="fa fa-reply"></i>
+                                </div>
+                                <div class="replyButton">
+                                    <button class="comment_box_bottom_button" type="button">回复</button>
+                                </div>
+                                <div class="fa_img">
+                                    <i class="fa fa-flag"></i>
+                                </div>
+                                <div class="reportButton">
+                                    <button class="comment_box_bottom_button" type="button">举报</button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
