@@ -80,7 +80,7 @@
 }
 
 .subtitleTime_box {
-    width: 10%;
+    width: 20%;
     min-height: 1em;
     height: auto;
     float: right;
@@ -150,7 +150,81 @@
     background: url(../images/image/点踩.png) no-repeat;
 }
 
-.comment_area reply {
+.comment_area_title {
+    width: 15%;
+    height: auto;
+    border-bottom: 2px solid #EE7942;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    font-size: 20px;
+}
+
+.comment_box {
+    width: 94%;
+    height: auto;
+    margin: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #C1C1C1;
+}
+
+.comment_box_title{
+    width:40%;
+    height:auto;
+}
+
+.comment_box_article {
+    clear: both;
+    padding-top: 1em;
+    padding-bottom: 1em;
     color: dodgerblue;
     font-weight: 600;
+}
+
+.name, .reply {
+    float: left;
+    margin-left:1%;
+    margin-right:1%;
+}
+
+.reply {
+    color: dodgerblue;
+}
+
+.comment_box_bottom{
+    padding-bottom:2%;
+}
+
+.comment_box_bottom ul {
+    list-style:none;
+    list-style-type:none;
+}
+
+.fa_img {
+    width: 3%;
+    list-style: none;
+    list-style-type: none;
+    float: left;
+}
+
+.replyButton .reportButton {
+    width:3em;;
+    list-style: none;
+    list-style-type: none;
+    float: left;
+}
+
+.comment_box_bottom_button {
+    width:100%;
+    height:auto;
+    border: none;
+    background-color: transparent;
+}
+
+.footer{
+    clear:both;
+    width:100%;
+    min-height:3em;
+    height:auto;
 }

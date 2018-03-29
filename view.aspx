@@ -256,19 +256,41 @@
                         
                     </div>
                     <div class="comment_area">
-                        评论区
-                        <img class=".photo" src="#"/>
-                        <div class=".name">
-                            欢仔
+                        <div class="comment_area_title">
+                            <b>热门评论</b>
                         </div>
-                        <div class="reply">回复</div>
-                        <img class=".photo" src="#"/>
-                        <div class=".name">
-                            伟仔
-                        </div>
-                        <div class="article">
-                            <p id="content">2333</p>
+                        <div class="comment_box">
+                            <div class="comment_box_title">
+                                <img class="photo" src="#" style="float:left" />
+                                <div class="name">
+                                    欢仔
+                                </div>
+                                <div class="reply">回复</div>
+                                <img class="photo" src="#" style="float:left" />
+                                <div class="name">
+                                    伟仔
+                                </div>
+                            </div>
+                            <div class="comment_box_article">
+                                <p class="content">2333</p>
 
+                            </div>
+                            <div class="comment_box_bottom">
+                                <ul>
+                                    <li class="fa_img">
+                                        <i class="fa fa-reply"></i>
+                                    </li>
+                                    <li class="replyButton">
+                                        <button class="comment_box_bottom_button" type="button">回复</button>
+                                    </li>
+                                    <li class="fa_img">
+                                        <i class="fa fa-flag"></i>
+                                    </li>
+                                    <li class="reportButton">
+                                        <button class="comment_box_bottom_button" type="button">举报</button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -293,7 +315,9 @@
 				</div>
 			</div>
 		</div>
-
+        <div class="footer">
+            <div style="width:10px;height:50px"></div>
+        </div>
         <script src="js/jquery.min.js" type="text/javascript"></script>
 	    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 	    <script src="js/bootstrap.min.js"></script>
