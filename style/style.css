@@ -2538,13 +2538,14 @@ button#default-map-btn, button#green-map-btn, button#blue-map-btn,button#grey-ma
     outline: none;
     cursor: pointer;
     color: #fff;
-    background: #fd5c63;
+    background: #0084ff;
     width: 100%;
     padding: .5em 1em;
     font-size: 1em;
     margin: 1.5em 0 0;
 }
 .login-info input[type="submit"]:hover{
+    color: #104E8B;
 	background:#67d3e0;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
