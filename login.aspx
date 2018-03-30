@@ -17,12 +17,16 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- font-awesome icons -->
     <link href="style/font-awesome.css" rel="stylesheet"/> 
+
+    <link href="style/login.css" rel="stylesheet" type="text/css" />
+
     <!-- //font-awesome icons -->
     <!--webfonts-->
     <link href="style/font-awesome.css" rel="stylesheet" type="text/css"/>
     <!--//webfonts--> 
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"></script>
+
     <!-- //js -->
     <title>凛冬将至 | 登录</title>
 </head>
@@ -62,11 +66,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					
 			</div>
 		</div>
-		
+		<!--
 		<div class="copyright login-copyright">
            <p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>    
 		</div>
-
+        -->
 
 
 
