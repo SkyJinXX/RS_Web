@@ -220,7 +220,7 @@ public partial class index : System.Web.UI.Page
 
         if (cmd.ExecuteScalar() == null)
         {
-            cmd.CommandText = "select top(4) from News order by Ngoods desc, Nid asc";
+            return Recommand_Nid();
         }
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -334,7 +334,7 @@ public partial class index : System.Web.UI.Page
     {
         int page_int = int.Parse(page);
         int st = page_int * maxSize;
-        int end = (page_int+1) * maxSize;
+        int end = (page_int + 1) * maxSize;
         Console.Write("{0}x{1}", st, end);
 
         ArrayList a = null;
@@ -350,8 +350,12 @@ public partial class index : System.Web.UI.Page
                 a = Type_Nid(keyWord);
                 break;
         }
-        if (a.Count < maxSize)
+        if (a.Count < end)
+        {
             end = a.Count;
+            //st = 0;
+        }
+
         ArrayList showlist = new ArrayList();
         for(int i = st; i < end; i++)
         {

@@ -5,30 +5,30 @@ $(function () {
   
     pageShow();
     page++;
-    scrollListen();
+    $(document).on('scroll', scrollListen);
     likeClick();
     unlikeClick();
     collectClick();
     TypeClick();
     SearchClick();
 })
-
 function scrollListen() {
-        $(document).scroll(function () {
             var bottomPadding = $(document).height() - $(document).scrollTop() - $(window).height();
             if (bottomPadding < 50) {
+                console.log("SourseType:" + SourseType);
+                console.log("keyWord:" + keyWord);
+                console.log("page:" + page);
                 pageShow();
                 page++;
             }
-        });
-    }
+        }
 
 function pageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
         url: 'index.aspx/getNewsJson',
-        async: true,
+        async: false,
         data: "{'page':'" + page + "', 'SourseType':'"+ SourseType +"', 'keyWord':'"+ keyWord +"'}",
         dataType: "json",
         success: function (result) {
@@ -80,7 +80,6 @@ function pageShow() {
                         '</div>'+
                     '</div>'
                 );
-                //console.log(value);
             });
         },
         error: function (textStatus, errorThrown) {
@@ -103,7 +102,7 @@ function likeClick(){
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
         success: function (result) {
-
+            console.log("点赞+1");
         },
         error: function (textStatus, errorThrown) {
             console.log(textStatus);
@@ -126,7 +125,7 @@ function unlikeClick(){
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
         success: function (result) {
-            alert('成功点踩');
+            console.log("点踩+1");
         },
         error: function (textStatus, errorThrown) {
             console.log(textStatus);
@@ -146,7 +145,7 @@ function collectClick(){
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
         success: function (result) {
-            alert('成功收藏');
+            conlose.log("成功收藏");
         },
         error: function (textStatus, errorThrown) {
             console.log(textStatus);
@@ -165,7 +164,9 @@ function TypeClick(){
                     page = 0;
                     SourseType = "Type";
                     $('.row').empty();
+                    $(document).off('scroll', scrollListen);
                     pageShow();
+                    $(document).on('scroll', scrollListen);
                     //console.log(keyWord);                                                 
                 });            
         }
@@ -174,13 +175,16 @@ function TypeClick(){
 function SearchClick(){
     $('#searchButton').click(
         function(){
-
             keyWord = $('#searchText').val();
-            console.log(keyWord);
+            
             page = 0;
             SourseType = "Search";
+            
             $('.row').empty();
-            //pageShow();
+            //console.log(page);
+            $(document).off('scroll', scrollListen);
+            pageShow();
+            $(document).on('scroll', scrollListen);
 
         })
 }
