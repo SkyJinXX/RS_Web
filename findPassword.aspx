@@ -17,7 +17,7 @@
 	<script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/custom.js"></script>
 
-    <title>凛冬将至 | 登录</title>
+    <title>凛冬将至 | 找回密码</title>
 </head>
 <body>
     <form id="form1" class="form" runat="server">

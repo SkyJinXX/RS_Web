@@ -49,19 +49,19 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							<ul>
 								<li>
 									<input type="checkbox" id="brand1" value=""/>
-									<label for="brand1"><span></span>Remember me</label>
+									<label for="brand1"><span></span>记住密码</label>
 								</li>
 							</ul>
 						</div>
 						<div class="forgot">
-							<a href="findPassword.aspx">Forgot password?</a>
+							<a href="findPassword.aspx">忘记密码?</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
 					<!--<input type="submit" name="Sign In" value="Login"/>-->
                     <asp:Button ID="Button_login" CssClass="loginButton" runat="server" Text="立即登录" OnClick="Button_login_Click" />
 					<div class="signup-text">
-						<a href="register.aspx">Don't have an account? Create one now</a>
+						<a href="register.aspx">还没有帐号? 马上注册</a>
 					</div>
 					
 			</div>

@@ -5,11 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="//img.t.sinajs.cn/t5/style/css/module/base/frame.css?v=13ed2dba8c5f088c" type="text/css" rel="stylesheet" />
-
-    <link href="//img.t.sinajs.cn/t5/skin/skin048/skin.css?v=13ed2dba8c5f088c" type="text/css" rel="stylesheet" />
-    <link href="//img.t.sinajs.cn/t5/style/css/pages/register/reg_guide.css?v=13ed2dba8c5f088c" type="text/css" rel="stylesheet" />
-    <link href="//img.t.sinajs.cn/t5/style/css/patch/register/register.css?v=13ed2dba8c5f088c" type="text/css" rel="stylesheet" />
+    
+    <link href="style/login.css" rel="stylesheet" type="text/css" />
+    <link href="style/frame.css" type="text/css" rel="stylesheet" />
+    <link href="style/skin.css" type="text/css" rel="stylesheet" />
+    <link href="style/reg_guide.css" type="text/css" rel="stylesheet" />
+    <link href="style//register.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript">
          
  
@@ -29,33 +30,10 @@ $CONFIG = {
 }
 </script>     
 <title>兴趣推荐</title>
-</head><body class="B_fav_sel ">
+</head>
+<body class="B_fav_sel login-bg">
 	<div class="W_nologin"  exp-data="key=regnguideschool&value=interests"> 
-  <!--顶导-->
-        
-  <!--<div style="top:0px;" class="WB_global_nav">
-    <div class="gn_bg">
-      <div class="gn_header">
-        <div class="gn_logo"></div>
-        <div class="gn_nav W_Yahei">
-          <div class="gn_title step_bg">
-              <a href="//weibo.com/nguide/recommend" class="step_item">
-                  <i class="W_f18">1.</i><i class="step">完善资料</i>
-                </a>
-            </div>
-            <div class="gn_title step_bg cur">
-                  <i class="step_ico step2 W_f18"></i><i class="step">兴趣推荐</i>
-            </div>
-            <div class="gn_title step_bg">
-              <span>
-                  <i class="step_enter"></i><i class="step">进入微博</i>
-                </span>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
-  <!--/顶导-->
+  
   <div class="nologo"></div>
   <div class="W_nologin_main main_single_bg">
     <div class="W_reg_info_single clearfix" id="pl_guide_front_interestTag">
@@ -361,7 +339,7 @@ $CONFIG = {
                                     </ul>
                 </div>
               </div>
-              <div class="txt W_Yahei W_f18"><i></i>本地</div>
+              <div class="txt W_Yahei W_f18"><i></i>风景</div>
               <div class="bor"></div>
             </li>
                    </ul>
