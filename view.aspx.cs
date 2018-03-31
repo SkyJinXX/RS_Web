@@ -76,7 +76,7 @@ public partial class view : System.Web.UI.Page
 
         String nid = HttpContext.Current.Session["nid"].ToString();
 
-        SqlCommand cmd = new SqlCommand("", conn);
+        SqlCommand cmd = new SqlCommand("", conn); 
         cmd.CommandText = "select Cid,Ccontent,Cfrom_Uid,Cto_Uid from Comments where Nid = '" + nid + "'";
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
