@@ -28,7 +28,8 @@
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
     <link href="style/interests.css" rel="stylesheet" type="text/css" />
-    <link href="style/custom.css" rel="stylesheet">
+    <link href="style/custom.css" rel="stylesheet" type="text/css" />
+    <link href="style/multi-switch.min.css" rel="stylesheet" type="text/css" />
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
     <!--//webfonts--> 
@@ -69,6 +70,39 @@
 				<div class="header-right header-right-grid">
 					<div class="profile_details_left"><!--notifications of menu start -->
 						<ul class="nofitications-dropdown">
+							<li class="dropdown head-dpdn header-nav">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									推荐
+								</a>
+								
+							</li>
+							<li class="dropdown head-dpdn header-nav">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									发现
+								</a>
+								
+							</li>	
+							
+							
+						</ul>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				
+				
+				<div class="clearfix"> </div>
+			</div>
+			<!--search-box-->
+            <div class="search-box">
+                <asp:TextBox ID="searchtextbox" CssClass="searchtextbox" runat="server" placeholder="Search for..."></asp:TextBox>
+                    
+                <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
+                 
+			</div>
+			<!--//end-search-box-->
+            <div class="header-right header-right-grid">
+					<div class="profile_details_left"><!--notifications of menu start -->
+						<ul class="nofitications-dropdown">
 							<li class="dropdown head-dpdn">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="fa fa-heart"></i><span class="badge">...</span>
@@ -105,7 +139,7 @@
 									</a></li>
 									<li>
 										<div class="notification_bottom">
-											<a href="interests.html">See all messages</a>
+											<a href="interests.aspx">See all messages</a>
 										</div> 
 									</li>
 								</ul>
@@ -158,7 +192,7 @@
 									</a></li>
 									<li>
 										<div class="notification_bottom">
-											<a href="#">See all pending tasks</a>
+											<a href="interests.aspx">See all pending tasks</a>
 										</div> 
 									</li>
 								</ul>
@@ -209,18 +243,6 @@
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-				
-				
-				<div class="clearfix"> </div>
-			</div>
-			<!--search-box-->
-            <div class="search-box">
-                <asp:TextBox ID="searchtextbox" CssClass="searchtextbox" runat="server" placeholder="Search for..."></asp:TextBox>
-                    
-                <asp:Button ID="search" CssClass="searchButton" runat="server" Text="" OnClick="search_Click" />
-                 
-			</div>
-				<!--//end-search-box-->
 			<div class="header-right">
 				
 				<!--notification menu end -->
@@ -236,7 +258,7 @@
 							<ul class="dropdown-menu drp-mnu">
                                 <li> <asp:Label ID="user_name" class="user-name" runat="server" Text="Username"></asp:Label></li> 
 								<li> <a href="#"><i class="fa fa-cog"></i> 修改密码</a> </li> 
-								<li> <a href="Userinformation.aspx"><i class="fa fa-user"></i> 个人信息</a> </li> 
+								<li> <a href="user_imformation.aspx"><i class="fa fa-user"></i> 个人信息</a> </li> 
 								<li> <a href="#"><i class="fa fa-sign-out"></i> 注销</a> </li>
 							</ul>
 						</li>
@@ -274,23 +296,69 @@
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=USERUSE-04UKSUB\SQLEXPRESS;Initial Catalog=recommendedsystem;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Uid], [Sum] FROM [U_L]"></asp:SqlDataSource>
 
                         </div>
-                        <div style="text-align: center">
+                        <div style="text-align: center;margin-bottom:3%;">
                             <br />
                             <asp:Label ID="Label2" runat="server" Text="历史浏览资讯兴趣模型"></asp:Label>
                         </div>
+                        <div class="line"></div>
                         <div class="interestBox">
-                            兴趣标签
+                            <table>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-ravelry"></i><span>科技</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-odnoklassniki-square"></i><span>娱乐</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-gamepad"></i><span>游戏</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-child"></i><span>体育</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <script src="js/jquery-2.1.1.min.js"></script>
+
+                            <script src="src/multi-switch.js"></script>
+                            <script>
+                                $(document).ready(function () {
+                                    $('.multi-switch').multiSwitch();
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
-				
-                <div class="nav-right">
+				<div class="nav-right-one">
+                    <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><i></i><a href="#">我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>
-						<li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
-						<li><a href="#">link3</a></li>
-						<li><a href="#">link4</a></li>
+						<li><a href="#"> link1</a></li>
+						<li><a href="#"> link2</a></li>
+                        <li><a href="#"> link3</a></li>
+						<li><a href="#"> link4</a></li>
+						<li><a href="#"> link5</a></li>
+					</ul>
+				</div>
+                <div class="nav-right-two">
+					<ul>
+						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
+						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的收藏</a></li>
+						<li><a class="nav-right-two_a_after" href="#">link3</a></li>
+						<li><a class="nav-right-two_a_after" href="#">link4</a></li>
 					</ul>
 				</div>
 			</div>
@@ -301,6 +369,9 @@
 	    <script src="js/bootstrap.min.js"></script>
 	    <script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="assets/js/custom.js"></script>
+        <script src="js/jquery-2.1.1.min.js"></script>
+	
+	    <script src="js/multi-switch.js"></script>
     </form>
 </body>
 </html>

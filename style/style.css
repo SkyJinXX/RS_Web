@@ -201,7 +201,8 @@ li.dropdown.head-dpdn {
 	float: left;
 }
 li.dropdown.head-dpdn a.dropdown-toggle {
-   padding: 1.7em 1.5em;
+    text-decoration:none;
+    padding: 1.7em 1.5em;
 }
 ul.dropdown-menu li {
     margin-left: 0;
@@ -325,8 +326,8 @@ i.fa.fa-tasks{
 /*start search*/
 .search-box {
     float: left;
-    width: 34%;
-    margin: 1.2em 0 0 8em;
+    width: 30%;
+    margin: 1.2em 0 0 4em;
     position: relative;
     z-index: 1;
     display: inline-block;
@@ -860,7 +861,7 @@ ul.dropdown-menu {
     padding: 1em;
     min-width: 135px;
     top: 122%;
-    left: 0;
+    left: -40px;
 }
 ul.dropdown-menu.drp-mnu li {
     list-style-type: none;
@@ -2537,13 +2538,14 @@ button#default-map-btn, button#green-map-btn, button#blue-map-btn,button#grey-ma
     outline: none;
     cursor: pointer;
     color: #fff;
-    background: #fd5c63;
+    background: #0084ff;
     width: 100%;
     padding: .5em 1em;
     font-size: 1em;
     margin: 1.5em 0 0;
 }
 .login-info input[type="submit"]:hover{
+    color: #104E8B;
 	background:#67d3e0;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
