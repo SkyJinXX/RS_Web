@@ -62,7 +62,6 @@
 				<div class="logo">
 					<a href="index.aspx">
 						<img src="images/logo_2.gif" alt="" />
-							
 					</a>
 				</div>
 				<!--//logo-->
