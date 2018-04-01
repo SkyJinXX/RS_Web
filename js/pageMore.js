@@ -54,7 +54,7 @@ function pageShow() {
                                             '<img src="'+ value['Nimage_url'] + '" alt="图片" width = "180px" height="120px">'+
                                         '</div>'+
                                         '<div class="content-right">'+
-                                            '<a href="view.aspx">'+
+                                            '<a href="view.aspx?Nid='+value['Nid']+'">'+
                                                 value['Ncontent']+
                                             '</a>'+
                                         '</div>'+
@@ -188,7 +188,6 @@ function SearchClick(){
 
         })
 }
-
 
 
 
