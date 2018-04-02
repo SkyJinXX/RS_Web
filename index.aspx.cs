@@ -42,25 +42,47 @@ public partial class index : System.Web.UI.Page
 
             //String  sql1 = "Select top 1 Ntitle from News order by Ngoods";
             cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
-            a.InnerText= cmd.ExecuteScalar().ToString();
+            a.InnerText = cmd.ExecuteScalar().ToString();
+            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            string a1 = cmd.ExecuteScalar().ToString();
+            a.HRef = "view.aspx? Nid = '" + a1 + "'";
+
 
             cmd.CommandText = "Select top 2 Ntitle from News order by Ngoods";
             b.InnerText = cmd.ExecuteScalar().ToString();
+            cmd.CommandText = "Select top 2 Nid from News order by Ngoods";
+            string b1 = cmd.ExecuteScalar().ToString();
+            b.HRef = "view.aspx? Nid = '" + b1 + "'";
 
             cmd.CommandText = "Select top 3 Ntitle from News order by Ngoods";
             c.InnerText = cmd.ExecuteScalar().ToString();
+            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            string c1 = cmd.ExecuteScalar().ToString();
+            c.HRef = "view.aspx? Nid = '" + c1 + "'";
 
             cmd.CommandText = "Select top 4 Ntitle from News order by Ngoods";
             d.InnerText = cmd.ExecuteScalar().ToString();
+            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            string d1 = cmd.ExecuteScalar().ToString();
+            d.HRef = "view.aspx? Nid = '" + d1 + "'";
 
             cmd.CommandText = "Select top 5 Ntitle from News order by Ngoods";
             h.InnerText = cmd.ExecuteScalar().ToString();
+            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            string h1 = cmd.ExecuteScalar().ToString();
+            h.HRef = "view.aspx? Nid = '" + h1 + "'";
 
             cmd.CommandText = "Select top 6 Ntitle from News order by Ngoods";
             f.InnerText = cmd.ExecuteScalar().ToString();
+            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            string f1 = cmd.ExecuteScalar().ToString();
+            f.HRef = "view.aspx? Nid = '" + f1 + "'";
 
             cmd.CommandText = "Select top 7 Ntitle from News order by Ngoods";
             g.InnerText = cmd.ExecuteScalar().ToString();
+            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            string g1 = cmd.ExecuteScalar().ToString();
+            g.HRef = "view.aspx? Nid = '" + g1 + "'";
 
             conn.Close();
         }
