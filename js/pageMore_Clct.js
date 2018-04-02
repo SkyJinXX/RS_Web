@@ -9,7 +9,6 @@ $(function () {
     likeClick();
     unlikeClick();
     collectClick();
-    TypeClick();
     SearchClick();
 })
 function scrollListen() {
@@ -27,7 +26,7 @@ function pageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index.aspx/getNewsJson',
+        url: 'Collection.aspx/getNewsJson',
         async: false,
         data: "{'page':'" + page + "', 'SourseType':'"+ SourseType +"', 'keyWord':'"+ keyWord +"'}",
         dataType: "json",
@@ -145,7 +144,7 @@ function collectClick(){
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
         success: function (result) {
-            console.log("成功收藏");
+            conlose.log("成功收藏");
         },
         error: function (textStatus, errorThrown) {
             console.log(textStatus);
@@ -155,23 +154,6 @@ function collectClick(){
 });
 }
 
-function TypeClick(){
-    $('#typeUl').children('li').each(
-        function(index, value){
-            $(value).children('a').children('b').click(
-                function(){
-                    keyWord = $(this).text();
-                    page = 0;
-                    SourseType = "Type";
-                    $('.row').empty();
-                    $(document).off('scroll', scrollListen);
-                    pageShow();
-                    $(document).on('scroll', scrollListen);
-                    //console.log(keyWord);                                                 
-                });            
-        }
-    )
-}
 function SearchClick(){
     $('#searchButton').click(
         function(){
