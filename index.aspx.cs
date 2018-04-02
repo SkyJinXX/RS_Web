@@ -38,7 +38,29 @@ public partial class index : System.Web.UI.Page
 
             cmd.CommandText = "Select Uid From Users Where Uusername = '" + Session["username"] + "'";
             Session["Uid"] = cmd.ExecuteScalar().ToString();
-            
+
+
+            //String  sql1 = "Select top 1 Ntitle from News order by Ngoods";
+            cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
+            a.InnerText= cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 2 Ntitle from News order by Ngoods";
+            b.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 3 Ntitle from News order by Ngoods";
+            c.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 4 Ntitle from News order by Ngoods";
+            d.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 5 Ntitle from News order by Ngoods";
+            h.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 6 Ntitle from News order by Ngoods";
+            f.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 7 Ntitle from News order by Ngoods";
+            g.InnerText = cmd.ExecuteScalar().ToString();
 
             conn.Close();
         }

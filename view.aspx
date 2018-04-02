@@ -62,7 +62,6 @@
 				<div class="logo">
 					<a href="index.aspx">
 						<img src="images/logo_2.gif" alt="" />
-							
 					</a>
 				</div>
 				<!--//logo-->
@@ -325,11 +324,13 @@
 				<div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><a href="#"> link1</a></li>
-						<li><a href="#"> link2</a></li>
-                        <li><a href="#"> link3</a></li>
-						<li><a href="#"> link4</a></li>
-						<li><a href="#"> link5</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server"> link3</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="g" runat="server"> link7</a></li>
 					</ul>
 				</div>
                 <div class="nav-right-two">

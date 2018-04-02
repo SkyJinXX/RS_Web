@@ -32,6 +32,36 @@ public partial class view : System.Web.UI.Page
             cmd.CommandText = s;
             //user_name.Text = cmd.ExecuteScalar().ToString();
 
+<<<<<<< HEAD
+            cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
+            a.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 2 Ntitle from News order by Ngoods";
+            b.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 3 Ntitle from News order by Ngoods";
+            c.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 4 Ntitle from News order by Ngoods";
+            d.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 5 Ntitle from News order by Ngoods";
+            h.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 6 Ntitle from News order by Ngoods";
+            f.InnerText = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "Select top 7 Ntitle from News order by Ngoods";
+            g.InnerText = cmd.ExecuteScalar().ToString();
+=======
+            cmd.CommandText = "select Cid,Ccontent from Comments where Nid = '" + Session["Nid"] + "' order by Cid";
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet("Com");
+            da.Fill(ds);
+
+            ds.Tables["Com"].Columns.Add("FromName")
+>>>>>>> 0e2ba09c8bce977825580e5e0ae07a88cdc4dca3
+
             conn.Close();
         }
     }
@@ -47,7 +77,7 @@ public partial class view : System.Web.UI.Page
 
         String nid = HttpContext.Current.Session["nid"].ToString();
 
-        cmd.CommandText = "Select Ntitle,Ncontent,Ntime,Ngoods,Nbads,Ntype,Nimage_url From News Where Nid = '" + nid + "'";
+        cmd.CommandText = "Select Nid,Ntitle,Ncontent,Ntime,Ngoods,Nbads,Ntype,Nimage_url From News Where Nid = '" + nid + "'";
         //if (cmd.ExecuteScalar() == null)
         //{
         //    Response.Write("<script>alert('未知错误!');window.location.href ='index.aspx'</script>");
@@ -77,7 +107,7 @@ public partial class view : System.Web.UI.Page
         String nid = HttpContext.Current.Session["nid"].ToString();
 
         SqlCommand cmd = new SqlCommand("", conn); 
-        cmd.CommandText = "select Cid,Ccontent,Cfrom_Uid,Cto_Uid from Comments where Nid = '" + nid + "'";
+        //cmd.CommandText = "select Cid as Id,Ccontent as Content,Uname as Fromname,Uname as Toname from Comments, User where Nid = '" + nid 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
         da.Fill(ds);

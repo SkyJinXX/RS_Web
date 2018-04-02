@@ -67,7 +67,7 @@
 				<!--logo -->
 				<div class="logo">
 					<a href="index.aspx">
-						<img src="images/logo_2.gif" alt="" />
+						<img src="images/logo/logo_picture_white.gif" alt="" />
 							
 					</a>
 				</div>
@@ -99,11 +99,13 @@
 			</div>
 			<!--search-box-->
             <div class="search-box">
-                <input type="text" id ="searchText"/>
-                    
-                <input type="button" id="searchButton" value="搜索"/>
-                 
+                <input type="text" id ="searchText" style="width:100%;height: 30px;" placeholder="发现你的兴趣..."/>
+                
 			</div>
+            <div class="search-button">    
+                <input type="button" id="searchButton" style="height: 30px;" value="搜索"/>
+                 
+            </div>
 			<!--//end-search-box-->
             <div class="header-right header-right-grid">
 					<div class="profile_details_left"><!--notifications of menu start -->
@@ -303,11 +305,13 @@
                 <div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><a class="nav-right-one_a_after" href="#"> link1</a></li>
-						<li><a class="nav-right-one_a_after" href="#"> link2</a></li>
-                        <li><a class="nav-right-one_a_after" href="#"> link3</a></li>
-						<li><a class="nav-right-one_a_after" href="#"> link4</a></li>
-						<li><a class="nav-right-one_a_after" href="#"> link5</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server"> link3</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="g" runat="server"> link7</a></li>
 					</ul>
 				</div>
 				<div class="nav-right-two">
