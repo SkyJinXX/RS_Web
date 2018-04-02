@@ -260,67 +260,7 @@
                     <div class="comment_area">
                         <div class="comment_area_title">
                             <b>热门评论</b>
-                        </div>
-                        <div class="comment_box_single">
-                            <div class="comment_box_title">
-                                <img class="photo" src="#" style="float:left" />
-                                <div class="name">
-                                    伟仔
-                                </div>
-                            </div>
-                            <div class="comment_box_article">
-                                <p class="content">2333</p>
-
-                            </div>
-                            <div class="comment_box_bottom">
-
-                                <div class="fa_img">
-                                    <i class="fa fa-reply"></i>
-                                </div>
-                                <div class="replyButton">
-                                    <button class="comment_box_bottom_button" type="button">回复</button>
-                                </div>
-                                <div class="fa_img">
-                                    <i class="fa fa-flag"></i>
-                                </div>
-                                <div class="reportButton">
-                                    <button class="comment_box_bottom_button" type="button">举报</button>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="comment_box_double">
-                            <div class="comment_box_title">
-                                <img class="photo" src="#" style="float:left" />
-                                <div class="name">
-                                    欢仔
-                                </div>
-                                <div class="reply">回复</div>
-                                <img class="photo" src="#" style="float:left" />
-                                <div class="name">
-                                    伟仔
-                                </div>
-                            </div>
-                            <div class="comment_box_article">
-                                <p class="content">2333</p>
-
-                            </div>
-                            <div class="comment_box_bottom">
-
-                                <div class="fa_img">
-                                    <i class="fa fa-reply"></i>
-                                </div>
-                                <div class="replyButton">
-                                    <button class="comment_box_bottom_button" type="button">回复</button>
-                                </div>
-                                <div class="fa_img">
-                                    <i class="fa fa-flag"></i>
-                                </div>
-                                <div class="reportButton">
-                                    <button class="comment_box_bottom_button" type="button">举报</button>
-                                </div>
-
-                            </div>
+                            <input type="button" class ="but" value="收起"/>
                         </div>
                     </div>
                 </div>

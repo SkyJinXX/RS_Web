@@ -25,8 +25,6 @@ public partial class view : System.Web.UI.Page
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
-            Session["Nid"] = 1;
-
             String s = "Select Uname From Users Where Uusername = '" + Session["username"] + "'";
             SqlCommand cmd = new SqlCommand(s, conn);
             cmd.CommandText = s;
@@ -74,45 +72,28 @@ public partial class view : System.Web.UI.Page
             cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
             string g1 = cmd.ExecuteScalar().ToString();
             g.HRef = "view.aspx? Nid = '" + g1 + "'";
-
-
-            /*
-            cmd.CommandText = "select Cid,Ccontent from Comments where Nid = '" + Session["Nid"] + "' order by Cid";
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet("Com");
-            da.Fill(ds);
-
-            ds.Tables["Com"].Columns.Add("FromName");
-            */
-            //cmd.CommandText = "select Cid,Ccontent from Comments where Nid = '" + Session["Nid"] + "' order by Cid";
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //DataSet ds = new DataSet("Com");
-            //da.Fill(ds);
-
-            //ds.Tables["Com"].Columns.Add("FromName");
-
+            
             conn.Close();
         }
     }
     
 
     [WebMethod]
-    public static String MessageShow()
+    public static String MessageShow(String nid)
     {
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
         SqlCommand cmd = new SqlCommand("", conn);
 
-        String nid = HttpContext.Current.Session["nid"].ToString();
+        HttpContext.Current.Session["nid"] = nid; 
 
         cmd.CommandText = "Select Nid,Ntitle,Ncontent,Ntime,Ngoods,Nbads,Ntype,Nimage_url From News Where Nid = '" + nid + "'";
         //if (cmd.ExecuteScalar() == null)
         //{
         //    Response.Write("<script>alert('未知错误!');window.location.href ='index.aspx'</script>");
         //}
-
-        ArrayList res = new ArrayList();
+        
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
@@ -136,13 +117,18 @@ public partial class view : System.Web.UI.Page
         String nid = HttpContext.Current.Session["nid"].ToString();
 
         SqlCommand cmd = new SqlCommand("", conn); 
-        //cmd.CommandText = "select Cid as Id,Ccontent as Content,Uname as Fromname,Uname as Toname from Comments, User where Nid = '" + nid 
+        cmd.CommandText = "select Cid as Id,Ccontent as Content,u1.Uname as Fromname,u1.Uimage_url as Fromurl,u2.Uname as Toname" +
+                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where Nid = '" + nid +
+                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid order by Cid";
+
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
         da.Fill(ds);
-        String s = DatasetToJson(ds);
 
+        String s = DatasetToJson(ds);
         conn.Close();
+
+        Console.Write(s);
 
         return s;
     }
@@ -256,6 +242,27 @@ public partial class view : System.Web.UI.Page
 
             conn.Close();
         }
+    }
+
+    //回复功能
+    [WebMethod]
+    public static void Replying(string id)
+    {
+        String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        SqlConnection conn = new SqlConnection(connstr);
+        conn.Open();
+
+        SqlCommand cmd = new SqlCommand("", conn);
+        cmd.CommandText = "select Cfrom_uid from Comments where Cid = '" + id + "'";
+        String Toid = cmd.ExecuteScalar().ToString();
+        String Fromid = HttpContext.Current.Session["uid"].ToString();
+        String Nid = HttpContext.Current.Session["nid"].ToString();
+        cmd.CommandText = "select Count(*) from Comments";
+        String Cid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
+
+        String Content = "";
+
+        conn.Close();
     }
 
     //数据集的总的（多表）json格式转化

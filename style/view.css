@@ -32,9 +32,10 @@
     clear:both;
 }
 
-.comment_area photo {
-    width: 150px;
-    height: 150px;
+.comment_area img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .message_view img {
@@ -158,6 +159,10 @@
     padding-bottom: 1%;
     margin-left: 2%;
     font-size: 20px;
+}
+
+.comment_area_title but{
+    float:right;
 }
 
 .comment_box_single {
