@@ -12,9 +12,9 @@
 
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- Bootstrap Core CSS -->
-    <link href="style/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="style/bootstrap.css" rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
-    <link href="style/style.css" rel='stylesheet' type='text/css' />
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
     <!-- font CSS -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" >
     <!-- font-awesome icons -->
@@ -33,6 +33,7 @@
     <!--//webfonts--> 
     <!--animate-->
     <link href="style/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style/footer.css" rel="stylesheet" type="text/css" />
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -270,86 +271,111 @@
 			<div class="clearfix"> </div>	
 		</div>
         <div id="page-wrapper">
-			<div class="main-page">
-				<div class="messageBox">
+            <div class="main-page">
+                <div class="messageBox">
                     <div class="user_message_background">
                         <div class="user_imformation_image">
                             <img src="img/image/board1.jpg" />
                         </div>
+                        <div class="form-title">
+                            <h4>个人信息</h4>
+                        </div>
                         <div class="user_message">
-
-                        </div>
-                    </div>
-				</div>
-                <div class="nav-right-one">
-                    <div class="nav-right-one-title">热门</div>
-					<ul>
-						<li><a href="#"> link1</a></li>
-						<li><a href="#"> link2</a></li>
-                        <li><a href="#"> link3</a></li>
-						<li><a href="#"> link4</a></li>
-						<li><a href="#"> link5</a></li>
-					</ul>
-				</div>
-				<div class="nav-right-two">
-					<ul>
-						<li><i></i><a href="#">我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>
-                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
-						<li><a href="#">link3</a></li>
-						<li><a href="#">link4</a></li>
-					</ul>
-				</div>
-				<!--//row-->
-			</div>
-		</div>
-
-
-
-        <div class="page-wrapper toggled">
-            
-            
-            <!-- sidebar-wrapper  -->
-            <main class="page-content">
-                <div class="container-fluid">
-                    <header class="htmleaf-header">
-                    </header>
-                    <div class="table">
-                        <div class="user_left">
-                            <img src="img/image/221-man.png" />
-                        </div>
-                        <div class="table_inside">
-                            <div class="message_title">
-                                <asp:Label ID="Information_modification" runat="server" Text="用户名"></asp:Label>
+                            <div class="user_left">
+                                <img src="img/image/221-man.png" />
                             </div>
-                            <div class="subline"></div>
-                            <div class="message_line">
-                                <asp:Label ID="label_Username" runat="server" Text="用户名:" ViewStateMode="Inherit"></asp:Label>
-                                <asp:TextBox ID="TextBox_Username" runat="server"></asp:TextBox><br />
-                                <asp:Label ID="Label_Nickname" runat="server" Text="昵称:"></asp:Label>
-                                <asp:TextBox ID="TextBox_Nickname" runat="server"></asp:TextBox>
-                                <br />
-                                <asp:Label ID="label_Email" runat="server" Text="邮件:" ViewStateMode="Inherit"></asp:Label>
-                                <asp:TextBox ID="TextBox_Email" runat="server"></asp:TextBox><br />
-                                <asp:Label ID="Label_Age" runat="server" Text="年龄:"></asp:Label>
-                                <asp:TextBox ID="TextBox_Age" runat="server"></asp:TextBox><br />
-                                <asp:Label ID="Label_Sex" runat="server" Text="性别:"></asp:Label>
-                                <asp:TextBox ID="TextBox_Sex" runat="server"></asp:TextBox><br />
-                            </div>
-                            <div class="subline"></div>
-                            <div class="button">
-                                <asp:Button ID="Button_cancel" runat="server" Text="放弃修改" OnClick="Button_cancel_Click" />
-                                <asp:Button ID="Button_confirm" runat="server" Text="确认修改" OnClick="Button_confirm_Click" />
+                            <div class="user_right">
+                                <div class="form-group" style="height: 40px">
+                                    <label class="col-md-2 control-label labelPosition">用户名</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-address-card"></i>
+                                            </span>
+                                            <asp:TextBox ID="TextBox_Username" CssClass="form-control1" runat="server" placeholder="用户名"></asp:TextBox>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="height: 40px">
+                                    <label class="col-md-2 control-label labelPosition">昵称</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-user-o"></i>
+                                            </span>
+                                            <asp:TextBox ID="TextBox_Nickname" CssClass="form-control1" runat="server" placeholder="昵称"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="height: 40px">
+                                    <label class="col-md-2 control-label labelPosition">邮件</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-envelope-o"></i>
+                                            </span>
+                                            <asp:TextBox ID="TextBox_Email" CssClass="form-control1" runat="server" placeholder="邮件"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="height: 40px">
+                                    <label class="col-md-2 control-label labelPosition">年龄</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-user-circle-o"></i>
+                                            </span>
+                                            <asp:TextBox ID="TextBox_Age" CssClass="form-control1" runat="server" placeholder="年龄"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="height: 40px">
+                                    <label class="col-md-2 control-label labelPosition">性别</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-venus-mars"></i>
+                                            </span>
+                                            <asp:TextBox ID="TextBox_Sex" CssClass="form-control1" runat="server"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group_save" style="height: 40px">
+                                    <asp:Button ID="saveChange" runat="server" Text="保存更改" OnClick="saveChange_Click" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </main><!-- page-content" -->
-            <footer>
-                footer is unfinshed
-            </footer>
+                <div class="nav-right-one">
+                    <div class="nav-right-one-title">热门</div>
+                    <ul>
+                        <li><a href="#">link1</a></li>
+                        <li><a href="#">link2</a></li>
+                        <li><a href="#">link3</a></li>
+                        <li><a href="#">link4</a></li>
+                        <li><a href="#">link5</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right-two">
+                    <ul>
+                        <li><i></i><a href="#">我的兴趣模型</a></li>
+                        <li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#">兴趣标签</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#">我的收藏</a></li>
+                        <li><a href="#">link3</a></li>
+                        <li><a href="#">link4</a></li>
+                    </ul>
+                </div>
+                <!--//row-->
+
+                <div class="footer">
+                    footer is unfinshed
+                </div>
+            </div>
         </div>
-        <!-- page-wrapper -->
+
+
 
 
         <script src="js/jquery.min.js" type="text/javascript"></script>
