@@ -32,12 +32,12 @@ public partial class view : System.Web.UI.Page
             cmd.CommandText = s;
             //user_name.Text = cmd.ExecuteScalar().ToString();
 
-            cmd.CommandText = "select Cid,Ccontent from Comments where Nid = '" + Session["Nid"] + "' order by Cid";
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet("Com");
-            da.Fill(ds);
+            //cmd.CommandText = "select Cid,Ccontent from Comments where Nid = '" + Session["Nid"] + "' order by Cid";
+            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //DataSet ds = new DataSet("Com");
+            //da.Fill(ds);
 
-            ds.Tables["Com"].Columns.Add("FromName")
+            //ds.Tables["Com"].Columns.Add("FromName");
 
             conn.Close();
         }
