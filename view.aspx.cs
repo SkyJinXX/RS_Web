@@ -33,6 +33,7 @@ public partial class view : System.Web.UI.Page
             //user_name.Text = cmd.ExecuteScalar().ToString();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
             a.InnerText = cmd.ExecuteScalar().ToString();
 
@@ -54,12 +55,17 @@ public partial class view : System.Web.UI.Page
             cmd.CommandText = "Select top 7 Ntitle from News order by Ngoods";
             g.InnerText = cmd.ExecuteScalar().ToString();
 =======
+=======
+>>>>>>> 0e2ba09c8bce977825580e5e0ae07a88cdc4dca3
             cmd.CommandText = "select Cid,Ccontent from Comments where Nid = '" + Session["Nid"] + "' order by Cid";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet("Com");
             da.Fill(ds);
 
             ds.Tables["Com"].Columns.Add("FromName")
+<<<<<<< HEAD
+>>>>>>> 0e2ba09c8bce977825580e5e0ae07a88cdc4dca3
+=======
 >>>>>>> 0e2ba09c8bce977825580e5e0ae07a88cdc4dca3
 
             conn.Close();
