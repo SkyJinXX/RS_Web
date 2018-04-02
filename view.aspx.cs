@@ -32,7 +32,6 @@ public partial class view : System.Web.UI.Page
             cmd.CommandText = s;
             //user_name.Text = cmd.ExecuteScalar().ToString();
 
-<<<<<<< HEAD
             cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
             a.InnerText = cmd.ExecuteScalar().ToString();
             cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
@@ -85,14 +84,12 @@ public partial class view : System.Web.UI.Page
 
             ds.Tables["Com"].Columns.Add("FromName");
             */
-=======
             //cmd.CommandText = "select Cid,Ccontent from Comments where Nid = '" + Session["Nid"] + "' order by Cid";
             //SqlDataAdapter da = new SqlDataAdapter(cmd);
             //DataSet ds = new DataSet("Com");
             //da.Fill(ds);
 
             //ds.Tables["Com"].Columns.Add("FromName");
->>>>>>> 37607bab83bfae55d3c2cfd66827fca7562732a5
 
             conn.Close();
         }
