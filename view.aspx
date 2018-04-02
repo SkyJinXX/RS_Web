@@ -69,6 +69,41 @@
 				<div class="header-right header-right-grid">
 					<div class="profile_details_left"><!--notifications of menu start -->
 						<ul class="nofitications-dropdown">
+							<li class="dropdown head-dpdn header-nav">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									推荐
+								</a>
+								
+							</li>
+							<li class="dropdown head-dpdn header-nav">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									发现
+								</a>
+								
+							</li>	
+							
+							
+						</ul>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				
+				
+				<div class="clearfix"> </div>
+			</div>
+			<!--search-box-->
+            <div class="search-box">
+                <input type="text" id ="searchText" style="width:100%;height: 30px;" placeholder="发现你的兴趣..."/>
+                
+			</div>
+            <div class="search-button">    
+                <input type="button" id="searchButton" style="height: 30px;" value="搜索"/>
+                 
+            </div>
+			<!--//end-search-box-->
+            <div class="header-right header-right-grid">
+					<div class="profile_details_left"><!--notifications of menu start -->
+						<ul class="nofitications-dropdown">
 							<li class="dropdown head-dpdn">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="fa fa-heart"></i><span class="badge">...</span>
@@ -158,7 +193,7 @@
 									</a></li>
 									<li>
 										<div class="notification_bottom">
-											<a href="#">See all pending tasks</a>
+											<a href="interests.aspx">See all pending tasks</a>
 										</div> 
 									</li>
 								</ul>
@@ -209,20 +244,6 @@
 						<div class="clearfix"> </div>
 					</div>
 				</div>
-				
-				
-				<div class="clearfix"> </div>
-			</div>
-			<!--search-box-->
-            <div class="search-box">
-                <input type="text" id ="searchText" style="width:100%;height: 30px;" placeholder="发现你的兴趣..."/>
-                
-			</div>
-            <div class="search-button">    
-                <input type="button" id="searchButton" style="height: 30px;" value="搜索"/>
-                 
-            </div>
-				<!--//end-search-box-->
 			<div class="header-right">
 				
 				<!--notification menu end -->
