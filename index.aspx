@@ -311,7 +311,6 @@
 						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
 						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
                         <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="g" runat="server"> link7</a></li>
 					</ul>
 				</div>
 				<div class="nav-right-two">
@@ -319,8 +318,6 @@
 						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
                         <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="Collection.aspx"> 我的收藏</a></li>
-						<li><a class="nav-right-two_a_after" href="#">link3</a></li>
-						<li><a class="nav-right-two_a_after" href="#">link4</a></li>
 					</ul>
 				</div>
 				<!--//row-->
