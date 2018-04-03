@@ -898,14 +898,28 @@ ul.dropdown-menu.drp-mnu li {
   border-bottom: 0;
   color: #3D464D;
 }
-.panel-title {
-    width:30%;
+
+.panel-title_home {
+    width: 30%;
     color: #2A2F43;
     border-bottom: 1px solid #EE7942;
     font-size: 1.4em;
     padding: 16px 20px;
     background: #FFFFFF;
     margin-bottom: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    letter-spacing: 1px;
+}
+
+.panel-title {
+    width: 100%;
+    color: #2A2F43;
+    border-bottom: 1px solid #EE7942;
+    font-size: 1.4em;
+    padding: 16px 20px;
+    background: #FFFFFF;
+    margin-bottom: 1em;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     letter-spacing: 1px;

@@ -349,7 +349,7 @@
                     <div class="row">
                         <div class="col-md-7">
                             <div class="panel panel-widget">
-                                <div class="panel-title">
+                                <div class="panel-title_home">
                                     资讯
 							      <ul class="panel-tools">
                                       <li></li>
@@ -366,7 +366,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="panel panel-widget">
-                                <div class="panel-title">
+                                <div class="panel-title_home">
                                     美食
 							  <ul class="panel-tools">
                                   <li></li>
@@ -389,7 +389,7 @@
                     <div class="row">
                         <div class="col-md-5 program-grid">
                             <div class="panel panel-widget">
-                                <div class="panel-title">
+                                <div class="panel-title_home">
                                     游玩
 							  <ul class="panel-tools">
                                   <li></li>
@@ -406,7 +406,7 @@
                         </div>
                         <div class="col-md-7 monthly-grid">
                             <div class="panel panel-widget">
-                                <div class="panel-title">
+                                <div class="panel-title_home">
                                     趣事
 							  <ul class="panel-tools">
                                   <li></li>
