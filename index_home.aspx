@@ -1,16 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
-
-<%@ Import Namespace="System" %>
-<%@ Import Namespace="System.Data" %>
-<%@ Import Namespace="System.Data.SqlClient" %>
-<%@ Import Namespace="System.Configuration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index_home.aspx.cs" Inherits="index_home" %>
 
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Baxster Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
     SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -21,11 +17,11 @@
     <!-- Custom CSS -->
     <link href="style/style.css" rel='stylesheet' type='text/css' />
     <!-- font CSS -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" >
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- font-awesome icons -->
-    <link href="style/font-awesome.css" rel="stylesheet"> 
+    <link href="style/font-awesome.css" rel="stylesheet" /> 
     
-    <link href="style/font-awesome.min.css" rel="stylesheet"> 
+    <link href="style/font-awesome.min.css" rel="stylesheet" /> 
     <!-- //font-awesome icons -->
     <link href="style/wap.css?2" rel="stylesheet" type="text/css" />
     <!--line-->
@@ -33,7 +29,7 @@
     <link href="style/content.css" rel="stylesheet" type="text/css" />
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
-    <link href="style/custom.css" rel="stylesheet">
+    <link href="style/custom.css" rel="stylesheet" />
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -41,12 +37,11 @@
      <!-- js-->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
-    <script src="js/pageMore.js"></script>
     <!--webfonts-->
-    <link href="style/fonts.css" rel="stylesheet" type="text/css">
+    <link href="style/fonts.css" rel="stylesheet" type="text/css" />
     <!--//webfonts--> 
     <!--animate-->
-    <link href="style/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style/animate.css" rel="stylesheet" type="text/css" media="all" />
     <script src="js/wow.min.js"></script>
 	<script>
         new WOW().init();
@@ -56,13 +51,18 @@
     <script src="js/metisMenu.min.js"></script>
     <script src="js/custom.js"></script>
     <!--//Metis Menu -->
-	<title>资讯</title>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+	<title>首页</title>
     
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
     <form id="form1" runat="server">
-
-        <div class="sticky-header header-section ">
+    <div class="sticky-header header-section ">
 			<div class="header-left">
 				<!--logo -->
 				<div class="logo">
@@ -280,41 +280,20 @@
 		</div>
         <div id="page-wrapper">
 			<div class="main-page">
-				
-				<div class="classification">
-					<ul id ="typeUl">
-						<li><i></i><a class="classification_type" href="#"><b>科技</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>娱乐</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>体育</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>游戏</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>汽车</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>政治</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>文化</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>财经</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>时尚</b></a></li>
-					</ul>
-				</div>
-				<!-- //four-grids -->
-				<!--row-->
-				<div class="message-left">
-					<div class="row">			
-						
-					</div>
-					
-				</div>
-                <div class="nav-right-one">
+                <div class="home_messageBox">
+                    
+                </div>
+				<div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server"> link3</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="g" runat="server"> link7</a></li>
+						<li><a href="#"> link1</a></li>
+						<li><a href="#"> link2</a></li>
+                        <li><a href="#"> link3</a></li>
+						<li><a href="#"> link4</a></li>
+						<li><a href="#"> link5</a></li>
 					</ul>
 				</div>
-				<div class="nav-right-two">
+                <div class="nav-right-two">
 					<ul>
 						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
@@ -323,18 +302,9 @@
 						<li><a class="nav-right-two_a_after" href="#">link4</a></li>
 					</ul>
 				</div>
-				<!--//row-->
+
 			</div>
 		</div>
-
-
-
     </form>
-	
-	<script src="js/jquery.min.js" type="text/javascript"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="assets/js/custom.js"></script>
 </body>
 </html>

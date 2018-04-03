@@ -246,7 +246,7 @@ public partial class view : System.Web.UI.Page
 
     //回复功能
     [WebMethod]
-    public static void Replying(string id)
+    public static void Replying(String id,String Con)
     {
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
@@ -260,10 +260,30 @@ public partial class view : System.Web.UI.Page
         cmd.CommandText = "select Count(*) from Comments";
         String Cid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
 
-        String Content = "";
+        bool s = false;
+        while(s)
+        {
+            cmd.CommandText = "select Cid from Comments where Cid = '" + Cid + "'";
+            if(cmd.ExecuteScalar()!=null)
+            {
+                Cid = (Convert.ToInt32(Cid) + 1).ToString();
+            }
+            else
+            {
+                break;
+            }
+        }
+        
+
+        String Content = Con.ToString();
+
+        Console.Write(Content);
+        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Nid + "','" + Content + "','" + Fromid + "','" + Toid + "')";
+        cmd.ExecuteScalar();
 
         conn.Close();
     }
+    
 
     //数据集的总的（多表）json格式转化
     public static string DatasetToJson(System.Data.DataSet ds)

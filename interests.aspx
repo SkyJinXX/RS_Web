@@ -80,10 +80,7 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 									发现
 								</a>
-								
 							</li>	
-							
-							
 						</ul>
 						<div class="clearfix"> </div>
 					</div>
