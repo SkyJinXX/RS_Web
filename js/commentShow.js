@@ -7,8 +7,9 @@ $(function () {
     likeClick();
     collectClick();
     unlikeClick();
+    Button_switch();
+    Button_hide();
     Reply();
-
 })
 
 
@@ -69,6 +70,7 @@ function messageShow() {
 
 function ColExp() {
     $(document).on("click", ".comment_area_title", function () {
+
         $(this).parent().slideToggle();
     });
 }
@@ -102,7 +104,11 @@ function CommentShow() {
                         '<i class="fa fa-reply"></i>' +
                         '</div>' +
                         '<div class="replyButton">' +
-                        '<button class="comment_box_bottom_button" type="button">回复</button>' +
+                        '<input class="comment_box_bottom_button" id="Button_Reply" type="button" value="回复" />' +
+                        '</div>' +
+                        '<div class="replyContent">' +
+                        '<input class="comment_box_bottom_text" type="text" style="display:none"/>' +
+                        '<input class="comment_box_bottom_confirm" type="Button" style="display:none" value="确定"/>' +
                         '</div>' +
                         '<div class="fa_img">' +
                         '<i class="fa fa-flag"></i>' +
@@ -139,7 +145,11 @@ function CommentShow() {
                         '<i class="fa fa-reply"></i>' +
                         '</div>' +
                         '<div class="replyButton">' +
-                        '<button class="comment_box_bottom_button" type="button">回复</button>' +
+                        '<input class="comment_box_bottom_button" id="Button_Reply" type="button" value="回复" />' +
+                        '</div>' +
+                        '<div class="replyContent">' +
+                        '<input class="comment_box_bottom_text" type="text" style="display:none"/>' +
+                        '<input class="comment_box_bottom_confirm" type="Button" style="display:none" value="确定"/>' +
                         '</div>' +
                         '<div class="fa_img">' +
                         '<i class="fa fa-flag"></i>' +
@@ -152,6 +162,7 @@ function CommentShow() {
                         '</div>'
                     );
                 }
+                
             });
         },
         error: function (textStatus, errorThrown) {
@@ -159,6 +170,38 @@ function CommentShow() {
             console.log(errorThrown);
         }
     })
+}
+
+function Button_hide(){
+    //$(document).on("click", "#hideButton", function () {
+    //    if ($('#hideButton').val() == "收起") 
+    //        $('#hideButton').val("展开");
+    //    else
+    //        $('#hideButton').val("收起");
+    //    $(".comment_area").slideToggle("slow");
+    //    //$(".comment_area").toggle();
+
+    //});
+    $(".fold-button").click(function () {
+        $(".comment_area").slideToggle("fast");
+        $(".open_Button").toggle();
+        $(".close_Button").toggle();
+    });
+}
+
+function Button_switch() {
+    $(document).on("click", ".replyButton", function () {
+        if (jQuery(this).children('.comment_box_bottom_button').val() == "回复") {
+            jQuery(this).children('.comment_box_bottom_button').val("取消");
+            jQuery(this).parent().children('.replyContent').children('.comment_box_bottom_text').css('display', 'block');
+            jQuery(this).parent().children('.replyContent').children('.comment_box_bottom_confirm').css('display', 'block');
+        }
+        else {
+            jQuery(this).children('.comment_box_bottom_button').val("回复");
+            jQuery(this).parent().children('.replyContent').children('.comment_box_bottom_text').css('display', 'none');
+            jQuery(this).parent().children('.replyContent').children('.comment_box_bottom_confirm').css('display', 'none');
+        }
+    });
 }
 
 function likeClick() {
@@ -229,22 +272,40 @@ function collectClick() {
 }
 
 function Reply() {
-    $(document).on("click", ".replyButton", function () {
-        var id = jQuery(this).parent().parent().parent().attr('Id');
-        $.ajax({
-            type: 'post',
-            contentType: "application/json",
-            url: 'view.aspx/Replying',
-            async: true,
-            data: "{'id':'" + id + "'}",
-            dataType: "json",
-            success: function (result) {
-                alert('成功收藏');
-            },
-            error: function (textStatus, errorThrown) {
-                console.log(textStatus);
-                console.log(errorThrown);
+    $(document).on("click", ".replyContent", function () {
+        var id = jQuery(this).parent().parent().parent().attr('Nid');
+        
+        $(".comment_box_bottom_confirm").click(function () {
+            var Con = jQuery(this).parent().children('.comment_box_bottom_text').val();
+            console.log(Con);
+
+            if (Con == null || Con == "") {
+                alert("评论内容不能为空");
             }
+            else {
+                $.ajax({
+                    type: 'post',
+                    contentType: "application/json",
+                    url: 'view.aspx/Replying',
+                    async: true,
+                    data: "{'id':'" + id + "','Con':'" + Con + "'}",
+                    dataType: "json",
+                    success: function (result) {
+                        alert('评论成功');
+                    },
+                    error: function (textStatus, errorThrown) {
+                        console.log(textStatus);
+                        console.log(errorThrown);
+                    }
+                });
+                jQuery(this).parent().parent().children('.replyButton').children('.comment_box_bottom_button').val("回复");
+                jQuery(this).parent().children('.comment_box_bottom_text').css('display', 'none');
+                jQuery(this).css('display', 'none');
+                $('.comment_area').empty();
+                CommentShow();
+            }
+            
+
         });
     });
 }

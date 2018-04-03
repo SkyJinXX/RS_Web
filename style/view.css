@@ -32,10 +32,17 @@
     clear:both;
 }
 
+.comment_area_Nid{
+
+
+}
+
 .comment_area img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .message_view img {
@@ -48,13 +55,22 @@
     padding-right: 8%;
 }
 
-.comment_area {
+.comment_are {
     width: 100%;
-    min-height: 10em;
-    margin-top:2em;
+    min-height: 6em;
+    margin-top: 2em;
     background-color: #FFFFFF;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.comment_area {
+    width: 100%;
+    min-height: 10em;
+    margin-top: 2em;
+    padding: 10px;
+    background: #ffffff;
+    clear:both;
 }
 .comment_area article{
 
@@ -154,6 +170,7 @@
 .comment_area_title {
     width: 15%;
     height: auto;
+    float:left;
     border-bottom: 2px solid #EE7942;
     padding-top: 2%;
     padding-bottom: 1%;
@@ -161,8 +178,8 @@
     font-size: 20px;
 }
 
-.comment_area_title but{
-    float:right;
+.comment_area_title_Button {
+    float: right;
 }
 
 .comment_box_single {
@@ -198,8 +215,12 @@
 
 .name, .reply {
     float: left;
-    margin-left:1%;
-    margin-right:1%;
+    /*margin-left:1%;
+    margin-right:1%;*/
+    margin-top:20px;
+    padding-left:5px;
+    padding-right:5px;
+    /*padding-top:20px;*/
 }
 
 .reply {
@@ -229,6 +250,10 @@
     float: left;
 }
 
+.replyContent{
+
+}
+
 .comment_box_bottom_button {
     width: 6%;
     float: left;
@@ -244,9 +269,50 @@
     color:#436EEE;
 }
 
+.comment_box_bottom_confirm {
+    width: 6%;
+    float: left;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+}
+
+.comment_box_bottom_button:hover {
+    color: #436EEE;
+}
+
+.comment_box_bottom_text{
+
+}
+
 .footer{
     clear:both;
     width:100%;
     min-height:3em;
     height:auto;
+}
+.fold-box {
+    padding: 10px;
+    background: #e5eecc;
+    border: solid 1px #c3c3c3;
+    display: none;
+    margin: 10px;
+}
+
+.fold-button {
+    float:right;
+    padding-top:2%;
+    margin-right: 4%;
+}
+
+.fold-button span {
+        display: inline-block;
+        padding: 5px 15px;
+        background-color: #32a5e7;
+        color: #fff;
+        border-radius: 2px;
+        cursor: pointer;
 }

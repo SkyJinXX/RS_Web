@@ -263,8 +263,9 @@
 								<li> <a href="#"><i class="fa fa-sign-out"></i> 注销</a> </li>
 							</ul>
 						</li>
-					</ul>
+					</ul> 
 				</div>
+
 				<!--toggle button start-->
                 <button id="showLeftPush" "><i></i></button>
 				<!--toggle button end-->
@@ -278,11 +279,18 @@
                     <div class="message_view">
                         
                     </div>
-                    <div class="comment_area">
+                    <div class="comment_are">
                         <div class="comment_area_title">
                             <b>热门评论</b>
-                            <input type="button" class ="but" value="收起"/>
+                           
                         </div>
+                        <div class="fold-button">
+                            <span class="open_Button" style="display: none;">展开</span>
+                            <span class="close_Button">收起</span>
+                        </div>
+                        <div class="comment_area">
+                        </div>
+                         
                     </div>
                 </div>
 				<div class="nav-right-one">
