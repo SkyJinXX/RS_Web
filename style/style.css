@@ -60,6 +60,7 @@ body a:hover{
 }
 .header-right {
     float: right;
+    margin-right:3%;
 }
 /* ----menu-icon----*/
 button#showLeftPush {
@@ -291,7 +292,7 @@ i.fa.fa-tasks{
 }
 /* ----Logo----*/
 .logo {
-    background: transparent;
+    background: #7EC0EE;
     text-align: center;
     float: left;
 }
@@ -326,8 +327,8 @@ i.fa.fa-tasks{
 /*start search*/
 .search-box {
     float: left;
-    width: 30%;
-    margin: 1.2em 0 0 4em;
+    width: 20%;
+    margin: 1.2em 0 0 0;
     position: relative;
     z-index: 1;
     display: inline-block;
@@ -536,8 +537,9 @@ i.icon_6{
 }
 /*---//bages---*/
 /*-- four-grids --*/
-.tickets{
-	background: #FFFFFF;
+.tickets {
+    text-align: center;
+    background: #FFFFFF;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 -1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
@@ -546,20 +548,20 @@ i.icon_6{
     -moz-transition: 0.6s;
 }
 .tickets:hover{
-	background-color: #212121;
+    cursor:pointer;
+	background-color: #E0EEEE;
 }
 
 .grid-left{
-	float:left;
 	width:40%;
+    margin:auto;
 }
 .grid-left img{
 	width:100%;
 }
-.grid-right{
-	float:left;
-	width:50%;
-	margin-left:1em;
+.grid-right {
+    width: 50%;
+    margin: auto;
 }
 
 .grid-right h3{
@@ -896,16 +898,16 @@ ul.dropdown-menu.drp-mnu li {
   color: #3D464D;
 }
 .panel-title {
+    width:30%;
     color: #2A2F43;
+    border-bottom: 1px solid #EE7942;
     font-size: 1.4em;
     padding: 16px 20px;
-    margin: -20px;
     background: #FFFFFF;
     margin-bottom: 5px;
-    border-bottom: none;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    letter-spacing: 1px;	
+    letter-spacing: 1px;
 }
 .panel-body,
 .panel-heading {

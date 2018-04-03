@@ -1,5 +1,17 @@
+.username {
+    float: left;
+    margin-top:20%;
+}
+
+
 .nav-total:hover{
 	cursor: pointer;
+}
+
+.home-left {
+    width: 70%;
+    margin-left: 5%;
+    float: left;
 }
 
 .message-left{
@@ -144,3 +156,4 @@
 .header-nav:hover {
     background-color: #EAEAEA;
 }
+

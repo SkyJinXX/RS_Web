@@ -258,12 +258,11 @@
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="images/image/user.png" alt=""> </span> 
+									<span class="prfil-img"><img src="images/image/user.png" alt=""/> </span> 
 									<div class="clearfix"></div>	
 								</div>	
 							</a>
 							<ul class="dropdown-menu drp-mnu">
-                                <li> <asp:Label ID="user_name" class="user-name" runat="server" Text="Username"></asp:Label></li> 
 								<li> <a href="#"><i class="fa fa-cog"></i> 修改密码</a> </li> 
 								<li> <a href="user_imformation.aspx"><i class="fa fa-user"></i> 个人信息</a> </li> 
 								<li> <a href="#"><i class="fa fa-sign-out"></i> 注销</a> </li>
@@ -271,17 +270,161 @@
 						</li>
 					</ul>
 				</div>
-				<!--toggle button start-->
-                <button id="showLeftPush" "><i></i></button>
-				<!--toggle button end-->
+                <div class="username">
+                    <asp:Label ID="user_name" class="user-name" runat="server" Text="Username"></asp:Label>
+                </div>
 				<div class="clearfix"> </div>				
 			</div>
 			<div class="clearfix"> </div>	
 		</div>
         <div id="page-wrapper">
 			<div class="main-page">
-                <div class="home_messageBox">
+                <div class="home-left">
+                    <!-- four-grids -->
+                    <div class="row four-grids">
+                        <div class="col-md-3 ticket-grid">
+                            <a href="index.aspx">
+                                <div class="tickets">
+                                    <div class="grid-left">
+                                        <div class="book-icon">
+                                            <i class="fa fa-globe" style="font-size: 4em;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="grid-right">
+                                        <h3>资讯</h3>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 ticket-grid">
+                            <a href="#">
+                                <div class="tickets">
+                                    <div class="grid-left">
+                                        <div class="book-icon">
+                                            <i class="fa fa-cutlery" style="font-size: 4em;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="grid-right">
+                                        <h3>美食</h3>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 ticket-grid">
+                            <a href="#">
+                                <div class="tickets">
+                                    <div class="grid-left">
+                                        <div class="book-icon">
+                                            <i class="fa fa-universal-access" style="font-size: 4em;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="grid-right">
+                                        <h3>游玩</h3>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 ticket-grid">
+                            <a href="#">
+                                <div class="tickets">
+                                    <div class="grid-left">
+                                        <div class="book-icon">
+                                            <i class="fa fa-smile-o" style="font-size: 4em;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="grid-right">
+                                        <h3>趣事</h3>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- //four-grids -->
                     
+                    <!--row-->
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="panel panel-widget">
+                                <div class="panel-title">
+                                    资讯
+							      <ul class="panel-tools">
+                                      <li></li>
+                                      <li></li>
+                                      <li></li>
+                                  </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="demo-container">
+                                        <div id="placeholder" class="demo-placeholder"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="panel panel-widget">
+                                <div class="panel-title">
+                                    美食
+							  <ul class="panel-tools">
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                              </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="demo-container">
+                                        <div id="placeholder1" class="demo-placeholder"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!--//row-->
+                    <!--row-->
+                    <div class="row">
+                        <div class="col-md-5 program-grid">
+                            <div class="panel panel-widget">
+                                <div class="panel-title">
+                                    游玩
+							  <ul class="panel-tools">
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                              </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="demo-container">
+                                        <div id="placeholder2" class="demo-placeholder"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 monthly-grid">
+                            <div class="panel panel-widget">
+                                <div class="panel-title">
+                                    趣事
+							  <ul class="panel-tools">
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                              </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="demo-container">
+                                        <div id="placeholder3" class="demo-placeholder"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!--//row-->
                 </div>
 				<div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>

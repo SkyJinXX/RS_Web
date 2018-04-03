@@ -282,10 +282,15 @@
                     <div class="comment_are">
                         <div class="comment_area_title">
                             <b>热门评论</b>
-                            <input type="button" class ="but" value="收起" id="hideButton"/>
+                           
+                        </div>
+                        <div class="fold-button">
+                            <span class="open_Button" style="display: none;">展开</span>
+                            <span class="close_Button">收起</span>
                         </div>
                         <div class="comment_area">
                         </div>
+                         
                     </div>
                 </div>
 				<div class="nav-right-one">
