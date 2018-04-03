@@ -258,12 +258,12 @@
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="images/image/user.png" alt=""> </span> 
+									<span class="prfil-img"><img id="User_HeaderImager" runat="server" src="images/image/user.png" alt=""/> </span> 
 									<div class="clearfix"></div>	
 								</div>	
 							</a>
 							<ul class="dropdown-menu drp-mnu">
-                                <li> <asp:Label ID="user_name" class="user-name" runat="server" Text="Username"></asp:Label></li> 
+                                <li> <asp:Label ID="user_name" class="user_name" runat="server" Text="Username"></asp:Label></li> 
 								<li> <a href="#"><i class="fa fa-cog"></i> 修改密码</a> </li> 
 								<li> <a href="user_imformation.aspx"><i class="fa fa-user"></i> 个人信息</a> </li> 
 								<li> <a href="#"><i class="fa fa-sign-out"></i> 注销</a> </li>
@@ -311,16 +311,13 @@
 						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
 						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
                         <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="g" runat="server"> link7</a></li>
 					</ul>
 				</div>
 				<div class="nav-right-two">
 					<ul>
 						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
-                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的收藏</a></li>
-						<li><a class="nav-right-two_a_after" href="#">link3</a></li>
-						<li><a class="nav-right-two_a_after" href="#">link4</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="Collection.aspx"> 我的收藏</a></li>
 					</ul>
 				</div>
 				<!--//row-->

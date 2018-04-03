@@ -252,7 +252,7 @@
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="images/image/user.png" alt=""> </span> 
+									<span class="prfil-img"><img id="User_HeaderImager" runat="server" src="images/image/user.png" alt=""/> </span> 
 									<div class="clearfix"></div>	
 								</div>	
 							</a>
@@ -263,8 +263,9 @@
 								<li> <a href="#"><i class="fa fa-sign-out"></i> 注销</a> </li>
 							</ul>
 						</li>
-					</ul>
+					</ul> 
 				</div>
+
 				<!--toggle button start-->
                 <button id="showLeftPush" "><i></i></button>
 				<!--toggle button end-->
@@ -278,11 +279,18 @@
                     <div class="message_view">
                         
                     </div>
-                    <div class="comment_area">
+                    <div class="comment_are">
                         <div class="comment_area_title">
                             <b>热门评论</b>
-                            <input type="button" class ="but" value="收起"/>
+                           
                         </div>
+                        <div class="fold-button">
+                            <span class="open_Button" style="display: none;">展开</span>
+                            <span class="close_Button">收起</span>
+                        </div>
+                        <div class="comment_area">
+                        </div>
+                         
                     </div>
                 </div>
 				<div class="nav-right-one">
@@ -294,7 +302,6 @@
 						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
 						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
                         <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="g" runat="server"> link7</a></li>
 					</ul>
 				</div>
                 <div class="nav-right-two">
@@ -302,8 +309,6 @@
 						<li><i></i><a href="#">我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>
 						<li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
-						<li><a href="#">link3</a></li>
-						<li><a href="#">link4</a></li>
 					</ul>
 				</div>
 			</div>

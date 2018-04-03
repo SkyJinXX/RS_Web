@@ -28,55 +28,60 @@ public partial class view : System.Web.UI.Page
             String s = "Select Uname From Users Where Uusername = '" + Session["username"] + "'";
             SqlCommand cmd = new SqlCommand(s, conn);
             cmd.CommandText = s;
-            //user_name.Text = cmd.ExecuteScalar().ToString();
+            user_name.Text = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "select Uimage_url From Users where Uusername = '" + Session["username"] + "'";
+            User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
 
             cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
-            a.InnerText = cmd.ExecuteScalar().ToString();
+            a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
             cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
             string a1 = cmd.ExecuteScalar().ToString();
-            a.HRef = "view.aspx? Nid = '" + a1 + "'";
+            a.HRef = "view.aspx?Nid=" + a1;
 
 
             cmd.CommandText = "Select top 2 Ntitle from News order by Ngoods";
-            b.InnerText = cmd.ExecuteScalar().ToString();
+            b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
             cmd.CommandText = "Select top 2 Nid from News order by Ngoods";
             string b1 = cmd.ExecuteScalar().ToString();
-            b.HRef = "view.aspx? Nid = '" + b1 + "'";
+            b.HRef = "view.aspx?Nid=" + b1;
 
             cmd.CommandText = "Select top 3 Ntitle from News order by Ngoods";
-            c.InnerText = cmd.ExecuteScalar().ToString();
-            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            cmd.CommandText = "Select top 3 Nid from News order by Ngoods";
             string c1 = cmd.ExecuteScalar().ToString();
-            c.HRef = "view.aspx? Nid = '" + c1 + "'";
+            c.HRef = "view.aspx?Nid=" + c1;
 
             cmd.CommandText = "Select top 4 Ntitle from News order by Ngoods";
-            d.InnerText = cmd.ExecuteScalar().ToString();
-            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            cmd.CommandText = "Select top 4 Nid from News order by Ngoods";
             string d1 = cmd.ExecuteScalar().ToString();
-            d.HRef = "view.aspx? Nid = '" + d1 + "'";
+            d.HRef = "view.aspx?Nid=" + d1;
 
             cmd.CommandText = "Select top 5 Ntitle from News order by Ngoods";
-            h.InnerText = cmd.ExecuteScalar().ToString();
-            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            cmd.CommandText = "Select top 5 Nid from News order by Ngoods";
             string h1 = cmd.ExecuteScalar().ToString();
-            h.HRef = "view.aspx? Nid = '" + h1 + "'";
+            h.HRef = "view.aspx?Nid=" + h1;
 
             cmd.CommandText = "Select top 6 Ntitle from News order by Ngoods";
-            f.InnerText = cmd.ExecuteScalar().ToString();
-            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            cmd.CommandText = "Select top 6 Nid from News order by Ngoods";
             string f1 = cmd.ExecuteScalar().ToString();
-            f.HRef = "view.aspx? Nid = '" + f1 + "'";
+            f.HRef = "view.aspx?Nid=" + f1;
 
-            cmd.CommandText = "Select top 7 Ntitle from News order by Ngoods";
-            g.InnerText = cmd.ExecuteScalar().ToString();
-            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
-            string g1 = cmd.ExecuteScalar().ToString();
-            g.HRef = "view.aspx? Nid = '" + g1 + "'";
-            
             conn.Close();
         }
     }
-    
+
+    private string TopString(string text, int length)
+    {
+        if (text.Length <= length)
+            return text;
+        else
+            return text.Substring(0, length);
+    }
+
 
     [WebMethod]
     public static String MessageShow(String nid)
@@ -246,7 +251,7 @@ public partial class view : System.Web.UI.Page
 
     //回复功能
     [WebMethod]
-    public static void Replying(string id)
+    public static void Replying(String id,String Con)
     {
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
@@ -260,10 +265,30 @@ public partial class view : System.Web.UI.Page
         cmd.CommandText = "select Count(*) from Comments";
         String Cid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
 
-        String Content = "";
+        bool s = false;
+        while(s)
+        {
+            cmd.CommandText = "select Cid from Comments where Cid = '" + Cid + "'";
+            if(cmd.ExecuteScalar()!=null)
+            {
+                Cid = (Convert.ToInt32(Cid) + 1).ToString();
+            }
+            else
+            {
+                break;
+            }
+        }
+        
+
+        String Content = Con.ToString();
+
+        Console.Write(Content);
+        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Nid + "','" + Content + "','" + Fromid + "','" + Toid + "')";
+        cmd.ExecuteScalar();
 
         conn.Close();
     }
+    
 
     //数据集的总的（多表）json格式转化
     public static string DatasetToJson(System.Data.DataSet ds)
