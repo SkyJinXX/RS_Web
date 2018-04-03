@@ -173,15 +173,22 @@ function CommentShow() {
 }
 
 function Button_hide(){
-    $(document).on("click", "#hideButton", function () {
-        if ($('#hideButton').val() == "收起") 
-            $('#hideButton').val("展开");
-        else
-            $('#hideButton').val("收起");
-        $(".comment_area").toggle();
+    //$(document).on("click", "#hideButton", function () {
+    //    if ($('#hideButton').val() == "收起") 
+    //        $('#hideButton').val("展开");
+    //    else
+    //        $('#hideButton').val("收起");
+    //    $(".comment_area").slideToggle("slow");
+    //    //$(".comment_area").toggle();
 
+    //});
+    $(".fold-button").click(function () {
+        $(".comment_area").slideToggle("fast");
+        $(".open_Button").toggle();
+        $(".close_Button").toggle();
     });
 }
+
 function Button_switch() {
     $(document).on("click", ".replyButton", function () {
         if (jQuery(this).children('.comment_box_bottom_button').val() == "回复") {
