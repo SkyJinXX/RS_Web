@@ -8,6 +8,7 @@ $(function () {
     collectClick();
     unlikeClick();
     Button_switch();
+    Button_hide();
     Reply();
 })
 
@@ -69,6 +70,7 @@ function messageShow() {
 
 function ColExp() {
     $(document).on("click", ".comment_area_title", function () {
+
         $(this).parent().slideToggle();
     });
 }
@@ -170,7 +172,16 @@ function CommentShow() {
     })
 }
 
+function Button_hide(){
+    $(document).on("click", "#hideButton", function () {
+        if ($('#hideButton').val() == "收起") 
+            $('#hideButton').val("展开");
+        else
+            $('#hideButton').val("收起");
+        $(".comment_area").toggle();
 
+    });
+}
 function Button_switch() {
     $(document).on("click", ".replyButton", function () {
         if (jQuery(this).children('.comment_box_bottom_button').val() == "回复") {

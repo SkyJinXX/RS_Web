@@ -282,7 +282,7 @@
                     <div class="comment_are">
                         <div class="comment_area_title">
                             <b>热门评论</b>
-                            <input type="button" class ="but" value="收起"/>
+                            <input type="button" class ="but" value="收起" id="hideButton"/>
                         </div>
                         <div class="comment_area">
                         </div>
