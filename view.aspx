@@ -252,7 +252,7 @@
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="images/image/user.png" alt=""> </span> 
+									<span class="prfil-img"><img id="User_HeaderImager" runat="server" src="images/image/user.png" alt=""/> </span> 
 									<div class="clearfix"></div>	
 								</div>	
 							</a>

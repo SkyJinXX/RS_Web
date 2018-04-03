@@ -90,6 +90,7 @@
 							
 							
 						</ul>
+						<div class="clearfix"> </div>
 					</div>
 				</div>
 				
@@ -257,7 +258,7 @@
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<div class="profile_img">	
-									<span class="prfil-img"><img src="images/image/user.png" alt=""/> </span> 
+									<span class="prfil-img"><img id="User_HeaderImager" runat="server" src="images/image/user.png" alt=""/> </span> 
 									<div class="clearfix"></div>	
 								</div>	
 							</a>
@@ -349,7 +350,7 @@
                     <div class="row">
                         <div class="col-md-7">
                             <div class="panel panel-widget">
-                                <div class="panel-title_home">
+                                <div class="panel-title">
                                     资讯
 							      <ul class="panel-tools">
                                       <li></li>
@@ -366,7 +367,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="panel panel-widget">
-                                <div class="panel-title_home">
+                                <div class="panel-title">
                                     美食
 							  <ul class="panel-tools">
                                   <li></li>
@@ -389,7 +390,7 @@
                     <div class="row">
                         <div class="col-md-5 program-grid">
                             <div class="panel panel-widget">
-                                <div class="panel-title_home">
+                                <div class="panel-title">
                                     游玩
 							  <ul class="panel-tools">
                                   <li></li>
@@ -406,7 +407,7 @@
                         </div>
                         <div class="col-md-7 monthly-grid">
                             <div class="panel panel-widget">
-                                <div class="panel-title_home">
+                                <div class="panel-title">
                                     趣事
 							  <ul class="panel-tools">
                                   <li></li>

@@ -845,8 +845,16 @@ ul.dropdown-menu {
     display: block;
     padding: 0.8em 1em 0 0;
 }
-.profile_img span.prfil-img{
-	float:left;
+.profile_img span.prfil-img {
+    float: left;
+}
+
+.profile_img span img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .profile_details ul li{

@@ -28,7 +28,10 @@ public partial class view : System.Web.UI.Page
             String s = "Select Uname From Users Where Uusername = '" + Session["username"] + "'";
             SqlCommand cmd = new SqlCommand(s, conn);
             cmd.CommandText = s;
-            //user_name.Text = cmd.ExecuteScalar().ToString();
+            user_name.Text = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "select Uimage_url From Users where Uusername = '" + Session["username"] + "'";
+            User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
 
             cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
             a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);

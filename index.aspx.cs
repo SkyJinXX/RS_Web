@@ -40,6 +40,10 @@ public partial class index : System.Web.UI.Page
             Session["Uid"] = cmd.ExecuteScalar().ToString();
 
 
+            cmd.CommandText = "select Uimage_url From Users where Uusername = '" + Session["username"] + "'";
+            User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
+            
+
             //String  sql1 = "Select top 1 Ntitle from News order by Ngoods";
             cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
             a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
