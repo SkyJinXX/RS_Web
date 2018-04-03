@@ -9,8 +9,8 @@
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Baxster Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
     SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -56,7 +56,7 @@
     <script src="js/metisMenu.min.js"></script>
     <script src="js/custom.js"></script>
     <!--//Metis Menu -->
-	<title>首页</title>
+	<title>资讯</title>
     
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
