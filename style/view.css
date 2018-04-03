@@ -32,10 +32,17 @@
     clear:both;
 }
 
+.comment_area_Nid{
+
+
+}
+
 .comment_area img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .message_view img {
@@ -50,7 +57,7 @@
 
 .comment_are {
     width: 100%;
-    min-height: 10em;
+    min-height: 6em;
     margin-top: 2em;
     background-color: #FFFFFF;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -170,8 +177,8 @@
     font-size: 20px;
 }
 
-.comment_area_title but{
-    float:right;
+.comment_area_title_Button {
+    float: right;
 }
 
 .comment_box_single {
@@ -207,8 +214,12 @@
 
 .name, .reply {
     float: left;
-    margin-left:1%;
-    margin-right:1%;
+    /*margin-left:1%;
+    margin-right:1%;*/
+    margin-top:20px;
+    padding-left:5px;
+    padding-right:5px;
+    /*padding-top:20px;*/
 }
 
 .reply {
