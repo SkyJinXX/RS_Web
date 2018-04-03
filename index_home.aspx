@@ -1,11 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="view.aspx.cs" Inherits="view" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index_home.aspx.cs" Inherits="index_home" %>
 
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Baxster Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
     SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -16,23 +17,19 @@
     <!-- Custom CSS -->
     <link href="style/style.css" rel='stylesheet' type='text/css' />
     <!-- font CSS -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" >
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- font-awesome icons -->
-    <link href="style/font-awesome.css" rel="stylesheet"> 
+    <link href="style/font-awesome.css" rel="stylesheet" /> 
+    
+    <link href="style/font-awesome.min.css" rel="stylesheet" /> 
     <!-- //font-awesome icons -->
     <link href="style/wap.css?2" rel="stylesheet" type="text/css" />
     <!--line-->
     <link href="style/line.css" rel="stylesheet" type="text/css" />
+    <link href="style/content.css" rel="stylesheet" type="text/css" />
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
-    <link href="style/interests.css" rel="stylesheet" type="text/css" />
-    <link href="style/custom.css" rel="stylesheet">
-    <link href="style/view.css" rel="stylesheet" type="text/css" />
-    <!--webfonts-->
-    <link href="style/fonts.css" rel="stylesheet" type="text/css">
-    <!--//webfonts--> 
-    <!--animate-->
-    <link href="style/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style/custom.css" rel="stylesheet" />
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -40,6 +37,11 @@
      <!-- js-->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
+    <!--webfonts-->
+    <link href="style/fonts.css" rel="stylesheet" type="text/css" />
+    <!--//webfonts--> 
+    <!--animate-->
+    <link href="style/animate.css" rel="stylesheet" type="text/css" media="all" />
     <script src="js/wow.min.js"></script>
 	<script>
         new WOW().init();
@@ -47,16 +49,20 @@
     <!--//end-animate-->
     <!-- Metis Menu -->
     <script src="js/metisMenu.min.js"></script>
-    <script src="js/commentShow.js"></script>
     <script src="js/custom.js"></script>
     <!--//Metis Menu -->
-	
-	
-    <title>内容页</title>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+	<title>首页</title>
+    
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
     <form id="form1" runat="server">
-        <div class="sticky-header header-section ">
+    <div class="sticky-header header-section ">
 			<div class="header-left">
 				<!--logo -->
 				<div class="logo">
@@ -263,9 +269,8 @@
 								<li> <a href="#"><i class="fa fa-sign-out"></i> 注销</a> </li>
 							</ul>
 						</li>
-					</ul> 
+					</ul>
 				</div>
-
 				<!--toggle button start-->
                 <button id="showLeftPush" "><i></i></button>
 				<!--toggle button end-->
@@ -275,81 +280,31 @@
 		</div>
         <div id="page-wrapper">
 			<div class="main-page">
-                <div class="messageBox_view">
-                    <div class="message_view">
-                        
-                    </div>
-                    <div class="comment_are">
-                        <div class="comment_area_title">
-                            <b>热门评论</b>
-                            <input type="button" class ="but" value="收起"/>
-                        </div>
-                        <div class="comment_area">
-                        </div>
-                    </div>
+                <div class="home_messageBox">
+                    
                 </div>
 				<div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server"> link3</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="g" runat="server"> link7</a></li>
+						<li><a href="#"> link1</a></li>
+						<li><a href="#"> link2</a></li>
+                        <li><a href="#"> link3</a></li>
+						<li><a href="#"> link4</a></li>
+						<li><a href="#"> link5</a></li>
 					</ul>
 				</div>
                 <div class="nav-right-two">
 					<ul>
-						<li><i></i><a href="#">我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>
-						<li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
-						<li><a href="#">link3</a></li>
-						<li><a href="#">link4</a></li>
+						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
+						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的收藏</a></li>
+						<li><a class="nav-right-two_a_after" href="#">link3</a></li>
+						<li><a class="nav-right-two_a_after" href="#">link4</a></li>
 					</ul>
 				</div>
+
 			</div>
 		</div>
-        <div class="footer">
-            <div style="width:10px;height:50px"></div>
-        </div>
-        <script src="js/jquery.min.js" type="text/javascript"></script>
-	    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
-	    <script src="js/bootstrap.min.js"></script>
-	    <script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="assets/js/custom.js"></script>
     </form>
 </body>
 </html>
-
-                        <%--<div class="artcle_title">
-                            <asp:Label ID="Title" runat="server" Text="标题"></asp:Label>
-                        </div>
-                        <div class="subtitle">
-                            <div class="subtitleClassification_box">
-                                <asp:Label ID="subtitleClassification" runat="server" Text="分类"></asp:Label>
-                            </div>
-                            <div class="subtitleTime_box">
-                                <asp:Label ID="subtitleTime" runat="server" Text="时间"></asp:Label>
-                            </div>
-                        </div>
-                        <div class="picture">
-                            <img src="#"/>
-                        </div>
-                        <div class="article">
-                            <p id ="content">文章内容</p>
-                        </div>
-                        <div class="article_bottom">
-                            <div class="collectBox">
-                                <input type="button" class="collect" value="" title="收藏">
-                            </div>
-                            <div class="likeBox">
-                                <input class="isLikeButton_like" type="button" value="">
-                                <div class="like_count">1</div>
-                            </div>
-                            <div class="unlikeBox">
-                                <input class="isLikeButton_dislike" type="button" value="">
-                                <div class="unlike_count">1</div>
-                            </div>
-                        </div>--%>

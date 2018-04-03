@@ -327,7 +327,7 @@ i.fa.fa-tasks{
 .search-box {
     float: left;
     width: 18%;
-    margin: 1.2em 0 0 4em;
+    margin: 1.2em 0 0 1em;
     position: relative;
     z-index: 1;
     display: inline-block;
