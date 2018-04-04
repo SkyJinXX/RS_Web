@@ -106,7 +106,7 @@ public partial class announceview : System.Web.UI.Page
     
 
 
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Upload_Click(object sender, EventArgs e)
     {
         if (TextBox1.Text == "" || TextBox1.Text == null)
         {
