@@ -312,6 +312,7 @@
 						<li><i></i><a href="#">我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>
 						<li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="announceview.aspx"> 我爆料</a></li>
 					</ul>
 				</div>
 			</div>
