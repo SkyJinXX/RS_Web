@@ -178,6 +178,7 @@ function TypeClick(){
                     $('.row').empty();
                     $(document).off('scroll', scrollListen);
                     pageShow();
+                    page++;
                     $(document).on('scroll', scrollListen);
                     //console.log(keyWord);                                                 
                 });            
@@ -196,6 +197,7 @@ function SearchClick(){
             //console.log(page);
             $(document).off('scroll', scrollListen);
             pageShow();
+            page++;
             $(document).on('scroll', scrollListen);
 
         })
