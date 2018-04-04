@@ -65,7 +65,7 @@
 			<div class="header-left">
 				<!--logo -->
 				<div class="logo">
-					<a href="index.aspx">
+					<a href="index_home.aspx">
 						<img src="images/logo/logo_picture_white.gif" alt="" />
 							
 					</a>

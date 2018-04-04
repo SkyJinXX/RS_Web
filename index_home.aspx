@@ -29,7 +29,8 @@
     <link href="style/content.css" rel="stylesheet" type="text/css" />
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
-    <link href="style/custom.css" rel="stylesheet" />
+    <link href="style/custom.css" rel="stylesheet" type="text/css" />
+    <link href="style/index_home.css" rel="stylesheet" type="text/css" />
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -66,7 +67,7 @@
             <div class="header-left">
                 <!--logo -->
                 <div class="logo">
-                    <a href="index.aspx">
+                    <a href="index_home.aspx">
                         <img src="images/logo/logo_picture_white.gif" alt="" />
 
                     </a>
@@ -222,7 +223,7 @@
                                 </li>
                                 <li><a href="#">
                                     <div class="user_img">
-                                        <img src="images/2.png" alt="">
+                                        <img src="images/2.png" alt=""/>
                                     </div>
                                     <div class="notification_desc">
                                         <p>Lorem ipsum dolor amet</p>
@@ -232,7 +233,7 @@
                                 </a></li>
                                 <li class="odd"><a href="#">
                                     <div class="user_img">
-                                        <img src="images/1.png" alt="">
+                                        <img src="images/1.png" alt=""/>
                                     </div>
                                     <div class="notification_desc">
                                         <p>Lorem ipsum dolor amet </p>
@@ -294,10 +295,10 @@
                     <div class="row four-grids">
                         <div class="col-md-3 ticket-grid">
                             <a href="index.aspx">
-                                <div class="tickets">
+                                <div id="Information" class="tickets">
                                     <div class="grid-left">
                                         <div class="book-icon">
-                                            <i class="fa fa-globe" style="font-size: 4em;"></i>
+                                            <i class="fa fa-globe" style="font-size: 4em;color:#5CACEE;"></i>
                                         </div>
                                     </div>
                                     <div class="grid-right">
@@ -309,10 +310,10 @@
                         </div>
                         <div class="col-md-3 ticket-grid">
                             <a href="#">
-                                <div class="tickets">
+                                <div id="Food" class="tickets">
                                     <div class="grid-left">
-                                        <div class="book-icon">
-                                            <i class="fa fa-cutlery" style="font-size: 4em;"></i>
+                                        <div class="book-icon ">
+                                            <i class="fa fa-cutlery" style="font-size: 4em;color:#FF8247;"></i>
                                         </div>
                                     </div>
                                     <div class="grid-right">
@@ -324,10 +325,10 @@
                         </div>
                         <div class="col-md-3 ticket-grid">
                             <a href="#">
-                                <div class="tickets">
+                                <div id="Playing" class="tickets">
                                     <div class="grid-left">
                                         <div class="book-icon">
-                                            <i class="fa fa-universal-access" style="font-size: 4em;"></i>
+                                            <i class="fa fa-universal-access" style="font-size: 4em;color:#551A8B;"></i>
                                         </div>
                                     </div>
                                     <div class="grid-right">
@@ -339,10 +340,10 @@
                         </div>
                         <div class="col-md-3 ticket-grid">
                             <a href="#">
-                                <div class="tickets">
+                                <div id="Interesting" class="tickets">
                                     <div class="grid-left">
                                         <div class="book-icon">
-                                            <i class="fa fa-smile-o" style="font-size: 4em;"></i>
+                                            <i class="fa fa-smile-o" style="font-size: 4em;color:#66CDAA"></i>
                                         </div>
                                     </div>
                                     <div class="grid-right">
@@ -370,7 +371,50 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="demo-container">
-                                        <div id="placeholder" class="demo-placeholder"></div>
+                                        <div id="placeholder" class="demo-placeholder">
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- 显示条目样式副本（静态填充）开始 -->
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- 显示条目样式副本（静态填充）结束 -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -387,7 +431,50 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="demo-container">
-                                        <div id="placeholder1" class="demo-placeholder"></div>
+                                        <div id="placeholder1" class="demo-placeholder">
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- 显示条目样式副本（静态填充）开始 -->
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- 显示条目样式副本（静态填充）结束 -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -410,7 +497,50 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="demo-container">
-                                        <div id="placeholder2" class="demo-placeholder"></div>
+                                        <div id="placeholder2" class="demo-placeholder">
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- 显示条目样式副本（静态填充）开始 -->
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- 显示条目样式副本（静态填充）结束 -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -427,7 +557,50 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="demo-container">
-                                        <div id="placeholder3" class="demo-placeholder"></div>
+                                        <div id="placeholder3" class="demo-placeholder">
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- 显示条目样式副本（静态填充）开始 -->
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="home_brief_message">
+                                                <a href="#">
+                                                    <div class="brief_message_img">
+                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
+                                                    </div>
+                                                    <div class="brief_message">
+                                                        春暖花开面朝大海
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <!-- 显示条目样式副本（静态填充）结束 -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -444,6 +617,7 @@
                         <li><a href="#"> link3</a></li>
 						<li><a href="#"> link4</a></li>
 						<li><a href="#"> link5</a></li>
+						<li><a href="#"> link6</a></li>
 					</ul>
 				</div>
                 <div class="nav-right-two">
@@ -451,8 +625,6 @@
 						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
                         <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的收藏</a></li>
-						<li><a class="nav-right-two_a_after" href="#">link3</a></li>
-						<li><a class="nav-right-two_a_after" href="#">link4</a></li>
 					</ul>
 				</div>
 

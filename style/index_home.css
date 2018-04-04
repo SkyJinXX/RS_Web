@@ -1,12 +1,58 @@
 ﻿body {
 }
 
-.book-icon {
+#Information:hover {
+    color:#3A5FCD;
+    background-color: #BFEFFF;
+}
 
+#Food:hover {
+    background-color: #FFE4B5;
+}
+
+#Playing:hover {
+    background-color: #EED2EE;
+}
+
+#Interesting:hover {
+    background-color: #C1FFC1;
+}
+
+.iconBox {
+    
 }
 
 .home_messageBox {
     width: 65%;
     margin-left: 8%;
     float: left;
+}
+
+.home_brief_message {
+    width: 100%;
+    height: 25%;
+    margin: auto;
+    padding-top: 5%;
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.brief_message_img{
+    width:30%;
+    height:auto;
+    margin-left:5%;
+    margin-right:5%;
+    float:left;
+}
+
+.brief_message_img img{
+    border:none;
+    vertical-align: middle;
+}
+
+.brief_message {
+    width: 60%;
+    height: auto;
+    float: left;
+    line-height:1.6em;
+    font-size: 1.4em;
 }

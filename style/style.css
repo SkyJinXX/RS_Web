@@ -3,6 +3,7 @@ h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
 
+
 html, body{
 	font-family: 'Roboto Condensed', sans-serif;
     font-size: 100%;
@@ -30,6 +31,11 @@ ul,label{
 body a:hover{
 	text-decoration:none;
 }
+
+body a:after {
+    text-decoration: none;
+}
+
 .main-content {
     position: relative;
 }
@@ -555,7 +561,6 @@ i.icon_6{
 }
 .tickets:hover{
     cursor:pointer;
-	background-color: #E0EEEE;
 }
 
 .grid-left{
@@ -572,7 +577,7 @@ i.icon_6{
 
 .grid-right h3{
 	padding-top: 1em;
-    color: #a9acbd;
+    color: #4F4F4F;
     font-size: 1.5em;
     text-transform: uppercase;
     margin: 0;
@@ -940,7 +945,6 @@ ul.dropdown-menu.drp-mnu li {
     font-size: 1.4em;
     padding: 16px 20px;
     background: #FFFFFF;
-    margin-bottom: 1em;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     letter-spacing: 1px;
