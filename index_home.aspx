@@ -257,10 +257,10 @@
 					<ul>
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-								<div class="profile_img">	
-									<span class="prfil-img"><img id="User_HeaderImager" runat="server" src="images/image/user.png" alt=""/> </span> 
-									<div class="clearfix"></div>	
-								</div>	
+                                <div class="profile_img">
+                                    <img id="User_HeaderImager" runat="server" src="images/image/user.png" alt="" />
+                                    <div class="clearfix"></div>
+                                </div>	
 							</a>
 							<ul class="dropdown-menu drp-mnu">
 								<li> <a href="#"><i class="fa fa-cog"></i> 修改密码</a> </li> 

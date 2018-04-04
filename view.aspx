@@ -251,13 +251,12 @@
 					<ul>
 						<li class="dropdown profile_details_drop">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-								<div class="profile_img">	
-									<span class="prfil-img"><img id="User_HeaderImager" runat="server" src="images/image/user.png" alt=""/> </span> 
-									<div class="clearfix"></div>	
-								</div>	
+								<div class="profile_img">
+                                    <img id="User_HeaderImager" runat="server" src="images/image/user.png" alt="" />
+                                    <div class="clearfix"></div>
+                                </div>	
 							</a>
 							<ul class="dropdown-menu drp-mnu">
-                                <li> <asp:Label ID="user_name" class="user-name" runat="server" Text="Username"></asp:Label></li> 
 								<li> <a href="#"><i class="fa fa-cog"></i> 修改密码</a> </li> 
 								<li> <a href="user_imformation.aspx"><i class="fa fa-user"></i> 个人信息</a> </li> 
 								<li> <a href="#"><i class="fa fa-sign-out"></i> 注销</a> </li>
@@ -265,10 +264,9 @@
 						</li>
 					</ul> 
 				</div>
-
-				<!--toggle button start-->
-                <button id="showLeftPush" "><i></i></button>
-				<!--toggle button end-->
+                <div class="username">
+                    <asp:Label ID="user_name" class="user-name" runat="server" Text="Username"></asp:Label>
+                </div>
 				<div class="clearfix"> </div>				
 			</div>
 			<div class="clearfix"> </div>	
