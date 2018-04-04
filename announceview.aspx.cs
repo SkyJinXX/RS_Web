@@ -37,10 +37,10 @@ public partial class announceview : System.Web.UI.Page
             //cmd.CommandText = s;
            // user_name.Text = cmd.ExecuteScalar().ToString();
 
-            /*
+            
             cmd.CommandText = "Select Uid From Users Where Uusername = '" + Session["username"] + "'";
             Session["Uid"] = cmd.ExecuteScalar().ToString();
-            */
+            
 
 
             //String  sql1 = "Select top 1 Ntitle from News order by Ngoods";
@@ -119,6 +119,7 @@ public partial class announceview : System.Web.UI.Page
             string newName = Guid.NewGuid().ToString();//生成新的文件名，保证唯一性
             string juedui = Server.MapPath("~\\img\\information\\");//设置文件保存的本地目录绝对路径，对于路径中的字符“＼”在字符串中必须以“＼＼”表示，因为“＼”为特殊字符。或者可以使用上一行的给路径前面加上＠
             string newFileName = juedui + strName;
+            Response.Write("<script>alert('" + newFileName + "')</script>");
             if (FileUpload1.HasFile)//验证 FileUpload 控件确实包含文件
             {
                 String[] allowedExtensions = { ".jpg" };
@@ -130,7 +131,7 @@ public partial class announceview : System.Web.UI.Page
                     }
                 }
             }
-            if (fileOK)
+            if (fileOK == false)
             {
                 try
                 {
@@ -149,27 +150,33 @@ public partial class announceview : System.Web.UI.Page
                      
 
                         conn.Open();
+                        SqlCommand cmd = new SqlCommand("", conn);
                         // String rr = GetWordContent(newFileName);
                         String a = TextBox1.Text;
                         string t = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                        string url = juedui + strName;
-                        String Nid = "200";
+                        
+
+                        cmd.CommandText = "select Max(Nid) from News";
+
+                        String Nid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
                         String type = "读者";
                         String good = "0";
                         String bad = "0";
                         String keyword = "读者自编";
-                        String sql = "insert into News values ('" + Nid+ "','" +TextBox1.Text+ "', '" + TextBox2.Text + "','" + t + "','"+type+"','"+good+"','"+bad+"','"+keyword+"','" + strName+ "')";
+                        string url = "//img//information//" + Nid + ".jpg";
+
+                        Response.Write("<script>alert('" + Nid + "')</script>");
+                        Response.Write("<script>alert('" + url + "')</script>");
+
+
+                        String sql = "insert into News values ('" + Session["Uid"].ToString() + "','" + Nid+ "','" +TextBox1.Text
+                                    + "', '" + TextBox2.Text + "','" + t + "','"+type+"','"+good+"','"+bad+"','"
+                                    +keyword+"','" + strName + "','" + "0" + "')";
                         SqlCommand cmd1 = new SqlCommand(sql, conn);
                         cmd1.CommandText = sql;
-                        cmd1.ExecuteScalar();
+                        //cmd1.ExecuteScalar();
                         // string result = (string)cmd1.ExecuteScalar();
-
-                       
-
                         conn.Close();
-
-                        
-
 
                     }
                 }
