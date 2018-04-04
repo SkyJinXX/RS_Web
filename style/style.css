@@ -64,8 +64,9 @@ body a:hover{
 }
 
 .header-right {
-    width:28%;
-    float: left;
+    width:30%;
+    float: right;
+    margin-right:1.5%;
 }
 /* ----menu-icon----*/
 button#showLeftPush {
@@ -3078,8 +3079,12 @@ canvas#canvas {
 	-ms-transition: 0.5s all ease;
 }
 /*--//compose mail--*/
-.header-right-grid{
-	float:left !important;
+.header-right-grid-one {
+    float: left !important;
+} 
+
+.header-right-grid {
+    float: right !important;
 }
 ul.nofitications-dropdown {
     margin: 0;
