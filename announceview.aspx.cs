@@ -116,22 +116,22 @@ public partial class announceview : System.Web.UI.Page
             bool fileOK = false;
             int i = strName.LastIndexOf(".");//获取。的索引顺序号，在这里。代表图片名字与后缀的间隔
             string kzm = strName.Substring(i);//获取文件扩展名的另一种方法 string fileExtension = System.IO.Path.GetExtension(FileUpload1.FileName).ToLower();
-            string newName = Guid.NewGuid().ToString();//生成新的文件名，保证唯一性
-            string juedui = Server.MapPath("~\\img\\information\\");//设置文件保存的本地目录绝对路径，对于路径中的字符“＼”在字符串中必须以“＼＼”表示，因为“＼”为特殊字符。或者可以使用上一行的给路径前面加上＠
-            string newFileName = juedui + strName;
-            Response.Write("<script>alert('" + newFileName + "')</script>");
+            string newName = "2333a.jpg";//生成新的文件名，保证唯一性
+            string juedui = Server.MapPath("~//img//Information//");//设置文件保存的本地目录绝对路径，对于路径中的字符“＼”在字符串中必须以“＼＼”表示，因为“＼”为特殊字符。或者可以使用上一行的给路径前面加上＠
+            string newFileName = juedui + newName;
+            //Response.Write("<script>alert('" + newFileName.ToString() + "')</script>");
             if (FileUpload1.HasFile)//验证 FileUpload 控件确实包含文件
             {
                 String[] allowedExtensions = { ".jpg" };
                 for (int j = 0; j < allowedExtensions.Length; j++)
                 {
                     if (kzm == allowedExtensions[j])
-                    {
+                    { 
                         fileOK = true;
                     }
                 }
             }
-            if (fileOK == false)
+            if (fileOK)
             {
                 try
                 {
@@ -142,8 +142,6 @@ public partial class announceview : System.Web.UI.Page
                     }
                     else
                     {
-                        FileUpload1.SaveAs(newFileName);
-                        HttpContext.Current.Response.Write("<script>alert('已成功提交。');</script>");
 
                         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
                         SqlConnection conn = new SqlConnection(connstr);
@@ -156,25 +154,38 @@ public partial class announceview : System.Web.UI.Page
                         string t = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                         
 
-                        cmd.CommandText = "select Max(Nid) from News";
+                        cmd.CommandText = "select count(*) from News";
 
                         String Nid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
-                        String type = "读者";
+                        while (!false)
+                        {
+                            cmd.CommandText = "select Nid from News where Nid = '" + Nid + "'";
+                            if (cmd.ExecuteScalar() == null)
+                                break;
+
+                            Nid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
+                        }
+
+                        newFileName = juedui + Nid + ".jpg";
+                        //保存图片
+                        FileUpload1.SaveAs(newFileName);
+                        HttpContext.Current.Response.Write("<script>alert('已成功提交。');</script>");
+
+                        String type = DropDownList1.SelectedValue.ToString();
                         String good = "0";
                         String bad = "0";
-                        String keyword = "读者自编";
-                        string url = "//img//information//" + Nid + ".jpg";
+                        String keyword = "读者自编"; 
+                        string url = "img/information/" + Nid + ".jpg";
 
                         Response.Write("<script>alert('" + Nid + "')</script>");
                         Response.Write("<script>alert('" + url + "')</script>");
 
-
-                        String sql = "insert into News values ('" + Session["Uid"].ToString() + "','" + Nid+ "','" +TextBox1.Text
+                        String sql = "insert into Review values ('" + Session["Uid"].ToString() + "','" + Nid+ "','" +TextBox1.Text
                                     + "', '" + TextBox2.Text + "','" + t + "','"+type+"','"+good+"','"+bad+"','"
-                                    +keyword+"','" + strName + "','" + "0" + "')";
+                                    +keyword+"','" + url + "','" + "0" + "')";
                         SqlCommand cmd1 = new SqlCommand(sql, conn);
                         cmd1.CommandText = sql;
-                        //cmd1.ExecuteScalar();
+                        cmd1.ExecuteScalar();
                         // string result = (string)cmd1.ExecuteScalar();
                         conn.Close();
 

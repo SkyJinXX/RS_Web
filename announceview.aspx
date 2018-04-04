@@ -278,6 +278,25 @@
                             <br/>
                             <asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine"  placeholder="请输入正文" Height="200px"></asp:TextBox>
                             <br/>
+                            <asp:DropDownList ID="DropDownList1" runat="server" Height="25px" Width="147px">
+                                <asp:ListItem> </asp:ListItem>
+                                <asp:ListItem Value="娱乐">娱乐</asp:ListItem>
+                                <asp:ListItem Value="游戏">游戏</asp:ListItem>
+                                <asp:ListItem Value="体育">体育</asp:ListItem>
+                                <asp:ListItem Value="趣事">趣事</asp:ListItem>
+                                <asp:ListItem Value="美食">美食</asp:ListItem>
+                                <asp:ListItem Value="生活">生活</asp:ListItem>
+                                <asp:ListItem Value="时尚">时尚</asp:ListItem>
+                                <asp:ListItem Value="文化">文化</asp:ListItem>
+                                <asp:ListItem Value="环境">环境</asp:ListItem>
+                                <asp:ListItem Value="经济">经济</asp:ListItem>
+                                <asp:ListItem Value="政治">政治</asp:ListItem>
+                                <asp:ListItem Value="教育">教育</asp:ListItem>
+                                <asp:ListItem Value="科技">科技</asp:ListItem>
+                                <asp:ListItem Value="精神">精神</asp:ListItem>
+                                <asp:ListItem Value="军事">军事</asp:ListItem>
+                                <asp:ListItem Value="环境">环境</asp:ListItem>
+                            </asp:DropDownList>
                             <br/>
                             <asp:Label ID="Label1" runat="server" Text="上传图片"></asp:Label>   <asp:FileUpload ID="FileUpload1" runat="server" />
                           
