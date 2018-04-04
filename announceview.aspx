@@ -288,7 +288,7 @@
                             <br/>
                             <asp:Label ID="Label2" runat="server" Text="已写文章"></asp:Label>
                             <br/>
-                            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="Label3" runat="server" Text="Label" Enabled="False"></asp:Label>
 
                         </div>
                         <div style="text-align: center;margin-bottom:3%;">

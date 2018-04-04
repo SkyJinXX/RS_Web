@@ -87,6 +87,18 @@ public partial class announceview : System.Web.UI.Page
             string g1 = cmd.ExecuteScalar().ToString();
             g.HRef = "view.aspx? Nid = '" + g1 + "'";
 
+
+            cmd.CommandText = "select Ntitle from News where Nid='200'";
+            if (cmd.ExecuteScalar() != null)
+            {
+                Label3.Text = cmd.ExecuteScalar().ToString();
+            }
+            else
+            {
+                Label3.Text = "";
+            }
+           
+
             conn.Close();
         }
     }
@@ -152,9 +164,7 @@ public partial class announceview : System.Web.UI.Page
                         cmd1.ExecuteScalar();
                         // string result = (string)cmd1.ExecuteScalar();
 
-                        cmd1.CommandText = "select Ntitle from News where Nid='200'";
-
-                        Label3.Text = cmd1.ExecuteScalar().ToString();
+                       
 
                         conn.Close();
 
