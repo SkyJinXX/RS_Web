@@ -108,7 +108,21 @@ public partial class announceview : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-     
+        if (TextBox1.Text == "" || TextBox1.Text == null)
+        {
+            Response.Write("<script>alert('请输入标题');</script>");
+            return;
+        }
+        if (TextBox1.Text == "" || TextBox1.Text == null)
+        {
+            Response.Write("<script>alert('请输入正文内容');</script>");
+            return;
+        }
+        if (DropDownList1.SelectedValue.ToString() == "资讯类别")
+        {
+            Response.Write("<script>alert('请选择上传的资讯类型');</script>");
+            return;
+        }
 
         string strName = FileUpload1.PostedFile.FileName;//使用fileupload控件获取上传文件的文件名
         if (strName != "")//如果文件名存在
@@ -145,17 +159,14 @@ public partial class announceview : System.Web.UI.Page
 
                         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
                         SqlConnection conn = new SqlConnection(connstr);
-                     
 
                         conn.Open();
                         SqlCommand cmd = new SqlCommand("", conn);
-                        // String rr = GetWordContent(newFileName);
+
                         String a = TextBox1.Text;
                         string t = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                        
 
                         cmd.CommandText = "select count(*) from News";
-
                         String Nid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
                         while (!false)
                         {
@@ -165,30 +176,35 @@ public partial class announceview : System.Web.UI.Page
 
                             Nid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
                         }
+                        while(!false)
+                        {
+                            cmd.CommandText = "select Rid from Review where Rid = '" + Nid + "'";
+                            if (cmd.ExecuteScalar() == null)
+                                break;
+
+                            Nid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
+                        }
 
                         newFileName = juedui + Nid + ".jpg";
                         //保存图片
                         FileUpload1.SaveAs(newFileName);
-                        HttpContext.Current.Response.Write("<script>alert('已成功提交。');</script>");
-
+                        
                         String type = DropDownList1.SelectedValue.ToString();
                         String good = "0";
                         String bad = "0";
-                        String keyword = "读者自编"; 
+                        String keyword = TextBox3.Text;
+                        if (keyword == null || keyword == "")
+                            keyword = "读者自述";
                         string url = "img/information/" + Nid + ".jpg";
 
-                        Response.Write("<script>alert('" + Nid + "')</script>");
-                        Response.Write("<script>alert('" + url + "')</script>");
-
                         String sql = "insert into Review values ('" + Session["Uid"].ToString() + "','" + Nid+ "','" +TextBox1.Text
-                                    + "', '" + TextBox2.Text + "','" + t + "','"+type+"','"+good+"','"+bad+"','"
+                                    + "','" + TextBox2.Text + "','" + t + "','"+type+"','"+good+"','"+bad+"','"
                                     +keyword+"','" + url + "','" + "0" + "')";
                         SqlCommand cmd1 = new SqlCommand(sql, conn);
                         cmd1.CommandText = sql;
                         cmd1.ExecuteScalar();
-                        // string result = (string)cmd1.ExecuteScalar();
+                        HttpContext.Current.Response.Write("<script>alert('已成功提交,等待审核');</script>");
                         conn.Close();
-
                     }
                 }
                 catch
