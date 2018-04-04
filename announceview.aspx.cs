@@ -171,7 +171,7 @@ public partial class announceview : System.Web.UI.Page
                         FileUpload1.SaveAs(newFileName);
                         HttpContext.Current.Response.Write("<script>alert('已成功提交。');</script>");
 
-                        String type = "读者";
+                        String type = DropDownList1.SelectedValue.ToString();
                         String good = "0";
                         String bad = "0";
                         String keyword = "读者自编"; 
