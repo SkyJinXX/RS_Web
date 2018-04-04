@@ -37,10 +37,13 @@ public partial class user_imformation : System.Web.UI.Page
             }               
             else{
                 TextBox_Nickname.Text = (String)cmd.ExecuteScalar();
+                user_name.Text = cmd.ExecuteScalar().ToString();
             }
-                
 
-           cmd.CommandText = "select Umail from Users where Uusername = '" + (String)Session["username"] + "'";
+            cmd.CommandText = "select Uimage_url From Users where Uusername = '" + Session["username"] + "'";
+            User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
+
+            cmd.CommandText = "select Umail from Users where Uusername = '" + (String)Session["username"] + "'";
             TextBox_Email.Text = (String)cmd.ExecuteScalar();
 
             cmd.CommandText = "select Uage from Users where Uusername = '" + (String)Session["username"] + "'";

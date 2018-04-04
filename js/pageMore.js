@@ -11,6 +11,7 @@ $(function () {
     collectClick();
     TypeClick();
     SearchClick();
+    DeleteNews();
 })
 function scrollListen() {
             var bottomPadding = $(document).height() - $(document).scrollTop() - $(window).height();
@@ -19,6 +20,7 @@ function scrollListen() {
                 console.log("keyWord:" + keyWord);
                 console.log("page:" + page);
                 pageShow();
+                DeleteNews();
                 page++;
             }
         }
@@ -154,6 +156,16 @@ function collectClick(){
     });
 });
 }
+
+//删除操作
+function DeleteNews() {
+    $('.panel-tools').children('li').click(function () {
+        jQuery(this).parent().parent().parent().parent().remove()
+    });
+        
+}
+
+
 
 function TypeClick(){
     $('#typeUl').children('li').each(

@@ -263,7 +263,7 @@
 					</ul>
 				</div>
 				<div class="username">
-                    <asp:Label ID="user_name" class="user-name" runat="server" Text="Username"></asp:Label>
+                    <asp:Label ID="user_name" class="user-name" runat="server" Text="昵称"></asp:Label>
                 </div>
 				<div class="clearfix"> </div>				
 			</div>

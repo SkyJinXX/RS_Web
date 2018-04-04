@@ -71,6 +71,9 @@
 							
 					</a>
 				</div>
+
+                
+
 				<!--//logo-->
 				<div class="header-right header-right-grid">
 					<div class="profile_details_left"><!--notifications of menu start -->
@@ -284,13 +287,14 @@
 					<ul id ="typeUl">
 						<li><i></i><a class="classification_type" href="#"><b>科技</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>娱乐</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>体育</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>游戏</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>汽车</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>生活</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>法律</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>环境</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>政治</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>文化</b></a></li>
 						<li><i></i><a class="classification_type" href="#"><b>财经</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>时尚</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>军事</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>教育</b></a></li>
 					</ul>
 				</div>
 				<!-- //four-grids -->
