@@ -59,9 +59,13 @@ body a:hover{
     width: 29%;
 }
 
+.header-right-one {
+    float: left;
+}
+
 .header-right {
-    float: right;
-    margin-right:1.5%;
+    width:28%;
+    float: left;
 }
 /* ----menu-icon----*/
 button#showLeftPush {
@@ -293,7 +297,7 @@ i.fa.fa-tasks{
 }
 /* ----Logo----*/
 .logo {
-    background: #7EC0EE;
+    background: #87CEEB;
     text-align: center;
     float: left;
 }
@@ -329,7 +333,7 @@ i.fa.fa-tasks{
 .search-box {
     float: left;
     width: 20%;
-    margin: 1.2em 0 0 0;
+    margin: 1.5em 0 0 2em;
     position: relative;
     z-index: 1;
     display: inline-block;
