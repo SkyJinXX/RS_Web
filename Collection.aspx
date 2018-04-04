@@ -61,7 +61,6 @@
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
     <form id="form1" runat="server">
-
         <div class="sticky-header header-section ">
 			<div class="header-left">
 				<!--logo -->
@@ -72,7 +71,7 @@
 					</a>
 				</div>
 				<!--//logo-->
-				<div class="header-right-one header-right-grid">
+				<div class="header-right-one header-right-grid-one">
 					<div class="profile_details_left-one"><!--notifications of menu start -->
 						<ul class="nofitications-dropdown">
 							<li class="dropdown head-dpdn header-nav">
