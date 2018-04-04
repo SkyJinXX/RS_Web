@@ -279,7 +279,7 @@
                             <asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine"  placeholder="请输入正文" Height="200px"></asp:TextBox>
                             <br/>
                             <asp:DropDownList ID="DropDownList1" runat="server" Height="25px" Width="147px">
-                                <asp:ListItem> </asp:ListItem>
+                                <asp:ListItem Value="资讯类别"> </asp:ListItem>
                                 <asp:ListItem Value="娱乐">娱乐</asp:ListItem>
                                 <asp:ListItem Value="游戏">游戏</asp:ListItem>
                                 <asp:ListItem Value="体育">体育</asp:ListItem>
@@ -297,6 +297,7 @@
                                 <asp:ListItem Value="军事">军事</asp:ListItem>
                                 <asp:ListItem Value="环境">环境</asp:ListItem>
                             </asp:DropDownList>
+                            <asp:TextBox ID="TextBox3" runat="server" TextMode="SingleLine"  placeholder="请概括内容" ></asp:TextBox>
                             <br/>
                             <asp:Label ID="Label1" runat="server" Text="上传图片"></asp:Label>   <asp:FileUpload ID="FileUpload1" runat="server" />
                           
