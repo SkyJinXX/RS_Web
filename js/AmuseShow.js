@@ -29,7 +29,7 @@ function pageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index_food.aspx/getNewsJson',
+        url: 'index_amuse.aspx/getNewsJson',
         async: false,
         data: "{'page':'" + page + "', 'SourseType':'"+ SourseType +"', 'keyWord':'"+ keyWord +"'}",
         dataType: "json",
@@ -39,10 +39,10 @@ function pageShow() {
             console.log(result);
             $.each(news,function(index, value){
                 $('.row').append(
-                    '<div class="col-md-6" fid="' + value['fid'] +'">'+
+                    '<div class="col-md-6" aid="' + value['aid'] +'">'+
                         '<div class="panel panel-widget">'+
-                            '<div class="panel-title">' + '<a href="view_food.aspx?fid=' + value['fid'] + '">' +
-                                value['fname'] + '</a>' +
+                            '<div class="panel-title">' + '<a href="view_amuse.aspx?aid=' + value['aid'] + '">' +
+                                value['aname'] + '</a>' +
                                 '<ul class="panel-tools">'+
                                     '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
                                 '</ul>'+
@@ -53,17 +53,17 @@ function pageShow() {
                                    '<div id="example-8">'+
                                        
                                         '<div class="content-left">'+
-                                            '<a href="view_food.aspx?fid=' + value['fid'] + '">' + '<img src="' + value['fimage_url'] + '" alt="图片" width = "240px" height="150px">' + '</a>' +
+                                            '<a href="view_food.aspx?aid=' + value['aid'] + '">' + '<img src="' + value['aimage_url'] + '" alt="图片" width = "240px" height="150px">' + '</a>' +
                                         '</div>'+
                                         '<div class="content-right">'+
-                                            '<div>' + value['feature'] + '</div> <br />' +
-                                            '<div>' + value['ftype'] + '</div > ' +
-                                            '<div>' + value['faddress'] + '</div > <br />' +
-                                            '<div>' + value['ftime'] + '</div> <br />' +
+                                            '<div>' + value['afeature'] + '</div> <br />' +
+                                            '<div>' + value['atype'] + '</div > ' +
+                                            '<div>' + value['aaddress'] + '</div > <br />' +
+                                            '<div>' + value['atime'] + '</div> <br />' +
                                         '</div>'+
                                     '</div>'+
                                     '<div class="sort">'+
-                                        value['ftype']+
+                                        value['atype']+
                                     '</div>'+
                                     '<div class="isLikeButton">'+
                                         '<div class="collectBox">'+
@@ -71,11 +71,7 @@ function pageShow() {
                                         '</div>'+
                                         '<div class="likeBox">'+
                                             '<input class="isLikeButton_like" type="button" value="" />'+
-                                            '<div class="like_count">' + value['fgoods'] + '</div>'+
-                                        '</div>'+
-                                        '<div class="unlikeBox">'+
-                                            '<input class="isLikeButton_dislike" type="button" value="" />'+
-                                            '<div class="unlike_count">' + value['fbads'] + '</div>'+
+                                            '<div class="like_count">' + value['agoods'] + '</div>'+
                                         '</div>'+
                                     '</div>'+
                                 '</div>'+
@@ -93,16 +89,16 @@ function pageShow() {
 }
 function likeClick(){
     $(document).on("click", ".likeBox", function(){
-    var fid = jQuery(this).parent().parent().parent().parent().parent().attr('fid');
+    var aid = jQuery(this).parent().parent().parent().parent().parent().attr('aid');
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
     jQuery(this).children('div').text(number);
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index_food.aspx/Liking',
+        url: 'index_amuse.aspx/Liking',
         async: true,
-        data: "{'fid':'" + fid + "'}",
+        data: "{'aid':'" + aid + "'}",
         dataType: "json",
         success: function (result) {
             alert("点赞+1");
@@ -114,38 +110,15 @@ function likeClick(){
     });
 });
 }
-function unlikeClick(){
-    $(document).on("click", ".unlikeBox", function(){
-    var fid = jQuery(this).parent().parent().parent().parent().parent().attr('fid');
-    var number = jQuery(this).children('div').text();
-    number = (parseInt(number) + 1).toString();
-    jQuery(this).children('div').text(number);
-    $.ajax({
-        type: 'post',
-        contentType: "application/json",
-        url: 'index_food.aspx/Disliking',
-        async: true,
-        data: "{'fid':'" + fid + "'}",
-        dataType: "json",
-        success: function (result) {
-            alert("点踩+1");
-        },
-        error: function (textStatus, errorThrown) {
-            console.log(textStatus);
-            console.log(errorThrown);
-        }
-    });
-});
-}
 function collectClick(){
     $(document).on("click", ".collectBox", function(){
-    var fid = jQuery(this).parent().parent().parent().parent().parent().attr('fid');
+        var aid = jQuery(this).parent().parent().parent().parent().parent().attr('aid');
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index_food.aspx/Collecting',
+        url: 'index_amuse.aspx/Collecting',
         async: true,
-        data: "{'fid':'" + fid + "'}",
+        data: "{'aid':'" + aid + "'}",
         dataType: "json",
         success: function (result) {
             alert("成功收藏");

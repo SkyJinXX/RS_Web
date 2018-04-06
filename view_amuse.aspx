@@ -1,16 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index_amuse.aspx.cs" Inherits="index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="view_amuse.aspx.cs" Inherits="view" %>
 
-<%@ Import Namespace="System" %>
-<%@ Import Namespace="System.Data" %>
-<%@ Import Namespace="System.Data.SqlClient" %>
-<%@ Import Namespace="System.Configuration" %>
-
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Baxster Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
     SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -24,16 +19,20 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" >
     <!-- font-awesome icons -->
     <link href="style/font-awesome.css" rel="stylesheet"> 
-    
-    <link href="style/font-awesome.min.css" rel="stylesheet"> 
     <!-- //font-awesome icons -->
     <link href="style/wap.css?2" rel="stylesheet" type="text/css" />
     <!--line-->
     <link href="style/line.css" rel="stylesheet" type="text/css" />
-    <link href="style/content.css" rel="stylesheet" type="text/css" />
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
+    <link href="style/interests.css" rel="stylesheet" type="text/css" />
     <link href="style/custom.css" rel="stylesheet">
+    <link href="style/view.css" rel="stylesheet" type="text/css" />
+    <!--webfonts-->
+    <link href="style/fonts.css" rel="stylesheet" type="text/css">
+    <!--//webfonts--> 
+    <!--animate-->
+    <link href="style/animate.css" rel="stylesheet" type="text/css" media="all">
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -41,12 +40,6 @@
      <!-- js-->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
-    <script src="js/AmuseShow.js"></script>
-    <!--webfonts-->
-    <link href="style/fonts.css" rel="stylesheet" type="text/css">
-    <!--//webfonts--> 
-    <!--animate-->
-    <link href="style/animate.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/wow.min.js"></script>
 	<script>
         new WOW().init();
@@ -54,10 +47,12 @@
     <!--//end-animate-->
     <!-- Metis Menu -->
     <script src="js/metisMenu.min.js"></script>
+    <script src="js/AmuseDetail.js"></script>
     <script src="js/custom.js"></script>
     <!--//Metis Menu -->
-	<title>玩乐？玩了？完了？</title>
-    
+	
+	
+    <title>美食页</title>
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
     <form id="form1" runat="server">
@@ -283,32 +278,25 @@
 		</div>
         <div id="page-wrapper">
 			<div class="main-page">
-				
-				<div class="classification">
-					<ul id ="typeUl">
-						<li><i></i><a class="classification_type" href="#"><b>酒吧</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>茶馆</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>电竞</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>私人影院</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>足疗按摩</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>棋牌室</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>桌游</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>KTV</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>运动健身</b></a></li>
-                        <li><i></i><a class="classification_type" href="#"><b>文化艺术</b></a></li>
-                        <li><i></i><a class="classification_type" href="#"><b>沐浴汗蒸</b></a></li>
-                        <li><i></i><a class="classification_type" href="#"><b>DIY手工坊</b></a></li>
-					</ul>
-				</div>
-				<!-- //four-grids -->
-				<!--row-->
-				<div class="message-left">
-					<div class="row">			
-						
-					</div>
-					
-				</div>
-                <div class="nav-right-one">
+                <div class="messageBox_view">
+                    <div class="message_view">
+                        
+                    </div>
+                    <div class="comment_are">
+                        <div class="comment_area_title">
+                            <b>热门评论</b>
+                           
+                        </div>
+                        <div class="fold-button">
+                            <span class="open_Button" style="display: none;">展开</span>
+                            <span class="close_Button">收起</span>
+                        </div>
+                        <div class="comment_area">
+                        </div>
+                         
+                    </div>
+                </div>
+				<div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
 						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
@@ -319,26 +307,55 @@
                         <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
 					</ul>
 				</div>
-				<div class="nav-right-two">
+                <div class="nav-right-two">
 					<ul>
-						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
-                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="Collection.aspx"> 我的收藏</a></li>
-					    <%--<li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="announceview.aspx"> 我爆料</a></li>--%>
+						<li><i></i><a href="#">我的兴趣模型</a></li>
+						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#"> 兴趣标签</a></li>
+						<li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#"> 我的收藏</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="announceview.aspx"> 我爆料</a></li>
 					</ul>
 				</div>
-				<!--//row-->
 			</div>
 		</div>
-
-
-
+        <div class="footer">
+            <div style="width:10px;height:50px"></div>
+        </div>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+	    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="assets/js/custom.js"></script>
     </form>
-	
-	<script src="js/jquery.min.js" type="text/javascript"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="assets/js/custom.js"></script>
 </body>
 </html>
+
+                        <%--<div class="artcle_title">
+                            <asp:Label ID="Title" runat="server" Text="标题"></asp:Label>
+                        </div>
+                        <div class="subtitle">
+                            <div class="subtitleClassification_box">
+                                <asp:Label ID="subtitleClassification" runat="server" Text="分类"></asp:Label>
+                            </div>
+                            <div class="subtitleTime_box">
+                                <asp:Label ID="subtitleTime" runat="server" Text="时间"></asp:Label>
+                            </div>
+                        </div>
+                        <div class="picture">
+                            <img src="#"/>
+                        </div>
+                        <div class="article">
+                            <p id ="content">文章内容</p>
+                        </div>
+                        <div class="article_bottom">
+                            <div class="collectBox">
+                                <input type="button" class="collect" value="" title="收藏">
+                            </div>
+                            <div class="likeBox">
+                                <input class="isLikeButton_like" type="button" value="">
+                                <div class="like_count">1</div>
+                            </div>
+                            <div class="unlikeBox">
+                                <input class="isLikeButton_dislike" type="button" value="">
+                                <div class="unlike_count">1</div>
+                            </div>
+                        </div>--%>

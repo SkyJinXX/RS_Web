@@ -1,7 +1,7 @@
-﻿var fid;
+﻿var aid;
 
 $(function () {
-    fid = $.getUrlParam('fid');
+    aid = $.getUrlParam('aid');
     messageShow();
     CommentShow()
     likeClick();
@@ -18,8 +18,8 @@ function messageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'view_food.aspx/MessageShow',
-        data: "{'fid':'" + fid + "'}",
+        url: 'view_amuse.aspx/MessageShow',
+        data: "{'aid':'" + aid + "'}",
         dataType: "json",
         success: function (result) {
             var res = eval("(" + result.d + ")");
@@ -27,20 +27,20 @@ function messageShow() {
             console.log(result);
             $.each(news, function (index, value) {
                 $('.message_view').append(
-                    '<div fid="' + value['fid'] + '">' +
-                    '<div class="artcle_title" fid="' + value['fid'] + '">' + value['Ntitle'] +
+                    '<div aid="' + value['aid'] + '">' +
+                    '<div class="artcle_title" aid="' + value['aid'] + '">' + value['aname'] +
                     '</div >' +
                     '<div class="subtitle">' +
-                    '<div class="subtitleClassification_box">' + value['Ntype'] +
+                    '<div class="subtitleClassification_box">' + value['atype'] +
                     '</div>' +
-                    '<div class="subtitleTime_box">' + value['Ntime'] +
+                    '<div class="subtitleTime_box">' + value['atime'] +
                     '</div >' +
                     '</div >' +
                     '<div class="picture">' +
-                    '<img src="' + value['Nimage_url'] + '"/>' +
+                    '<img src="' + value['aimage_url'] + '"/>' +
                     '</div>' +
                     '<div class="article">' +
-                    '<p id="content">' + value['Ncontent'] + '</p>' +
+                    '<p id="content">' + value['afeature'] + '</p>' +
                     '</div>' +
                     '<div class="article_bottom">' +
                     '<div class="collectBox">' +
@@ -48,11 +48,7 @@ function messageShow() {
                     '</div>' +
                     '<div class="likeBox">' +
                     '<input class="isLikeButton_like" type="button" value="">' +
-                    '<div class="like_count">' + value['Ngoods'] + '</div>' +
-                    '</div>' +
-                    '<div class="unlikeBox">' +
-                    '<input class="isLikeButton_dislike" type="button" value="">' +
-                    '<div class="unlike_count">' + value['Nbads'] + '</div>' +
+                    '<div class="like_count">' + value['agoods'] + '</div>' +
                     '</div>' +
                     '</div>' +
                     '</div>'
@@ -79,7 +75,7 @@ function CommentShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'view_food.aspx/CommentShow',
+        url: 'view_amuse.aspx/CommentShow',
         success: function (result) {
             var res = eval("(" + result.d + ")");
             var news = res['Tables'][0]['Rows'];
@@ -87,7 +83,7 @@ function CommentShow() {
             $.each(news, function (index, value) {
                 if (value["Tourl"] == "" || value["Tourl"] == null || value["Toname"] == null || value["Toname"] == "" || value["Toname"] == " ") {
                     $('.comment_area').append(
-                        '<div Nid="' + value['Id'] + '">' +
+                        '<div aid="' + value['Id'] + '">' +
                         '<div class="comment_box_double">' +
                         '<div class="comment_box_title">' +
                         '<img src="' + value["Fromurl"] + '" style="float:left" />' +
@@ -123,7 +119,7 @@ function CommentShow() {
                 }
                 else {
                     $('.comment_area').append(
-                        '<div Nid="' + value['Id'] + '">' +
+                        '<div aid="' + value['Id'] + '">' +
                         '<div class="comment_box_double">' +
                         '<div class="comment_box_title">' +
                         '<img src="' + value["Fromurl"] + '" style="float:left" />' +
@@ -197,16 +193,16 @@ function Button_switch() {
 
 function likeClick() {
     $(document).on("click", ".likeBox", function () {
-        var Nid = jQuery(this).parent().parent().attr('fid');
+        var aid = jQuery(this).parent().parent().attr('aid');
         var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('div').text(number);
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view_food.aspx/Liking',
+            url: 'view_amuse.aspx/Liking',
             async: true,
-            data: "{'fid':'" + fid + "'}",
+            data: "{'aid':'" + aid + "'}",
             dataType: "json",
             success: function (result) {
                 alert('成功点赞');
@@ -218,38 +214,16 @@ function likeClick() {
         });
     });
 }
-function unlikeClick() {
-    $(document).on("click", ".unlikeBox", function () {
-        var Nid = jQuery(this).parent().parent().attr('fid');
-        var number = jQuery(this).children('div').text();
-        number = (parseInt(number) + 1).toString();
-        jQuery(this).children('div').text(number);
-        $.ajax({
-            type: 'post',
-            contentType: "application/json",
-            url: 'view_food.aspx/Disliking',
-            async: true,
-            data: "{'fid':'" + fid + "'}",
-            dataType: "json",
-            success: function (result) {
-                alert('成功点踩');
-            },
-            error: function (textStatus, errorThrown) {
-                console.log(textStatus);
-                console.log(errorThrown);
-            }
-        });
-    });
-}
+
 function collectClick() {
     $(document).on("click", ".collectBox", function () {
-        var Nid = jQuery(this).parent().parent().attr('fid');
+        var aid = jQuery(this).parent().parent().attr('aid');
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view_food.aspx/Collecting',
+            url: 'view_amuse.aspx/Collecting',
             async: true,
-            data: "{'fid':'" + fid + "'}",
+            data: "{'aid':'" + aid + "'}",
             dataType: "json",
             success: function (result) {
                 alert('成功收藏');
@@ -264,7 +238,7 @@ function collectClick() {
 
 function Reply() {
     $(document).on("click", ".replyContent", function () {
-        var id = jQuery(this).parent().parent().parent().attr('Nid');
+        var id = jQuery(this).parent().parent().parent().attr('aid');
         
         $(".comment_box_bottom_confirm").click(function () {
             var Con = jQuery(this).parent().children('.comment_box_bottom_text').val();
@@ -277,7 +251,7 @@ function Reply() {
                 $.ajax({
                     type: 'post',
                     contentType: "application/json",
-                    url: 'view_food.aspx/Replying',
+                    url: 'view_amuse.aspx/Replying',
                     async: true,
                     data: "{'id':'" + id + "','Con':'" + Con + "'}",
                     dataType: "json",

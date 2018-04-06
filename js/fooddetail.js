@@ -28,19 +28,19 @@ function messageShow() {
             $.each(news, function (index, value) {
                 $('.message_view').append(
                     '<div fid="' + value['fid'] + '">' +
-                    '<div class="artcle_title" fid="' + value['fid'] + '">' + value['Ntitle'] +
+                    '<div class="artcle_title" fid="' + value['fid'] + '">' + value['fname'] +
                     '</div >' +
                     '<div class="subtitle">' +
-                    '<div class="subtitleClassification_box">' + value['Ntype'] +
+                    '<div class="subtitleClassification_box">' + value['ftype'] +
                     '</div>' +
-                    '<div class="subtitleTime_box">' + value['Ntime'] +
+                    '<div class="subtitleTime_box">' + value['ftime'] +
                     '</div >' +
                     '</div >' +
                     '<div class="picture">' +
-                    '<img src="' + value['Nimage_url'] + '"/>' +
+                    '<img src="' + value['fimage_url'] + '"/>' +
                     '</div>' +
                     '<div class="article">' +
-                    '<p id="content">' + value['Ncontent'] + '</p>' +
+                    '<p id="content">' + value['feature'] + '</p>' +
                     '</div>' +
                     '<div class="article_bottom">' +
                     '<div class="collectBox">' +
@@ -48,11 +48,11 @@ function messageShow() {
                     '</div>' +
                     '<div class="likeBox">' +
                     '<input class="isLikeButton_like" type="button" value="">' +
-                    '<div class="like_count">' + value['Ngoods'] + '</div>' +
+                    '<div class="like_count">' + value['fgoods'] + '</div>' +
                     '</div>' +
                     '<div class="unlikeBox">' +
                     '<input class="isLikeButton_dislike" type="button" value="">' +
-                    '<div class="unlike_count">' + value['Nbads'] + '</div>' +
+                    '<div class="unlike_count">' + value['fbads'] + '</div>' +
                     '</div>' +
                     '</div>' +
                     '</div>'
@@ -87,7 +87,7 @@ function CommentShow() {
             $.each(news, function (index, value) {
                 if (value["Tourl"] == "" || value["Tourl"] == null || value["Toname"] == null || value["Toname"] == "" || value["Toname"] == " ") {
                     $('.comment_area').append(
-                        '<div Nid="' + value['Id'] + '">' +
+                        '<div fid="' + value['Id'] + '">' +
                         '<div class="comment_box_double">' +
                         '<div class="comment_box_title">' +
                         '<img src="' + value["Fromurl"] + '" style="float:left" />' +
@@ -123,7 +123,7 @@ function CommentShow() {
                 }
                 else {
                     $('.comment_area').append(
-                        '<div Nid="' + value['Id'] + '">' +
+                        '<div fid="' + value['Id'] + '">' +
                         '<div class="comment_box_double">' +
                         '<div class="comment_box_title">' +
                         '<img src="' + value["Fromurl"] + '" style="float:left" />' +
@@ -197,7 +197,7 @@ function Button_switch() {
 
 function likeClick() {
     $(document).on("click", ".likeBox", function () {
-        var Nid = jQuery(this).parent().parent().attr('fid');
+        var fid = jQuery(this).parent().parent().attr('fid');
         var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('div').text(number);
@@ -220,7 +220,7 @@ function likeClick() {
 }
 function unlikeClick() {
     $(document).on("click", ".unlikeBox", function () {
-        var Nid = jQuery(this).parent().parent().attr('fid');
+        var fid = jQuery(this).parent().parent().attr('fid');
         var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('div').text(number);
@@ -243,7 +243,7 @@ function unlikeClick() {
 }
 function collectClick() {
     $(document).on("click", ".collectBox", function () {
-        var Nid = jQuery(this).parent().parent().attr('fid');
+        var fid = jQuery(this).parent().parent().attr('fid');
         $.ajax({
             type: 'post',
             contentType: "application/json",

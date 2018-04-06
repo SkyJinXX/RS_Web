@@ -324,7 +324,7 @@
                             </a>
                         </div>
                         <div class="col-md-3 ticket-grid">
-                            <a href="#">
+                            <a href="index_amuse.aspx">
                                 <div id="Playing" class="tickets">
                                     <div class="grid-left">
                                         <div class="book-icon">
