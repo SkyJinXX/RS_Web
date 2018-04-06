@@ -18,7 +18,7 @@ function messageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'view.aspx/MessageShow',
+        url: 'view_News.aspx/MessageShow',
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
         success: function (result) {
@@ -79,7 +79,7 @@ function CommentShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'view.aspx/CommentShow',
+        url: 'view_News.aspx/CommentShow',
         success: function (result) {
             var res = eval("(" + result.d + ")");
             var news = res['Tables'][0]['Rows'];
@@ -204,7 +204,7 @@ function likeClick() {
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view.aspx/Liking',
+            url: 'view_News.aspx/Liking',
             async: true,
             data: "{'nid':'" + Nid + "'}",
             dataType: "json",
@@ -227,7 +227,7 @@ function unlikeClick() {
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view.aspx/Disliking',
+            url: 'view_News.aspx/Disliking',
             async: true,
             data: "{'nid':'" + Nid + "'}",
             dataType: "json",
@@ -247,7 +247,7 @@ function collectClick() {
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view.aspx/Collecting',
+            url: 'view_News.aspx/Collecting',
             async: true,
             data: "{'nid':'" + Nid + "'}",
             dataType: "json",
@@ -277,7 +277,7 @@ function Reply() {
                 $.ajax({
                     type: 'post',
                     contentType: "application/json",
-                    url: 'view.aspx/Replying',
+                    url: 'view_News.aspx/Replying',
                     async: true,
                     data: "{'id':'" + id + "','Con':'" + Con + "'}",
                     dataType: "json",

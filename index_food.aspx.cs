@@ -10,28 +10,37 @@ using System.Data;
 using System.Web.Services;
 using System.Collections;
 using System.Text;
-public partial class view : System.Web.UI.Page
+
+public partial class index : System.Web.UI.Page
 {
+    //全局变量 用于迭代资讯主键
+    public const int maxSize = 6;
+    //页面加载
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
+            String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+            SqlConnection conn = new SqlConnection(connstr);
+            conn.Open();
+
             if (Session["username"] == null)
             {
                 Response.Write("<script>alert('请先登录!');window.location.href ='login.aspx'</script>");
             }
-
-            String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
-            SqlConnection conn = new SqlConnection(connstr);
-            conn.Open();
 
             String s = "Select Uname From Users Where Uusername = '" + Session["username"] + "'";
             SqlCommand cmd = new SqlCommand(s, conn);
             cmd.CommandText = s;
             user_name.Text = cmd.ExecuteScalar().ToString();
 
+            cmd.CommandText = "Select Uid From Users Where Uusername = '" + Session["username"] + "'";
+            Session["Uid"] = cmd.ExecuteScalar().ToString();
+
+
             cmd.CommandText = "select Uimage_url From Users where Uusername = '" + Session["username"] + "'";
             User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
+
 
             cmd.CommandText = "Select top 1 Fname from Food order by Fgoods";
             a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
@@ -69,6 +78,7 @@ public partial class view : System.Web.UI.Page
             cmd.CommandText = "Select top 6 Fid from Food order by Fgoods";
             string f1 = cmd.ExecuteScalar().ToString();
             f.HRef = "view_food.aspx?fid=" + f1;
+
             conn.Close();
         }
     }
@@ -81,60 +91,15 @@ public partial class view : System.Web.UI.Page
             return text.Substring(0, length);
     }
 
-
-    [WebMethod]
-    public static String MessageShow(String fid)
+    //注销事件
+    protected void Button_logout_Click(object sender, EventArgs e)
     {
-        String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
-        SqlConnection conn = new SqlConnection(connstr);
-        conn.Open();
-        SqlCommand cmd = new SqlCommand("", conn);
-
-        HttpContext.Current.Session["fid"] = fid; 
-
-        cmd.CommandText = "select fid,fname,faddress,feature,ftime,ftype,fsign,fphone,fgoods,fbads,fimage_url from food Where fid = '" + fid + "'";
-        //if (cmd.ExecuteScalar() == null)
-        //{
-        //    Response.Write("<script>alert('未知错误!');window.location.href ='index.aspx'</script>");
-        //}
-        
-
-        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        DataSet ds = new DataSet();
-        da.Fill(ds);
-
-        String s = DatasetToJson(ds);
-        conn.Close();
-
-        Console.Write(s);
-
-        return s;
+        Response.Redirect("login.aspx");
     }
 
-    [WebMethod]
-    public static String CommentShow()
+    protected void Button_setting_Click(object sender, EventArgs e)
     {
-        String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
-        SqlConnection conn = new SqlConnection(connstr);
-        conn.Open();
 
-        String fid = HttpContext.Current.Session["nid"].ToString();
-
-        SqlCommand cmd = new SqlCommand("", conn); 
-        cmd.CommandText = "select Cid as Id,Ccontent as Content,u1.Uname as Fromname,u1.Uimage_url as Fromurl,u2.Uname as Toname" +
-                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where id = '" + fid +
-                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid and type = 'F' order by Cid ";
-
-        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        DataSet ds = new DataSet();
-        da.Fill(ds);
-
-        String s = DatasetToJson(ds);
-        conn.Close();
-
-        Console.Write(s);
-
-        return s;
     }
 
     //点赞事件 
@@ -189,7 +154,7 @@ public partial class view : System.Web.UI.Page
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-
+            
             cmd.CommandText = "select uid from u_f where fid = '" + fid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
             if (cmd.ExecuteScalar() != null)
             {
@@ -209,7 +174,7 @@ public partial class view : System.Web.UI.Page
 
             cmd.CommandText = "update food set fbads = '" + number + "' where fid = '" + fid + "'";
             cmd.ExecuteNonQuery();
-
+            
             //id_dislike.Text = "已点踩 ( " + cmd.ExecuteScalar().ToString() + " ) ";
             //id_dislike.Enabled = false;
             conn.Close();
@@ -248,51 +213,113 @@ public partial class view : System.Web.UI.Page
 
             //id_collection.Text = "已收藏^_^ ";
             //id_collection.Enabled = false;
-
+            
             conn.Close();
         }
     }
 
-    //回复功能
+    //左边分类框显示的类别资讯
     [WebMethod]
-    public static void Replying(String id,String Con)
+    public static ArrayList Type_Nid(string type)
+    {
+        ArrayList res = new ArrayList();
+        String s = type;
+        String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        SqlConnection conn = new SqlConnection(connstr);
+        conn.Open();
+        
+        SqlCommand cmd = new SqlCommand("", conn);
+        cmd.CommandText = "select fid,fname,faddress,feature,ftime,ftype,fgoods,fbads,fimage_url from food where ftype = '"
+            + s + "' order by Fgoods desc";
+
+        if (cmd.ExecuteScalar() == null)
+        {
+            cmd.CommandText = "select top 4 * from food order by Fgoods desc, fid asc";
+        }
+
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        foreach (DataRow row in ds.Tables[0].Rows)
+        {
+            res.Add(Convert.ToInt32(row[0].ToString()));
+        }
+
+        //Console.Write("{0}", s.ToString());
+        conn.Close();
+
+        return res;
+    }
+
+    //搜索生成关键字查询的资讯显示序列  搜索按钮事件
+    [WebMethod]
+    public static ArrayList Search_Nid(string keyword)
+    {
+        ArrayList res = new ArrayList();
+        String s = keyword;
+        String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
+        SqlConnection conn = new SqlConnection(connstr);
+        conn.Open();
+
+        SqlCommand cmd = new SqlCommand("", conn);
+        cmd.CommandText = "select fid,fname,faddress,feature,ftime,ftype,fgoods,fbads,fimage_url from food where fname like '%"
+            + s + "%' order by Fgoods desc";
+
+        if (cmd.ExecuteScalar() == null)
+        {
+            return Recommand_Nid();
+        }
+
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        foreach (DataRow row in ds.Tables[0].Rows)
+        {
+            res.Add(Convert.ToInt32(row[0].ToString()));
+        }
+        
+        //Console.Write("{0}", s.ToString());
+        conn.Close();
+
+        return res;
+    }
+
+    //默认生成总的Nid序列
+    public static ArrayList Recommand_Nid()
+    {
+        ArrayList res = new ArrayList();
+        for (int i = 1; i < 37; i++) {
+            res.Add(i);
+        }
+        return res;
+    }
+
+    //选择某组资讯返回json格式
+    public static String Select_News(ArrayList a)
     {
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
 
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select Cfrom_uid from Comments where Cid = '" + id + "'";
-        String Toid = cmd.ExecuteScalar().ToString();
-        String Fromid = HttpContext.Current.Session["uid"].ToString();
-        String Comment_id = HttpContext.Current.Session["fid"].ToString();
-        cmd.CommandText = "select Count(*) from Comments";
-        String Cid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
-
-        bool s = true;
-        while(s)
+        cmd.CommandText = "select fid,fname,faddress,feature,ftime,ftype,fgoods,fbads,fimage_url from food where fid in ('" + a[0];
+        for(int i = 0; i < a.Count; i++)
         {
-            cmd.CommandText = "select Cid from Comments where Cid = '" + Cid + "'";
-            if(cmd.ExecuteScalar()!=null)
-            {
-                Cid = (Convert.ToInt32(Cid) + 1).ToString();
-            }
-            else
-            {
-                break;
-            }
+            cmd.CommandText = cmd.CommandText + "','" + a[i]; 
         }
-        
+        cmd.CommandText += "')";
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataSet ds = new DataSet();
+        da.Fill(ds);
 
-        String Content = Con.ToString();
-
-        Console.Write(Content);
-        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Comment_id + "','" + Content + "','" + Fromid + "','" + Toid + "','F')";
-        cmd.ExecuteScalar();
+        String s = DatasetToJson(ds);
+        //Response.Write("" +s.ToString());
+        Console.Write("{0}", s.ToString());
 
         conn.Close();
+
+        return s;
     }
-    
 
     //数据集的总的（多表）json格式转化
     public static string DatasetToJson(System.Data.DataSet ds)
@@ -337,4 +364,42 @@ public partial class view : System.Web.UI.Page
         return jsonBuilder.ToString();
     }
 
+    //获取前台页面需要显示的资讯的多个属性值
+    [WebMethod]
+    public static string GetNewsJson(String page, String SourseType, String keyWord)
+    {
+        int page_int = int.Parse(page);
+        int st = page_int * maxSize;
+        int end = (page_int + 1) * maxSize;
+        Console.Write("{0}x{1}", st, end);
+
+        ArrayList a = null;
+        switch (SourseType)
+        {
+            case "Recommand":
+                a = Recommand_Nid();
+                break;
+            case "Search":
+                a = Search_Nid(keyWord);
+                break;
+            case "Type":
+                a = Type_Nid(keyWord);
+                break;
+        }
+        if (a.Count < end)
+        {
+            end = a.Count;
+            //st = 0;
+        }
+
+        ArrayList showlist = new ArrayList();
+        for(int i = st; i < end; i++)
+        {
+            showlist.Add(a[i]);
+        }
+
+        String JsonBuilder = Select_News(showlist);
+
+        return JsonBuilder;
+    }
 }

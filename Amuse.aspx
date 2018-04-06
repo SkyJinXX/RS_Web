@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="food.aspx.cs" Inherits="index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Amuse.aspx.cs" Inherits="index" %>
 
 <%@ Import Namespace="System" %>
 <%@ Import Namespace="System.Data" %>
@@ -286,19 +286,19 @@
 				
 				<div class="classification">
 					<ul id ="typeUl">
-						<li><i></i><a class="classification_type" href="#"><b>私房菜</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>家常菜</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>下午茶</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>人气餐厅</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>日本料理</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>韩国料理</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>西餐</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>中餐</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>小吃</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>咖啡厅</b></a></li>
-                        <li><i></i><a class="classification_type" href="#"><b>特色菜</b></a></li>
-                        <li><i></i><a class="classification_type" href="#"><b>自助餐</b></a></li>
-
+						<li><i></i><a class="classification_type" href="#"><b>酒吧</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>茶馆</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>体育馆</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>网咖</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>影院</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>足疗按摩</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>棋牌室</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>桌游</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>KTV</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>运动建神</b></a></li>
+                        <li><i></i><a class="classification_type" href="#"><b>文化艺术</b></a></li>
+                        <li><i></i><a class="classification_type" href="#"><b>沐浴汗蒸</b></a></li>
+                        <li><i></i><a class="classification_type" href="#"><b>DIY手工坊</b></a></li>
 					</ul>
 				</div>
 				<!-- //four-grids -->

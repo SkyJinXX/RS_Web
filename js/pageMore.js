@@ -29,7 +29,7 @@ function pageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index.aspx/getNewsJson',
+        url: 'index_News.aspx/getNewsJson',
         async: false,
         data: "{'page':'" + page + "', 'SourseType':'"+ SourseType +"', 'keyWord':'"+ keyWord +"'}",
         dataType: "json",
@@ -41,7 +41,7 @@ function pageShow() {
                 $('.row').append(
                     '<div class="col-md-6" Nid="' + value['Nid'] +'">'+
                         '<div class="panel panel-widget">'+
-                            '<div class="panel-title">' + '<a href="view.aspx?Nid=' + value['Nid'] + '">' +
+                            '<div class="panel-title">' + '<a href="view_News.aspx?Nid=' + value['Nid'] + '">' +
                                 value['Ntitle'] + '</a>' +
                                 '<ul class="panel-tools">'+
                                     '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
@@ -53,10 +53,10 @@ function pageShow() {
                                    '<div id="example-8">'+
                                         '<!--<span>资讯内容</span>-->'+
                                         '<div class="content-left">'+
-                                            '<a href="view.aspx?Nid=' + value['Nid'] + '">' + '<img src="' + value['Nimage_url'] + '" alt="图片" width = "180px" height="120px">' + '</a>' +
+                                            '<a href="view_News.aspx?Nid=' + value['Nid'] + '">' + '<img src="' + value['Nimage_url'] + '" alt="图片" width = "180px" height="120px">' + '</a>' +
                                         '</div>'+
                                         '<div class="content-right">'+
-                                            '<a href="view.aspx?Nid='+value['Nid']+'">'+
+                                            '<a href="view_News.aspx?Nid='+value['Nid']+'">'+
                                                 value['Ncontent']+
                                             '</a>'+
                                         '</div>'+
@@ -99,7 +99,7 @@ function likeClick(){
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index.aspx/Liking',
+        url: 'index_News.aspx/Liking',
         async: true,
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
@@ -122,7 +122,7 @@ function unlikeClick(){
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index.aspx/Disliking',
+        url: 'index_News.aspx/Disliking',
         async: true,
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
@@ -142,7 +142,7 @@ function collectClick(){
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index.aspx/Collecting',
+        url: 'index_News.aspx/Collecting',
         async: true,
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
@@ -170,9 +170,9 @@ function DeleteNews() {
 function TypeClick(){
     $('#typeUl').children('li').each(
         function(index, value){
-            $(value).children('a').children('b').click(
+            $(value).click(
                 function(){
-                    keyWord = $(this).text();
+                    keyWord = $(this).children('a').children('b').text();
                     page = 0;
                     SourseType = "Type";
                     $('.row').empty();
