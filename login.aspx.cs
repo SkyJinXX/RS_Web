@@ -42,7 +42,7 @@ public partial class login : System.Web.UI.Page
             String user = Username.Text;
 
             Session["username"] = user;
-            Response.Redirect("index_home.aspx");
+            Response.Redirect("index.aspx");
         }
         objConnection.Close();
 
