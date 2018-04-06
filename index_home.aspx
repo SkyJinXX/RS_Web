@@ -274,7 +274,7 @@
                                 </div>
                             </a>
                             <ul class="dropdown-menu drp-mnu">
-                                <li><a href="#"><i class="fa fa-cog"></i>修改密码</a> </li>
+                                <li><a href="findPassword.aspx"><i class="fa fa-cog"></i>修改密码</a> </li>
                                 <li><a href="user_imformation.aspx"><i class="fa fa-user"></i>个人信息</a> </li>
                                 <li><a href="#"><i class="fa fa-sign-out"></i>注销</a> </li>
                             </ul>
@@ -309,7 +309,7 @@
                             </a>
                         </div>
                         <div class="col-md-3 ticket-grid">
-                            <a href="#">
+                            <a href="food_index.aspx">
                                 <div id="Food" class="tickets">
                                     <div class="grid-left">
                                         <div class="book-icon ">
