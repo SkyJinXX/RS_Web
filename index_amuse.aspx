@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Amuse.aspx.cs" Inherits="index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index_amuse.aspx.cs" Inherits="index" %>
 
 <%@ Import Namespace="System" %>
 <%@ Import Namespace="System.Data" %>
@@ -41,7 +41,7 @@
      <!-- js-->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
-    <script src="js/FoodShow.js"></script>
+    <script src="js/AmouseShow.js"></script>
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
     <!--//webfonts--> 
@@ -56,7 +56,7 @@
     <script src="js/metisMenu.min.js"></script>
     <script src="js/custom.js"></script>
     <!--//Metis Menu -->
-	<title>美食</title>
+	<title>玩乐？玩了？完了？</title>
     
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
@@ -65,7 +65,7 @@
 			<div class="header-left">
 				<!--logo -->
 				<div class="logo">
-					<a href="index_home.aspx">
+					<a href="index.aspx">
 						<img src="images/logo/logo_picture_white.gif" alt="" />
 							
 					</a>

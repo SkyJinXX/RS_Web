@@ -15,7 +15,7 @@ public partial class index : System.Web.UI.Page
 {
     //全局变量 用于迭代资讯主键
     public const int maxSize = 6;
-    //页面加载
+    //页面加载 
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
