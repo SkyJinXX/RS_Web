@@ -1,7 +1,7 @@
-﻿var Nid;
+﻿var fid;
 
 $(function () {
-    Nid = $.getUrlParam('Nid');
+    fid = $.getUrlParam('fid');
     messageShow();
     CommentShow()
     likeClick();
@@ -18,8 +18,8 @@ function messageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'view.aspx/MessageShow',
-        data: "{'nid':'" + Nid + "'}",
+        url: 'view_food.aspx/MessageShow',
+        data: "{'fid':'" + fid + "'}",
         dataType: "json",
         success: function (result) {
             var res = eval("(" + result.d + ")");
@@ -27,8 +27,8 @@ function messageShow() {
             console.log(result);
             $.each(news, function (index, value) {
                 $('.message_view').append(
-                    '<div Nid="' + value['Nid'] + '">' +
-                    '<div class="artcle_title" Nid="' + value['Nid'] + '">' + value['Ntitle'] +
+                    '<div fid="' + value['fid'] + '">' +
+                    '<div class="artcle_title" fid="' + value['fid'] + '">' + value['Ntitle'] +
                     '</div >' +
                     '<div class="subtitle">' +
                     '<div class="subtitleClassification_box">' + value['Ntype'] +
@@ -79,7 +79,7 @@ function CommentShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'view.aspx/CommentShow',
+        url: 'view_food.aspx/CommentShow',
         success: function (result) {
             var res = eval("(" + result.d + ")");
             var news = res['Tables'][0]['Rows'];
@@ -197,16 +197,16 @@ function Button_switch() {
 
 function likeClick() {
     $(document).on("click", ".likeBox", function () {
-        var Nid = jQuery(this).parent().parent().attr('Nid');
+        var Nid = jQuery(this).parent().parent().attr('fid');
         var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('div').text(number);
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view.aspx/Liking',
+            url: 'view_food.aspx/Liking',
             async: true,
-            data: "{'nid':'" + Nid + "'}",
+            data: "{'fid':'" + fid + "'}",
             dataType: "json",
             success: function (result) {
                 alert('成功点赞');
@@ -220,16 +220,16 @@ function likeClick() {
 }
 function unlikeClick() {
     $(document).on("click", ".unlikeBox", function () {
-        var Nid = jQuery(this).parent().parent().attr('Nid');
+        var Nid = jQuery(this).parent().parent().attr('fid');
         var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('div').text(number);
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view.aspx/Disliking',
+            url: 'view_food.aspx/Disliking',
             async: true,
-            data: "{'nid':'" + Nid + "'}",
+            data: "{'fid':'" + fid + "'}",
             dataType: "json",
             success: function (result) {
                 alert('成功点踩');
@@ -243,13 +243,13 @@ function unlikeClick() {
 }
 function collectClick() {
     $(document).on("click", ".collectBox", function () {
-        var Nid = jQuery(this).parent().parent().attr('Nid');
+        var Nid = jQuery(this).parent().parent().attr('fid');
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view.aspx/Collecting',
+            url: 'view_food.aspx/Collecting',
             async: true,
-            data: "{'nid':'" + Nid + "'}",
+            data: "{'fid':'" + fid + "'}",
             dataType: "json",
             success: function (result) {
                 alert('成功收藏');
@@ -277,7 +277,7 @@ function Reply() {
                 $.ajax({
                     type: 'post',
                     contentType: "application/json",
-                    url: 'view.aspx/Replying',
+                    url: 'view_food.aspx/Replying',
                     async: true,
                     data: "{'id':'" + id + "','Con':'" + Con + "'}",
                     dataType: "json",

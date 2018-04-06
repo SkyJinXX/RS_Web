@@ -29,7 +29,7 @@ function pageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index.aspx/getNewsJson',
+        url: 'food.aspx/getNewsJson',
         async: false,
         data: "{'page':'" + page + "', 'SourseType':'"+ SourseType +"', 'keyWord':'"+ keyWord +"'}",
         dataType: "json",
@@ -39,9 +39,9 @@ function pageShow() {
             console.log(result);
             $.each(news,function(index, value){
                 $('.row').append(
-                    '<div class="col-md-6" Nid="' + value['Nid'] +'">'+
+                    '<div class="col-md-6" fid="' + value['fid'] +'">'+
                         '<div class="panel panel-widget">'+
-                            '<div class="panel-title">' + '<a href="view.aspx?Nid=' + value['Nid'] + '">' +
+                            '<div class="panel-title">' + '<a href="view.aspx?fid=' + value['fid'] + '">' +
                                 value['Ntitle'] + '</a>' +
                                 '<ul class="panel-tools">'+
                                     '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
@@ -92,16 +92,16 @@ function pageShow() {
 }
 function likeClick(){
     $(document).on("click", ".likeBox", function(){
-    var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
+    var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('fid');
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
     jQuery(this).children('div').text(number);
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index.aspx/Liking',
+        url: 'food.aspx/Liking',
         async: true,
-        data: "{'nid':'" + Nid + "'}",
+        data: "{'fid':'" + fid + "'}",
         dataType: "json",
         success: function (result) {
             console.log("点赞+1");
@@ -115,16 +115,16 @@ function likeClick(){
 }
 function unlikeClick(){
     $(document).on("click", ".unlikeBox", function(){
-    var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
+    var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('fid');
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
     jQuery(this).children('div').text(number);
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index.aspx/Disliking',
+        url: 'food.aspx/Disliking',
         async: true,
-        data: "{'nid':'" + Nid + "'}",
+        data: "{'fid':'" + fid + "'}",
         dataType: "json",
         success: function (result) {
             console.log("点踩+1");
@@ -138,13 +138,13 @@ function unlikeClick(){
 }
 function collectClick(){
     $(document).on("click", ".collectBox", function(){
-    var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
+    var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('fid');
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'index.aspx/Collecting',
+        url: 'food.aspx/Collecting',
         async: true,
-        data: "{'nid':'" + Nid + "'}",
+        data: "{'fid':'" + fid + "'}",
         dataType: "json",
         success: function (result) {
             console.log("成功收藏");

@@ -123,8 +123,8 @@ public partial class view : System.Web.UI.Page
 
         SqlCommand cmd = new SqlCommand("", conn); 
         cmd.CommandText = "select Cid as Id,Ccontent as Content,u1.Uname as Fromname,u1.Uimage_url as Fromurl,u2.Uname as Toname" +
-                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where Nid = '" + nid +
-                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid order by Cid";
+                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where id = '" + nid +
+                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid order by Cid and where type = 'N'";
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
@@ -265,7 +265,7 @@ public partial class view : System.Web.UI.Page
         cmd.CommandText = "select Count(*) from Comments";
         String Cid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
 
-        bool s = false;
+        bool s = true;
         while(s)
         {
             cmd.CommandText = "select Cid from Comments where Cid = '" + Cid + "'";
@@ -283,7 +283,8 @@ public partial class view : System.Web.UI.Page
         String Content = Con.ToString();
 
         Console.Write(Content);
-        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Nid + "','" + Content + "','" + Fromid + "','" + Toid + "')";
+        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Nid + "','" + Content + "','" + Fromid + "','" + Toid 
+                        + "','" + "N" +"')";
         cmd.ExecuteScalar();
 
         conn.Close();

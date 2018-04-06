@@ -118,12 +118,12 @@ public partial class view : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
 
-        String nid = HttpContext.Current.Session["nid"].ToString();
+        String fid = HttpContext.Current.Session["nid"].ToString();
 
         SqlCommand cmd = new SqlCommand("", conn); 
         cmd.CommandText = "select Cid as Id,Ccontent as Content,u1.Uname as Fromname,u1.Uimage_url as Fromurl,u2.Uname as Toname" +
-                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where Nid = '" + nid +
-                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid order by Cid";
+                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where id = '" + fid +
+                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid order by Cid where type = 'F'";
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
@@ -265,11 +265,11 @@ public partial class view : System.Web.UI.Page
         cmd.CommandText = "select Cfrom_uid from Comments where Cid = '" + id + "'";
         String Toid = cmd.ExecuteScalar().ToString();
         String Fromid = HttpContext.Current.Session["uid"].ToString();
-        String Nid = HttpContext.Current.Session["nid"].ToString();
+        String Comment_id = HttpContext.Current.Session["fid"].ToString();
         cmd.CommandText = "select Count(*) from Comments";
         String Cid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
 
-        bool s = false;
+        bool s = true;
         while(s)
         {
             cmd.CommandText = "select Cid from Comments where Cid = '" + Cid + "'";
@@ -287,7 +287,7 @@ public partial class view : System.Web.UI.Page
         String Content = Con.ToString();
 
         Console.Write(Content);
-        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Nid + "','" + Content + "','" + Fromid + "','" + Toid + "')";
+        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Comment_id + "','" + Content + "','" + Fromid + "','" + Toid + "','F')";
         cmd.ExecuteScalar();
 
         conn.Close();
