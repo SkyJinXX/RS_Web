@@ -33,43 +33,42 @@ public partial class view : System.Web.UI.Page
             cmd.CommandText = "select Uimage_url From Users where Uusername = '" + Session["username"] + "'";
             User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
 
-            cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
+            cmd.CommandText = "Select top 1 Fname from Food order by Fgoods";
             a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
+            cmd.CommandText = "Select top 1 Fid from Food order by Fgoods";
             string a1 = cmd.ExecuteScalar().ToString();
-            a.HRef = "view.aspx?Nid=" + a1;
+            a.HRef = "view_food.aspx?fid=" + a1;
 
 
-            cmd.CommandText = "Select top 2 Ntitle from News order by Ngoods";
+            cmd.CommandText = "Select top 2 Fname from Food order by Fgoods";
             b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 2 Nid from News order by Ngoods";
+            cmd.CommandText = "Select top 2 Fid from Food order by Fgoods";
             string b1 = cmd.ExecuteScalar().ToString();
-            b.HRef = "view.aspx?Nid=" + b1;
+            b.HRef = "view_food.aspx?fid=" + b1;
 
-            cmd.CommandText = "Select top 3 Ntitle from News order by Ngoods";
+            cmd.CommandText = "Select top 3 Fname from Food order by Fgoods";
             c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 3 Nid from News order by Ngoods";
+            cmd.CommandText = "Select top 3 Fid from Food order by Fgoods";
             string c1 = cmd.ExecuteScalar().ToString();
-            c.HRef = "view.aspx?Nid=" + c1;
+            c.HRef = "view_food.aspx?fid=" + c1;
 
-            cmd.CommandText = "Select top 4 Ntitle from News order by Ngoods";
+            cmd.CommandText = "Select top 4 Fname from Food order by Fgoods";
             d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 4 Nid from News order by Ngoods";
+            cmd.CommandText = "Select top 4 Fid from Food order by Fgoods";
             string d1 = cmd.ExecuteScalar().ToString();
-            d.HRef = "view.aspx?Nid=" + d1;
+            d.HRef = "view_food.aspx?fid=" + d1;
 
-            cmd.CommandText = "Select top 5 Ntitle from News order by Ngoods";
+            cmd.CommandText = "Select top 5 Fname from Food order by Fgoods";
             h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 5 Nid from News order by Ngoods";
+            cmd.CommandText = "Select top 5 Fid from Food order by Fgoods";
             string h1 = cmd.ExecuteScalar().ToString();
-            h.HRef = "view.aspx?Nid=" + h1;
+            h.HRef = "view_food.aspx?fid=" + h1;
 
-            cmd.CommandText = "Select top 6 Ntitle from News order by Ngoods";
+            cmd.CommandText = "Select top 6  Fname from Food order by Fgoods";
             f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 6 Nid from News order by Ngoods";
+            cmd.CommandText = "Select top 6 Fid from Food order by Fgoods";
             string f1 = cmd.ExecuteScalar().ToString();
-            f.HRef = "view.aspx?Nid=" + f1;
-
+            f.HRef = "view_food.aspx?fid=" + f1;
             conn.Close();
         }
     }
@@ -84,16 +83,16 @@ public partial class view : System.Web.UI.Page
 
 
     [WebMethod]
-    public static String MessageShow(String nid)
+    public static String MessageShow(String fid)
     {
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
         SqlCommand cmd = new SqlCommand("", conn);
 
-        HttpContext.Current.Session["nid"] = nid; 
+        HttpContext.Current.Session["fid"] = fid; 
 
-        cmd.CommandText = "Select Nid,Ntitle,Ncontent,Ntime,Ngoods,Nbads,Ntype,Nimage_url From News Where Nid = '" + nid + "'";
+        cmd.CommandText = "select fid,fname,faddress,feature,ftime,ftype,fsign,fphone,fgoods,fbads,fimage_url from food Where fid = '" + fid + "'";
         //if (cmd.ExecuteScalar() == null)
         //{
         //    Response.Write("<script>alert('未知错误!');window.location.href ='index.aspx'</script>");
@@ -119,12 +118,12 @@ public partial class view : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
 
-        String nid = HttpContext.Current.Session["nid"].ToString();
+        String fid = HttpContext.Current.Session["nid"].ToString();
 
         SqlCommand cmd = new SqlCommand("", conn); 
         cmd.CommandText = "select Cid as Id,Ccontent as Content,u1.Uname as Fromname,u1.Uimage_url as Fromurl,u2.Uname as Toname" +
-                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where id = '" + nid +
-                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid order by Cid and where type = 'N'";
+                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where id = '" + fid +
+                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid order by Cid where type = 'F'";
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
@@ -140,33 +139,33 @@ public partial class view : System.Web.UI.Page
 
     //点赞事件 
     [WebMethod]
-    public static void Liking(String nid)
+    public static void Liking(String fid)
     {
-        if (nid != null && nid != "")
+        if (fid != null && fid != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-            cmd.CommandText = "select uid from u_n where nid = '" + nid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            cmd.CommandText = "select uid from u_f where fid = '" + fid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
             if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "update u_n set isok = '" + true + "' where  nid = '" + nid + "' and uid = '"
+                cmd.CommandText = "update u_f set isok = '" + true + "' where  fid = '" + fid + "' and uid = '"
                     + HttpContext.Current.Session["uid"] + "' ";
                 cmd.ExecuteScalar();
             }
             else
             {
                 TimeSpan ts = new TimeSpan(0, 7, 55);
-                cmd.CommandText = "insert into u_n values('" + HttpContext.Current.Session["uid"] + "','" + nid + "','"
+                cmd.CommandText = "insert into u_f values('" + HttpContext.Current.Session["uid"] + "','" + fid + "','"
                     + ts + "','" + false + "','" + true + "','" + false + "')";
                 cmd.ExecuteScalar();
             }
-            cmd.CommandText = "select Ngoods from News where Nid = '" + nid + "'";
+            cmd.CommandText = "select Fgoods from food where fid = '" + fid + "'";
             String number = Convert.ToString(Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1);
 
-            cmd.CommandText = "update News set Ngoods = '" + number + "' where Nid = '" + nid + "'";
+            cmd.CommandText = "update food set Fgoods = '" + number + "' where fid = '" + fid + "'";
             cmd.ExecuteNonQuery();
 
             //id_like.Text = "已点赞 ( " + cmd.ExecuteScalar().ToString() + " ) ";
@@ -175,15 +174,15 @@ public partial class view : System.Web.UI.Page
         }
         else
         {
-            Console.Write("传入的Nid为空错误");
+            Console.Write("传入的Fid为空错误");
         }
     }
 
     //点踩事件
     [WebMethod]
-    public static void Disliking(string nid)
+    public static void Disliking(string fid)
     {
-        if (nid != null && nid != "")
+        if (fid != null && fid != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
@@ -191,59 +190,64 @@ public partial class view : System.Web.UI.Page
 
             SqlCommand cmd = new SqlCommand("", conn);
 
-            cmd.CommandText = "select uid from u_n where nid = '" + nid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            cmd.CommandText = "select uid from u_f where fid = '" + fid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
             if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "update u_n set isbad = '" + true + "' where  nid = '" + nid + "' and uid = '"
+                cmd.CommandText = "update u_f set isbad = '" + true + "' where  fid = '" + fid + "' and uid = '"
                     + HttpContext.Current.Session["uid"] + "' ";
                 cmd.ExecuteScalar();
             }
             else
             {
-                TimeSpan ts = new TimeSpan(0, 10, 15);
-                cmd.CommandText = "insert into u_n values('" + HttpContext.Current.Session["uid"] + "','" + nid + "','"
+                TimeSpan ts = new TimeSpan(0, 5, 15);
+                cmd.CommandText = "insert into u_f values('" + HttpContext.Current.Session["uid"] + "','" + fid + "','"
                     + ts + "','" + false + "','" + false + "','" + true + "')";
                 cmd.ExecuteScalar();
             }
-            cmd.CommandText = "select Nbads from News where Nid = '" + nid + "'";
+            cmd.CommandText = "select fbads from food where fid = '" + fid + "'";
             String number = Convert.ToString(Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1);
 
-            cmd.CommandText = "update News set Nbads = '" + number + "' where Nid = '" + nid + "'";
+            cmd.CommandText = "update food set fbads = '" + number + "' where fid = '" + fid + "'";
             cmd.ExecuteNonQuery();
 
+            //id_dislike.Text = "已点踩 ( " + cmd.ExecuteScalar().ToString() + " ) ";
+            //id_dislike.Enabled = false;
             conn.Close();
         }
         else
         {
-            Console.Write("传入的Nid为空错误");
+            Console.Write("传入的fid为空错误");
         }
     }
 
     //收藏事件
     [WebMethod]
-    public static void Collecting(string nid)
+    public static void Collecting(string fid)
     {
-        if (nid != null && nid != "")
+        if (fid != null && fid != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-            cmd.CommandText = "select uid from u_n where nid = '" + nid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            cmd.CommandText = "select uid from u_f where fid = '" + fid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
             if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "update u_n set iscollect = '" + true + "' where  nid = '" + nid + "' and uid = '"
+                cmd.CommandText = "update u_f set iscollect = '" + true + "' where  fid = '" + fid + "' and uid = '"
                     + HttpContext.Current.Session["uid"] + "' ";
                 cmd.ExecuteScalar();
             }
             else
             {
                 TimeSpan ts = new TimeSpan(0, 9, 30);
-                cmd.CommandText = "insert into u_n values('" + HttpContext.Current.Session["uid"] + "','" + nid + "','"
+                cmd.CommandText = "insert into u_f values('" + HttpContext.Current.Session["uid"] + "','" + fid + "','"
                     + ts + "','" + true + "','" + false + "','" + false + "')";
                 cmd.ExecuteScalar();
             }
+
+            //id_collection.Text = "已收藏^_^ ";
+            //id_collection.Enabled = false;
 
             conn.Close();
         }
@@ -261,7 +265,7 @@ public partial class view : System.Web.UI.Page
         cmd.CommandText = "select Cfrom_uid from Comments where Cid = '" + id + "'";
         String Toid = cmd.ExecuteScalar().ToString();
         String Fromid = HttpContext.Current.Session["uid"].ToString();
-        String Nid = HttpContext.Current.Session["nid"].ToString();
+        String Comment_id = HttpContext.Current.Session["fid"].ToString();
         cmd.CommandText = "select Count(*) from Comments";
         String Cid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
 
@@ -283,8 +287,7 @@ public partial class view : System.Web.UI.Page
         String Content = Con.ToString();
 
         Console.Write(Content);
-        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Nid + "','" + Content + "','" + Fromid + "','" + Toid 
-                        + "','" + "N" +"')";
+        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Comment_id + "','" + Content + "','" + Fromid + "','" + Toid + "','F')";
         cmd.ExecuteScalar();
 
         conn.Close();
