@@ -126,11 +126,8 @@ public partial class view : System.Web.UI.Page
         SqlCommand cmd = new SqlCommand("", conn); 
         cmd.CommandText = "select Cid as Id,Ccontent as Content,u1.Uname as Fromname,u1.Uimage_url as Fromurl,u2.Uname as Toname" +
                            ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where id = '" + nid +
-<<<<<<< HEAD:view.aspx.cs
                            "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid and Comments.type = 'N' order by Cid";
-=======
-                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid order by Cid and type = 'N'";
->>>>>>> 50d7d1228c1e3f586c26d39a3669ed3e83c07c31:view_News.aspx.cs
+
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();

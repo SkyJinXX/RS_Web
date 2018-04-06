@@ -309,7 +309,7 @@
                             </a>
                         </div>
                         <div class="col-md-3 ticket-grid">
-                            <a href="food_index.aspx">
+                            <a href="index_food.aspx">
                                 <div id="Food" class="tickets">
                                     <div class="grid-left">
                                         <div class="book-icon ">
