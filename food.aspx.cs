@@ -302,7 +302,7 @@ public partial class index : System.Web.UI.Page
         conn.Open();
 
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select fid,fname,faddress,feature,ftime,ftype,fgoods,fbads,fimage_url from food where Nid in ('" + a[0];
+        cmd.CommandText = "select fid,fname,faddress,feature,ftime,ftype,fgoods,fbads,fimage_url from food where fid in ('" + a[0];
         for(int i = 0; i < a.Count; i++)
         {
             cmd.CommandText = cmd.CommandText + "','" + a[i]; 
@@ -352,18 +352,7 @@ public partial class index : System.Web.UI.Page
                 jsonBuilder.Append("\"");
                 jsonBuilder.Append(dt.Columns[j].ColumnName);
                 jsonBuilder.Append("\":\"");
-
-                if (j == 2)
-                {
-                    String s = dt.Rows[i][j].ToString();
-                    s = s.Substring(0, 110);
-                     
-                    jsonBuilder.Append(s.Replace("\"", "\\\""));
-                }
-                else
-                {
-                    jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\"", "\\\""));
-                }
+                jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\"", "\\\""));
                 jsonBuilder.Append("\",");
             }
             jsonBuilder.Remove(jsonBuilder.Length - 1, 1);

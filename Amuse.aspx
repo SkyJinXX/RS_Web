@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="food.aspx.cs" Inherits="index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Amuse.aspx.cs" Inherits="index" %>
 
 <%@ Import Namespace="System" %>
 <%@ Import Namespace="System.Data" %>
@@ -286,66 +286,26 @@
 				
 				<div class="classification">
 					<ul id ="typeUl">
-						<li><i></i><a class="classification_type" href="#"><b>私房菜</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>家常菜</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>下午茶</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>人气餐厅</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>日本料理</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>韩国料理</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>西餐</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>中餐</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>小吃</b></a></li>
-						<li><i></i><a class="classification_type" href="#"><b>咖啡厅</b></a></li>
-                        <li><i></i><a class="classification_type" href="#"><b>特色菜</b></a></li>
-                        <li><i></i><a class="classification_type" href="#"><b>自助餐</b></a></li>
-
+						<li><i></i><a class="classification_type" href="#"><b>酒吧</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>茶馆</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>体育馆</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>网咖</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>影院</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>足疗按摩</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>棋牌室</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>桌游</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>KTV</b></a></li>
+						<li><i></i><a class="classification_type" href="#"><b>运动建神</b></a></li>
+                        <li><i></i><a class="classification_type" href="#"><b>文化艺术</b></a></li>
+                        <li><i></i><a class="classification_type" href="#"><b>沐浴汗蒸</b></a></li>
+                        <li><i></i><a class="classification_type" href="#"><b>DIY手工坊</b></a></li>
 					</ul>
 				</div>
 				<!-- //four-grids -->
 				<!--row-->
 				<div class="message-left">
 					<div class="row">			
-						<div class="col-md-6" >
-                        <div class="panel panel-widget">
-                            <div class="panel-title"><a href="view_food.aspx?fid='1'">朋友圈美食社区·鲜鱼馆</a>
-                                <ul class="panel-tools">
-                                    <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="panel-body" style="display: block;">
-                                <!-- candlestick -->
-                                <div class="candlestick">
-                                   <div id="example-8">
-                                       <!--<span>资讯内容</span>-->
-                                        <div class="content-left">
-                                            <a href="view_food.aspx?fid='1'"><img src="img/Food/1.jpg" alt="图片" width = "240px"height="150px"></a>
-                                        </div>
-                                        <div class="content-right">
-                                            <div>人均：92元 口味：8.9 环境：9.2 服务：8.9</div><br />
-                                            <div>私房菜</div><div>新安南路11-1号、11-8号城中湖旅游码头旁(怡途酒店对面)</div><br />
-                                            <div>周一至周日 10:00-23:00 非营业时段 2018-02-11至2018-02-17 全天</div><br />
-                                        </div>
-                                    </div>
-                                    <div class="sort">
-                                        美味
-                                    </div>
-                                    <div class="isLikeButton">
-                                        <div class="collectBox">
-                                            <input type="button" class="collect" value="" title="收藏"/>
-                                        </div>
-                                        <div class="likeBox">
-                                            <input class="isLikeButton_like" type="button" value="" />
-                                            <div class="like_count">0</div>
-                                        </div>
-                                        <div class="unlikeBox">
-                                            <input class="isLikeButton_dislike" type="button" value="" />
-                                            <div class="unlike_count">0</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+						
 					</div>
 					
 				</div>
