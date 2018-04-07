@@ -1,0 +1,142 @@
+﻿body {
+}
+
+.clearfloat {
+    clear: both;
+}
+
+.message_view_amuse {
+    height: auto;
+    padding-top: 2em;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-bottom: 2em;
+    background-color: #FFFFFF;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.content-left-line {
+    width: 100%;
+    height: 1.2em;
+    padding-bottom: 0.8em;
+    margin-bottom: 0.5em;
+    clear: both;
+}
+
+.content-left-menu {
+    width: 100%;
+    height: 1.2em;
+    padding-bottom: 0.8em;
+    margin-bottom: 0.5em;
+    clear: both;
+}
+
+.content-left-line-address {
+    width: 100%;
+    height: 1.2em;
+    padding-bottom: 2.4em;
+    margin-bottom: 0.5em;
+    clear: both;
+}
+
+.view_amuse_body_address_title {
+    width: 13%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.view_amuse_body_address {
+    width: 87%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.view_amuse_title {
+    width: 100%;
+    border-bottom: 1px solid #EE7942;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1em;
+    text-align: center;
+    font-size: x-large;
+}
+
+.view_amuse_body {
+    width: 100%;
+    padding-top: 2em;
+}
+
+.view_amuse_body_left {
+    width: 60%;
+    float: left;
+}
+
+.view_amuse_body_right {
+    width: 40%;
+    float: left
+}
+
+.view_amuse_body_item {
+    width: 100%;
+    margin-right: 2%;
+    float: left;
+    color: #666666;
+}
+
+.view_amuse_body_title {
+    width: 13%;
+    float: left;
+    color: #666666;
+}
+
+.view_amuse_body_sort {
+    color: #666666;
+}
+
+
+.view_amuse_body_time_title {
+    width: 20%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.view_amuse_body_time {
+    width: 80%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+    padding-bottom: 2.6em;
+}
+
+.view_amuse_body_phone_title {
+    width: 13%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.view_amuse_body_phone {
+    width: 80%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+    padding-top: 0.1em;
+}
+
+.view_amuse_body_dish_title {
+    width: 3em;
+    height: auto;
+    padding-bottom: 0.3em;
+    float: left;
+    color: #666666;
+    border-bottom: 0.1em solid #EE7942;
+}
+
+.view_amuse_body_dish {
+    width: 60%;
+    height: auto;
+    color: #666666;
+}

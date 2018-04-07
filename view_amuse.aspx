@@ -26,8 +26,10 @@
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
     <link href="style/interests.css" rel="stylesheet" type="text/css" />
-    <link href="style/custom.css" rel="stylesheet">
+    <link href="style/custom.css" rel="stylesheet" type="text/css"/>
     <link href="style/view.css" rel="stylesheet" type="text/css" />
+    <link href="style/view_amuse.css" rel="stylesheet" type="text/css" />
+
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
     <!--//webfonts--> 
@@ -52,7 +54,7 @@
     <!--//Metis Menu -->
 	
 	
-    <title>美食页</title>
+    <title>游玩</title>
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
     <form id="form1" runat="server">
@@ -279,8 +281,39 @@
         <div id="page-wrapper">
 			<div class="main-page">
                 <div class="messageBox_view">
-                    <div class="message_view">
-                        
+                    <div class="message_view_amuse">
+                        <div class="view_amuse_title"><b>YOLO WHISKY & COCKTAIL BAR</b></div>
+                        <div class="view_amuse_body">
+                            <div class="view_amuse_body_left">
+                                <div class="content-left-line">
+                                    <div class="view_amuse_body_item">人均: ￥168 口味: 8.9 环境: 9.2 服务: 8.9</div>
+                                </div>
+                                <div class="content-left-line">
+                                    <div class="view_amuse_body_title">分类</div>
+                                    <div class="view_amuse_body_sort">酒吧</div>
+                                </div>
+                                <div class="content-left-line">
+                                    <div class="view_amuse_body_phone_title">电话</div>
+                                    <div class="view_amuse_body_phone">18989461051</div>
+                                </div>
+                                <div class="content-left-line-address">
+                                    <div class="view_amuse_body_address_title">地点</div>
+                                    <div class="view_amuse_body_address">百井坊巷75号(武林银泰)</div>
+                                </div>
+                                <div class="content-left-line">
+                                    <div class="view_amuse_body_time_title">营业时间</div>
+                                    <div class="view_amuse_body_time">周一至周日 19:00-02:00 </div>
+                                </div>
+                                <div class="content-left-menu">
+                                    <div class="view_amuse_body_dish_title">推荐</div>
+                                    <div class="view_amuse_body_dish"></div>
+                                </div>
+                            </div>
+                            <div class="view_amuse_body_right">
+                                <img src="img/Amuse/1.jpg" alt="图片" style="width: 320px; height: 213px"/>
+                            </div>
+                        </div>
+                        <div class="clearfloat"></div>
                     </div>
                     <div class="comment_are">
                         <div class="comment_area_title">
@@ -329,33 +362,4 @@
 </body>
 </html>
 
-                        <%--<div class="artcle_title">
-                            <asp:Label ID="Title" runat="server" Text="标题"></asp:Label>
-                        </div>
-                        <div class="subtitle">
-                            <div class="subtitleClassification_box">
-                                <asp:Label ID="subtitleClassification" runat="server" Text="分类"></asp:Label>
-                            </div>
-                            <div class="subtitleTime_box">
-                                <asp:Label ID="subtitleTime" runat="server" Text="时间"></asp:Label>
-                            </div>
-                        </div>
-                        <div class="picture">
-                            <img src="#"/>
-                        </div>
-                        <div class="article">
-                            <p id ="content">文章内容</p>
-                        </div>
-                        <div class="article_bottom">
-                            <div class="collectBox">
-                                <input type="button" class="collect" value="" title="收藏">
-                            </div>
-                            <div class="likeBox">
-                                <input class="isLikeButton_like" type="button" value="">
-                                <div class="like_count">1</div>
-                            </div>
-                            <div class="unlikeBox">
-                                <input class="isLikeButton_dislike" type="button" value="">
-                                <div class="unlike_count">1</div>
-                            </div>
-                        </div>--%>
+                        

@@ -1,7 +1,7 @@
 ﻿body {
 }
 
-.panel-title-food {
+.panel-title-amuse {
     width: 100%;
     color: #2A2F43;
     border-bottom: 1px solid #EE7942;
@@ -13,11 +13,11 @@
     letter-spacing: 1px;
 }
 
-    .panel-title-food > a {
-        color: inherit;
-    }
+.panel-title-amuse > a {
+    color: inherit;
+}
 
-.panel-title-food-score {
+.panel-title-amuse-score {
 }
 
 .content-right-line {
@@ -36,74 +36,74 @@
     clear: both;
 }
 
-.food-comments-title {
+.amuse-comments-title {
     height: 1.2em;
     float: left;
     padding-top: 0.1em;
     color: #666666;
 }
 
-.food-comments {
+.amuse-comments {
     height: 1.2em;
     float: left;
     color: #666666;
 }
 
 .first-line-item {
-    width: 23%;
+    width: 100%;
     margin-right: 2%;
     float: left;
     color: #666666;
 }
 
-.food-address-title {
+.amuse-address-title {
     width: 13%;
     height: 1.2em;
     float: left;
     color: #666666;
 }
 
-.food-address {
+.amuse-address {
     width: 87%;
     height: 1.2em;
     float: left;
     color: #666666;
 }
 
-.food-sort-title {
+.amuse-sort-title {
     width: 13%;
     float: left;
     color: #666666;
 }
 
-.food-sort {
+.amuse-sort {
     width: 87%;
     height: 1.2em;
     float: left;
     color: #666666;
 }
 
-.food-recommends {
+.amuse-recommends {
     height: 1.2em;
     float: left;
     color: #666666;
     margin-right: 5%;
 }
 
-.food-recommend {
+.amuse-recommend {
     height: 1.2em;
     float: left;
     color: #666666;
 }
 
-.food-time-title {
+.amuse-time-title {
     width: 20%;
     height: 1.2em;
     float: left;
     color: #666666;
 }
 
-.food-time {
+.amuse-time {
     width: 80%;
     height: 1.2em;
     float: left;
