@@ -1,7 +1,7 @@
-﻿var aid;
+﻿var did;
 
 $(function () {
-    aid = $.getUrlParam('aid');
+    did = $.getUrlParam('did');
     messageShow();
     CommentShow()
     likeClick();
@@ -18,8 +18,8 @@ function messageShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'view_amuse.aspx/MessageShow',
-        data: "{'aid':'" + aid + "'}",
+        url: 'view_duanzi.aspx/MessageShow',
+        data: "{'did':'" + did + "'}",
         dataType: "json",
         success: function (result) {
             var res = eval("(" + result.d + ")");
@@ -27,20 +27,20 @@ function messageShow() {
             console.log(result);
             $.each(news, function (index, value) {
                 $('.message_view').append(
-                    '<div aid="' + value['aid'] + '">' +
-                    '<div class="artcle_title" aid="' + value['aid'] + '">' + value['aname'] +
+                    '<div did="' + value['did'] + '">' +
+                    '<div class="artcle_title" Nid="' + value['did'] + '">' + value['Dtitle'] +
                     '</div >' +
                     '<div class="subtitle">' +
-                    '<div class="subtitleClassification_box">' + value['atype'] +
+                    '<div class="subtitleClassification_box">' + value['Dtype'] +
                     '</div>' +
-                    '<div class="subtitleTime_box">' + value['atime'] +
+                    '<div class="subtitleTime_box">' + value['Dtime'] +
                     '</div >' +
                     '</div >' +
                     '<div class="picture">' +
-                    '<img src="' + value['aimage_url'] + '"/>' +
+                    '<img src="' + value['Dimage_url'] + '"/>' +
                     '</div>' +
                     '<div class="article">' +
-                    '<p id="content">' + value['afeature'] + '</p>' +
+                    '<p id="content">' + value['Dcontent'] + '</p>' +
                     '</div>' +
                     '<div class="article_bottom">' +
                     '<div class="collectBox">' +
@@ -48,7 +48,7 @@ function messageShow() {
                     '</div>' +
                     '<div class="likeBox">' +
                     '<input class="isLikeButton_like" type="button" value="">' +
-                    '<div class="like_count">' + value['agoods'] + '</div>' +
+                    '<div class="like_count">' + value['Dgoods'] + '</div>' +
                     '</div>' +
                     '</div>' +
                     '</div>'
@@ -75,7 +75,7 @@ function CommentShow() {
     $.ajax({
         type: 'post',
         contentType: "application/json",
-        url: 'view_amuse.aspx/CommentShow',
+        url: 'view_duanzi.aspx/CommentShow',
         success: function (result) {
             var res = eval("(" + result.d + ")");
             var news = res['Tables'][0]['Rows'];
@@ -83,7 +83,7 @@ function CommentShow() {
             $.each(news, function (index, value) {
                 if (value["Tourl"] == "" || value["Tourl"] == null || value["Toname"] == null || value["Toname"] == "" || value["Toname"] == " ") {
                     $('.comment_area').append(
-                        '<div aid="' + value['Id'] + '">' +
+                        '<div did="' + value['Id'] + '">' +
                         '<div class="comment_box_double">' +
                         '<div class="comment_box_title">' +
                         '<img src="' + value["Fromurl"] + '" style="float:left" />' +
@@ -119,7 +119,7 @@ function CommentShow() {
                 }
                 else {
                     $('.comment_area').append(
-                        '<div aid="' + value['Id'] + '">' +
+                        '<div did="' + value['Id'] + '">' +
                         '<div class="comment_box_double">' +
                         '<div class="comment_box_title">' +
                         '<img src="' + value["Fromurl"] + '" style="float:left" />' +
@@ -193,16 +193,16 @@ function Button_switch() {
 
 function likeClick() {
     $(document).on("click", ".likeBox", function () {
-        var aid = jQuery(this).parent().parent().attr('aid');
+        var did = jQuery(this).parent().parent().attr('did');
         var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('div').text(number);
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view_amuse.aspx/Liking',
+            url: 'view_duanzi.aspx/Liking',
             async: true,
-            data: "{'aid':'" + aid + "'}",
+            data: "{'did':'" + did + "'}",
             dataType: "json",
             success: function (result) {
                 alert('成功点赞');
@@ -221,9 +221,9 @@ function collectClick() {
         $.ajax({
             type: 'post',
             contentType: "application/json",
-            url: 'view_amuse.aspx/Collecting',
+            url: 'view_duanzi.aspx/Collecting',
             async: true,
-            data: "{'aid':'" + aid + "'}",
+            data: "{'did':'" + did + "'}",
             dataType: "json",
             success: function (result) {
                 alert('成功收藏');
@@ -238,7 +238,7 @@ function collectClick() {
 
 function Reply() {
     $(document).on("click", ".replyContent", function () {
-        var id = jQuery(this).parent().parent().parent().attr('aid');
+        var id = jQuery(this).parent().parent().parent().attr('did');
         
         $(".comment_box_bottom_confirm").click(function () {
             var Con = jQuery(this).parent().children('.comment_box_bottom_text').val();
@@ -251,7 +251,7 @@ function Reply() {
                 $.ajax({
                     type: 'post',
                     contentType: "application/json",
-                    url: 'view_amuse.aspx/Replying',
+                    url: 'view_duanzi.aspx/Replying',
                     async: true,
                     data: "{'id':'" + id + "','Con':'" + Con + "'}",
                     dataType: "json",

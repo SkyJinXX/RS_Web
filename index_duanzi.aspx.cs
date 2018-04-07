@@ -42,42 +42,42 @@ public partial class index : System.Web.UI.Page
             User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
 
 
-            cmd.CommandText = "Select top 1 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 1 Dtitle from Duanzi order by Dgoods";
             a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 1 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 1 Did from Duanzi order by Dgoods";
             string a1 = cmd.ExecuteScalar().ToString();
-            a.HRef = "view_amuse.aspx?aid=" + a1;
+            a.HRef = "view_duanzi.aspx?Did=" + a1;
 
 
-            cmd.CommandText = "Select top 2 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 2 Dtitle from Duanzi order by Dgoods";
             b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 2 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 2 Did from Duanzi order by Dgoods";
             string b1 = cmd.ExecuteScalar().ToString();
-            b.HRef = "view_amuse.aspx?aid=" + b1;
+            b.HRef = "view_duanzi.aspx?Did=" + b1;
 
-            cmd.CommandText = "Select top 3 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 3 Dtitle from Duanzi order by Dgoods";
             c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 3 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 3 Did from Duanzi order by Dgoods";
             string c1 = cmd.ExecuteScalar().ToString();
-            c.HRef = "view_amuse.aspx?aid=" + c1;
+            c.HRef = "view_duanzi.aspx?Did=" + c1;
 
-            cmd.CommandText = "Select top 4 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 4 Dtitle from Duanzi order by Dgoods";
             d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 4 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 4 Did from Duanzi order by Dgoods";
             string d1 = cmd.ExecuteScalar().ToString();
-            d.HRef = "view_amuse.aspx?aid=" + d1;
+            d.HRef = "view_duanzi.aspx?Did=" + d1;
 
-            cmd.CommandText = "Select top 5 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 5 Dtitle from Duanzi order by Dgoods";
             h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 5 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 5 Did from Duanzi order by Dgoods";
             string h1 = cmd.ExecuteScalar().ToString();
-            h.HRef = "view_amuse.aspx?aid=" + h1;
+            h.HRef = "view_duanzi.aspx?Did=" + h1;
 
-            cmd.CommandText = "Select top 6  Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 6 Dtitle from Duanzi order by Dgoods";
             f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 6 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 6 Did from Duanzi order by Dgoods";
             string f1 = cmd.ExecuteScalar().ToString();
-            f.HRef = "view_amuse.aspx?aid=" + f1;
+            f.HRef = "view_duanzi.aspx?Did=" + f1;
 
             conn.Close();
         }
@@ -104,33 +104,33 @@ public partial class index : System.Web.UI.Page
 
     //点赞事件 
     [WebMethod]
-    public static void Liking(String aid)
+    public static void Liking(String did)
     {
-        if (aid != null && aid != "")
+        if (did != null && did != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-            cmd.CommandText = "select uid from u_a where aid = '" + aid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            cmd.CommandText = "select uid from u_d where did = '" + did + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
             if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "update u_a set isok = '" + true + "' where  aid = '" + aid + "' and uid = '"
+                cmd.CommandText = "update u_d set isok = '" + true + "' where  did = '" + did + "' and uid = '"
                     + HttpContext.Current.Session["uid"] + "' ";
                 cmd.ExecuteScalar();
             }
             else
             {
                 TimeSpan ts = new TimeSpan(0, 7, 55);
-                cmd.CommandText = "insert into u_a values('" + HttpContext.Current.Session["uid"] + "','" + aid + "','"
+                cmd.CommandText = "insert into u_d values('" + HttpContext.Current.Session["uid"] + "','" + did + "','"
                     + ts + "','" + false + "','" + true + "','" + false + "')";
                 cmd.ExecuteScalar();
             }
-            cmd.CommandText = "select agoods from amuse where aid = '" + aid + "'";
+            cmd.CommandText = "select dgoods from duanzi where did = '" + did + "'";
             String number = Convert.ToString(Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1);
 
-            cmd.CommandText = "update amuse set agoods = '" + number + "' where aid = '" + aid + "'";
+            cmd.CommandText = "update duanzi set dgoods = '" + number + "' where did = '" + did + "'";
             cmd.ExecuteNonQuery();
 
             //id_like.Text = "已点赞 ( " + cmd.ExecuteScalar().ToString() + " ) ";
@@ -139,32 +139,32 @@ public partial class index : System.Web.UI.Page
         }
         else
         {
-            Console.Write("传入的Aid为空错误");
+            Console.Write("传入的Did为空错误");
         }
     }
 
     //收藏事件
     [WebMethod]
-    public static void Collecting(string aid)
+    public static void Collecting(string did)
     {
-        if (aid != null && aid != "")
+        if (did != null && did != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-            cmd.CommandText = "select uid from u_a where aid = '" + aid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            cmd.CommandText = "select uid from u_d where did = '" + did + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
             if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "update u_a set iscollect = '" + true + "' where  aid = '" + aid + "' and uid = '"
+                cmd.CommandText = "update u_d set iscollect = '" + true + "' where  did = '" + did + "' and uid = '"
                     + HttpContext.Current.Session["uid"] + "' ";
                 cmd.ExecuteScalar();
             }
             else
-            {
+            { 
                 TimeSpan ts = new TimeSpan(0, 9, 30);
-                cmd.CommandText = "insert into u_a values('" + HttpContext.Current.Session["uid"] + "','" + aid + "','"
+                cmd.CommandText = "insert into u_d values('" + HttpContext.Current.Session["uid"] + "','" + did + "','"
                     + ts + "','" + true + "','" + false + "','" + false + "')";
                 cmd.ExecuteScalar();
             }
@@ -187,12 +187,12 @@ public partial class index : System.Web.UI.Page
         conn.Open();
         
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select aid,aname,aaddress,afeature,atime,atype,agoods,aimage_url from amuse where atype = '"
-            + s + "' order by agoods desc";
+        cmd.CommandText = "select Did,Dtitle,Dcontent,Dtime,Dtype,Dgoods,Dimage_url from duanzi where Dtype = '"
+            + s + "' order by Dgoods desc";
 
         if (cmd.ExecuteScalar() == null)
         {
-            cmd.CommandText = "select top 4 * from amuse order by agoods desc, aid asc";
+            cmd.CommandText = "select top 4 * from duanzi order by Dgoods desc, Did asc";
         }
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -220,8 +220,8 @@ public partial class index : System.Web.UI.Page
         conn.Open();
 
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select aid,aname,aaddress,afeature,atime,atype,agoods,aimage_url from amuse where aname like '%"
-            + s + "%' order by agoods desc";
+        cmd.CommandText = "select Did,Dtitle,Dcontent,Dtime,Dtype,Dgoods,Dimage_url from duanzi where Dtitle like '%"
+            + s + "%'or Dkeyword like '%" + s + "%' order by Dgoods desc";
 
         if (cmd.ExecuteScalar() == null)
         {
@@ -260,7 +260,7 @@ public partial class index : System.Web.UI.Page
         conn.Open();
 
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select aid,aname,aaddress,afeature,atime,atype,aphone,agoods,aimage_url from amuse where aid in ('" + a[0];
+        cmd.CommandText = "select Did,Dtitle,Dcontent,Dtime,Dtype,Dgoods,Dimage_url from duanzi where Did in ('" + a[0];
         for(int i = 0; i < a.Count; i++)
         {
             cmd.CommandText = cmd.CommandText + "','" + a[i]; 
