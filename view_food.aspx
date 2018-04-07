@@ -26,8 +26,10 @@
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
     <link href="style/interests.css" rel="stylesheet" type="text/css" />
-    <link href="style/custom.css" rel="stylesheet">
+    <link href="style/custom.css" rel="stylesheet" type="text/css">
     <link href="style/view.css" rel="stylesheet" type="text/css" />
+    <link href="style/view_food.css" rel="stylesheet" type="text/css" />
+
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
     <!--//webfonts--> 
@@ -279,8 +281,42 @@
         <div id="page-wrapper">
 			<div class="main-page">
                 <div class="messageBox_view">
-                    <div class="message_view">
-                        
+                    <div class="message_view_food">
+                        <div class="view_food_title"><b>朋友圈美食社区·鲜鱼馆</b></div>
+                        <div class="view_food_body">
+                            <div class="view_food_body_left">
+                                <div class="content-left-line">
+                                    <div class="view_food_body_item">人均: ￥92</div>
+                                    <div class="view_food_body_item">口味: 8.9</div>
+                                    <div class="view_food_body_item">环境: 9.2</div>
+                                    <div class="view_food_body_item">服务: 8.9</div>
+                                </div>
+                                <div class="content-left-line">
+                                    <div class="view_food_body_title">特色</div>
+                                    <div class="view_food_body_sort">私房菜</div>
+                                </div>
+                                <div class="content-left-line">
+                                    <div class="view_food_body_phone_title">电话</div>
+                                    <div class="view_food_body_phone">0571-64885555</div>
+                                </div>
+                                <div class="content-left-line-address">
+                                    <div class="view_food_body_address_title">地点</div>
+                                    <div class="view_food_body_address">新安南路11-1号、11-8号城中湖旅游码头旁(怡途酒店对面)</div>
+                                </div>
+                                <div class="content-left-line">
+                                    <div class="view_food_body_time_title">营业时间</div>
+                                    <div class="view_food_body_time">周一至周日 10:00-23:00</div>
+                                </div>
+                                <div class="content-left-menu">
+                                    <div class="view_food_body_dish_title">推荐菜</div>
+                                    <div class="view_food_body_dish"></div>
+                                </div>
+                            </div>
+                            <div class="view_food_body_right">
+                                <img src="img/Food/1.jpg" alt="图片" style="width: 320px; height: 213px"/>
+                            </div>
+                        </div>
+                        <div class="clearfloat"></div>
                     </div>
                     <div class="comment_are">
                         <div class="comment_area_title">
