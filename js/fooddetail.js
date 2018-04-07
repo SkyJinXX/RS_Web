@@ -27,34 +27,50 @@ function messageShow() {
             console.log(result);
             $.each(news, function (index, value) {
                 $('.message_view').append(
-                    '<div fid="' + value['fid'] + '">' +
-                    '<div class="artcle_title" fid="' + value['fid'] + '">' + value['fname'] +
-                    '</div >' +
-                    '<div class="subtitle">' +
-                    '<div class="subtitleClassification_box">' + value['ftype'] +
+                    '<div class="message_view_food" fid="' + value['fid'] +'">'+
+                    '<div class="view_food_title"><b>>' + value['fname'] +'</b></div>' +
+                    '<div class="view_food_body">' +
+                    '<div class="view_food_body_left">' +
+                    '<div class="content-left-line">' +
+                    '<div class="view_food_body_item">' + value['feature'] + '</div>' +
                     '</div>' +
-                    '<div class="subtitleTime_box">' + value['ftime'] +
-                    '</div >' +
-                    '</div >' +
-                    '<div class="picture">' +
-                    '<img src="' + value['fimage_url'] + '"/>' +
+                    '<div class="content-left-line">' +
+                    '<div class="view_food_body_title">特色</div>' +
+                    '<div class="view_food_body_sort">' + value['ftype'] + '</div>' +
                     '</div>' +
-                    '<div class="article">' +
-                    '<p id="content">' + value['feature'] + '</p>' +
+                    '<div class="content-left-line">' +
+                    '<div class="view_food_body_phone_title">电话</div>' +
+                    '<div class="view_food_body_phone">' + value['fphone'] + '</div>' +
                     '</div>' +
-                    '<div class="article_bottom">' +
+                    '<div class="content-left-line-address">' +
+                    '<div class="view_food_body_address_title">地点</div>' +
+                    '<div class="view_food_body_address">' + value['faddress'] + '</div>' +
+                    '</div>' +
+                    '<div class="content-left-line">' +
+                    '<div class="view_food_body_time_title">营业时间</div>' +
+                    '<div class="view_food_body_time">' + value['ftime'] + '</div>' +
+                    '</div>' +
+                    '<div class="content-left-menu">' +
+                    '<div class="view_food_body_dish_title">推荐菜</div>' +
+                    '<div class="view_food_body_dish">' + value['fsign'] + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="view_food_body_right">' +
+                    '<img src="' + value['fimage_url'] +'" alt="图片" style="width: 320px; height: 213px"/>' +
+                    '</div>' +
                     '<div class="collectBox">' +
                     '<input type="button" class="collect" value="" title="收藏"/>' +
                     '</div>' +
                     '<div class="likeBox">' +
-                    '<input class="isLikeButton_like" type="button" value="">' +
+                    '<input class="isLikeButton_like" type="button" value="" />' +
                     '<div class="like_count">' + value['fgoods'] + '</div>' +
                     '</div>' +
                     '<div class="unlikeBox">' +
-                    '<input class="isLikeButton_dislike" type="button" value="">' +
+                    '<input class="isLikeButton_dislike" type="button" value="" />' +
                     '<div class="unlike_count">' + value['fbads'] + '</div>' +
                     '</div>' +
                     '</div>' +
+                    '<div class="clearfloat"></div>' +
                     '</div>'
                 );
             });
