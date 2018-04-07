@@ -306,56 +306,7 @@
 				<!--row-->
 				<div class="message-left">
 					<div class="row">			
-						<div class="col-md-6" >
-                        <div class="panel panel-widget">
-                            <div class="panel-title-food">
-                                <a href="view_food.aspx?fid='1'"><b>朋友圈美食社区·鲜鱼馆</b></a>
-                                <ul class="panel-tools">
-                                    <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="panel-body" style="display: block;">
-                                <!-- candlestick -->
-                                <div class="candlestick">
-                                   <div id="example-8">
-                                       <!--<span>资讯内容</span>-->
-                                        <div class="content-left">
-                                            <a href="view_food.aspx?fid='1'"><img src="img/Food/1.jpg" alt="图片" style="width: 210px; height: 140px"/></a>
-                                        </div>
-                                        <div class="content-right">
-                                            <a href="#">
-                                                <div class="content-right-line">
-                                                    <div class="first-line-item">人均: ￥92</div>
-                                                    <div class="first-line-item">口味: 8.9</div>
-                                                    <div class="first-line-item">环境: 9.2</div>
-                                                    <div class="first-line-item">服务: 8.9</div>
-                                                </div>
-                                                <div class="content-right-line">
-                                                    <div class="food-sort-title">特色</div>
-                                                    <div class="food-sort">私房菜</div>
-                                                </div>
-                                                <div class="content-right-line-address">
-                                                    <div class="food-address-title">地点</div>
-                                                    <div class="food-address">新安南路11-1号、11-8号城中湖旅游码头旁(怡途酒店对面)</div>
-                                                </div>
-                                                <div class="content-right-line">
-                                                    <div class="food-time-title">营业时间</div>
-                                                    <div class="food-time">周一至周日 10:00-23:00</div>
-                                                </div>  
-                                                <!--
-                                                <div class="content-right-line">
-                                                    <div class="food-comments-title">营业时间</div>
-                                                    <div class="food-comments">周一至周日 10:00-23:00</div>
-                                                </div>  
-                                                -->
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+						
 					</div>
 					
 				</div>

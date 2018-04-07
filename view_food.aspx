@@ -287,9 +287,6 @@
                             <div class="view_food_body_left">
                                 <div class="content-left-line">
                                     <div class="view_food_body_item">人均: ￥92</div>
-                                    <div class="view_food_body_item">口味: 8.9</div>
-                                    <div class="view_food_body_item">环境: 9.2</div>
-                                    <div class="view_food_body_item">服务: 8.9</div>
                                 </div>
                                 <div class="content-left-line">
                                     <div class="view_food_body_title">特色</div>

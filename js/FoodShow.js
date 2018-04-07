@@ -40,47 +40,56 @@ function pageShow() {
             $.each(news,function(index, value){
                 $('.row').append(
                     '<div class="col-md-6" fid="' + value['fid'] +'">'+
-                        '<div class="panel panel-widget">'+
-                            '<div class="panel-title">' + '<a href="view_food.aspx?fid=' + value['fid'] + '">' +
-                                value['fname'] + '</a>' +
-                                '<ul class="panel-tools">'+
-                                    '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
-                                '</ul>'+
-                            '</div>'+
-                            '<div class="panel-body" style="display: block;">'+
-                                '<!-- candlestick -->'+
-                                '<div class="candlestick">'+
-                                   '<div id="example-8">'+
-                                       
-                                        '<div class="content-left">'+
-                                            '<a href="view_food.aspx?fid=' + value['fid'] + '">' + '<img src="' + value['fimage_url'] + '" alt="图片" width = "240px" height="150px">' + '</a>' +
-                                        '</div>'+
-                                        '<div class="content-right">'+
-                                            '<div>' + value['feature'] + '</div> <br />' +
-                                            '<div>' + value['ftype'] + '</div > ' +
-                                            '<div>' + value['faddress'] + '</div > <br />' +
-                                            '<div>' + value['ftime'] + '</div> <br />' +
-                                        '</div>'+
-                                    '</div>'+
-                                    '<div class="sort">'+
-                                        value['ftype']+
-                                    '</div>'+
-                                    '<div class="isLikeButton">'+
-                                        '<div class="collectBox">'+
-                                            '<input type="button" class="collect" value="" title="收藏"/>'+
-                                        '</div>'+
-                                        '<div class="likeBox">'+
-                                            '<input class="isLikeButton_like" type="button" value="" />'+
-                                            '<div class="like_count">' + value['fgoods'] + '</div>'+
-                                        '</div>'+
-                                        '<div class="unlikeBox">'+
-                                            '<input class="isLikeButton_dislike" type="button" value="" />'+
-                                            '<div class="unlike_count">' + value['fbads'] + '</div>'+
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>'+
-                            '</div>'+
-                        '</div>'+
+                    '<div class="panel panel-widget">' +
+                    '<div class="panel-title-food">' +
+                    '<a href="view_food.aspx?fid="' + value['fid'] + '">' +
+                    '<b>' + value['fname'] +'</b ></a > ' +
+                    '<ul class="panel-tools">' +
+                    '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>' +
+                    '</ul>' +
+                    '</div>' +
+                    '<div class="panel-body" style="display: block;">' +
+                    '<!-- candlestick -->' +
+                    '<div class="candlestick">' +
+                    '<div id="example-8">' +
+                    '<!--<span>资讯内容</span>-->' +
+                    '<div class="content-left">' +
+                    '<a href="view_food.aspx?fid="' + value['fid'] + '"><img src="' + value['fimage_url'] +'" alt="图片" style="width: 210px; height: 140px" /></a>' +
+                    '</div>' +
+                    '<div class="content-right">' +
+                    '<a href="#">' +
+                    '<div class="content-right-line">' +
+                    '<div class="first-line-item">' + value['feature'] + '</div>' +
+                    '</div>' +
+                    '<div class="content-right-line">' +
+                    '<div class="food-sort-title">特色</div>' +
+                    '<div class="food-sort">' + value['ftype'] + '</div>' +
+                    '</div>' +
+                    '<div class="content-right-line-address">' +
+                    '<div class="food-address-title">地点</div>' +
+                    '<div class="food-address">' + value['faddress'] + '</div>' +
+                    '</div>' +
+                    '<div class="content-right-line">' +
+                    '<div class="food-time-title">营业时间</div>' +
+                    '<div class="food-time">' + value['ftime'] + '</div>' +
+                    '</div>' +
+                    '</a>' +
+                    '<div class="collectBox">' +
+                    '<input type="button" class="collect" value="" title="收藏"/>' +
+                    '</div>' +
+                    '<div class="likeBox">' +
+                    '<input class="isLikeButton_like" type="button" value="" />' +
+                    '<div class="like_count">' + value['fgoods'] + '</div>' +
+                    '</div>' +
+                    '<div class="unlikeBox">' +
+                    '<input class="isLikeButton_dislike" type="button" value="" />' +
+                    '<div class="unlike_count">' + value['fbads'] + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
                     '</div>'
                 );
             });
@@ -93,7 +102,8 @@ function pageShow() {
 }
 function likeClick(){
     $(document).on("click", ".likeBox", function(){
-    var fid = jQuery(this).parent().parent().parent().parent().parent().attr('fid');
+        var fid = jQuery(this).parent().parent().parent().parent().parent().parent().attr('fid');
+        console.log(fid);
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
     jQuery(this).children('div').text(number);
@@ -116,7 +126,7 @@ function likeClick(){
 }
 function unlikeClick(){
     $(document).on("click", ".unlikeBox", function(){
-    var fid = jQuery(this).parent().parent().parent().parent().parent().attr('fid');
+        var fid = jQuery(this).parent().parent().parent().parent().parent().parent().attr('fid');
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
     jQuery(this).children('div').text(number);
@@ -139,7 +149,7 @@ function unlikeClick(){
 }
 function collectClick(){
     $(document).on("click", ".collectBox", function(){
-    var fid = jQuery(this).parent().parent().parent().parent().parent().attr('fid');
+        var fid = jQuery(this).parent().parent().parent().parent().parent().parent().attr('fid');
     $.ajax({
         type: 'post',
         contentType: "application/json",
