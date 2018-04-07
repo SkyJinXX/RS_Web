@@ -33,42 +33,42 @@ public partial class view : System.Web.UI.Page
             cmd.CommandText = "select Uimage_url From Users where Uusername = '" + Session["username"] + "'";
             User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
 
-            cmd.CommandText = "Select top 1 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 1 Dtitle from Duanzi order by Dgoods";
             a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 1 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 1 Did from Duanzi order by Dgoods";
             string a1 = cmd.ExecuteScalar().ToString();
-            a.HRef = "view_amuse.aspx?aid=" + a1;
+            a.HRef = "view_duanzi.aspx?Did=" + a1;
 
 
-            cmd.CommandText = "Select top 2 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 2 Dtitle from Duanzi order by Dgoods";
             b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 2 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 2 Did from Duanzi order by Dgoods";
             string b1 = cmd.ExecuteScalar().ToString();
-            b.HRef = "view_amuse.aspx?aid=" + b1;
+            b.HRef = "view_duanzi.aspx?Did=" + b1;
 
-            cmd.CommandText = "Select top 3 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 3 Dtitle from Duanzi order by Dgoods";
             c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 3 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 3 Did from Duanzi order by Dgoods";
             string c1 = cmd.ExecuteScalar().ToString();
-            c.HRef = "view_amuse.aspx?aid=" + c1;
+            c.HRef = "view_duanzi.aspx?Did=" + c1;
 
-            cmd.CommandText = "Select top 4 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 4 Dtitle from Duanzi order by Dgoods";
             d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 4 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 4 Did from Duanzi order by Dgoods";
             string d1 = cmd.ExecuteScalar().ToString();
-            d.HRef = "view_amuse.aspx?aid=" + d1;
+            d.HRef = "view_duanzi.aspx?Did=" + d1;
 
-            cmd.CommandText = "Select top 5 Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 5 Dtitle from Duanzi order by Dgoods";
             h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 5 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 5 Did from Duanzi order by Dgoods";
             string h1 = cmd.ExecuteScalar().ToString();
-            h.HRef = "view_amuse.aspx?aid=" + h1;
+            h.HRef = "view_duanzi.aspx?Did=" + h1;
 
-            cmd.CommandText = "Select top 6  Aname from Amuse order by Agoods";
+            cmd.CommandText = "Select top 6 Dtitle from Duanzi order by Dgoods";
             f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 6 Aid from Amuse order by Agoods";
+            cmd.CommandText = "Select top 6 Did from Duanzi order by Dgoods";
             string f1 = cmd.ExecuteScalar().ToString();
-            f.HRef = "view_amuse.aspx?aid=" + f1;
+            f.HRef = "view_duanzi.aspx?Did=" + f1;
 
             conn.Close();
         }
@@ -84,16 +84,16 @@ public partial class view : System.Web.UI.Page
 
 
     [WebMethod]
-    public static String MessageShow(String aid)
+    public static String MessageShow(String did)
     {
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
         SqlCommand cmd = new SqlCommand("", conn);
 
-        HttpContext.Current.Session["aid"] = aid; 
+        HttpContext.Current.Session["did"] = did; 
 
-        cmd.CommandText = "select aid,aname,aaddress,afeature,atime,atype,agoods,aphone,aimage_url from amuse Where aid = '" + aid + "'";
+        cmd.CommandText = "select select Did,Dtitle,Dcontent,Dtime,Dcount,Dtype,Dgoods,Dimage_url from duanzi Where Did = '" + did + "'";
         //if (cmd.ExecuteScalar() == null)
         //{
         //    Response.Write("<script>alert('未知错误!');window.location.href ='index.aspx'</script>");
@@ -119,12 +119,12 @@ public partial class view : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
 
-        String aid = HttpContext.Current.Session["aid"].ToString();
+        String did = HttpContext.Current.Session["did"].ToString();
 
         SqlCommand cmd = new SqlCommand("", conn); 
         cmd.CommandText = "select Cid as Id,Ccontent as Content,u1.Uname as Fromname,u1.Uimage_url as Fromurl,u2.Uname as Toname" +
-                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where id = '" + aid +
-                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid and type = 'A' order by Cid ";
+                           ",u2.Uimage_url as Tourl from Comments, Users u1, Users u2 where id = '" + did +
+                           "' and u1.Uid = Cfrom_Uid and u2.Uid = Cto_Uid and type = 'D' order by Cid ";
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
@@ -140,33 +140,33 @@ public partial class view : System.Web.UI.Page
 
     //点赞事件 
     [WebMethod]
-    public static void Liking(String aid)
+    public static void Liking(String did)
     {
-        if (aid != null && aid != "")
+        if (did != null && did != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-            cmd.CommandText = "select uid from u_a where aid = '" + aid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            cmd.CommandText = "select uid from u_d where did = '" + did + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
             if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "update u_a set isok = '" + true + "' where  aid = '" + aid + "' and uid = '"
+                cmd.CommandText = "update u_d set isok = '" + true + "' where  did = '" + did + "' and uid = '"
                     + HttpContext.Current.Session["uid"] + "' ";
                 cmd.ExecuteScalar();
             }
             else
             {
                 TimeSpan ts = new TimeSpan(0, 7, 55);
-                cmd.CommandText = "insert into u_a values('" + HttpContext.Current.Session["uid"] + "','" + aid + "','"
+                cmd.CommandText = "insert into u_d values('" + HttpContext.Current.Session["uid"] + "','" + did + "','"
                     + ts + "','" + false + "','" + true + "','" + false + "')";
                 cmd.ExecuteScalar();
             }
-            cmd.CommandText = "select agoods from amuse where aid = '" + aid + "'";
+            cmd.CommandText = "select dgoods from duanzi where did = '" + did + "'";
             String number = Convert.ToString(Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1);
 
-            cmd.CommandText = "update amuse set agoods = '" + number + "' where aid = '" + aid + "'";
+            cmd.CommandText = "update duanzi set dgoods = '" + number + "' where did = '" + did + "'";
             cmd.ExecuteNonQuery();
 
             //id_like.Text = "已点赞 ( " + cmd.ExecuteScalar().ToString() + " ) ";
@@ -175,32 +175,32 @@ public partial class view : System.Web.UI.Page
         }
         else
         {
-            Console.Write("传入的Aid为空错误");
+            Console.Write("传入的Did为空错误");
         }
     }
 
     //收藏事件
     [WebMethod]
-    public static void Collecting(string aid)
+    public static void Collecting(string did)
     {
-        if (aid != null && aid != "")
+        if (did != null && did != "")
         {
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("", conn);
-            cmd.CommandText = "select uid from u_a where aid = '" + aid + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
+            cmd.CommandText = "select uid from u_d where did = '" + did + "' and uid = '" + HttpContext.Current.Session["uid"] + "'";
             if (cmd.ExecuteScalar() != null)
             {
-                cmd.CommandText = "update u_a set iscollect = '" + true + "' where  aid = '" + aid + "' and uid = '"
+                cmd.CommandText = "update u_d set iscollect = '" + true + "' where  did = '" + did + "' and uid = '"
                     + HttpContext.Current.Session["uid"] + "' ";
                 cmd.ExecuteScalar();
             }
             else
             {
                 TimeSpan ts = new TimeSpan(0, 9, 30);
-                cmd.CommandText = "insert into u_a values('" + HttpContext.Current.Session["uid"] + "','" + aid + "','"
+                cmd.CommandText = "insert into u_d values('" + HttpContext.Current.Session["uid"] + "','" + did + "','"
                     + ts + "','" + true + "','" + false + "','" + false + "')";
                 cmd.ExecuteScalar();
             }
@@ -224,7 +224,7 @@ public partial class view : System.Web.UI.Page
         cmd.CommandText = "select Cfrom_uid from Comments where Cid = '" + id + "'";
         String Toid = cmd.ExecuteScalar().ToString();
         String Fromid = HttpContext.Current.Session["uid"].ToString();
-        String Comment_id = HttpContext.Current.Session["aid"].ToString();
+        String Comment_id = HttpContext.Current.Session["did"].ToString();
         cmd.CommandText = "select Count(*) from Comments";
         String Cid = (Convert.ToInt32(cmd.ExecuteScalar().ToString()) + 1).ToString();
 
@@ -246,7 +246,7 @@ public partial class view : System.Web.UI.Page
         String Content = Con.ToString();
 
         Console.Write(Content);
-        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Comment_id + "','" + Content + "','" + Fromid + "','" + Toid + "','A')";
+        cmd.CommandText = "insert into Comments values('" + Cid + "','" + Comment_id + "','" + Content + "','" + Fromid + "','" + Toid + "','D')";
         cmd.ExecuteScalar();
 
         conn.Close();
