@@ -320,7 +320,6 @@
         <div class="footer">
             <div style="width:10px;height:50px"></div>
         </div>
-        <script src="js/jquery.min.js" type="text/javascript"></script>
 	    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 	    <script src="js/bootstrap.min.js"></script>
 	    <script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
@@ -328,34 +327,3 @@
     </form>
 </body>
 </html>
-
-                        <%--<div class="artcle_title">
-                            <asp:Label ID="Title" runat="server" Text="标题"></asp:Label>
-                        </div>
-                        <div class="subtitle">
-                            <div class="subtitleClassification_box">
-                                <asp:Label ID="subtitleClassification" runat="server" Text="分类"></asp:Label>
-                            </div>
-                            <div class="subtitleTime_box">
-                                <asp:Label ID="subtitleTime" runat="server" Text="时间"></asp:Label>
-                            </div>
-                        </div>
-                        <div class="picture">
-                            <img src="#"/>
-                        </div>
-                        <div class="article">
-                            <p id ="content">文章内容</p>
-                        </div>
-                        <div class="article_bottom">
-                            <div class="collectBox">
-                                <input type="button" class="collect" value="" title="收藏">
-                            </div>
-                            <div class="likeBox">
-                                <input class="isLikeButton_like" type="button" value="">
-                                <div class="like_count">1</div>
-                            </div>
-                            <div class="unlikeBox">
-                                <input class="isLikeButton_dislike" type="button" value="">
-                                <div class="unlike_count">1</div>
-                            </div>
-                        </div>--%>

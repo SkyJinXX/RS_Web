@@ -1,6 +1,8 @@
 ﻿var page = 0;
 var SourseType = "Recommand";
 var keyWord = "null";
+    
+jQuery.support.cors = true;
 $(function () {
   
     pageShow();
@@ -12,6 +14,7 @@ $(function () {
     TypeClick();
     SearchClick();
     DeleteNews();
+    getCity();
 })
 function scrollListen() {
             var bottomPadding = $(document).height() - $(document).scrollTop() - $(window).height();
@@ -202,8 +205,15 @@ function SearchClick(){
 
         })
 }
-
-
+function getCity(){
+    var province = '' ;  
+    var city = '' ;  
+    jQuery.getScript("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js",function(){  
+       province = remote_ip_info["province"];  
+       city = remote_ip_info["city"];  
+       $('.username').append('</br>'+ province + ' ' + city);  
+   }) ;   
+}
 
 
 
