@@ -33,7 +33,8 @@
     <link href="style/content.css" rel="stylesheet" type="text/css" />
     <link href="style/nav-total-left.css" rel="stylesheet" type="text/css" />
     <link href="style/button.css" rel="stylesheet" type="text/css" />
-    <link href="style/custom.css" rel="stylesheet">
+    <link href="style/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="style/food_index.css" rel="stylesheet" type="text/css" />
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -307,7 +308,8 @@
 					<div class="row">			
 						<div class="col-md-6" >
                         <div class="panel panel-widget">
-                            <div class="panel-title"><a href="view_food.aspx?fid='1'">朋友圈美食社区·鲜鱼馆</a>
+                            <div class="panel-title-food">
+                                <a href="view_food.aspx?fid='1'"><b>朋友圈美食社区·鲜鱼馆</b></a>
                                 <ul class="panel-tools">
                                     <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
                                 </ul>
@@ -318,30 +320,38 @@
                                    <div id="example-8">
                                        <!--<span>资讯内容</span>-->
                                         <div class="content-left">
-                                            <a href="view_food.aspx?fid='1'"><img src="img/Food/1.jpg" alt="图片" width = "240px"height="150px"></a>
+                                            <a href="view_food.aspx?fid='1'"><img src="img/Food/1.jpg" alt="图片" style="width: 210px; height: 140px"/></a>
                                         </div>
                                         <div class="content-right">
-                                            <div>人均：92元 口味：8.9 环境：9.2 服务：8.9</div><br />
-                                            <div>私房菜</div><div>新安南路11-1号、11-8号城中湖旅游码头旁(怡途酒店对面)</div><br />
-                                            <div>周一至周日 10:00-23:00 非营业时段 2018-02-11至2018-02-17 全天</div><br />
+                                            <a href="#">
+                                                <div class="content-right-line">
+                                                    <div class="first-line-item">人均: ￥92</div>
+                                                    <div class="first-line-item">口味: 8.9</div>
+                                                    <div class="first-line-item">环境: 9.2</div>
+                                                    <div class="first-line-item">服务: 8.9</div>
+                                                </div>
+                                                <div class="content-right-line">
+                                                    <div class="food-sort-title">特色</div>
+                                                    <div class="food-sort">私房菜</div>
+                                                </div>
+                                                <div class="content-right-line-address">
+                                                    <div class="food-address-title">地点</div>
+                                                    <div class="food-address">新安南路11-1号、11-8号城中湖旅游码头旁(怡途酒店对面)</div>
+                                                </div>
+                                                <div class="content-right-line">
+                                                    <div class="food-time-title">营业时间</div>
+                                                    <div class="food-time">周一至周日 10:00-23:00</div>
+                                                </div>  
+                                                <!--
+                                                <div class="content-right-line">
+                                                    <div class="food-comments-title">营业时间</div>
+                                                    <div class="food-comments">周一至周日 10:00-23:00</div>
+                                                </div>  
+                                                -->
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="sort">
-                                        美味
-                                    </div>
-                                    <div class="isLikeButton">
-                                        <div class="collectBox">
-                                            <input type="button" class="collect" value="" title="收藏"/>
-                                        </div>
-                                        <div class="likeBox">
-                                            <input class="isLikeButton_like" type="button" value="" />
-                                            <div class="like_count">0</div>
-                                        </div>
-                                        <div class="unlikeBox">
-                                            <input class="isLikeButton_dislike" type="button" value="" />
-                                            <div class="unlike_count">0</div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

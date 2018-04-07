@@ -24,57 +24,90 @@
 .content-right-line{
     width:100%;
     height:1.2em;
-    padding-top:0.8em;
     padding-bottom:0.8em;
+    margin-bottom:0.5em;
+    clear:both;
+}
+
+.content-right-line-address {
+    width: 100%;
+    height: 1.2em;
+    padding-bottom: 2.6em;
+    margin-bottom: 0.5em;
+    clear: both;
+}
+
+.food-comments-title {
+    height: 1.2em;
+    float: left;
+    padding-top: 0.1em;
+    color: #666666;
 }
 
 .food-comments {
     height: 1.2em;
     float: left;
-    padding-top: 0.1em;
-    color: #919191;
+    color: #666666;
 }
 
-.food-comment {
-    height: 1.2em;
+.first-line-item {
+    width:23%;
+    margin-right:2%;
     float: left;
-    color: #919191;
+    color: #666666;
 }
 
-.per-capita-prices {
+.food-address-title {
+    width: 13%;
     height: 1.2em;
     float: left;
-    color: #919191;
-}
-
-.per-capita-price {
-    height: 1.2em;
-    float: left;
-    color: #919191;
-    margin-right:10%;
+    color: #666666;
 }
 
 .food-address {
+    width:87%;
     height: 1.2em;
     float: left;
-    color: #919191;
+    color: #666666;
+}
+
+.food-sort-title {
+    width: 13%;
+    float: left;
+    color: #666666;
 }
 
 .food-sort {
+    width: 87%;
     height: 1.2em;
     float: left;
-    color: #919191;
+    color: #666666;
 }
 
 .food-recommends {
     height: 1.2em;
     float: left;
-    color: #919191;
+    color: #666666;
     margin-right: 5%;
 }
 
 .food-recommend {
     height: 1.2em;
     float: left;
-    color: #919191;
+    color: #666666;
+}
+
+.food-time-title {
+    width:20%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.food-time {
+    width: 80%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+    padding-bottom: 2.6em;
 }
