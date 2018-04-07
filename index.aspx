@@ -52,7 +52,6 @@
     <script src="js/metisMenu.min.js"></script>
     <script src="js/custom.js"></script>
     <!--//Metis Menu -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
