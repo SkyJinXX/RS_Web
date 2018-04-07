@@ -1,0 +1,112 @@
+﻿body {
+}
+
+.panel-title-food {
+    width: 100%;
+    color: #2A2F43;
+    border-bottom: 1px solid #EE7942;
+    font-size: 1.4em;
+    padding: 16px 20px;
+    background: #FFFFFF;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    letter-spacing: 1px;
+}
+
+    .panel-title-food > a {
+        color: inherit;
+    }
+
+.panel-title-food-score {
+}
+
+.content-right-line {
+    width: 100%;
+    height: 1.2em;
+    padding-bottom: 0.8em;
+    margin-bottom: 0.5em;
+    clear: both;
+}
+
+.content-right-line-address {
+    width: 100%;
+    height: 1.2em;
+    padding-bottom: 2.6em;
+    margin-bottom: 0.5em;
+    clear: both;
+}
+
+.food-comments-title {
+    height: 1.2em;
+    float: left;
+    padding-top: 0.1em;
+    color: #666666;
+}
+
+.food-comments {
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.first-line-item {
+    width: 23%;
+    margin-right: 2%;
+    float: left;
+    color: #666666;
+}
+
+.food-address-title {
+    width: 13%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.food-address {
+    width: 87%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.food-sort-title {
+    width: 13%;
+    float: left;
+    color: #666666;
+}
+
+.food-sort {
+    width: 87%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.food-recommends {
+    height: 1.2em;
+    float: left;
+    color: #666666;
+    margin-right: 5%;
+}
+
+.food-recommend {
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.food-time-title {
+    width: 20%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+}
+
+.food-time {
+    width: 80%;
+    height: 1.2em;
+    float: left;
+    color: #666666;
+    padding-bottom: 2.6em;
+}
