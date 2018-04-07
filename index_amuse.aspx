@@ -305,9 +305,50 @@
 				<!--row-->
 				<div class="message-left">
 					<div class="row">			
-						
+						<div class="col-md-6" >
+                        <div class="panel panel-widget">
+                            <div class="panel-title-amuse">
+                                <a href="#"><b>YOLO WHISKY & COCKTAIL BAR</b></a>
+                                <ul class="panel-tools">
+                                    <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="panel-body" style="display: block;">
+                                <!-- candlestick -->
+                                <div class="candlestick">
+                                   <div id="example-8">
+                                       <!--<span>资讯内容</span>-->
+                                        <div class="content-left">
+                                            <a href="#"><img src="img/Amuse/1.jpg" alt="图片" style="width: 210px; height: 140px"/></a>
+                                        </div>
+                                        <div class="content-right">
+                                            <a href="#">
+                                                <div class="content-right-line">
+                                                    <div class="first-line-item">人均: ￥156</div>
+                                                    <div class="first-line-item">评价: 9.1</div>
+                                                    <div class="first-line-item">环境: 9.1</div>
+                                                    <div class="first-line-item">服务: 9.2</div>
+                                                </div>
+                                                <div class="content-right-line">
+                                                    <div class="amuse-sort">酒吧</div>
+                                                </div>
+                                                <div class="content-right-line-address">
+                                                    <div class="amuse-address-title">地点</div>
+                                                    <div class="amuse-address">百井坊巷75号(武林银泰)</div>
+                                                </div>
+                                                <div class="content-right-line">
+                                                    <div class="amuse-time-title">营业时间</div>
+                                                    <div class="amuse-time">周一至周日 19:00-02:00 </div>
+                                                </div>  
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 					</div>
-					
 				</div>
                 <div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
