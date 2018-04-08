@@ -93,7 +93,7 @@ public partial class view : System.Web.UI.Page
 
         HttpContext.Current.Session["did"] = did; 
 
-        cmd.CommandText = "select select Did,Dtitle,Dcontent,Dtime,Dcount,Dtype,Dgoods,Dimage_url from duanzi Where Did = '" + did + "'";
+        cmd.CommandText = "select did,dtitle,dcontent,dtime,dtype,dcount,dgoods,dimage_url from duanzi Where Did = '" + did + "'";
         //if (cmd.ExecuteScalar() == null)
         //{
         //    Response.Write("<script>alert('未知错误!');window.location.href ='index.aspx'</script>");

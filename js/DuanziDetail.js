@@ -28,28 +28,28 @@ function messageShow() {
             $.each(news, function (index, value) {
                 $('.message_view').append(
                     '<div did="' + value['did'] + '">' +
-                    '<div class="artcle_title" Nid="' + value['did'] + '">' + value['Dtitle'] +
-                    '</div >' +
+                    '<div class="artcle_title" did="' + value['did'] + '">' + value['dtitle'] +'</div>' +
                     '<div class="subtitle">' +
-                    '<div class="subtitleClassification_box">' + value['Dtype'] +
+                    '<div class="view_duanzi_detail_title">' + value['dtype'] +'</div>' +
+                    '<div class="view_reading_capacity_count">' + value['dcount'] +'</div>' +
+                    '<div class="view_reading_capacity">次浏览</div>' +
+                    '<div class="subtitleTime_box">' + value['dtime'] +'</div>' +
                     '</div>' +
-                    '<div class="subtitleTime_box">' + value['Dtime'] +
-                    '</div >' +
-                    '</div >' +
                     '<div class="picture">' +
-                    '<img src="' + value['Dimage_url'] + '"/>' +
-                    '</div>' +
+                    '<img src="' + value['dimage_url'] +'" style="width:720px;height:480px"></div>' +
                     '<div class="article">' +
-                    '<p id="content">' + value['Dcontent'] + '</p>' +
+                    '<p id="content">' + value['dcontent'] +'<br>' +
+                    '</p>' +
                     '</div>' +
-                    '<div class="article_bottom">' +
-                    '<div class="collectBox">' +
-                    '<input type="button" class="collect" value="" title="收藏"/>' +
+                    '<div class="view_duanzi_article_bottom">' +
+                    '<div class="view_duanzi_collectBox">' +
+                    '<input type="button" class="collect" value="" title="收藏">' +
                     '</div>' +
-                    '<div class="likeBox">' +
-                    '<input class="isLikeButton_like" type="button" value="">' +
-                    '<div class="like_count">' + value['Dgoods'] + '</div>' +
+                    '<div class="view_duanzi_likeBox">' +
+                    '<input class="isLikeButton_like" type="button" value=""><div class="index_duanzi_like_count">' + value['dgoods'] +'</div>' +
                     '</div>' +
+                    '</div>' +
+                    '<div class="view_duanzi_article_bottom_line">' +
                     '</div>' +
                     '</div>'
                 );
@@ -193,7 +193,7 @@ function Button_switch() {
 
 function likeClick() {
     $(document).on("click", ".likeBox", function () {
-        var did = jQuery(this).parent().parent().attr('did');
+        var did = jQuery(this).parent().parent().parent().attr('did');
         var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('div').text(number);
@@ -205,7 +205,7 @@ function likeClick() {
             data: "{'did':'" + did + "'}",
             dataType: "json",
             success: function (result) {
-                alert('成功点赞');
+                alert("成功点赞");
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);
@@ -217,7 +217,7 @@ function likeClick() {
 
 function collectClick() {
     $(document).on("click", ".collectBox", function () {
-        var aid = jQuery(this).parent().parent().attr('aid');
+        var aid = jQuery(this).parent().parent().parent().attr('aid');
         $.ajax({
             type: 'post',
             contentType: "application/json",

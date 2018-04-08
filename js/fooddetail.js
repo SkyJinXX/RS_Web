@@ -215,7 +215,7 @@ function Button_switch() {
 
 function likeClick() {
     $(document).on("click", ".likeBox", function () {
-        var fid = jQuery(this).parent().parent().attr('fid');
+        var fid = jQuery(this).parent().parent().parent().attr('fid');
         var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('div').text(number);
@@ -227,7 +227,7 @@ function likeClick() {
             data: "{'fid':'" + fid + "'}",
             dataType: "json",
             success: function (result) {
-                alert('成功点赞');
+                alert("点赞+1");
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);
@@ -238,7 +238,7 @@ function likeClick() {
 }
 function unlikeClick() {
     $(document).on("click", ".unlikeBox", function () {
-        var fid = jQuery(this).parent().parent().attr('fid');
+        var fid = jQuery(this).parent().parent().parent().attr('fid');
         var number = jQuery(this).children('div').text();
         number = (parseInt(number) + 1).toString();
         jQuery(this).children('div').text(number);
@@ -250,7 +250,7 @@ function unlikeClick() {
             data: "{'fid':'" + fid + "'}",
             dataType: "json",
             success: function (result) {
-                alert('成功点踩');
+                alert("点踩+1");
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);
@@ -261,7 +261,7 @@ function unlikeClick() {
 }
 function collectClick() {
     $(document).on("click", ".collectBox", function () {
-        var fid = jQuery(this).parent().parent().attr('fid');
+        var fid = jQuery(this).parent().parent().parent().attr('fid');
         $.ajax({
             type: 'post',
             contentType: "application/json",
@@ -270,7 +270,7 @@ function collectClick() {
             data: "{'fid':'" + fid + "'}",
             dataType: "json",
             success: function (result) {
-                alert('成功收藏');
+                alert("成功收藏");
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);
@@ -282,11 +282,11 @@ function collectClick() {
 
 function Reply() {
     $(document).on("click", ".replyContent", function () {
-        var id = jQuery(this).parent().parent().parent().attr('Nid');
         
         $(".comment_box_bottom_confirm").click(function () {
+            var id = jQuery(this).parent().parent().parent().parent().attr('fid');
             var Con = jQuery(this).parent().children('.comment_box_bottom_text').val();
-            console.log(Con);
+            console.log(id);
 
             if (Con == null || Con == "") {
                 alert("评论内容不能为空");
@@ -300,7 +300,7 @@ function Reply() {
                     data: "{'id':'" + id + "','Con':'" + Con + "'}",
                     dataType: "json",
                     success: function (result) {
-                        alert('评论成功');
+                        alert("评论成功");
                     },
                     error: function (textStatus, errorThrown) {
                         console.log(textStatus);
