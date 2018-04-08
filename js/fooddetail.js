@@ -58,6 +58,7 @@ function messageShow() {
                             '<div class="view_food_body_right">' +
                                 '<img src="' + value['fimage_url'] +'" alt="图片" style="width: 320px; height: 213px"/>' +
                             '</div>' +
+                            '<div class="article_bottom_food">' +
                             '<div class="collectBox">' +
                                 '<input type="button" class="collect" value="" title="收藏"/>' +
                             '</div>' +
@@ -68,6 +69,7 @@ function messageShow() {
                             '<div class="unlikeBox">' +
                                 '<input class="isLikeButton_dislike" type="button" value="" />' +
                                 '<div class="unlike_count">' + value['fbads'] + '</div>' +
+                            '</div>' +
                             '</div>' +
                         '</div>' +
                         '<div class="clearfloat"></div>' +
