@@ -304,7 +304,40 @@
 				<!--row-->
 				<div class="message-left">
 					<div class="row">			
-						
+                        <div class="col-md-6" nid="1">
+                            <div class="panel panel-widget">
+                                <div class="panel-title"><a href="#">英男子巴厘岛度假遭剑鱼刺入颈部 奇迹幸存</a><ul class="panel-tools">
+                                    <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                                </ul>
+                                </div>
+                                <div class="panel-body" style="display: block;">
+                                    <!-- candlestick -->
+                                    <div class="candlestick">
+                                        <div id="example-8">
+                                            <!--<span>资讯内容</span>-->
+                                            <div class="content-left"><a href="view_News.aspx?Nid=1">
+                                                <img src="img/Duanzi/1.jpg" alt="图片" width="180px" height="120px"></a></div>
+                                            <div class="content-right"><a href="#">英国一名男子乘船出海时被跃出水面的一条剑鱼刺入颈部，幸好没有被刺破重要血管，保住一命。船家迅速返航，送波普去医院。最初接诊的医院条件简陋，无法完整取出插进波普颈部深处的长15厘米的剑鱼上颌。他和妻子随后又去了两家医院，经过3个半小时手术，总算去除了这把“凶器”。英国《每日邮报》28日引述波普的话说，“凶器”刚好插在两条动脉之间。</a></div>
+                                        </div>
+                                        <div class="subexample">
+                                            <div class="duanzi_sort">地球家园</div>
+                                            <div class="reading_capacity_count">2</div>
+                                            <div class="reading_capacity">次浏览</div>
+                                        </div>
+                                        <div class="isLikeButton">
+                                            <div class="collectBox">
+                                                <input type="button" class="collect" value="" title="收藏"></div>
+                                            <div class="likeBox">
+                                                <input class="isLikeButton_like" type="button" value=""><div class="like_count">7</div>
+                                            </div>
+                                            <div class="unlikeBox">
+                                                <input class="isLikeButton_dislike" type="button" value=""><div class="unlike_count">1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</div>
 					
 				</div>

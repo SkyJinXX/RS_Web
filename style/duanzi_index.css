@@ -1,1 +1,49 @@
-﻿
+﻿.subexample {
+    width: 50%;
+    line-height: 1.2em;
+    border-left: 3px solid #9AC0CD;
+    margin-left: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-left: 0.8em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    clear: both;
+}
+
+.duanzi_sort {
+    width: 40%;
+    line-height: 1.2em;
+    border-left: 3px solid #9AC0CD;
+    margin-left: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 0.8em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    float: left;
+    color: #00C2EA;
+}
+
+.reading_capacity_count {
+    width: auto;
+    float: left;
+    margin-left: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 0.8em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    color: #919191;
+}
+
+.reading_capacity {
+    width: 30%;
+    float: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    color: #919191;
+}

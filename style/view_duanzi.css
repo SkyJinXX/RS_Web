@@ -1,0 +1,26 @@
+﻿.view_duanzi_detail_title {
+    width: 15%;
+    min-height: 1em;
+    height: auto;
+    float: left;
+    margin-left:2em;
+    padding-left: 0.8em;
+    border-left: 3px solid #9AC0CD;
+}
+
+.view_reading_capacity_count {
+    width: auto;
+    min-height: 1em;
+    float: left;
+    padding-top:0.13em;
+    padding-left: 0.8em;
+    color: #919191;
+}
+
+.view_reading_capacity {
+    width: 30%;
+    min-height: 1em;
+    float: left;
+    padding-left: 0.5em;
+    color: #919191;
+}
