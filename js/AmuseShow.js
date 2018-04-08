@@ -7,7 +7,6 @@ $(function () {
     page++;
     $(document).on('scroll', scrollListen);
     likeClick();
-    unlikeClick();
     collectClick();
     TypeClick();
     SearchClick();
@@ -40,43 +39,52 @@ function pageShow() {
             $.each(news,function(index, value){
                 $('.row').append(
                     '<div class="col-md-6" aid="' + value['aid'] +'">'+
-                        '<div class="panel panel-widget">'+
-                            '<div class="panel-title">' + '<a href="view_amuse.aspx?aid=' + value['aid'] + '">' +
-                                value['aname'] + '</a>' +
-                                '<ul class="panel-tools">'+
-                                    '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>'+
-                                '</ul>'+
-                            '</div>'+
-                            '<div class="panel-body" style="display: block;">'+
-                                '<!-- candlestick -->'+
-                                '<div class="candlestick">'+
-                                   '<div id="example-8">'+
-                                       
-                                        '<div class="content-left">'+
-                                            '<a href="view_food.aspx?aid=' + value['aid'] + '">' + '<img src="' + value['aimage_url'] + '" alt="图片" width = "240px" height="150px">' + '</a>' +
-                                        '</div>'+
-                                        '<div class="content-right">'+
-                                            '<div>' + value['afeature'] + '</div> <br />' +
-                                            '<div>' + value['atype'] + '</div > ' +
-                                            '<div>' + value['aaddress'] + '</div > <br />' +
-                                            '<div>' + value['atime'] + '</div> <br />' +
-                                        '</div>'+
-                                    '</div>'+
-                                    '<div class="sort">'+
-                                        value['atype']+
-                                    '</div>'+
-                                    '<div class="isLikeButton">'+
-                                        '<div class="collectBox">'+
-                                            '<input type="button" class="collect" value="" title="收藏"/>'+
-                                        '</div>'+
-                                        '<div class="likeBox">'+
-                                            '<input class="isLikeButton_like" type="button" value="" />'+
-                                            '<div class="like_count">' + value['agoods'] + '</div>'+
-                                        '</div>'+
-                                    '</div>'+
-                                '</div>'+
-                            '</div>'+
-                        '</div>'+
+                    '<div class="panel panel-widget">' +
+                    '<div class="panel-title-amuse">' +
+                    '<a href="view_amuse.aspx?aid=' + value['aid'] + '"><b>' + value['aname'] + '</b></a>' +
+                    '<ul class="panel-tools">' +
+                    '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>' +
+                    '</ul>' +
+                    '</div>' +
+                    '<div class="panel-body" style="display: block;">' +
+                    '<!-- candlestick -->' +
+                    '<div class="candlestick">' +
+                    '<div id="example-8">' +
+                    '<!--<span>资讯内容</span>-->' +
+                    '<div class="content-left">' +
+                    '<a href="view_amuse.aspx?aid=' + value['aid'] + '">' +
+                    '<img src="' + value['aimage_url'] +'" alt="图片" style="width: 210px; height: 140px" /></a>' +
+                    '</div>' +
+                    '<div class="content-right">' +
+                    '<a href="view_amuse.aspx?aid=' + value['aid'] + '">' +
+                    '<div class="content-right-line">' +
+                    '<div class="first-line-item">' + value['afeature'] + '</div>' +
+                    '</div>' +
+                    '<div class="content-right-line">' +
+                    '<div class="amuse-sort-title">特色</div>' +
+                    '<div class="amuse-sort">' + value['atype'] + '</div>' +
+                    '</div>' +
+                    '<div class="content-right-line-address">' +
+                    '<div class="amuse-address-title">地点</div>' +
+                    '<div class="amuse-address">' + value['aaddress'] + '</div>' +
+                    '</div>' +
+                    '<div class="content-right-line">' +
+                    '<div class="amuse-time-title">营业时间</div>' +
+                    '<div class="amuse-time">' + value['atime'] + '</div>' +
+                    '</div>' +
+                    '</a>' +
+                    '<div class="collectBox">' +
+                    '<input type="button" class="collect" value="" title="收藏"/>' +
+                    '</div>' +
+                    '<div class="likeBox">' +
+                    '<input class="isLikeButton_like" type="button" value="" />' +
+                    '<div class="like_count">' + value['agoods'] + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
                     '</div>'
                 );
             });
@@ -89,7 +97,7 @@ function pageShow() {
 }
 function likeClick(){
     $(document).on("click", ".likeBox", function(){
-    var aid = jQuery(this).parent().parent().parent().parent().parent().attr('aid');
+        var aid = jQuery(this).parent().parent().parent().parent().parent().parent().attr('aid');
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
     jQuery(this).children('div').text(number);
@@ -112,7 +120,7 @@ function likeClick(){
 }
 function collectClick(){
     $(document).on("click", ".collectBox", function(){
-        var aid = jQuery(this).parent().parent().parent().parent().parent().attr('aid');
+        var aid = jQuery(this).parent().parent().parent().parent().parent().parent().attr('aid');
     $.ajax({
         type: 'post',
         contentType: "application/json",

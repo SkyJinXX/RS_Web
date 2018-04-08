@@ -27,30 +27,42 @@ function messageShow() {
             console.log(result);
             $.each(news, function (index, value) {
                 $('.message_view').append(
-                    '<div aid="' + value['aid'] + '">' +
-                    '<div class="artcle_title" aid="' + value['aid'] + '">' + value['aname'] +
-                    '</div >' +
-                    '<div class="subtitle">' +
-                    '<div class="subtitleClassification_box">' + value['atype'] +
+                    '<div class="message_view_amuse" aid="' + value['aid'] +'">'+
+                    '<div class="view_amuse_title"><b>' + value['aname'] +'</b></div>' +
+                    '<div class="view_amuse_body">' +
+                    '<div class="view_amuse_body_left">' +
+                    '<div class="content-left-line">' +
+                    '<div class="view_amuse_body_item">' + value['afeature'] + '</div>' +
                     '</div>' +
-                    '<div class="subtitleTime_box">' + value['atime'] +
-                    '</div >' +
-                    '</div >' +
-                    '<div class="picture">' +
-                    '<img src="' + value['aimage_url'] + '"/>' +
+                    '<div class="content-left-line">' +
+                    '<div class="view_amuse_body_title">分类</div>' +
+                    '<div class="view_amuse_body_sort">' + value['atype'] + '</div>' +
                     '</div>' +
-                    '<div class="article">' +
-                    '<p id="content">' + value['afeature'] + '</p>' +
+                    '<div class="content-left-line">' +
+                    '<div class="view_amuse_body_phone_title">电话</div>' +
+                    '<div class="view_amuse_body_phone">' + value['aphone'] + '</div>' +
                     '</div>' +
-                    '<div class="article_bottom">' +
+                    '<div class="content-left-line-address">' +
+                    '<div class="view_amuse_body_address_title">地点</div>' +
+                    '<div class="view_amuse_body_address">' + value['aaddress'] + '</div>' +
+                    '</div>' +
+                    '<div class="content-left-line">' +
+                    '<div class="view_amuse_body_time_title">营业时间</div>' +
+                    '<div class="view_amuse_body_time">' + value['atime'] + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="view_amuse_body_right">' +
+                    '<img src="' + value['aimage_url'] +'" alt="图片" style="width: 320px; height: 213px" />'+
+                    '</div>' +
                     '<div class="collectBox">' +
                     '<input type="button" class="collect" value="" title="收藏"/>' +
                     '</div>' +
                     '<div class="likeBox">' +
-                    '<input class="isLikeButton_like" type="button" value="">' +
+                    '<input class="isLikeButton_like" type="button" value="" />' +
                     '<div class="like_count">' + value['agoods'] + '</div>' +
                     '</div>' +
                     '</div>' +
+                    '<div class="clearfloat"></div>' +
                     '</div>'
                 );
             });
