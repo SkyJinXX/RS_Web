@@ -284,7 +284,7 @@
                 <div class="messageBox_view">
                     <div class="message_view">
                         <div>
-                            <div class="artcle_title">春暖花开面朝大海 凯德来了带你去海边玩个痛快</div>
+                            <div class="artcle_title">英男子巴厘岛度假遭剑鱼刺入颈部 奇迹幸存</div>
                             <div class="subtitle">
                                 <div class="view_duanzi_detail_title">地球家园</div>
                                 <div class="view_reading_capacity_count">2</div>
@@ -297,15 +297,15 @@
                                 <p id="content">英国一名男子乘船出海时被跃出水面的一条剑鱼刺入颈部，幸好没有被刺破重要血管，保住一命。船家迅速返航，送波普去医院。最初接诊的医院条件简陋，无法完整取出插进波普颈部深处的长15厘米的剑鱼上颌。他和妻子随后又去了两家医院，经过3个半小时手术，总算去除了这把“凶器”。英国《每日邮报》28日引述波普的话说，“凶器”刚好插在两条动脉之间。<br>
                                 </p>
                             </div>
-                            <div class="article_bottom">
-                                <div class="collectBox">
-                                    <input type="button" class="collect" value="" title="收藏"></div>
-                                <div class="likeBox">
-                                    <input class="isLikeButton_like" type="button" value=""><div class="like_count">7</div>
+                            <div class="view_duanzi_article_bottom">
+                                <div class="view_duanzi_collectBox">
+                                    <input type="button" class="collect" value="" title="收藏">
                                 </div>
-                                <div class="unlikeBox">
-                                    <input class="isLikeButton_dislike" type="button" value=""><div class="unlike_count">1</div>
+                                <div class="view_duanzi_likeBox">
+                                    <input class="isLikeButton_like" type="button" value=""><div class="index_duanzi_like_count">7</div>
                                 </div>
+                            </div>
+                            <div class="view_duanzi_article_bottom_line">
                             </div>
                         </div>
                     </div>
