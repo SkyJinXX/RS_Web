@@ -281,54 +281,27 @@
         <div id="page-wrapper">
 			<div class="main-page">
                 <div class="messageBox_view">
-                    <div class="message_view_food">
-                        <div class="view_food_title"><b>朋友圈美食社区·鲜鱼馆</b></div>
-                        <div class="view_food_body">
-                            <div class="view_food_body_left">
-                                <div class="content-left-line">
-                                    <div class="view_food_body_item">人均: ￥92</div>
-                                </div>
-                                <div class="content-left-line">
-                                    <div class="view_food_body_title">特色</div>
-                                    <div class="view_food_body_sort">私房菜</div>
-                                </div>
-                                <div class="content-left-line">
-                                    <div class="view_food_body_phone_title">电话</div>
-                                    <div class="view_food_body_phone">0571-64885555</div>
-                                </div>
-                                <div class="content-left-line-address">
-                                    <div class="view_food_body_address_title">地点</div>
-                                    <div class="view_food_body_address">新安南路11-1号、11-8号城中湖旅游码头旁(怡途酒店对面)</div>
-                                </div>
-                                <div class="content-left-line">
-                                    <div class="view_food_body_time_title">营业时间</div>
-                                    <div class="view_food_body_time">周一至周日 10:00-23:00</div>
-                                </div>
-                                <div class="content-left-menu">
-                                    <div class="view_food_body_dish_title">推荐菜</div>
-                                    <div class="view_food_body_dish"></div>
-                                </div>
-                            </div>
-                            <div class="view_food_body_right">
-                                <img src="img/Food/1.jpg" alt="图片" style="width: 320px; height: 213px"/>
-                            </div>
-                        </div>
-                        <div class="clearfloat"></div>
+                    
+                    <div class="message_view" >
+
                     </div>
                     <div class="comment_are">
-                        <div class="comment_area_title">
-                            <b>热门评论</b>
+                    <div class="comment_area_title">
+                        <b>热门评论</b>
                            
-                        </div>
-                        <div class="fold-button">
-                            <span class="open_Button" style="display: none;">展开</span>
-                            <span class="close_Button">收起</span>
-                        </div>
-                        <div class="comment_area">
-                        </div>
-                         
                     </div>
+                    <div class="fold-button">
+                        <span class="open_Button" style="display: none;">展开</span>
+                        <span class="close_Button">收起</span>
+                    </div>
+                    <div class="comment_area">
+                    </div>
+                         
                 </div>
+                </div>
+                
+                
+
 				<div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>

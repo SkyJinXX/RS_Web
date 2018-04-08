@@ -118,7 +118,7 @@ public partial class view : System.Web.UI.Page
         SqlConnection conn = new SqlConnection(connstr);
         conn.Open();
 
-        String fid = HttpContext.Current.Session["nid"].ToString();
+        String fid = HttpContext.Current.Session["fid"].ToString();
 
         SqlCommand cmd = new SqlCommand("", conn); 
         cmd.CommandText = "select Cid as Id,Ccontent as Content,u1.Uname as Fromname,u1.Uimage_url as Fromurl,u2.Uname as Toname" +

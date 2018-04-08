@@ -42,7 +42,7 @@ function pageShow() {
                     '<div class="col-md-6" fid="' + value['fid'] +'">'+
                     '<div class="panel panel-widget">' +
                     '<div class="panel-title-food">' +
-                    '<a href="view_food.aspx?fid="' + value['fid'] + '">' +
+                    '<a href="view_food.aspx?fid=' + value['fid'] + '">' +
                     '<b>' + value['fname'] +'</b ></a > ' +
                     '<ul class="panel-tools">' +
                     '<li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>' +
@@ -54,7 +54,7 @@ function pageShow() {
                     '<div id="example-8">' +
                     '<!--<span>资讯内容</span>-->' +
                     '<div class="content-left">' +
-                    '<a href="view_food.aspx?fid="' + value['fid'] + '"><img src="' + value['fimage_url'] +'" alt="图片" style="width: 210px; height: 140px" /></a>' +
+                    '<a href="view_food.aspx?fid=' + value['fid'] + '"><img src="' + value['fimage_url'] +'" alt="图片" style="width: 210px; height: 140px" /></a>' +
                     '</div>' +
                     '<div class="content-right">' +
                     '<a href="#">' +
