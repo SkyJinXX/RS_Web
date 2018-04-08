@@ -217,7 +217,7 @@ function likeClick() {
             data: "{'aid':'" + aid + "'}",
             dataType: "json",
             success: function (result) {
-                alert('成功点赞');
+                alert("点赞+1");
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);
@@ -238,7 +238,7 @@ function collectClick() {
             data: "{'aid':'" + aid + "'}",
             dataType: "json",
             success: function (result) {
-                alert('成功收藏');
+                alert("成功收藏");
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);

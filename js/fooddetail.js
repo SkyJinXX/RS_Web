@@ -313,8 +313,6 @@ function Reply() {
                 $('.comment_area').empty();
                 CommentShow();
             }
-            
-
         });
     });
 }
