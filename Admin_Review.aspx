@@ -59,7 +59,7 @@
 				<!--logo -->
 				<div class="logo">
 					<a href="index.aspx">
-						<img src="images/logo/logo_picture_white.gif" alt="" />
+						<img src="images/logo/logo_picture_white.gif" alt="logo" />
 							
 					</a>
 				</div>
@@ -272,104 +272,68 @@
         <div id="page-wrapper">
             <div class="main-page">
                 <div class="messageBox">
-                    <div class="user_message_background">
-                        <div class="user_imformation_image">
-                            <img src="img/image/board1.jpg" />
-                        </div>
+                    <div class="artcle_message">
                         <div class="form-title">
-                            <h4>个人信息</h4>
+                            <h4>我要爆料</h4>
                         </div>
-                        <div class="user_message">
-                            <div class="user_left">
-                                <img src="img/image/221-man.png" />
-                            </div>
-                            <div class="user_right">
-                                <div class="form-group" style="height: 40px">
-                                    <label class="col-md-2 control-label labelPosition">用户名</label>
-                                    <div class="col-md-8">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-address-card"></i>
-                                            </span>
-                                            <asp:TextBox ID="TextBox_Username" CssClass="form-control1" runat="server" placeholder="用户名"></asp:TextBox>
-
-                                        </div>
+                        <div class="artcle_message_box">
+                            <div class="form-group" style="height: 40px">
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-text-width "></i> 标题</label>
+                                <div class="col-md-8 artcle_text">
+                                    <div class="input-group artcle-input-group">
+                                        <asp:TextBox ID="TextBox1" CssClass="form-control1" runat="server" placeholder="请输入标题"></asp:TextBox>
                                     </div>
-                                </div>
-                                <div class="form-group" style="height: 40px">
-                                    <label class="col-md-2 control-label labelPosition">昵称</label>
-                                    <div class="col-md-8">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-user-o"></i>
-                                            </span>
-                                            <asp:TextBox ID="TextBox_Nickname" CssClass="form-control1" runat="server" placeholder="昵称"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group" style="height: 40px">
-                                    <label class="col-md-2 control-label labelPosition">邮件</label>
-                                    <div class="col-md-8">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-envelope-o"></i>
-                                            </span>
-                                            <asp:TextBox ID="TextBox_Email" CssClass="form-control1" runat="server" placeholder="邮件"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group" style="height: 40px">
-                                    <label class="col-md-2 control-label labelPosition">年龄</label>
-                                    <div class="col-md-8">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-user-circle-o"></i>
-                                            </span>
-                                            <asp:TextBox ID="TextBox_Age" CssClass="form-control1" runat="server" placeholder="年龄"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group" style="height: 40px">
-                                    <label class="col-md-2 control-label labelPosition">性别</label>
-                                    <div class="col-md-8">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-venus-mars"></i>
-                                            </span>
-                                            <asp:TextBox ID="TextBox_Sex" CssClass="form-control1" runat="server"></asp:TextBox>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group_save" style="height: 40px">
-                                    <asp:Button ID="saveChange" runat="server" Text="保存更改" OnClick="saveChange_Click" />
                                 </div>
                             </div>
+                            <div class="form-group" style="height: 40px">
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 关键字</label>
+                                <div class="col-md-8 artcle_text">
+                                    <div class="input-group artcle-input-group">
+                                        <asp:TextBox ID="TextBox3" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="height: 205px;">
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-newspaper-o "></i> 内容</label>
+                                <div class="col-md-8 artcle_text">
+                                    <div class="input-group artcle-input-group">
+                                        <asp:TextBox ID="TextBox2" CssClass="form-control1" runat="server" TextMode="MultiLine" placeholder="请输入正文" Height="200px"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" style="height: 40px">
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-list-ol"></i> 类别</label>
+                                <div class="col-md-8 artcle_text">
+                                    <div class="input-group artcle-input-group">
+                                        <asp:DropDownList ID="DropDownList1" CssClass="form-control1_artcle" runat="server" Height="25px" Width="147px">
+                                            <asp:ListItem Value="资讯类别"> </asp:ListItem>
+                                            <asp:ListItem Value="娱乐">娱乐</asp:ListItem>
+                                            <asp:ListItem Value="游戏">游戏</asp:ListItem>
+                                            <asp:ListItem Value="体育">体育</asp:ListItem>
+                                            <asp:ListItem Value="趣事">趣事</asp:ListItem>
+                                            <asp:ListItem Value="美食">美食</asp:ListItem>
+                                            <asp:ListItem Value="生活">生活</asp:ListItem>
+                                            <asp:ListItem Value="时尚">时尚</asp:ListItem>
+                                            <asp:ListItem Value="文化">文化</asp:ListItem>
+                                            <asp:ListItem Value="环境">环境</asp:ListItem>
+                                            <asp:ListItem Value="经济">经济</asp:ListItem>
+                                            <asp:ListItem Value="政治">政治</asp:ListItem>
+                                            <asp:ListItem Value="教育">教育</asp:ListItem>
+                                            <asp:ListItem Value="科技">科技</asp:ListItem>
+                                            <asp:ListItem Value="精神">精神</asp:ListItem>
+                                            <asp:ListItem Value="军事">军事</asp:ListItem>
+                                            <asp:ListItem Value="环境">环境</asp:ListItem>
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
+                            </div>
+                       
                         </div>
                     </div>
                 </div>
-                <div class="nav-right-one">
-                    <div class="nav-right-one-title">热门</div>
-                    <ul>
-                        <li><a href="#">link1</a></li>
-                        <li><a href="#">link2</a></li>
-                        <li><a href="#">link3</a></li>
-                        <li><a href="#">link4</a></li>
-                        <li><a href="#">link5</a></li>
-                    </ul>
-                </div>
-                <div class="nav-right-two">
-                    <ul>
-                        <li><i></i><a href="#">我的兴趣模型</a></li>
-                        <li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a href="#">兴趣标签</a></li>
-                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a href="#">我的收藏</a></li>
-                        <li><a href="#">link3</a></li>
-                        <li><a href="#">link4</a></li>
-                    </ul>
-                </div>
-                <!--//row-->
 
                 <div class="footer">
-                    footer is unfinshed
+                    Supported By W.I.C
                 </div>
             </div>
         </div>
