@@ -45,17 +45,20 @@
         font-weight: bold;
         text-align: center;
         font-style: normal;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
     }
 
     .W_btn_big:hover, .btn_reg_a:hover {
-        background: #0084FE;
+        background: #67d3e0;
         text-decoration: none;
         _zoom: 1;
     }
 
         .W_btn_big:hover span, .btn_reg_a:hover span {
             text-decoration: none;
-            background: #0084FE;
+            background: #67d3e0;
             background: -moz-linear-gradient(top, rgba(255,184,71,1) 0%, rgba(255,162,16,1) 100%);
             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,184,71,1)), color-stop(100%,rgba(255,162,16,1)));
             background: -webkit-linear-gradient(top, rgba(255,184,71,1) 0%,rgba(255,162,16,1) 100%);
@@ -80,13 +83,13 @@
     }
 
 .W_btn_big_dis, .W_btn_big_dis:hover {
-    background: #F2F2F2;
+    background: #67d3e0;
     border-color: #D9D9D9;
     cursor: default;
 }
 
     .W_btn_big_dis span, .W_btn_big_dis:hover span {
-        background: #F2F2F2;
+        background: #67d3e0;
         border-color: #FFF;
         color: #dadada;
         cursor: default;
@@ -259,11 +262,10 @@ body {
 }
 
 .W_nologin_main {
-    width: 900px;
+    width: 70%;
     margin: 0 auto 35px;
-    border-radius: 6px;
     background-color: #fff;
-    box-shadow: 0px 2px 3px #98b4c4;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
     -moz-box-shadow: 0px 2px 3px #98b4c4;
     -webkit-box-shadow: 0px 2px 3px #98b4c4;
 }
@@ -699,7 +701,7 @@ body {
 }
 
     .fav_tags_sel_v6 .info_tips {
-        margin: 0 20px 18px;
+        margin: 0;
         padding: 0 0 20px;
         border-bottom: 1px solid #f2f2f5;
     }
@@ -784,7 +786,7 @@ body {
         }
 
         .fav_tags_sel_v6 .sel_box .pic_arts, .fav_tags_sel_v6 .sel_box .layer_bg_arts div {
-            background-image: url("../images/classification_label/arts.png");
+            background-image: url("../images/classification_label/comprehensive.png");
         }
 
         .fav_tags_sel_v6 .sel_box .pic_estate, .fav_tags_sel_v6 .sel_box .layer_bg_estate div {
