@@ -122,7 +122,7 @@
                                 </li>
                                 <li><a href="#">
                                     <div class="user_img">
-                                        <img src="images/1.png" alt="">
+                                        <img src="images/1.png" alt=""/>
                                     </div>
                                     <div class="notification_desc">
                                         <p>Lorem ipsum dolor amet</p>
@@ -132,7 +132,7 @@
                                 </a></li>
                                 <li class="odd"><a href="#">
                                     <div class="user_img">
-                                        <img src="images/2.png" alt="">
+                                        <img src="images/2.png" alt=""/>
                                     </div>
                                     <div class="notification_desc">
                                         <p>Lorem ipsum dolor amet </p>
@@ -142,7 +142,7 @@
                                 </a></li>
                                 <li><a href="#">
                                     <div class="user_img">
-                                        <img src="images/3.png" alt="">
+                                        <img src="images/3.png" alt=""/>
                                     </div>
                                     <div class="notification_desc">
                                         <p>Lorem ipsum dolor amet </p>

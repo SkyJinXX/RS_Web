@@ -11,6 +11,9 @@
 	<link href="Bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet" />
 	<link href="Bootstrap/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <link href="style/custom.css" rel="stylesheet" type="text/css" />
+    <link href="style/findPassword.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" href="img/logo/logo_2.png" />
 	
 	<script src="js/jquery.min.js" type="text/javascript"></script>
@@ -23,45 +26,53 @@
 </head>
 <body>
     <form id="form1" class="form" runat="server">
-        <div class="htmleaf-container">
-            <div class="wrapper">
-                <div class="main_box">
-                    <div class="main_title">
-                        <div class="logo_box">
-                            <img src="img/logo/logo.gif" />
-                        </div>
-                        <div class="login_register_button">
-                            
-                        </div>
+        <div class="sticky-header header-section top_background">
+            <div class="header-left">
+                <!--logo -->
+                <div class="logo logo_background">
+                    <a href="index.aspx">
+                        <img src="images/logo/logo_picture_white.gif" alt="" />
+                    </a>
+                </div>
+                <!--//logo-->
+                <div  class="top_title_logo">
+                    <i class="fa fa-product-hunt top_title_icon"></i>
+                </div>
+                <div class="top_title">
+                    <span class="top_title_content">安全中心</span>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+                
+                <div class="clearfix"></div>
+            </div>
+            
+            <div class="clearfix"></div>
+        </div>
+        <div id="page-wrapper">
+            <div class="main-page">
+                <div class="subtop">
+                    <div class="dotted_line"></div>
+                    <div class="sublogo"><i class="fa fa-lock sublogo_font"></i></div>
+                    <div class="dotted_line"></div>
+                    <div class="sublogo"><i class="fa fa-unlock-alt sublogo_font"></i></div>
+                    <div class="dotted_line"></div>
+                    <div class="sublogo sublogo_selected"><i class="fa fa-check-circle sublogo_font selected"></i></div>
+                    <div class="dotted_line"></div>
+                </div>
+                <div class="findPassword-body">
+                    
+                    <div class="login-info">
+                        <asp:TextBox ID="newPassword" class="user" placeholder="新密码" runat="server" required="required" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="confirmPassword" class="user" placeholder="确认密码" runat="server" required="required" TextMode="Password"></asp:TextBox>
+                        <asp:Button ID="Button_changePassword" CssClass="loginButton" runat="server" Text="确认修改" OnClick="Button_changePassword_Click"  />
+                        <asp:Button ID="Button1" CssClass="loginButton" runat="server" Text="前往登录" OnClick="Button1_Click"   />
                     </div>
-                    <div class="line"></div>
                 </div>
-                <div class="container">
-                    <h1>找回密码</h1>
-                    <div class="box">
-                        <asp:TextBox ID="newPassword" placeholder="新密码" runat="server" required="required" TextMode="Password"></asp:TextBox>
-                        <asp:TextBox ID="confirmPassword" placeholder="确认密码" runat="server" required="required" TextMode="Password"></asp:TextBox>
-                        <asp:Button ID="Button_changePassword" CssClass="changePasswordButton" runat="server" Text="确认修改" OnClick="Button_changePassword_Click"  />
-                         <asp:Button ID="Button1" CssClass="changePasswordButton" runat="server" Text="前往登录" OnClick="Button1_Click"   />
-                    </div>
-                </div>
-                <div class="footer">
-                    <div class="line"></div>
-                </div>
-                <ul class="bg-bubbles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
             </div>
         </div>
+        
     </form>
 </body>
 </html>
