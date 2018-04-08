@@ -281,39 +281,8 @@
         <div id="page-wrapper">
 			<div class="main-page">
                 <div class="messageBox_view">
-                    <div class="message_view_amuse">
-                        <div class="view_amuse_title"><b>YOLO WHISKY & COCKTAIL BAR</b></div>
-                        <div class="view_amuse_body">
-                            <div class="view_amuse_body_left">
-                                <div class="content-left-line">
-                                    <div class="view_amuse_body_item">人均: ￥168 口味: 8.9 环境: 9.2 服务: 8.9</div>
-                                </div>
-                                <div class="content-left-line">
-                                    <div class="view_amuse_body_title">分类</div>
-                                    <div class="view_amuse_body_sort">酒吧</div>
-                                </div>
-                                <div class="content-left-line">
-                                    <div class="view_amuse_body_phone_title">电话</div>
-                                    <div class="view_amuse_body_phone">18989461051</div>
-                                </div>
-                                <div class="content-left-line-address">
-                                    <div class="view_amuse_body_address_title">地点</div>
-                                    <div class="view_amuse_body_address">百井坊巷75号(武林银泰)</div>
-                                </div>
-                                <div class="content-left-line">
-                                    <div class="view_amuse_body_time_title">营业时间</div>
-                                    <div class="view_amuse_body_time">周一至周日 19:00-02:00 </div>
-                                </div>
-                                <div class="content-left-menu">
-                                    <div class="view_amuse_body_dish_title">推荐</div>
-                                    <div class="view_amuse_body_dish"></div>
-                                </div>
-                            </div>
-                            <div class="view_amuse_body_right">
-                                <img src="img/Amuse/1.jpg" alt="图片" style="width: 320px; height: 213px"/>
-                            </div>
-                        </div>
-                        <div class="clearfloat"></div>
+                    <div class="message_view" >
+
                     </div>
                     <div class="comment_are">
                         <div class="comment_area_title">
@@ -326,7 +295,6 @@
                         </div>
                         <div class="comment_area">
                         </div>
-                         
                     </div>
                 </div>
 				<div class="nav-right-one">

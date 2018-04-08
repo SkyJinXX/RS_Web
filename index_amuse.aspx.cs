@@ -310,18 +310,7 @@ public partial class index : System.Web.UI.Page
                 jsonBuilder.Append("\"");
                 jsonBuilder.Append(dt.Columns[j].ColumnName);
                 jsonBuilder.Append("\":\"");
-
-                if (j == 2)
-                {
-                    String s = dt.Rows[i][j].ToString();
-                    s = s.Substring(0, 110);
-                     
-                    jsonBuilder.Append(s.Replace("\"", "\\\""));
-                }
-                else
-                {
-                    jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\"", "\\\""));
-                }
+                jsonBuilder.Append(dt.Rows[i][j].ToString().Replace("\"", "\\\""));
                 jsonBuilder.Append("\",");
             }
             jsonBuilder.Remove(jsonBuilder.Length - 1, 1);

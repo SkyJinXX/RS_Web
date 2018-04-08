@@ -309,10 +309,10 @@
 }
 
 .fold-button span {
-        display: inline-block;
-        padding: 5px 15px;
-        background-color: #32a5e7;
-        color: #fff;
-        border-radius: 2px;
-        cursor: pointer;
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #32a5e7;
+    color: #fff;
+    border-radius: 2px;
+    cursor: pointer;
 }

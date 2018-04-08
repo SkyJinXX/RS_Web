@@ -187,12 +187,12 @@ public partial class index : System.Web.UI.Page
         conn.Open();
         
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select Did,Dtitle,Dcontent,Dtime,Dtype,Dgoods,Dimage_url from duanzi where Dtype = '"
-            + s + "' order by Dgoods desc";
+        cmd.CommandText = "select did,dtitle,dcontent,dtime,dtype,dcount,dgoods,dimage_url from duanzi where dtype = '"
+            + s + "' order by dgoods desc";
 
         if (cmd.ExecuteScalar() == null)
         {
-            cmd.CommandText = "select top 4 * from duanzi order by Dgoods desc, Did asc";
+            cmd.CommandText = "select top 4 * from duanzi order by dgoods desc, did asc";
         }
 
         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -220,8 +220,8 @@ public partial class index : System.Web.UI.Page
         conn.Open();
 
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select Did,Dtitle,Dcontent,Dtime,Dtype,Dgoods,Dimage_url from duanzi where Dtitle like '%"
-            + s + "%'or Dkeyword like '%" + s + "%' order by Dgoods desc";
+        cmd.CommandText = "select did,dtitle,dcontent,dtime,dtype,dcount,dgoods,dimage_url from duanzi where dtitle like '%"
+            + s + "%'or dkeyword like '%" + s + "%' order by dgoods desc";
 
         if (cmd.ExecuteScalar() == null)
         {
@@ -260,7 +260,7 @@ public partial class index : System.Web.UI.Page
         conn.Open();
 
         SqlCommand cmd = new SqlCommand("", conn);
-        cmd.CommandText = "select Did,Dtitle,Dcontent,Dtime,Dtype,Dgoods,Dimage_url from duanzi where Did in ('" + a[0];
+        cmd.CommandText = "select did,dtitle,dcontent,dtime,dtype,dcount,dgoods,dimage_url from duanzi where did in ('" + a[0];
         for(int i = 0; i < a.Count; i++)
         {
             cmd.CommandText = cmd.CommandText + "','" + a[i]; 
@@ -314,7 +314,7 @@ public partial class index : System.Web.UI.Page
                 if (j == 2)
                 {
                     String s = dt.Rows[i][j].ToString();
-                    s = s.Substring(0, 110);
+                    s = s.Substring(0, 120);
                      
                     jsonBuilder.Append(s.Replace("\"", "\\\""));
                 }
