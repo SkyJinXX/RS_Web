@@ -107,6 +107,7 @@
 }
 
 .article_bottom{
+    clear:both;
     width:35%;
     margin-left:65%;
     padding-top:5%;
