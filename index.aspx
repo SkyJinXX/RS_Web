@@ -338,7 +338,7 @@
                             </a>
                         </div>
                         <div class="col-md-3 ticket-grid">
-                            <a href="#">
+                            <a href="index_duanzi.aspx">
                                 <div id="Interesting" class="tickets">
                                     <div class="grid-left">
                                         <div class="book-icon">

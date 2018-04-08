@@ -1,0 +1,75 @@
+﻿.view_duanzi_detail_title {
+    width: 15%;
+    min-height: 1em;
+    height: auto;
+    float: left;
+    margin-left:2em;
+    padding-left: 0.8em;
+    border-left: 3px solid #9AC0CD;
+}
+
+.view_reading_capacity_count {
+    width: auto;
+    min-height: 1em;
+    float: left;
+    padding-top:0.13em;
+    padding-left: 0.8em;
+    color: #919191;
+}
+
+.view_reading_capacity {
+    width: 30%;
+    min-height: 1em;
+    float: left;
+    padding-left: 0.5em;
+    color: #919191;
+}
+
+.view_duanzi_article_bottom {
+    clear:both;
+    width: 20%;
+    min-height: 1em;
+    height: auto;
+    padding-bottom:1em;
+    margin-left: 80%;
+}
+
+.view_duanzi_article_bottom_line {
+    width:auto;
+    height:auto;
+    clear: both;
+}
+
+.subexample_right {
+    width: 50%;
+    line-height: 1.2em;
+    margin-right: 0.5em;
+    margin-top: 1em;
+    padding-right: 0.8em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    float: right;
+}
+
+.view_duanzi_collectBox {
+    width: 3em;
+    height: auto;
+    float: left;
+    margin-top: 1em;
+    padding-left: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+.view_duanzi_likeBox {
+    width: 4em;
+    height: auto;
+    float: left;
+    margin-top: 1em;
+    padding-left: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    line-height: 1.3em;
+    color: #19CF8A;
+    border: none;
+}

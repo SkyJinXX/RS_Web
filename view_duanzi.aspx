@@ -28,6 +28,9 @@
     <link href="style/interests.css" rel="stylesheet" type="text/css" />
     <link href="style/custom.css" rel="stylesheet">
     <link href="style/view.css" rel="stylesheet" type="text/css" />
+    <link href="style/view_duanzi.css" rel="stylesheet" type="text/css" />
+
+
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
     <!--//webfonts--> 
@@ -52,7 +55,7 @@
     <!--//Metis Menu -->
 	
 	
-    <title>美食页</title>
+    <title>趣事</title>
 </head>
 <body class="cbp-spmenu-push cbp-spmenu-push-toright">
     <form id="form1" runat="server">
@@ -280,7 +283,31 @@
 			<div class="main-page">
                 <div class="messageBox_view">
                     <div class="message_view">
-                        
+                        <div>
+                            <div class="artcle_title">英男子巴厘岛度假遭剑鱼刺入颈部 奇迹幸存</div>
+                            <div class="subtitle">
+                                <div class="view_duanzi_detail_title">地球家园</div>
+                                <div class="view_reading_capacity_count">2</div>
+                                <div class="view_reading_capacity">次浏览</div>
+                                <div class="subtitleTime_box">2017-08-01 00:00:00</div>
+                            </div>
+                            <div class="picture">
+                                <img src="img/Duanzi/1.jpg" style="width:720px;height:480px"></div>
+                            <div class="article">
+                                <p id="content">英国一名男子乘船出海时被跃出水面的一条剑鱼刺入颈部，幸好没有被刺破重要血管，保住一命。船家迅速返航，送波普去医院。最初接诊的医院条件简陋，无法完整取出插进波普颈部深处的长15厘米的剑鱼上颌。他和妻子随后又去了两家医院，经过3个半小时手术，总算去除了这把“凶器”。英国《每日邮报》28日引述波普的话说，“凶器”刚好插在两条动脉之间。<br>
+                                </p>
+                            </div>
+                            <div class="view_duanzi_article_bottom">
+                                <div class="view_duanzi_collectBox">
+                                    <input type="button" class="collect" value="" title="收藏">
+                                </div>
+                                <div class="view_duanzi_likeBox">
+                                    <input class="isLikeButton_like" type="button" value=""><div class="index_duanzi_like_count">7</div>
+                                </div>
+                            </div>
+                            <div class="view_duanzi_article_bottom_line">
+                            </div>
+                        </div>
                     </div>
                     <div class="comment_are">
                         <div class="comment_area_title">
@@ -328,34 +355,3 @@
     </form>
 </body>
 </html>
-
-                        <%--<div class="artcle_title">
-                            <asp:Label ID="Title" runat="server" Text="标题"></asp:Label>
-                        </div>
-                        <div class="subtitle">
-                            <div class="subtitleClassification_box">
-                                <asp:Label ID="subtitleClassification" runat="server" Text="分类"></asp:Label>
-                            </div>
-                            <div class="subtitleTime_box">
-                                <asp:Label ID="subtitleTime" runat="server" Text="时间"></asp:Label>
-                            </div>
-                        </div>
-                        <div class="picture">
-                            <img src="#"/>
-                        </div>
-                        <div class="article">
-                            <p id ="content">文章内容</p>
-                        </div>
-                        <div class="article_bottom">
-                            <div class="collectBox">
-                                <input type="button" class="collect" value="" title="收藏">
-                            </div>
-                            <div class="likeBox">
-                                <input class="isLikeButton_like" type="button" value="">
-                                <div class="like_count">1</div>
-                            </div>
-                            <div class="unlikeBox">
-                                <input class="isLikeButton_dislike" type="button" value="">
-                                <div class="unlike_count">1</div>
-                            </div>
-                        </div>--%>
