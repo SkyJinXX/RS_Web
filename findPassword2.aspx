@@ -35,21 +35,20 @@
                     </a>
                 </div>
                 <!--//logo-->
-                <div  class="top_title_logo">
+                <div class="top_title_logo">
                     <i class="fa fa-product-hunt top_title_icon"></i>
                 </div>
                 <div class="top_title">
                     <span class="top_title_content">安全中心</span>
                 </div>
-                
+
                 <div class="clearfix"></div>
             </div>
-                
-                <div class="clearfix"></div>
-            </div>
-            
+
             <div class="clearfix"></div>
         </div>
+            
+            <div class="clearfix"></div>
         <div id="page-wrapper">
             <div class="main-page">
                 <div class="subtop">
