@@ -1,0 +1,11 @@
+﻿body {
+}
+
+.notification_header_line{
+    width:50%;
+    float:left;
+}
+
+.notification_header_li{
+    padding-left:20%;
+}

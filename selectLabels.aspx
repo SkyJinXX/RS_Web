@@ -142,20 +142,7 @@ $CONFIG = {
 
 
         <script src="//js.t.sinajs.cn/t5/home/js/common/extra/exposure.js"></script>
-        <!--注册登录footer-->
-        <!--<div class="nologin_footer clearfix"> 
-  <div class="left_link"> <i class="footer_logo"></i><em class="company_name">北京微梦创科网络技术有限公司</em>&emsp;<a href="//weibo.com/aj/static/jww.html">京网文[2011]0398-130号</a>&emsp;<a href="http://www.miibeian.gov.cn">京ICP备12002058号</a></div>
-  <div class="copy"> 
-  		<span>Copyright © 2009-2018 WEIBO</span>
-  		<select id="pl_content_changeLanguage" action-data="login=1">
-			<option selected="selected" value="zh-cn">中文(简体)</option>
-			<option  value="zh-tw">中文(台湾)</option>
-			<option  value="zh-hk">中文(香港)</option>
-			<option  value="en">English</option>
-		</select>
-  </div>
-</div>-->
-        <!--/注册登录footer-->
+        
 
     </div>
 </body>
