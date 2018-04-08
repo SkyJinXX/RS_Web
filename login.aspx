@@ -36,41 +36,32 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<div class="login-heading">
 				<h1>Login</h1>
 			</div>
-			<div class="login-info">
-                <!--<asp:Button ID="Button1" CssClass="sublogin_register_button" runat="server" Text="登录" OnClick="sublogin_Click" />
-                <asp:Button ID="Button2" CssClass="sublogin_register_button" runat="server" Text="注册" OnClick="subregister_Click" />-->
-					<asp:TextBox ID="Username" class="user" placeholder="用户名" runat="server" ></asp:TextBox>
-                    <asp:TextBox ID="Password" class="lock" placeholder="密码" runat="server"  TextMode="Password"></asp:TextBox>
-                
-                    <!--<input type="text" class="user" name="email" placeholder="Email" required=""/>
-					<input type="password" name="password" class="lock" placeholder="Password"/>-->
-					<div class="forgot-top-grids">
-						<div class="forgot-grid">
-							<ul>
-								<li>
-									<input type="checkbox" id="brand1" value=""/>
-									<label for="brand1"><span></span>记住密码</label>
-								</li>
-							</ul>
-						</div>
-						<div class="forgot">
-							<a href="findPassword.aspx">忘记密码?</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<!--<input type="submit" name="Sign In" value="Login"/>-->
-                    <asp:Button ID="Button_login" CssClass="loginButton" runat="server" Text="立即登录" OnClick="Button_login_Click" />
-					<div class="signup-text">
-						<a href="register.aspx">还没有帐号? 马上注册</a>
-					</div>
-					
-			</div>
+            <div class="login-info">
+                <asp:TextBox ID="Username" class="user" placeholder="用户名" runat="server"></asp:TextBox>
+                <asp:TextBox ID="Password" class="lock" placeholder="密码" runat="server" TextMode="Password"></asp:TextBox>
+
+                <div class="forgot-top-grids">
+                    <div class="forgot-grid">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="brand1" value="" />
+                                <label for="brand1"><span></span>记住密码</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="forgot">
+                        <a href="findPassword.aspx">忘记密码?</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <!--<input type="submit" name="Sign In" value="Login"/>-->
+                <asp:Button ID="Button_login" CssClass="loginButton" runat="server" Text="立即登录" OnClick="Button_login_Click" />
+                <div class="signup-text">
+                    <a href="register.aspx">还没有帐号? 马上注册</a>
+                </div>
+
+            </div>
 		</div>
-		<!--
-		<div class="copyright login-copyright">
-           <p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>    
-		</div>
-        -->
 
 
 

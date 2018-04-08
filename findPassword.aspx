@@ -9,7 +9,11 @@
 	<link href="Bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet" />
 	<link href="Bootstrap/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <link href="style/findPassword.css" rel="stylesheet" type="text/css" />
+    <link href="style/custom.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/png" href="img/logo/logo_2.png" />
+
 	
 	<script src="js/jquery.min.js" type="text/javascript"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
@@ -21,45 +25,55 @@
 </head>
 <body>
     <form id="form1" class="form" runat="server">
-        <div class="htmleaf-container">
-            <div class="wrapper">
-                <div class="main_box">
-                    <div class="main_title">
-                        <div class="logo_box">
-                            <img src="img/logo/logo.gif" />
+        <div class="sticky-header header-section top_background">
+            <div class="header-left">
+                <!--logo -->
+                <div class="logo logo_background">
+                    <a href="index.aspx">
+                        <img src="images/logo/logo_picture_white.gif" alt="" />
+                    </a>
+                </div>
+                <!--//logo-->
+                <div  class="top_title_logo">
+                    <i class="fa fa-product-hunt top_title_icon"></i>
+                </div>
+                <div class="top_title">
+                    <span class="top_title_content">安全中心</span>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+            
+            <div class="clearfix"></div>
+        </div>
+        <div id="page-wrapper">
+            <div class="main-page">
+                <div class="subtop">
+                    <div class="dotted_line"></div>
+                    <div class="sublogo sublogo_selected"><i class="fa fa-lock sublogo_font selected"></i></div>
+                    <div class="dotted_line"></div>
+                    <div class="sublogo"><i class="fa fa-unlock-alt sublogo_font"></i></div>
+                    <div class="dotted_line"></div>
+                    <div class="sublogo"><i class="fa fa-check-circle sublogo_font"></i></div>
+                    <div class="dotted_line"></div>
+                </div>
+                <div class="findPassword-body">
+                    
+                    <div class="login-info">
+                        <asp:TextBox ID="identity" class="user" placeholder="请输入你的帐号" runat="server" required="required"></asp:TextBox>
+                        
+                        <asp:TextBox ID="identifyingcode" class="user" placeholder="请输入验证码" runat="server" required="required"></asp:TextBox>
+                        <div class="verification_code">
+                            <img style="width:100%;height:100%" src="png.aspx" id="img" onclick="f_refreshtype()" />
                         </div>
-                        <div class="login_register_button">
-                            
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                </div>
-                <div class="container">
-                    <h1>找回密码</h1>
-                    <div class="box">
-                        <asp:TextBox ID="identity" placeholder="请输入你的帐号" runat="server" required="required" ></asp:TextBox>
-                        <asp:TextBox ID="identifyingcode" placeholder="请输入验证码" runat="server" required="required" ></asp:TextBox>
-                        <img src="png.aspx" id="img" onclick="f_refreshtype()" />
-                        <asp:Button ID="next" CssClass="changePasswordButton" runat="server" Text="下一步" OnClick="next_Click" />
+                        <asp:Button ID="next" CssClass="loginButton" runat="server" Text="下一步" OnClick="next_Click" />
+                        
+
                     </div>
                 </div>
-                <div class="footer">
-                    <div class="line"></div>
-                </div>
-                <ul class="bg-bubbles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
             </div>
         </div>
+        
     </form>
 </body>
 </html>
