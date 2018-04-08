@@ -61,7 +61,7 @@
             <div class="header-left">
                 <!--logo -->
                 <div class="logo">
-                    <a href="index_home.aspx">
+                    <a href="index.aspx">
                         <img src="images/logo/logo_picture_white.gif" alt="" />
 
                     </a>
@@ -299,7 +299,7 @@
                                 </div>
                             </div>
                             <div class="form-group" style="height: 40px">
-                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 资讯简述</label>
+                                <label class="col-md-artcle-label control-label artcle_labelPosition"><i class="fa fa-bars "></i> 关键字</label>
                                 <div class="col-md-8 artcle_text">
                                     <div class="input-group artcle-input-group">
                                         <asp:TextBox ID="TextBox3" CssClass="form-control1" runat="server" TextMode="SingleLine" placeholder="请概括内容"></asp:TextBox>
