@@ -173,9 +173,9 @@ public partial class Collection : System.Web.UI.Page
 
     //左边分类框显示的类别资讯
     [WebMethod]
-    public static ArrayList Collection_Nid()
+    public static List<int> Collection_Nid()
     {
-        ArrayList res = new ArrayList();
+        List<int> res = new List<int>();
         String s = (string)HttpContext.Current.Session["Uid"];
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
@@ -204,7 +204,7 @@ public partial class Collection : System.Web.UI.Page
     }
 
     //选择某组资讯返回json格式
-    public static String Select_News(ArrayList a)
+    public static String Select_News(List<int> a)
     {
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
@@ -292,7 +292,7 @@ public partial class Collection : System.Web.UI.Page
         int st = page_int * maxSize;
         int end = (page_int + 1) * maxSize;
 
-        ArrayList a = null;
+        List<int> a = null;
         a = Collection_Nid();
         if (a.Count < end)
         {
@@ -300,7 +300,7 @@ public partial class Collection : System.Web.UI.Page
             //st = 0;
         }
 
-        ArrayList showlist = new ArrayList();
+        List<int> showlist = new List<int>();
         for (int i = st; i < end; i++)
         {
             showlist.Add(a[i]);
