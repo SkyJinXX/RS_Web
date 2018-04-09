@@ -1,5 +1,6 @@
 ﻿var Nid;
-
+var SourseType = "Recommand";
+var keyWord = "null";
 $(function () {
     Nid = $.getUrlParam('Nid');
     messageShow();
