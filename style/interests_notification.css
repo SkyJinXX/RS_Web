@@ -1,0 +1,17 @@
+﻿body {
+}
+
+.notification_header_line{
+    width:50%;
+    float:left;
+}
+
+.notification_header_li{
+    padding-left:20%;
+    padding-bottom:0.5em;
+}
+
+.task-info-center {
+    color: #D4D4D4;
+    text-align: center;
+}

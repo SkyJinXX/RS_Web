@@ -31,6 +31,7 @@
     <link href="style/button.css" rel="stylesheet" type="text/css" />
     <link href="style/custom.css" rel="stylesheet" type="text/css" />
     <link href="style/index_home.css" rel="stylesheet" type="text/css" />
+    <link href="style/footer.css" rel="stylesheet" type="text/css" />
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -213,47 +214,22 @@
                         </li>
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-bell"></i><span class="badge blue">...</span>
+                                <i class="fa fa-map-marker"></i><span class="badge blue">...</span>
                             </a>
                             <ul class="dropdown-menu anti-dropdown-menu">
                                 <li>
                                     <div class="notification_header">
-                                        <h3>我的评论</h3>
+                                        <h3>我的定位</h3>
                                     </div>
                                 </li>
-                                <li><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/2.png" alt=""/>
+                                <li>
+                                    <div class="location">
+                                        地点
                                     </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet</p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li class="odd"><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/1.png" alt=""/>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/3.png" alt="">
-                                    </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
+                                </li>
                                 <li>
                                     <div class="notification_bottom">
-                                        <a href="#">See all notifications</a>
+                                        
                                     </div>
                                 </li>
                             </ul>
@@ -466,6 +442,13 @@
 
 			</div>
 		</div>
+        <div class="footer">
+            <div class="footer_content">
+                <div class="footer_content_line">
+                    <i class="fa fa-handshake-o"></i>一路相遇 一路相知 一路相行
+                </div>
+            </div>
+        </div>
     </form>
 </body>
 </html>

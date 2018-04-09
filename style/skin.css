@@ -75,6 +75,9 @@ body, legend, .S_txt1, .S_func1, .SW_fun .S_func1, .SW_fun2 .S_func3, .current .
 
 a, .S_link1, .S_func1:hover, .SW_fun:hover .S_func1, .SW_fun2:hover .S_func3, .SW_fun2:hover .S_func4 {
     color: #0a8cd2;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
 }
 
 .S_link1_bg {

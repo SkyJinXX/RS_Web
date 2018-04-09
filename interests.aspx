@@ -30,6 +30,8 @@
     <link href="style/interests.css" rel="stylesheet" type="text/css" />
     <link href="style/custom.css" rel="stylesheet" type="text/css" />
     <link href="style/multi-switch.min.css" rel="stylesheet" type="text/css" />
+    <link href="style/interests_notification.css" rel="stylesheet" type="text/css" />
+    
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
     <!--//webfonts--> 
@@ -116,36 +118,85 @@
                                     <h3>兴趣标签</h3>
                                 </div>
                             </li>
-                            <li><a href="#">
-                                <div class="user_img">
-                                    <img src="images/1.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet</p>
-                                    <p><span>1 hour ago</span></p>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-film"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>电影</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-child"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>体育</span>
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
-                            </a></li>
-                            <li class="odd"><a href="#">
-                                <div class="user_img">
-                                    <img src="images/2.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-money"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>财经</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-newspaper-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>新闻</span>
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="user_img">
-                                    <img src="images/3.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-smile-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>搞笑</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-hand-rock-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>军事</span>
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
-                            </a></li>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-gamepad"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>游戏</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="notification_desc">
+                                        <span>...</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <div class="clearfix"></div>
+                            </li>
                             <li>
                                 <div class="notification_bottom">
-                                    <a href="interests.aspx">See all messages</a>
+                                    <a href="interests.aspx">查看所有兴趣标签</a>
                                 </div>
                             </li>
                         </ul>
@@ -162,43 +213,33 @@
                             </li>
                             <li><a href="#">
                                 <div class="task-info">
-                                    <span class="task-desc">Database update</span><span class="percentage">40%</span>
+                                    <span class="task-desc">收藏标题1</span>
                                     <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar yellow" style="width: 40%;"></div>
                                 </div>
                             </a></li>
                             <li><a href="#">
                                 <div class="task-info">
-                                    <span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+                                    <span class="task-desc">收藏标题2</span>
                                     <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar green" style="width: 90%;"></div>
                                 </div>
                             </a></li>
                             <li><a href="#">
                                 <div class="task-info">
-                                    <span class="task-desc">Mobile App</span><span class="percentage">33%</span>
+                                    <span class="task-desc">收藏标题3</span>
                                     <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar red" style="width: 33%;"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar  blue" style="width: 80%;"></div>
                                 </div>
                             </a></li>
                             <li>
+                                <a href="index.aspx">
+                                    <div class="task-info-center">
+                                        <span class="task-desc">没有更多了,去发现新世界&nbsp;<i class="fa fa-sign-in"></i></span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
                                 <div class="notification_bottom">
-                                    <a href="interests.aspx">See all pending tasks</a>
+                                    <a href="interests.aspx">个人收藏</a>
                                 </div>
                             </li>
                         </ul>
@@ -242,7 +283,7 @@
                             </a></li>
                             <li>
                                 <div class="notification_bottom">
-                                    <a href="#">See all notifications</a>
+                                    <a href="#">所有评论</a>
                                 </div>
                             </li>
                         </ul>
@@ -311,13 +352,40 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <i class="fa fa-ravelry"></i><span>科技</span>
+                                        <i class="fa fa-film"></i><span>电影</span>
                                     </td>
                                     <td>
                                         <input type="checkbox" class="multi-switch" value="0" />
                                     </td>
                                     <td>
-                                        <i class="fa fa-odnoklassniki-square"></i><span>娱乐</span>
+                                        <i class="fa fa-child"></i><span>体育</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-money"></i><span>财经</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-newspaper-o"></i><span>新闻</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                </tr>
+                                <tr style="height:1em;"></tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-smile-o"></i><span>搞笑</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-ravelry"></i><span>科普</span>
                                     </td>
                                     <td>
                                         <input type="checkbox" class="multi-switch" value="0" />
@@ -329,7 +397,55 @@
                                         <input type="checkbox" class="multi-switch" value="0" />
                                     </td>
                                     <td>
-                                        <i class="fa fa-child"></i><span>体育</span>
+                                        <i class="fa fa-hand-rock-o"></i><span>军事</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                </tr>
+                                <tr style="height:1em;"></tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-television"></i><span>电视剧</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-car"></i><span>汽车</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-medkit"></i><span>健康</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-book"></i><span>读书</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                </tr>
+                                <tr style="height:1em;"></tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-users"></i><span>综艺</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-star"></i><span>明星</span>
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="multi-switch" value="0" />
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-area-chart"></i><span>风景</span>
                                     </td>
                                     <td>
                                         <input type="checkbox" class="multi-switch" value="0" />

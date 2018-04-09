@@ -101,7 +101,7 @@ a {
 }
 
 .W_Yahei {
-    font-family: "Microsoft Yahei"
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .W_Tahoma {
@@ -126,7 +126,7 @@ a {
 }
 
 .W_f18 {
-    font-size: 18px
+    font-size: 18px;
 }
 
 .W_f20 {

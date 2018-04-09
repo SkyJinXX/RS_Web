@@ -220,7 +220,6 @@ li.dropdown.head-dpdn a.dropdown-toggle {
 ul.dropdown-menu li {
     margin-left: 0;
     width: 100%;
-    padding: 0;
 	background: #fff;
 }
 .user-panel-top ul{
@@ -3133,7 +3132,7 @@ ul.nofitications-dropdown {
 }
 .user_img{
 	float:left;
-	width:19%;
+	width:20%;
 }
 .user_img img{
 	max-width:100%;
