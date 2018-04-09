@@ -209,43 +209,13 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
                         </a>
-                        <ul class="dropdown-menu anti-dropdown-menu">
+                        <ul class="dropdown-menu anti-dropdown-menu" id="collection_menu">
                             <li>
                                 <div class="notification_header">
-                                    <h3>收藏的资讯</h3>
+                                    <h3>收藏的资讯 </h3>
                                 </div>
                             </li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">收藏标题1</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">收藏标题2</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">收藏标题3</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a></li>
-                            <li>
-                                <a href="index.aspx">
-                                    <div class="task-info-center">
-                                        <span class="task-desc">没有更多了,去发现新世界&nbsp;<i class="fa fa-sign-in"></i></span>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="interests.aspx">个人收藏</a>
-                                </div>
-                            </li>
+
                         </ul>
                         </li>
                         <li class="dropdown head-dpdn">
@@ -288,9 +258,9 @@
                             </div>
                         </a>
                         <ul class="dropdown-menu drp-mnu">
-                            <li><a href="#"><i class="fa fa-cog"></i>修改密码</a> </li>
+                            <li><a href="findPassword.aspx"><i class="fa fa-cog"></i>修改密码</a> </li>
                             <li><a href="user_imformation.aspx"><i class="fa fa-user"></i>个人信息</a> </li>
-                            <li><a href="#"><i class="fa fa-sign-out"></i>注销</a> </li>
+                            <li><a href="login.aspx"><i class="fa fa-sign-out"></i>注销</a> </li>
                         </ul>
                     </li>
                 </ul>
@@ -340,8 +310,8 @@
 				</div>
 				<div class="nav-right-two">
 					<ul>
-						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
+						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="interests.aspx"> 我的兴趣模型</a></li>
+						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="interests.aspx"> 兴趣标签</a></li>
                         <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="Collection.aspx"> 我的收藏</a></li>
 					    
 					</ul>

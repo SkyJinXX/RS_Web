@@ -262,7 +262,7 @@
                             <ul class="dropdown-menu drp-mnu">
                                 <li><a href="findPassword.aspx"><i class="fa fa-cog"></i>修改密码</a> </li>
                                 <li><a href="user_imformation.aspx"><i class="fa fa-user"></i>个人信息</a> </li>
-                                <li><a href="#"><i class="fa fa-sign-out"></i>注销</a> </li>
+                                <li><a href="login.aspx"><i class="fa fa-sign-out"></i>注销</a> </li>
                             </ul>
                         </li>
                     </ul>

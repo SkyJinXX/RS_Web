@@ -87,30 +87,13 @@ public partial class register : System.Web.UI.Page
             }
         }
         
-
-        /*
-        if ((Username.Text.Length >0&& Username.Text.Length <10)&&
-            (Password.Text.Length > 0 && Password.Text.Length < 20) &&
-            (Email.Text.Length > 0 && Email.Text.Length < 20))
-        {
-            String SqlStr = "Insert into userinfo values ('" + Username.Text + "','" + Password.Text + "','" + Email.Text + "')";
-            SqlCommand cmd = new SqlCommand(SqlStr, objConnection);
-            cmd.CommandText = SqlStr;
-            cmd.ExecuteScalar();
-
-            Response.Redirect("login.aspx");
-
-        }
-        else{
-            Response.Write("<script>alert('注册失败');</script>");
-        }
-        */
+        
         objConnection.Close();
     }
 
     protected void sublogin_Click(object sender, EventArgs e)
     {
-        Response.Redirect("login.aspx");
+        Response.Redirect("selectLabels.aspx");
     }
 
     protected void subregister_Click(object sender, EventArgs e)
