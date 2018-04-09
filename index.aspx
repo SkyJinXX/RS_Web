@@ -31,6 +31,7 @@
     <link href="style/button.css" rel="stylesheet" type="text/css" />
     <link href="style/custom.css" rel="stylesheet" type="text/css" />
     <link href="style/index_home.css" rel="stylesheet" type="text/css" />
+    <link href="style/footer.css" rel="stylesheet" type="text/css" />
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -629,6 +630,19 @@
 
 			</div>
 		</div>
+        <div class="footer">
+            <div class="footer_content">
+                <div class="footer_content_line">
+                    <i class="fa fa-handshake-o"></i>一路相遇：互帮互助、合作学习、团结友善、分享收货、共同成长。
+                </div>
+                <div class="footer_content_line">
+                    <i class="fa fa-handshake-o"></i>一路相知：学习、理解、合作、分享、创新。
+                </div>
+                <div class="footer_content_line">
+                    <i class="fa fa-handshake-o"></i>一路相行：以自身为支点，权衡用户需求与功能实现；以时间为结点，平衡实际情况与目标期望；以基础为起点，感受过去成长与未来希冀。
+                </div>
+            </div>
+        </div>
     </form>
 </body>
 </html>
