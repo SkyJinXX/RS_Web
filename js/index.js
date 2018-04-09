@@ -28,7 +28,7 @@ function demoShow_News() {
             $.each(news,function(index, value){
                 $('#placeholder').append(
                     '<div class="home_brief_message">'+
-                        '<a href="#">'+
+                        '<a href="view_News.aspx?Nid='+value['Nid']+'">'+
                         '<div class="brief_message_img">'+
                             '<img src="'+value['Nimage_url']+'" alt="图片" style="width: 105px; height: 70px;" />'+
                         '</div>'+
@@ -61,7 +61,7 @@ function demoShow_Food() {
             $.each(news,function(index, value){
                 $('#placeholder1').append(
                     '<div class="home_brief_message">'+
-                        '<a href="#">'+
+                        '<a href="view_food.aspx?fid='+value['fid']+'">'+
                         '<div class="brief_message_img">'+
                             '<img src="'+value['fimage_url']+'" alt="图片" style="width: 105px; height: 70px;" />'+
                         '</div>'+
@@ -94,7 +94,7 @@ function demoShow_Amuse() {
             $.each(news,function(index, value){
                 $('#placeholder2').append(
                     '<div class="home_brief_message">'+
-                        '<a href="#">'+
+                        '<a href="view_amuse.aspx?aid='+value['aid']+'">'+
                         '<div class="brief_message_img">'+
                             '<img src="'+value['aimage_url']+'" alt="图片" style="width: 105px; height: 70px;" />'+
                         '</div>'+
@@ -127,7 +127,7 @@ function demoShow_Duan() {
             $.each(news,function(index, value){
                 $('#placeholder3').append(
                     '<div class="home_brief_message">'+
-                        '<a href="#">'+
+                        '<a href="view_duanzi.aspx?Nid='+value['did']+'">'+
                         '<div class="brief_message_img">'+
                             '<img src="'+value['dimage_url']+'" alt="图片" style="width: 105px; height: 70px;" />'+
                         '</div>'+

@@ -225,9 +225,9 @@ public partial class index : System.Web.UI.Page
 
     //左边分类框显示的类别资讯
     [WebMethod]
-    public static ArrayList Type_Nid(string type)
+    public static List<int> Type_Nid(string type)
     {
-        ArrayList res = new ArrayList();
+        List<int> res = new List<int>();
         String s = type;
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
@@ -258,9 +258,9 @@ public partial class index : System.Web.UI.Page
 
     //搜索生成关键字查询的资讯显示序列  搜索按钮事件
     [WebMethod]
-    public static ArrayList Search_Nid(string keyword)
+    public static List<int> Search_Nid(string keyword)
     {
-        ArrayList res = new ArrayList();
+        List<int> res = new List<int>();
         String s = keyword;
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
@@ -290,17 +290,19 @@ public partial class index : System.Web.UI.Page
     }
 
     //默认生成总的Nid序列
-    public static ArrayList Recommand_Nid()
+    public static List<int> Recommand_Nid()
     {
-        ArrayList res = new ArrayList();
+        List<int> random_res;
+        List<int> base_res = new List<int>();
         for (int i = 1; i < 143; i++) {
-            res.Add(i);
-        }
-        return res;
+            base_res.Add(i);
+        } 
+        random_res = base_res.OrderBy(x => Guid.NewGuid()).ToList();
+        return random_res;
     }
 
     //选择某组资讯返回json格式
-    public static String Select_News(ArrayList a)
+    public static String Select_News(List<int> a)
     {
         String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
         SqlConnection conn = new SqlConnection(connstr);
@@ -389,7 +391,7 @@ public partial class index : System.Web.UI.Page
         int end = (page_int + 1) * maxSize;
         Console.Write("{0}x{1}", st, end);
 
-        ArrayList a = null;
+        List<int> a = null;
         switch (SourseType)
         {
             case "Recommand":
@@ -408,7 +410,7 @@ public partial class index : System.Web.UI.Page
             //st = 0;
         }
 
-        ArrayList showlist = new ArrayList();
+        List<int> showlist = new List<int>();
         for(int i = st; i < end; i++)
         {
             showlist.Add(a[i]);
