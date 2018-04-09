@@ -109,7 +109,7 @@ function likeClick(){
         data: "{'aid':'" + aid + "'}",
         dataType: "json",
         success: function (result) {
-            alert("点赞+1");
+            //alert("点赞+1");
         },
         error: function (textStatus, errorThrown) {
             console.log(textStatus);

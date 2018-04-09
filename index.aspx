@@ -44,6 +44,7 @@
     <!--animate-->
     <link href="style/animate.css" rel="stylesheet" type="text/css" media="all" />
     <script src="js/wow.min.js"></script>
+	<script src="js/index.js"></script>
 	<script>
         new WOW().init();
 	</script>
@@ -371,48 +372,7 @@
                                 <div class="panel-body">
                                     <div class="demo-container">
                                         <div id="placeholder" class="demo-placeholder">
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- 显示条目样式副本（静态填充）开始 -->
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- 显示条目样式副本（静态填充）结束 -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -431,48 +391,7 @@
                                 <div class="panel-body">
                                     <div class="demo-container">
                                         <div id="placeholder1" class="demo-placeholder">
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- 显示条目样式副本（静态填充）开始 -->
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- 显示条目样式副本（静态填充）结束 -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -497,48 +416,7 @@
                                 <div class="panel-body">
                                     <div class="demo-container">
                                         <div id="placeholder2" class="demo-placeholder">
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- 显示条目样式副本（静态填充）开始 -->
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- 显示条目样式副本（静态填充）结束 -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -557,48 +435,7 @@
                                 <div class="panel-body">
                                     <div class="demo-container">
                                         <div id="placeholder3" class="demo-placeholder">
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- 显示条目样式副本（静态填充）开始 -->
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="home_brief_message">
-                                                <a href="#">
-                                                    <div class="brief_message_img">
-                                                        <img src="img/Information/1.jpg" alt="图片" style="width: 105px; height: 70px;" />
-                                                    </div>
-                                                    <div class="brief_message">
-                                                        春暖花开面朝大海
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <!-- 显示条目样式副本（静态填充）结束 -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -611,12 +448,12 @@
 				<div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><a href="#"> link1</a></li>
-						<li><a href="#"> link2</a></li>
-                        <li><a href="#"> link3</a></li>
-						<li><a href="#"> link4</a></li>
-						<li><a href="#"> link5</a></li>
-						<li><a href="#"> link6</a></li>
+						<li><a href="#">若有小行星撞地球如何阻止?</a></li>
+						<li><a href="#">美国学区给学校配备石头</a></li>
+                        <li><a href="#">美国“生命大游行”呼吁严控枪支</a></li>
+						<li><a href="#">京都酒店外籍游客入住率创新高</a></li>
+						<li><a href="#">环球时报：中国既坚定又冷静</a></li>
+						<li><a href="#">男子照看电瓶车后盗车</a></li>
 					</ul>
 				</div>
                 <div class="nav-right-two">

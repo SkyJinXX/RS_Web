@@ -27,6 +27,7 @@ public partial class index : System.Web.UI.Page
             if (Session["username"] == null)
             {
                 Response.Write("<script>alert('请先登录!');window.location.href ='login.aspx'</script>");
+                return;
             }
 
             String s = "Select Uname From Users Where Uusername = '" + Session["username"] + "'";

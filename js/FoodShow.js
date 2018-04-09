@@ -115,7 +115,7 @@ function likeClick(){
         data: "{'fid':'" + fid + "'}",
         dataType: "json",
         success: function (result) {
-            alert("点赞+1");
+            
         },
         error: function (textStatus, errorThrown) {
             console.log(textStatus);
@@ -138,7 +138,7 @@ function unlikeClick(){
         data: "{'fid':'" + fid + "'}",
         dataType: "json",
         success: function (result) {
-            alert("点踩+1");
+            
         },
         error: function (textStatus, errorThrown) {
             console.log(textStatus);

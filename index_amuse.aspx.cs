@@ -23,16 +23,19 @@ public partial class index : System.Web.UI.Page
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
-
-            if (Session["username"] == null)
+                        
+            var username = (string)Session["username"];
+            if (username == null)
             {
                 Response.Write("<script>alert('请先登录!');window.location.href ='login.aspx'</script>");
+                return;
             }
-
+            
             String s = "Select Uname From Users Where Uusername = '" + Session["username"] + "'";
             SqlCommand cmd = new SqlCommand(s, conn);
             cmd.CommandText = s;
-            user_name.Text = cmd.ExecuteScalar().ToString();
+            var result = cmd.ExecuteScalar().ToString();
+            user_name.Text = result;
 
             cmd.CommandText = "Select Uid From Users Where Uusername = '" + Session["username"] + "'";
             Session["Uid"] = cmd.ExecuteScalar().ToString();

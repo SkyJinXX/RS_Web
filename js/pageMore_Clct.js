@@ -101,7 +101,7 @@ function likeClick(){
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
         success: function (result) {
-            console.log("点赞+1");
+            //console.log("点赞+1");
         },
         error: function (textStatus, errorThrown) {
             console.log(textStatus);
@@ -124,7 +124,7 @@ function unlikeClick(){
         data: "{'nid':'" + Nid + "'}",
         dataType: "json",
         success: function (result) {
-            console.log("点踩+1");
+            //console.log("点踩+1");
         },
         error: function (textStatus, errorThrown) {
             console.log(textStatus);

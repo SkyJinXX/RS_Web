@@ -6,7 +6,6 @@ $(function () {
     CommentShow()
     likeClick();
     collectClick();
-    unlikeClick();
     Button_switch();
     Button_hide();
     Reply();
@@ -182,6 +181,7 @@ function CommentShow() {
 
 function Button_hide(){
     $(".fold-button").click(function () {
+        //alert(123);
         $(".comment_area").slideToggle("fast");
         $(".open_Button").toggle();
         $(".close_Button").toggle();
@@ -217,7 +217,7 @@ function likeClick() {
             data: "{'aid':'" + aid + "'}",
             dataType: "json",
             success: function (result) {
-                alert("点赞+1");
+                //alert("点赞+1");
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);

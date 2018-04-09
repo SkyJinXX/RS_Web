@@ -205,7 +205,7 @@ function likeClick() {
             data: "{'did':'" + did + "'}",
             dataType: "json",
             success: function (result) {
-                alert("成功点赞");
+                //alert("成功点赞");
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);

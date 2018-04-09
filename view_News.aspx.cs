@@ -19,6 +19,7 @@ public partial class view : System.Web.UI.Page
             if (Session["username"] == null)
             {
                 Response.Write("<script>alert('请先登录!');window.location.href ='login.aspx'</script>");
+                return;
             }
 
             String connstr = ConfigurationManager.ConnectionStrings["ConStr"].ToString();

@@ -209,7 +209,7 @@ function likeClick() {
             data: "{'nid':'" + Nid + "'}",
             dataType: "json",
             success: function (result) {
-                alert('成功点赞');
+                //alert('成功点赞');
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);
@@ -232,7 +232,7 @@ function unlikeClick() {
             data: "{'nid':'" + Nid + "'}",
             dataType: "json",
             success: function (result) {
-                alert('成功点踩');
+                //alert('成功点踩');
             },
             error: function (textStatus, errorThrown) {
                 console.log(textStatus);

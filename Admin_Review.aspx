@@ -274,7 +274,7 @@
                 <div class="messageBox">
                     <div class="artcle_message">
                         <div class="form-title">
-                            <h4>我要爆料</h4>
+                            <h4>审核</h4>
                         </div>
                         <div class="artcle_message_box">
                             <div class="form-group" style="height: 40px">
