@@ -158,51 +158,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
                         </a>
-                        <ul class="dropdown-menu anti-dropdown-menu">
+                        <ul class="dropdown-menu anti-dropdown-menu" id="collection_menu">
                             <li>
                                 <div class="notification_header">
-                                    <h3>收藏的资讯</h3>
-                                </div>
-                            </li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Database update</span><span class="percentage">40%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar yellow" style="width: 40%;"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar green" style="width: 90%;"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Mobile App</span><span class="percentage">33%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar red" style="width: 33%;"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar  blue" style="width: 80%;"></div>
-                                </div>
-                            </a></li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="interests.aspx">See all pending tasks</a>
+                                    <h3>收藏的资讯 </h3>
                                 </div>
                             </li>
                         </ul>
@@ -292,23 +251,11 @@
 					</div>
 					
 				</div>
-                <div class="nav-right-one">
-                    <div class="nav-right-one-title">热门</div>
-					<ul>
-						<li><a class="nav-right-one_a_after" href="#"> link1</a></li>
-						<li><a class="nav-right-one_a_after" href="#"> link2</a></li>
-                        <li><a class="nav-right-one_a_after" href="#"> link3</a></li>
-						<li><a class="nav-right-one_a_after" href="#"> link4</a></li>
-						<li><a class="nav-right-one_a_after" href="#"> link5</a></li>
-					</ul>
-				</div>
 				<div class="nav-right-two">
 					<ul>
 						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
-                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的收藏</a></li>
-						<li><a class="nav-right-two_a_after" href="#">link3</a></li>
-						<li><a class="nav-right-two_a_after" href="#">link4</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="Collection.aspx"> 我的收藏</a></li>
 					</ul>
 				</div>
 				<!--//row-->

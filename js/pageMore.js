@@ -14,6 +14,7 @@ $(function () {
     TypeClick();
     SearchClick();
     DeleteNews();
+        CollectionShow();
     getCity();
 })
 function scrollListen() {
@@ -205,13 +206,53 @@ function SearchClick(){
 
         })
 }
+function CollectionShow() {
+    $.ajax({
+        type: 'post',
+        contentType: "application/json",
+        url: 'Collection.aspx/getNewsJson',
+        async: false,
+        data: "{'page':'0', 'SourseType':'"+ SourseType +"', 'keyWord':'"+ keyWord +"'}",
+        dataType: "json",
+        success: function (result) {
+            var result_true = eval("("+result.d+")");
+            var news = result_true['Tables'][0]['Rows'];
+            console.log(news);
+            $.each(news,function(index, value){
+                $('#collection_menu').append(
+                    '<li>'+
+                        '<a href="#">'+
+                            '<div class="task-info">'+
+                                '<span class="task-desc">'+
+                                value['Ntitle']+
+                                '</span>'+
+                                '<div class="clearfix"></div>'+
+                            '</div>'+
+                        '</a>'+
+                    '</li>'
+                );
+            });
+            $('#collection_menu').append(
+                '<li>'+
+                '<div class="notification_bottom">'+
+                '<a href="interests.aspx">个人收藏</a>'+
+                '</div>'+
+                '</li>'
+                );
+        },
+        error: function (textStatus, errorThrown) {
+            console.log(textStatus);
+            console.log(errorThrown);
+        }
+    });
+}
 function getCity(){
     var province = '' ;  
     var city = '' ;  
     jQuery.getScript("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js",function(){  
        province = remote_ip_info["province"];  
        city = remote_ip_info["city"];  
-       $('.username').append('</br>'+ province + ' ' + city);  
+       $('.location').text(province+" "+city);  
    }) ;   
 }
 
