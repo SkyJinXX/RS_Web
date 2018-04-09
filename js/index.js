@@ -9,7 +9,7 @@ $(function () {
     demoShow_Amuse();
     demoShow_Duan();
     //SearchClick();
-    //getCity();
+    getCity();
 })
 
 
@@ -151,7 +151,7 @@ function getCity(){
     jQuery.getScript("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js",function(){  
        province = remote_ip_info["province"];  
        city = remote_ip_info["city"];  
-       $('.username').append('</br>'+ province + ' ' + city);  
+       $('.location').text(province+" "+city);  
    }) ;   
 }
 
