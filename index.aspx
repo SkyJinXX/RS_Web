@@ -213,47 +213,22 @@
                         </li>
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-bell"></i><span class="badge blue">...</span>
+                                <i class="fa fa-map-marker"></i><span class="badge blue">...</span>
                             </a>
                             <ul class="dropdown-menu anti-dropdown-menu">
                                 <li>
                                     <div class="notification_header">
-                                        <h3>我的评论</h3>
+                                        <h3>我的定位</h3>
                                     </div>
                                 </li>
-                                <li><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/2.png" alt=""/>
+                                <li>
+                                    <div class="location">
+                                        地点
                                     </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet</p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li class="odd"><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/1.png" alt=""/>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/3.png" alt="">
-                                    </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
+                                </li>
                                 <li>
                                     <div class="notification_bottom">
-                                        <a href="#">See all notifications</a>
+                                        
                                     </div>
                                 </li>
                             </ul>
@@ -633,13 +608,7 @@
         <div class="footer">
             <div class="footer_content">
                 <div class="footer_content_line">
-                    <i class="fa fa-handshake-o"></i>一路相遇：互帮互助、合作学习、团结友善、分享收货、共同成长。
-                </div>
-                <div class="footer_content_line">
-                    <i class="fa fa-handshake-o"></i>一路相知：学习、理解、合作、分享、创新。
-                </div>
-                <div class="footer_content_line">
-                    <i class="fa fa-handshake-o"></i>一路相行：以自身为支点，权衡用户需求与功能实现；以时间为结点，平衡实际情况与目标期望；以基础为起点，感受过去成长与未来希冀。
+                    <i class="fa fa-handshake-o"></i>一路相遇 一路相知 一路相行
                 </div>
             </div>
         </div>

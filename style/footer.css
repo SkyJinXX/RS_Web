@@ -13,11 +13,12 @@
 }
 
 .footer_content {
-    width: 62%;
-    padding-left: 1em;
-    font-size: 0.8em;
-    border-left: 1px solid #B0E0E6;
+    width: 30%;
+    padding-top:1em;
+    font-size: 1.2em;
+    border-bottom: 1px solid #B0E0E6;
     margin: auto;
+    text-align:center;
 }
 
 .footer_content_line {
@@ -26,7 +27,7 @@
 }
 
 .footer_content_line i {
-    font-size: 1em;
+    font-size: 1.2em;
     margin-right:0.5em;
     color: #0A0A0A;
 }
