@@ -29,6 +29,8 @@
     <link href="style/custom.css" rel="stylesheet">
     <link href="style/view.css" rel="stylesheet" type="text/css" />
     <link href="style/interests_notification.css" rel="stylesheet" type="text/css" />
+    <link href="style/interests_notification.css" rel="stylesheet" type="text/css" />
+    <link href="style/view_footer.css" rel="stylesheet" type="text/css" />
 
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
@@ -105,8 +107,8 @@
 			<!--//end-search-box-->
         <div class="header-right header-right-grid">
             <div class="profile_details_left">
-                <!--notifications of menu start -->
-                <ul class="nofitications-dropdown">
+                    <!--notifications of menu start -->
+                    <ul class="nofitications-dropdown">
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-heart"></i><span class="badge">...</span>
@@ -238,8 +240,8 @@
                         </li>
 
                     </ul>
-                <div class="clearfix"></div>
-            </div>
+                    <div class="clearfix"></div>
+                </div>
 
             <!--notification menu end -->
             <div class="profile_details">
@@ -308,7 +310,11 @@
 			</div>
 		</div>
         <div class="footer">
-            <div style="width:10px;height:50px"></div>
+            <div class="footer_content">
+                <div class="footer_content_line">
+                    <i class="fa fa-handshake-o"></i>一路相遇 一路相知 一路相行
+                </div>
+            </div>
         </div>
 	    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
 	    <script src="js/bootstrap.min.js"></script>

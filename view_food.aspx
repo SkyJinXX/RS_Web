@@ -29,6 +29,8 @@
     <link href="style/custom.css" rel="stylesheet" type="text/css">
     <link href="style/view.css" rel="stylesheet" type="text/css" />
     <link href="style/view_food.css" rel="stylesheet" type="text/css" />
+    <link href="style/interests_notification.css" rel="stylesheet" type="text/css" />
+    <link href="style/view_footer.css" rel="stylesheet" type="text/css" />
 
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
@@ -105,10 +107,10 @@
 			<!--//end-search-box-->
         <div class="header-right header-right-grid">
             <div class="profile_details_left">
-                <!--notifications of menu start -->
-                <ul class="nofitications-dropdown">
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <!--notifications of menu start -->
+                    <ul class="nofitications-dropdown">
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-heart"></i><span class="badge">...</span>
                         </a>
                         <ul class="dropdown-menu anti-dropdown-menu">
@@ -117,42 +119,91 @@
                                     <h3>兴趣标签</h3>
                                 </div>
                             </li>
-                            <li><a href="#">
-                                <div class="user_img">
-                                    <img src="images/1.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet</p>
-                                    <p><span>1 hour ago</span></p>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-film"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>电影</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-child"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>体育</span>
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
-                            </a></li>
-                            <li class="odd"><a href="#">
-                                <div class="user_img">
-                                    <img src="images/2.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-money"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>财经</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-newspaper-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>新闻</span>
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="user_img">
-                                    <img src="images/3.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-smile-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>搞笑</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-hand-rock-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>军事</span>
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
-                            </a></li>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-gamepad"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>游戏</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="notification_desc">
+                                        <span>...</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <div class="clearfix"></div>
+                            </li>
                             <li>
                                 <div class="notification_bottom">
-                                    <a href="interests.aspx">See all messages</a>
+                                    <a href="interests.aspx">查看所有兴趣标签</a>
                                 </div>
                             </li>
                         </ul>
-                    </li>
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
                         </a>
                         <ul class="dropdown-menu anti-dropdown-menu">
@@ -163,95 +214,65 @@
                             </li>
                             <li><a href="#">
                                 <div class="task-info">
-                                    <span class="task-desc">Database update</span><span class="percentage">40%</span>
+                                    <span class="task-desc">收藏标题1</span>
                                     <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar yellow" style="width: 40%;"></div>
                                 </div>
                             </a></li>
                             <li><a href="#">
                                 <div class="task-info">
-                                    <span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
+                                    <span class="task-desc">收藏标题2</span>
                                     <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar green" style="width: 90%;"></div>
                                 </div>
                             </a></li>
                             <li><a href="#">
                                 <div class="task-info">
-                                    <span class="task-desc">Mobile App</span><span class="percentage">33%</span>
+                                    <span class="task-desc">收藏标题3</span>
                                     <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar red" style="width: 33%;"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="progress progress-striped active">
-                                    <div class="bar  blue" style="width: 80%;"></div>
                                 </div>
                             </a></li>
                             <li>
+                                <a href="index.aspx">
+                                    <div class="task-info-center">
+                                        <span class="task-desc">没有更多了,去发现新世界&nbsp;<i class="fa fa-sign-in"></i></span>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
                                 <div class="notification_bottom">
-                                    <a href="interests.aspx">See all pending tasks</a>
+                                    <a href="interests.aspx">个人收藏</a>
                                 </div>
                             </li>
                         </ul>
-                    </li>
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-bell"></i><span class="badge blue">...</span>
-                        </a>
-                        <ul class="dropdown-menu anti-dropdown-menu">
-                            <li>
-                                <div class="notification_header">
-                                    <h3>我的评论</h3>
-                                </div>
-                            </li>
-                            <li><a href="#">
-                                <div class="user_img">
-                                    <img src="images/2.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet</p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li class="odd"><a href="#">
-                                <div class="user_img">
-                                    <img src="images/1.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="user_img">
-                                    <img src="images/3.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="#">See all notifications</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-map-marker"></i><span class="badge blue">...</span>
+                            </a>
+                            <ul class="dropdown-menu anti-dropdown-menu">
+                                <li>
+                                    <div class="notification_header">
+                                        <h3>我的定位</h3>
+                                    </div>
+                                </li>
+                                <li style="width: 60%;margin:auto;">
+                                    <div class="location_icon">
+                                        <i class="fa fa-street-view"></i>
+                                    </div>
+                                    <div class="location"></div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li>
+                                    <div class="notification_bottom">
+                                        
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
 
-                </ul>
-                <div class="clearfix"></div>
-            </div>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
 
             <!--notification menu end -->
             <div class="profile_details">
@@ -324,7 +345,11 @@
 			</div>
 		</div>
         <div class="footer">
-            <div style="width:10px;height:50px"></div>
+            <div class="footer_content">
+                <div class="footer_content_line">
+                    <i class="fa fa-handshake-o"></i>一路相遇 一路相知 一路相行
+                </div>
+            </div>
         </div>
         <script src="js/jquery.min.js" type="text/javascript"></script>
 	    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
@@ -334,34 +359,3 @@
     </form>
 </body>
 </html>
-
-                        <%--<div class="artcle_title">
-                            <asp:Label ID="Title" runat="server" Text="标题"></asp:Label>
-                        </div>
-                        <div class="subtitle">
-                            <div class="subtitleClassification_box">
-                                <asp:Label ID="subtitleClassification" runat="server" Text="分类"></asp:Label>
-                            </div>
-                            <div class="subtitleTime_box">
-                                <asp:Label ID="subtitleTime" runat="server" Text="时间"></asp:Label>
-                            </div>
-                        </div>
-                        <div class="picture">
-                            <img src="#"/>
-                        </div>
-                        <div class="article">
-                            <p id ="content">文章内容</p>
-                        </div>
-                        <div class="article_bottom">
-                            <div class="collectBox">
-                                <input type="button" class="collect" value="" title="收藏">
-                            </div>
-                            <div class="likeBox">
-                                <input class="isLikeButton_like" type="button" value="">
-                                <div class="like_count">1</div>
-                            </div>
-                            <div class="unlikeBox">
-                                <input class="isLikeButton_dislike" type="button" value="">
-                                <div class="unlike_count">1</div>
-                            </div>
-                        </div>--%>
