@@ -12,6 +12,7 @@
     SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    
     <!-- Bootstrap Core CSS -->
     <link href="style/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- Custom CSS -->
@@ -32,6 +33,7 @@
     <link href="style/custom.css" rel="stylesheet" type="text/css" />
     <link href="style/index_home.css" rel="stylesheet" type="text/css" />
     <link href="style/footer.css" rel="stylesheet" type="text/css" />
+    <link href="style/interests_notification.css" rel="stylesheet" type="text/css" />
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -114,103 +116,139 @@
                     <ul class="nofitications-dropdown">
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-heart"></i><span class="badge">...</span>
-                            </a>
-                            <ul class="dropdown-menu anti-dropdown-menu">
-                                <li>
-                                    <div class="notification_header">
-                                        <h3>兴趣标签</h3>
-                                    </div>
-                                </li>
-                                <li><a href="#">
+                            <i class="fa fa-heart"></i><span class="badge">...</span>
+                        </a>
+                        <ul class="dropdown-menu anti-dropdown-menu">
+                            <li>
+                                <div class="notification_header">
+                                    <h3>兴趣标签</h3>
+                                </div>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
                                     <div class="user_img">
-                                        <img src="images/1.png" alt=""/>
+                                        <i class="fa fa-film"></i>
                                     </div>
                                     <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet</p>
-                                        <p><span>1 hour ago</span></p>
+                                        <span>电影</span>
                                     </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li class="odd"><a href="#">
+                                </div>
+                                <div class="notification_header_line">
                                     <div class="user_img">
-                                        <img src="images/2.png" alt=""/>
+                                        <i class="fa fa-child"></i>
                                     </div>
                                     <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
+                                        <span>体育</span>
                                     </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li><a href="#">
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
                                     <div class="user_img">
-                                        <img src="images/3.png" alt=""/>
+                                        <i class="fa fa-money"></i>
                                     </div>
                                     <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
+                                        <span>财经</span>
                                     </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li>
-                                    <div class="notification_bottom">
-                                        <a href="interests.aspx">See all messages</a>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-newspaper-o"></i>
                                     </div>
-                                </li>
-                            </ul>
+                                    <div class="notification_desc">
+                                        <span>新闻</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-smile-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>搞笑</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-hand-rock-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>军事</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-gamepad"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>游戏</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="notification_desc">
+                                        <span>...</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <div class="notification_bottom">
+                                    <a href="interests.aspx">查看所有兴趣标签</a>
+                                </div>
+                            </li>
+                        </ul>
                         </li>
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
-                            </a>
-                            <ul class="dropdown-menu anti-dropdown-menu">
-                                <li>
-                                    <div class="notification_header">
-                                        <h3>收藏的资讯</h3>
-                                    </div>
-                                </li>
-                                <li><a href="#">
-                                    <div class="task-info">
-                                        <span class="task-desc">Database update</span><span class="percentage">40%</span>
+                            <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
+                        </a>
+                        <ul class="dropdown-menu anti-dropdown-menu">
+                            <li>
+                                <div class="notification_header">
+                                    <h3>收藏的资讯</h3>
+                                </div>
+                            </li>
+                            <li><a href="#">
+                                <div class="task-info">
+                                    <span class="task-desc">收藏标题1</span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a></li>
+                            <li><a href="#">
+                                <div class="task-info">
+                                    <span class="task-desc">收藏标题2</span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a></li>
+                            <li><a href="#">
+                                <div class="task-info">
+                                    <span class="task-desc">收藏标题3</span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a></li>
+                            <li>
+                                <a href="index.aspx">
+                                    <div class="task-info-center">
+                                        <span class="task-desc">没有更多了,去发现新世界&nbsp;<i class="fa fa-sign-in"></i></span>
                                         <div class="clearfix"></div>
                                     </div>
-                                    <div class="progress progress-striped active">
-                                        <div class="bar yellow" style="width: 40%;"></div>
-                                    </div>
-                                </a></li>
-                                <li><a href="#">
-                                    <div class="task-info">
-                                        <span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="progress progress-striped active">
-                                        <div class="bar green" style="width: 90%;"></div>
-                                    </div>
-                                </a></li>
-                                <li><a href="#">
-                                    <div class="task-info">
-                                        <span class="task-desc">Mobile App</span><span class="percentage">33%</span>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="progress progress-striped active">
-                                        <div class="bar red" style="width: 33%;"></div>
-                                    </div>
-                                </a></li>
-                                <li><a href="#">
-                                    <div class="task-info">
-                                        <span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="progress progress-striped active">
-                                        <div class="bar  blue" style="width: 80%;"></div>
-                                    </div>
-                                </a></li>
-                                <li>
-                                    <div class="notification_bottom">
-                                        <a href="interests.aspx">See all pending tasks</a>
-                                    </div>
-                                </li>
-                            </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="notification_bottom">
+                                    <a href="interests.aspx">个人收藏</a>
+                                </div>
+                            </li>
+                        </ul>
                         </li>
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -222,10 +260,12 @@
                                         <h3>我的定位</h3>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="location">
-                                        地点
+                                <li style="width: 60%;margin:auto;">
+                                    <div class="location_icon">
+                                        <i class="fa fa-street-view"></i>
                                     </div>
+                                    <div class="location"></div>
+                                    <div class="clearfix"></div>
                                 </li>
                                 <li>
                                     <div class="notification_bottom">

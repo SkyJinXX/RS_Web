@@ -15,3 +15,21 @@
     color: #D4D4D4;
     text-align: center;
 }
+
+.location_line {
+    margin:auto;
+    width: 80%;
+    background: #fff;
+}
+
+.location_icon{
+    width:1em;
+    margin-top:0.1em;
+    margin-right:1em;
+    float:left;
+}
+
+.location{
+    width:60%;
+    float:left;
+}

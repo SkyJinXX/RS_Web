@@ -29,7 +29,7 @@
     <link href="style/button.css" rel="stylesheet" type="text/css" />
     <link href="style/interests.css" rel="stylesheet" type="text/css" />
     <link href="style/custom.css" rel="stylesheet" type="text/css" />
-    <link href="style/multi-switch.min.css" rel="stylesheet" type="text/css" />
+    <link href="style/multi-switch.min.css" rel="stylesheet" type="text/css" 
     <link href="style/interests_notification.css" rel="stylesheet" type="text/css" />
     
     <!--webfonts-->
@@ -108,8 +108,8 @@
             <div class="profile_details_left">
                 <!--notifications of menu start -->
                 <ul class="nofitications-dropdown">
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-heart"></i><span class="badge">...</span>
                         </a>
                         <ul class="dropdown-menu anti-dropdown-menu">
@@ -200,9 +200,9 @@
                                 </div>
                             </li>
                         </ul>
-                    </li>
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
                         </a>
                         <ul class="dropdown-menu anti-dropdown-menu">
@@ -243,53 +243,33 @@
                                 </div>
                             </li>
                         </ul>
-                    </li>
-                    <li class="dropdown head-dpdn">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-bell"></i><span class="badge blue">...</span>
-                        </a>
-                        <ul class="dropdown-menu anti-dropdown-menu">
-                            <li>
-                                <div class="notification_header">
-                                    <h3>我的评论</h3>
-                                </div>
-                            </li>
-                            <li><a href="#">
-                                <div class="user_img">
-                                    <img src="images/2.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet</p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li class="odd"><a href="#">
-                                <div class="user_img">
-                                    <img src="images/1.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="user_img">
-                                    <img src="images/3.png" alt=""></div>
-                                <div class="notification_desc">
-                                    <p>Lorem ipsum dolor amet </p>
-                                    <p><span>1 hour ago</span></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </a></li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="#">所有评论</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-map-marker"></i><span class="badge blue">...</span>
+                            </a>
+                            <ul class="dropdown-menu anti-dropdown-menu">
+                                <li>
+                                    <div class="notification_header">
+                                        <h3>我的定位</h3>
+                                    </div>
+                                </li>
+                                <li style="width: 60%;margin:auto;">
+                                    <div class="location_icon">
+                                        <i class="fa fa-street-view"></i>
+                                    </div>
+                                    <div class="location"></div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li>
+                                    <div class="notification_bottom">
+                                        
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
 
-                </ul>
+                    </ul>
                 <div class="clearfix"></div>
             </div>
 
