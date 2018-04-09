@@ -251,11 +251,11 @@
 					</div>
 					
 				</div>
-				<div class="nav-right-two">
+				<div class="nav-right-three">
 					<ul>
-						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
-                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="Collection.aspx"> 我的收藏</a></li>
+						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-three_a_after" href="#"> 我的兴趣模型</a></li>
+						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-three_a_after" href="#"> 兴趣标签</a></li>
+                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-three_a_after" href="Collection.aspx"> 我的收藏</a></li>
 					</ul>
 				</div>
 				<!--//row-->

@@ -29,8 +29,9 @@
     <link href="style/button.css" rel="stylesheet" type="text/css" />
     <link href="style/interests.css" rel="stylesheet" type="text/css" />
     <link href="style/custom.css" rel="stylesheet" type="text/css" />
-    <link href="style/multi-switch.min.css" rel="stylesheet" type="text/css" 
+    <link href="style/multi-switch.min.css" rel="stylesheet" type="text/css" />
     <link href="style/interests_notification.css" rel="stylesheet" type="text/css" />
+    <link href="style/footer.css" rel="stylesheet" type="text/css" />
     
     <!--webfonts-->
     <link href="style/fonts.css" rel="stylesheet" type="text/css">
@@ -106,8 +107,8 @@
 			<!--//end-search-box-->
         <div class="header-right header-right-grid">
             <div class="profile_details_left">
-                <!--notifications of menu start -->
-                <ul class="nofitications-dropdown">
+                    <!--notifications of menu start -->
+                    <ul class="nofitications-dropdown">
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-heart"></i><span class="badge">...</span>
@@ -205,43 +206,13 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                             <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
                         </a>
-                        <ul class="dropdown-menu anti-dropdown-menu">
+                        <ul class="dropdown-menu anti-dropdown-menu" id="collection_menu">
                             <li>
                                 <div class="notification_header">
-                                    <h3>收藏的资讯</h3>
+                                    <h3>收藏的资讯 </h3>
                                 </div>
                             </li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">收藏标题1</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">收藏标题2</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="task-info">
-                                    <span class="task-desc">收藏标题3</span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a></li>
-                            <li>
-                                <a href="index.aspx">
-                                    <div class="task-info-center">
-                                        <span class="task-desc">没有更多了,去发现新世界&nbsp;<i class="fa fa-sign-in"></i></span>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="notification_bottom">
-                                    <a href="interests.aspx">个人收藏</a>
-                                </div>
-                            </li>
+
                         </ul>
                         </li>
                         <li class="dropdown head-dpdn">
@@ -270,8 +241,8 @@
                         </li>
 
                     </ul>
-                <div class="clearfix"></div>
-            </div>
+                    <div class="clearfix"></div>
+                </div>
 
             <!--notification menu end -->
             <div class="profile_details">
@@ -445,7 +416,7 @@
                     </div>
                 </div>
 				<div class="nav-right-one">
-                    <div class="nav-right-one-title">热门</div>
+                    <div class="nav-right-one-title"><b>热门</b></div>
 					<ul>
 						<li><a href="#">若有小行星撞地球如何阻止?</a></li>
 						<li><a href="#">美国学区给学校配备石头</a></li>
@@ -464,6 +435,13 @@
 				</div>
 			</div>
 		</div>
+        <div class="footer">
+            <div class="footer_content">
+                <div class="footer_content_line">
+                    <i class="fa fa-handshake-o"></i>一路相遇 一路相知 一路相行
+                </div>
+            </div>
+        </div>
 
         <script src="js/jquery.min.js" type="text/javascript"></script>
 	    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>

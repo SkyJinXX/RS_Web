@@ -324,7 +324,7 @@
                     </div>
                 </div>
 				<div class="nav-right-one">
-                    <div class="nav-right-one-title">热门</div>
+                    <div class="nav-right-one-title"><b>热门</b></div>
 					<ul>
 						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
 						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>

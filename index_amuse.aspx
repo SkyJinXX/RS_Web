@@ -328,7 +328,7 @@
 					</div>
 				</div>
                 <div class="nav-right-one">
-                    <div class="nav-right-one-title">热门</div>
+                    <div class="nav-right-one-title"><b>热门</b></div>
 					<ul>
 						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
 						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>
@@ -343,7 +343,7 @@
 						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
                         <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="Collection.aspx"> 我的收藏</a></li>
-					    <%--<li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="announceview.aspx"> 我爆料</a></li>--%>
+					    
 					</ul>
 				</div>
 				<!--//row-->
