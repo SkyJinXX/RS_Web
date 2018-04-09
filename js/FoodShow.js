@@ -57,7 +57,7 @@ function pageShow() {
                     '<a href="view_food.aspx?fid=' + value['fid'] + '"><img src="' + value['fimage_url'] +'" alt="图片" style="width: 210px; height: 140px" /></a>' +
                     '</div>' +
                     '<div class="content-right">' +
-                    '<a href="#">' +
+                    '<a  href="view_food.aspx?fid=' + value['fid'] + '">' +
                     '<div class="content-right-line">' +
                     '<div class="first-line-item">' + value['feature'] + '</div>' +
                     '</div>' +
