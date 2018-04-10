@@ -35,6 +35,7 @@
     <!--//webfonts--> 
     <!--animate-->
     <link href="style/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style/footer.css" rel="stylesheet" type="text/css" />
 
     <!-- chart -->
     <script src="js/Chart.js"></script>
@@ -107,106 +108,130 @@
                     <ul class="nofitications-dropdown">
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-heart"></i><span class="badge">...</span>
-                            </a>
-                            <ul class="dropdown-menu anti-dropdown-menu">
-                                <li>
-                                    <div class="notification_header">
-                                        <h3>兴趣标签</h3>
-                                    </div>
-                                </li>
-                                <li><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/1.png" alt="">
-                                    </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet</p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li class="odd"><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/2.png" alt="">
-                                    </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/3.png" alt="">
-                                    </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li>
-                                    <div class="notification_bottom">
-                                        <a href="interests.aspx">See all messages</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown head-dpdn">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
-                            </a>
-                            <ul class="dropdown-menu anti-dropdown-menu" id="collection_menu">
+                            <i class="fa fa-heart"></i><span class="badge">...</span>
+                        </a>
+                        <ul class="dropdown-menu anti-dropdown-menu">
                             <li>
                                 <div class="notification_header">
-                                    <h3>收藏的资讯 </h3>
+                                    <h3>兴趣标签</h3>
+                                </div>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-film"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>电影</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-child"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>体育</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-money"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>财经</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-newspaper-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>新闻</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-smile-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>搞笑</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-hand-rock-o"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>军事</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li class="notification_header_li">
+                                <div class="notification_header_line">
+                                    <div class="user_img">
+                                        <i class="fa fa-gamepad"></i>
+                                    </div>
+                                    <div class="notification_desc">
+                                        <span>游戏</span>
+                                    </div>
+                                </div>
+                                <div class="notification_header_line">
+                                    <div class="notification_desc">
+                                        <span>...</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <div class="notification_bottom">
+                                    <a href="interests.aspx">查看所有兴趣标签</a>
                                 </div>
                             </li>
                         </ul>
                         </li>
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-bell"></i><span class="badge blue">...</span>
+                            <i class="fa fa-tasks"></i><span class="badge blue1">...</span>
+                        </a>
+                        <ul class="dropdown-menu anti-dropdown-menu" id="collection_menu">
+                            <li>
+                                <div class="notification_header">
+                                    <h3>收藏的资讯 </h3>
+                                </div>
+                            </li>
+
+                        </ul>
+                        </li>
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-map-marker"></i><span class="badge blue">...</span>
                             </a>
                             <ul class="dropdown-menu anti-dropdown-menu">
                                 <li>
                                     <div class="notification_header">
-                                        <h3>我的评论</h3>
+                                        <h3>我的定位</h3>
                                     </div>
                                 </li>
-                                <li><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/2.png" alt=""/>
+                                <li style="width: 60%;margin:auto;">
+                                    <div class="location_icon">
+                                        <i class="fa fa-street-view"></i>
                                     </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet</p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
+                                    <div class="location"></div>
                                     <div class="clearfix"></div>
-                                </a></li>
-                                <li class="odd"><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/1.png" alt=""/>
-                                    </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
-                                <li><a href="#">
-                                    <div class="user_img">
-                                        <img src="images/3.png" alt="">
-                                    </div>
-                                    <div class="notification_desc">
-                                        <p>Lorem ipsum dolor amet </p>
-                                        <p><span>1 hour ago</span></p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </a></li>
+                                </li>
                                 <li>
                                     <div class="notification_bottom">
-                                        <a href="#">See all notifications</a>
+                                        
                                     </div>
                                 </li>
                             </ul>
