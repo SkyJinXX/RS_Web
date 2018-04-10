@@ -52,4 +52,9 @@ public partial class user_imformation : System.Web.UI.Page
     {
 
     }
+
+    protected void Finish_Click(object sender, EventArgs e)
+    {
+
+    }
 }
