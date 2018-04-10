@@ -10,6 +10,7 @@
     -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.21);
     -moz-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.21);
     -o-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.21);
+    text-decoration: underline;
 }
 
 .footer_content {

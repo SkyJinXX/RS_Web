@@ -69,12 +69,12 @@
 }
 
 #Finish {
-    width: 50%;
+    width: 30%;
     height: 2.2em;
     border-radius: 4px;
     border: none;
     color: white;
-    background-color: #4876FF;
+    background-color: #7EC0EE;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -82,7 +82,24 @@
 }
 
 #Finish:hover {
-    background-color: #7EC0EE;
+    background-color: #4876FF;
+}
+
+#Cancel {
+    width: 30%;
+    height: 2.2em;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #f64040;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    font-size: 1.1em;
+}
+
+#Cancel:hover {
+    background-color: #c50000;
 }
 
 .nav-right-four_selected:visited {
