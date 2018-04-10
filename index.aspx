@@ -439,16 +439,15 @@
                         <li><a href="#">美国“生命大游行”呼吁严控枪支</a></li>
 						<li><a href="#">京都酒店外籍游客入住率创新高</a></li>
 						<li><a href="#">环球时报：中国既坚定又冷静</a></li>
-						<li><a href="#">男子照看电瓶车后盗车</a></li>
+						<li><a href="#">李敖去世前亲笔信</a></li>
+                        <li><a href="#">微信“红包赌”涉案近亿</a></li>
+                        <li><a href="#">曹操墓新发现起争议</a></li>
+                        <li><a href="#">北京发布空气重污染“橙警”</a></li>
+                        <li><a href="#">一名中国籍船长在韩获刑1年半</a></li>
+                        <li><a href="#">台北直升机轰鸣似军演</a></li>
+                        <li><a href="#">北京首批市级传统村落公布</a></li>
 					</ul>
 				</div>
-                <%--<div class="nav-right-two">
-					<ul>
-						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 我的兴趣模型</a></li>
-						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="#"> 兴趣标签</a></li>
-                        <li><i class="fa fa-tasks" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="Collection.aspx"> 我的收藏</a></li>
-					</ul>
-				</div>--%>
 
 			</div>
 		</div>
