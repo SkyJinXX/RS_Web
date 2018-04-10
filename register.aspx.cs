@@ -32,8 +32,8 @@ public partial class register : System.Web.UI.Page
     {
         MailMessage msg = new MailMessage();
         msg.From = new MailAddress("994920937@qq.com");   //发件人的邮箱地址
-        msg.Subject = "*找回密码*";  //邮件主题
-        msg.Body = "<a>645978</a>";//邮件正文
+        msg.Subject = "*注册激活*";  //邮件主题
+        msg.Body = "<a>您的账号已经激活</a>";//邮件正文
         msg.To.Add(this.Email.Text);
         msg.IsBodyHtml = true;  //邮件正文是否支持html的值
         SmtpClient sc = new SmtpClient();
@@ -78,7 +78,7 @@ public partial class register : System.Web.UI.Page
                 SqlCommand cmd1 = new SqlCommand(SqlStr, objConnection);
                 cmd1.CommandText = SqlStr;
                 cmd1.ExecuteScalar();
-                // SendMail();
+                 SendMail();
                 Response.Write("<script>alert('请前往邮箱激活此账号');</script>");
             }
             else
