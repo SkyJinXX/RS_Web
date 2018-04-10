@@ -126,7 +126,7 @@ function collectClick(){
 //删除操作
 function DeleteNews() {
     $('.panel-tools').children('li').click(function () {
-        jQuery(this).parent().parent().parent().parent().parent().remove()
+        jQuery(this).parent().parent().parent().parent().remove()
     });
 }
 
