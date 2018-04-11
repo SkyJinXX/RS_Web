@@ -318,7 +318,7 @@ public partial class index : System.Web.UI.Page
                 if (j == 2)
                 {
                     String s = dt.Rows[i][j].ToString();
-                    s = s.Substring(0, 120);
+                    s = s.Substring(0, 110);
                      
                     jsonBuilder.Append(s.Replace("\"", "\\\""));
                 }
