@@ -96,7 +96,7 @@ function pageShow() {
 }
 function likeClick(){
     $(document).on("click", ".likeBox", function(){
-    $('#vote').attr("class", "isLikeButton_like_checked"); 
+    jQuery(this).children('#vote').attr("class", "isLikeButton_like_checked"); 
     var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
@@ -120,7 +120,7 @@ function likeClick(){
 }
 function unlikeClick(){
     $(document).on("click", ".unlikeBox", function(){
-    $('#vote_down').attr("class", "isLikeButton_dislike_checked"); 
+    jQuery(this).children('#vote_down').attr("class", "isLikeButton_dislike_checked"); 
     var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
@@ -144,7 +144,7 @@ function unlikeClick(){
 }
 function collectClick(){
     $(document).on("click", ".collectBox", function(){
-    $('#collect').attr("class", "collect_checked"); 
+    jQuery(this).children('#collect').attr("class", "collect_checked"); 
     var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
     $.ajax({
         type: 'post',
