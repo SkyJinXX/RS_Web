@@ -147,7 +147,6 @@
 .like_count:hover, .unlike_count:hover {
     cursor:pointer;
 }
-
 .isLikeButton_like {
     width: 1.5em;
     height: 1.5em;
@@ -156,7 +155,7 @@
     color: #19CF8A;
     background-color: #E0FFFF;
     border: none;
-    background: url(../images/image/点赞.png) no-repeat;
+    background: url(../images/image/ic_vote_normal.png) no-repeat;
 }
 
 
@@ -168,7 +167,29 @@
     color: #19CF8A;
     background-color: white;
     border: none;
-    background: url(../images/image/点踩.png) no-repeat;
+    background: url(../images/image/ic_vote_down_normal.png) no-repeat;
+}
+.isLikeButton_like_checked {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    float: left;
+    color: #19CF8A;
+    background-color: #E0FFFF;
+    border: none;
+    background: url(../images/image/ic_vote_checked.png) no-repeat;
+}
+
+
+.isLikeButton_dislike_checked {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    float: left;
+    color: #19CF8A;
+    background-color: white;
+    border: none;
+    background: url(../images/image/ic_vote_down_checked.png) no-repeat;
 }
 
 .comment_area_title {

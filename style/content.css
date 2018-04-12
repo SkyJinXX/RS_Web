@@ -54,7 +54,7 @@
 }
 
 .likeBox {
-    width: 30%;
+    width: 26%;
     height: auto;
     float: left;
     margin-left: 0.5em;
@@ -64,7 +64,7 @@
     padding-top: 0.2em;
     padding-bottom: 0.2em;
 }
-
+input:focus { outline: none; }
 .unlikeBox {
     width: 30%;
     height: auto;
@@ -72,7 +72,7 @@
     margin-left: 0.5em;
     margin-top: 2em;
     margin-bottom: 1em;
-    padding-left: 0.8em;
+    padding-left: 0.5em;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
 }
@@ -87,25 +87,47 @@
     cursor:pointer;
 }
 
-.isLikeButton_like{
-	width: 1.5em;
-	height: 1.5em;
-	line-height: 1.3em;
-    float:left;
-	color: #19CF8A;
-	background-color: #E0FFFF;
-	border: none;
-	background: url(../images/image/点赞.png) no-repeat;
+.isLikeButton_like {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    float: left;
+    color: #19CF8A;
+    background-color: #E0FFFF;
+    border: none;
+    background: url(../images/image/ic_vote_normal.png) no-repeat;
 }
 
 
-.isLikeButton_dislike{
-	width: 1.5em;
-	height: 1.5em;
-	line-height: 1.3em;
-    float:left;
-	color: #19CF8A;
-	background-color: white;
-	border: none;
-	background: url(../images/image/点踩.png) no-repeat;
+.isLikeButton_dislike {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    float: left;
+    color: #19CF8A;
+    background-color: white;
+    border: none;
+    background: url(../images/image/ic_vote_down_normal.png) no-repeat;
+}
+.isLikeButton_like_checked {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    float: left;
+    color: #19CF8A;
+    background-color: #E0FFFF;
+    border: none;
+    background: url(../images/image/ic_vote_checked.png) no-repeat;
+}
+
+
+.isLikeButton_dislike_checked {
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    float: left;
+    color: #19CF8A;
+    background-color: white;
+    border: none;
+    background: url(../images/image/ic_vote_down_checked.png) no-repeat;
 }

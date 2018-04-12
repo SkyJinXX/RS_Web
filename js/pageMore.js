@@ -70,14 +70,14 @@ function pageShow() {
                                     '</div>'+
                                     '<div class="isLikeButton">'+
                                         '<div class="collectBox">'+
-                                            '<input type="button" class="collect" value="" title="收藏"/>'+
+                                            '<input  id="collect" type="button" class="collect" value="" title="收藏"/>'+
                                         '</div>'+
                                         '<div class="likeBox">'+
-                                            '<input class="isLikeButton_like" type="button" value="" />'+
+                                            '<input id="vote" class="isLikeButton_like" type="button" value="" />'+
                                             '<div class="like_count">' + value['Ngoods'] + '</div>'+
                                         '</div>'+
                                         '<div class="unlikeBox">'+
-                                            '<input class="isLikeButton_dislike" type="button" value="" />'+
+                                            '<input id="vote_down" class="isLikeButton_dislike" type="button" value="" />'+
                                             '<div class="unlike_count">' + value['Nbads'] + '</div>'+
                                         '</div>'+
                                     '</div>'+
@@ -96,6 +96,7 @@ function pageShow() {
 }
 function likeClick(){
     $(document).on("click", ".likeBox", function(){
+    $('#vote').attr("class", "isLikeButton_like_checked"); 
     var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
@@ -119,6 +120,7 @@ function likeClick(){
 }
 function unlikeClick(){
     $(document).on("click", ".unlikeBox", function(){
+    $('#vote_down').attr("class", "isLikeButton_dislike_checked"); 
     var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
     var number = jQuery(this).children('div').text();
     number = (parseInt(number) + 1).toString();
@@ -142,6 +144,7 @@ function unlikeClick(){
 }
 function collectClick(){
     $(document).on("click", ".collectBox", function(){
+    $('#collect').attr("class", "collect_checked"); 
     var Nid = jQuery(this).parent().parent().parent().parent().parent().attr('Nid');
     $.ajax({
         type: 'post',

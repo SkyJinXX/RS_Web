@@ -44,8 +44,20 @@
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
-    background:url(../images/image/collect.png) no-repeat
+    background:url(../images/image/ic_thank.png) no-repeat
 }
+.collect_checked {
+    width: 1.8em;
+    height: 1.8em;
+    float: left;
+    border: none;
+    background-color: transparent;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    background:url(../images/image/ic_thanked.png) no-repeat
+}
+
 
 .collect:hover {
     background-color: transparent;
