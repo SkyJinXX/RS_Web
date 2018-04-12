@@ -78,7 +78,7 @@ public partial class index : System.Web.UI.Page
             //f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
             //cmd.CommandText = "Select top 6 Did from Duanzi order by Dgoods";
             //string f1 = cmd.ExecuteScalar().ToString();
-            f.HRef = "view_duanzi.aspx?did=6" ;
+            f.HRef = "view_duanzi.aspx?did=20" ;
 
             conn.Close();
         }

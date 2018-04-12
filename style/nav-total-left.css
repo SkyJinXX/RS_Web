@@ -119,12 +119,26 @@
     box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
 }
 
-.nav-right-one ul, .nav-right-two ul, .nav-right-three ul {
+
+.nav-right-five {
+    width: 20%;
+    min-height: 10em;
+    padding-top: 1.2em;
+    padding-bottom: 0.8em;
+    color: #2A2F43;
+    background-color: #FFFFFF;
+    float: left;
+    position: fixed;
+    margin-left: 72%;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.nav-right-one ul, .nav-right-two ul, .nav-right-three ul,.nav-right-five  ul {
     list-style: none;
     list-style-type: none;
 }
 
-.nav-right-one ul li,.nav-right-two ul li,.nav-right-three  ul li{
+.nav-right-one ul li,.nav-right-two ul li,.nav-right-three  ul li,.nav-right-five  ul li{
 	font-size: 1.2em;
 	line-height: 1.8em;
 	list-style: none;
@@ -137,12 +151,12 @@
 	-moz-transition: 0.6s;
 }
 
-.nav-right-one ul li:hover,.nav-right-two ul li:hover,.nav-right-three  ul li:hover{
+.nav-right-one ul li:hover,.nav-right-two ul li:hover,.nav-right-three  ul li:hover,.nav-right-five  ul li:hover{
 	cursor: pointer;
 	background-color: #EBEBEB;
 }
 
-.nav-right-one ul li a,.nav-right-two ul li a,.nav-right-three  ul li a{
+.nav-right-one ul li a,.nav-right-two ul li a,.nav-right-three  ul li a,.nav-right-five  ul li a{
     font-size:0.8em;
 	color: #4F94CD;
 	transition: 0.6s;
