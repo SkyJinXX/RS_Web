@@ -326,12 +326,12 @@
 				<div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server"> link3</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
+						<li><a class="nav-right-one_a_after" href="view_food.aspx?fid=13" id="a" runat="server">藏日本料理</a></li>
+						<li><a class="nav-right-one_a_after" href="view_food.aspx?fid=17" id="b" runat="server">武林榜(和达城店)</a></li>
+                        <li><a class="nav-right-one_a_after" href="view_food.aspx?fid=2" id="c" runat="server">云山上餐厅</a></li>
+						<li><a class="nav-right-one_a_after" href="view_food.aspx?fid=33" id="d" runat="server">泛海钓鱼台酒店品聚杭州</a></li>
+						<li><a class="nav-right-one_a_after" href="view_food.aspx?fid=36" id="h" runat="server">地中海自助餐厅</a></li>
+                        <li><a class="nav-right-one_a_after" href="view_food.aspx?fid=8" id="f" runat="server">夏日花园 咖啡.小厨</a></li>
 					</ul>
 				</div>
                 <div class="nav-right-two">
