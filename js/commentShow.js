@@ -281,7 +281,7 @@ function Reply() {
                     type: 'post',
                     contentType: "application/json",
                     url: 'view_News.aspx/Replying',
-                    async: true,
+                    async: false,
                     data: "{'id':'" + id + "','Con':'" + Con + "'}",
                     dataType: "json",
                     success: function (result) {
