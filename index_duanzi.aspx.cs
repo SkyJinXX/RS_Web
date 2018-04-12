@@ -43,42 +43,42 @@ public partial class index : System.Web.UI.Page
             User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
 
 
-            cmd.CommandText = "Select top 1 Dtitle from Duanzi order by Dgoods";
-            a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 1 Did from Duanzi order by Dgoods";
-            string a1 = cmd.ExecuteScalar().ToString();
-            a.HRef = "view_duanzi.aspx?Did=" + a1;
+            //cmd.CommandText = "Select top 1 Dtitle from Duanzi order by Dgoods";
+            //a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 1 Did from Duanzi order by Dgoods";
+            //string a1 = cmd.ExecuteScalar().ToString();
+            a.HRef = "view_duanzi.aspx?did=1";
 
 
-            cmd.CommandText = "Select top 2 Dtitle from Duanzi order by Dgoods";
-            b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 2 Did from Duanzi order by Dgoods";
-            string b1 = cmd.ExecuteScalar().ToString();
-            b.HRef = "view_duanzi.aspx?Did=" + b1;
+            //cmd.CommandText = "Select top 2 Dtitle from Duanzi order by Dgoods";
+            //b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 2 Did from Duanzi order by Dgoods";
+            //string b1 = cmd.ExecuteScalar().ToString();
+            b.HRef = "view_duanzi.aspx?did=2" ;
 
-            cmd.CommandText = "Select top 3 Dtitle from Duanzi order by Dgoods";
-            c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 3 Did from Duanzi order by Dgoods";
-            string c1 = cmd.ExecuteScalar().ToString();
-            c.HRef = "view_duanzi.aspx?Did=" + c1;
+            //cmd.CommandText = "Select top 3 Dtitle from Duanzi order by Dgoods";
+            //c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 3 Did from Duanzi order by Dgoods";
+            //string c1 = cmd.ExecuteScalar().ToString();
+            c.HRef = "view_duanzi.aspx?did=3" ;
 
-            cmd.CommandText = "Select top 4 Dtitle from Duanzi order by Dgoods";
-            d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 4 Did from Duanzi order by Dgoods";
-            string d1 = cmd.ExecuteScalar().ToString();
-            d.HRef = "view_duanzi.aspx?Did=" + d1;
+            //cmd.CommandText = "Select top 4 Dtitle from Duanzi order by Dgoods";
+            //d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 4 Did from Duanzi order by Dgoods";
+            //string d1 = cmd.ExecuteScalar().ToString();
+            d.HRef = "view_duanzi.aspx?did=4";
 
-            cmd.CommandText = "Select top 5 Dtitle from Duanzi order by Dgoods";
-            h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 5 Did from Duanzi order by Dgoods";
-            string h1 = cmd.ExecuteScalar().ToString();
-            h.HRef = "view_duanzi.aspx?Did=" + h1;
+            //cmd.CommandText = "Select top 5 Dtitle from Duanzi order by Dgoods";
+            //h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 5 Did from Duanzi order by Dgoods";
+            //string h1 = cmd.ExecuteScalar().ToString();
+            h.HRef = "view_duanzi.aspx?did=5" ;
 
-            cmd.CommandText = "Select top 6 Dtitle from Duanzi order by Dgoods";
-            f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 6 Did from Duanzi order by Dgoods";
-            string f1 = cmd.ExecuteScalar().ToString();
-            f.HRef = "view_duanzi.aspx?Did=" + f1;
+            //cmd.CommandText = "Select top 6 Dtitle from Duanzi order by Dgoods";
+            //f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 6 Did from Duanzi order by Dgoods";
+            //string f1 = cmd.ExecuteScalar().ToString();
+            f.HRef = "view_duanzi.aspx?did=6" ;
 
             conn.Close();
         }

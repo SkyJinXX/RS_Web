@@ -300,12 +300,12 @@
                 <div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server"> link3</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> 英男子巴厘岛度假遭剑鱼刺入颈部</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server">法国发生森林大火致上万人撤离  </a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server"> 日本发明自动洗澡机 懒出了巅峰</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> 黑洞吞噬物质，讲究“细嚼慢咽”</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> 宇宙是个全息图？实验观测与“全息宇宙</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> 太阳用40亿年时间，把火星的大气和海</a></li>
 					</ul>
 				</div>
 				<div class="nav-right-two">

@@ -321,12 +321,12 @@
 				<div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
 					<ul>
-						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server"> link3</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
-						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
-                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server">YOLO WHISKY & COCKTAIL BAR</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server">飞鸟私人影院(西湖店)</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server">M.E私人影院(武林路店)</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> 灵溪别院</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> 江南玉璞(滨江星耀城店)</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> 中经堂(湖滨店)</a></li>
 					</ul>
 				</div>
                 <div class="nav-right-two">

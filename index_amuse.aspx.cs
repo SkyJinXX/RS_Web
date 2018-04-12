@@ -45,42 +45,42 @@ public partial class index : System.Web.UI.Page
             User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
 
 
-            cmd.CommandText = "Select top 1 Aname from Amuse order by Agoods";
-            a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 1 Aid from Amuse order by Agoods";
-            string a1 = cmd.ExecuteScalar().ToString();
-            a.HRef = "view_amuse.aspx?aid=" + a1;
+            //cmd.CommandText = "Select top 1 Aname from Amuse order by Agoods";
+            //a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 1 Aid from Amuse order by Agoods";
+            //string a1 = cmd.ExecuteScalar().ToString();
+            a.HRef = "view_amuse.aspx?aid=1" ;
 
 
-            cmd.CommandText = "Select top 2 Aname from Amuse order by Agoods";
-            b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 2 Aid from Amuse order by Agoods";
-            string b1 = cmd.ExecuteScalar().ToString();
-            b.HRef = "view_amuse.aspx?aid=" + b1;
+            //cmd.CommandText = "Select top 2 Aname from Amuse order by Agoods";
+            //b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 2 Aid from Amuse order by Agoods";
+            //string b1 = cmd.ExecuteScalar().ToString();
+            b.HRef = "view_amuse.aspx?aid=10";
 
-            cmd.CommandText = "Select top 3 Aname from Amuse order by Agoods";
-            c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 3 Aid from Amuse order by Agoods";
-            string c1 = cmd.ExecuteScalar().ToString();
-            c.HRef = "view_amuse.aspx?aid=" + c1;
+            //cmd.CommandText = "Select top 3 Aname from Amuse order by Agoods";
+            //c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 3 Aid from Amuse order by Agoods";
+            //string c1 = cmd.ExecuteScalar().ToString();
+            c.HRef = "view_amuse.aspx?aid=12" ;
 
-            cmd.CommandText = "Select top 4 Aname from Amuse order by Agoods";
-            d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 4 Aid from Amuse order by Agoods";
-            string d1 = cmd.ExecuteScalar().ToString();
-            d.HRef = "view_amuse.aspx?aid=" + d1;
+            //cmd.CommandText = "Select top 4 Aname from Amuse order by Agoods";
+            //d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 4 Aid from Amuse order by Agoods";
+            //string d1 = cmd.ExecuteScalar().ToString();
+            d.HRef = "view_amuse.aspx?aid=13";
 
-            cmd.CommandText = "Select top 5 Aname from Amuse order by Agoods";
-            h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 5 Aid from Amuse order by Agoods";
-            string h1 = cmd.ExecuteScalar().ToString();
-            h.HRef = "view_amuse.aspx?aid=" + h1;
+            //cmd.CommandText = "Select top 5 Aname from Amuse order by Agoods";
+            //h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 5 Aid from Amuse order by Agoods";
+            //string h1 = cmd.ExecuteScalar().ToString();
+            h.HRef = "view_amuse.aspx?aid=14";
 
-            cmd.CommandText = "Select top 6  Aname from Amuse order by Agoods";
-            f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 6 Aid from Amuse order by Agoods";
-            string f1 = cmd.ExecuteScalar().ToString();
-            f.HRef = "view_amuse.aspx?aid=" + f1;
+            //cmd.CommandText = "Select top 6  Aname from Amuse order by Agoods";
+            //f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            //cmd.CommandText = "Select top 6 Aid from Amuse order by Agoods";
+            //string f1 = cmd.ExecuteScalar().ToString();
+            f.HRef = "view_amuse.aspx?aid=15";
 
             conn.Close();
         }
