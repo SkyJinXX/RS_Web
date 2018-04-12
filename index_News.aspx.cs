@@ -44,45 +44,6 @@ public partial class index : System.Web.UI.Page
             cmd.CommandText = "select Uimage_url From Users where Uusername = '" + Session["username"] + "'";
             User_HeaderImager.Src = cmd.ExecuteScalar().ToString();
             
-
-            //String  sql1 = "Select top 1 Ntitle from News order by Ngoods";
-            cmd.CommandText = "Select top 1 Ntitle from News order by Ngoods";
-            a.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 1 Nid from News order by Ngoods";
-            string a1 = cmd.ExecuteScalar().ToString();
-            a.HRef = "view_News.aspx?Nid="+ a1;
-
-
-            cmd.CommandText = "Select top 2 Ntitle from News order by Ngoods";
-            b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 2 Nid from News order by Ngoods";
-            string b1 = cmd.ExecuteScalar().ToString();
-            b.HRef = "view_News.aspx?Nid=" + b1;
-
-            cmd.CommandText = "Select top 3 Ntitle from News order by Ngoods";
-            c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 3 Nid from News order by Ngoods";
-            string c1 = cmd.ExecuteScalar().ToString();
-            c.HRef = "view_News.aspx?Nid=" + c1;
-
-            cmd.CommandText = "Select top 4 Ntitle from News order by Ngoods";
-            d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 4 Nid from News order by Ngoods";
-            string d1 = cmd.ExecuteScalar().ToString();
-            d.HRef = "view_News.aspx?Nid=" + d1;
-
-            cmd.CommandText = "Select top 5 Ntitle from News order by Ngoods";
-            h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 5 Nid from News order by Ngoods";
-            string h1 = cmd.ExecuteScalar().ToString();
-            h.HRef = "view_News.aspx?Nid=" + h1;
-
-            cmd.CommandText = "Select top 6 Ntitle from News order by Ngoods";
-            f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
-            cmd.CommandText = "Select top 6 Nid from News order by Ngoods";
-            string f1 = cmd.ExecuteScalar().ToString();
-            f.HRef = "view_News.aspx?Nid=" + f1;
-            
             conn.Close();
         }
 
