@@ -22,7 +22,7 @@
 	<script src="assets/js//jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/custom.js"></script>
 
-    <title>凛冬将至 | 找回密码</title>
+    <title>凛冬将至 | 账户激活</title>
 </head>
 <body>
     <form id="form1" runat="server">
