@@ -351,12 +351,13 @@
 				<div class="nav-right-one">
                     <div class="nav-right-one-title"><b>热门</b></div>
 					<ul>
-						<li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=96" id="a" runat="server">全国优秀民族歌剧展演</a></li>
-						<li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=98" id="b" runat="server">专访理查德·弗兰纳根</a></li>
-                        <li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=85" id="c" runat="server">儿童邪典片流入中国毒害儿童</a></li>
-						<li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=79" id="d" runat="server">北京的无雪之冬</a></li>
-						<li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=64" id="h" runat="server">新华社评美301调查</a></li>
-                        <li><a class="nav-right-one_a_after" href="view_News.aspx?Nid=62" id="f" runat="server">我们要保护人类和星球</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="a" runat="server"> link1</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="b" runat="server"> link2</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="c" runat="server"> link3</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="d" runat="server"> link4</a></li>
+						<li><a class="nav-right-one_a_after" href="#" id="h" runat="server"> link5</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="f" runat="server"> link6</a></li>
+                        <li><a class="nav-right-one_a_after" href="#" id="g" runat="server"> link7</a></li>
 					</ul>
 				</div>
                 <div class="nav-right-two">

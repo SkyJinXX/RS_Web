@@ -373,7 +373,7 @@
                         </div>
                     </div>
                 </div>
-                <%--<div class="nav-right-one">
+                <div class="nav-right-one">
                     <div class="nav-right-one-title">热门</div>
                     <ul>
                         <li><a href="#">link1</a></li>
@@ -382,8 +382,8 @@
                         <li><a href="#">link4</a></li>
                         <li><a href="#">link5</a></li>
                     </ul>
-                </div>--%>
-                <div class="nav-right-five">
+                </div>
+                <div class="nav-right-two">
                     <ul>
 						<li><i class="fa fa-codepen" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="interests.aspx"> 我的兴趣模型</a></li>
 						<li><i class="fa fa-heart" style="color: #8DB6CD;"></i><a class="nav-right-two_a_after" href="interests.aspx"> 兴趣标签</a></li>

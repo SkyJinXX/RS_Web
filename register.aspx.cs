@@ -33,7 +33,7 @@ public partial class register : System.Web.UI.Page
         MailMessage msg = new MailMessage();
         msg.From = new MailAddress("994920937@qq.com");   //发件人的邮箱地址
         msg.Subject = "*注册激活*";  //邮件主题
-        msg.Body = "<a href='#'>您的账号已经激活</a>";//邮件正文
+        msg.Body = "<a>您的账号已经激活</a>";//邮件正文
         msg.To.Add(this.Email.Text);
         msg.IsBodyHtml = true;  //邮件正文是否支持html的值
         SmtpClient sc = new SmtpClient();
