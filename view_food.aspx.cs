@@ -40,6 +40,36 @@ public partial class view : System.Web.UI.Page
             string a1 = cmd.ExecuteScalar().ToString();
             a.HRef = "view_food.aspx?fid=" + a1;
 
+
+            cmd.CommandText = "Select top 2 Fname from Food order by Fgoods";
+            b.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            cmd.CommandText = "Select top 2 Fid from Food order by Fgoods";
+            string b1 = cmd.ExecuteScalar().ToString();
+            b.HRef = "view_food.aspx?fid=" + b1;
+
+            cmd.CommandText = "Select top 3 Fname from Food order by Fgoods";
+            c.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            cmd.CommandText = "Select top 3 Fid from Food order by Fgoods";
+            string c1 = cmd.ExecuteScalar().ToString();
+            c.HRef = "view_food.aspx?fid=" + c1;
+
+            cmd.CommandText = "Select top 4 Fname from Food order by Fgoods";
+            d.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            cmd.CommandText = "Select top 4 Fid from Food order by Fgoods";
+            string d1 = cmd.ExecuteScalar().ToString();
+            d.HRef = "view_food.aspx?fid=" + d1;
+
+            cmd.CommandText = "Select top 5 Fname from Food order by Fgoods";
+            h.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            cmd.CommandText = "Select top 5 Fid from Food order by Fgoods";
+            string h1 = cmd.ExecuteScalar().ToString();
+            h.HRef = "view_food.aspx?fid=" + h1;
+
+            cmd.CommandText = "Select top 6  Fname from Food order by Fgoods";
+            f.InnerText = TopString(cmd.ExecuteScalar().ToString(), 15);
+            cmd.CommandText = "Select top 6 Fid from Food order by Fgoods";
+            string f1 = cmd.ExecuteScalar().ToString();
+            f.HRef = "view_food.aspx?fid=" + f1;
             conn.Close();
         }
     }
