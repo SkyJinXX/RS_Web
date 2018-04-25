@@ -25,7 +25,7 @@ public partial class findPassword1 : System.Web.UI.Page
         MailMessage msg = new MailMessage();
         msg.From = new MailAddress("994920937@qq.com");   //发件人的邮箱地址
         msg.Subject = "*找回密码*";  //邮件主题
-        msg.Body = "<a>验证码：645978  有效期60分钟</a>";//邮件正文
+        msg.Body = "<a>645978</a>";//邮件正文
         msg.To.Add(this.email.Text);
         msg.IsBodyHtml = true;  //邮件正文是否支持html的值
         SmtpClient sc = new SmtpClient();
